@@ -1,0 +1,44 @@
+name: daily-frame
+
+on:
+  schedule:
+    # 20:40 UTC / 06:40 AEST. Deliberately off the hour: The Aftertimes found
+    # that the on-the-hour slot is congested enough on GitHub's schedulers to be
+    # dropped or run an hour late.
+    - cron: "40 20 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  # Two frames in one day would both describe the same parent, and the chain's
+  # only claim is that each frame came from the one before it.
+  group: chain
+  cancel-in-progress: false
+
+jobs:
+  frame:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install deps
+        run: pip install -r requirements.txt
+      - name: Test
+        run: python -m pytest tests/ -q
+      - name: Advance the chain
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+        run: python step.py
+      - name: Commit and push
+        run: |
+          git config user.name "the-likeness bot"
+          git config user.email "actions@github.com"
+          git add -A
+          git diff --staged --quiet || git commit -m "frame: $(date -u +%Y-%m-%d)"
+          git push

@@ -1,0 +1,65 @@
+site:
+  name: "The Likeness"
+  tagline: "A machine draws itself from yesterday's description"
+  base_url: "https://likeness.charlietrenorden.com"
+timezone: "Australia/Sydney"
+output_html: "index.html"
+
+gemini:
+  model: "gemini-3.6-flash"
+  endpoint: "https://generativelanguage.googleapis.com/v1beta/models"
+  timeout_seconds: 60
+  max_retries: 2
+  temperature: 0.7        # the loop supplies the variation; the describer should be accurate
+
+image:
+  model: "@cf/black-forest-labs/flux-1-schnell"
+  steps: 8
+  timeout: 120
+  dir: "assets/img"
+  # Frames are stored at this width. Big enough to read, small enough that a
+  # thousand of them still fit in a git repo without LFS.
+  store_width: 768
+
+# Everything that resists collapse. See docs/collapse.md for why each exists.
+loop:
+  # Terms appearing in this many of the last `avoid_window` descriptions are
+  # forbidden in the next one. Self-generated: the run's own history is the only
+  # input, so the chain is never nudged from outside.
+  avoid_window: 6
+  avoid_min_count: 4
+  avoid_term_cap: 14
+
+collapse:
+  # A run is sealed when the descriptions have stopped moving AND the images have
+  # stopped moving, for `patience` consecutive frames. Both, because either alone
+  # gives false positives: a run can hold a subject while restyling it, and it can
+  # rephrase a description without the picture changing.
+  window: 5               # frames compared
+  text_similarity: 0.72   # mean pairwise cosine over description tokens
+  image_distance: 8       # mean pairwise dHash Hamming distance (0-64); lower = stuck
+  patience: 3
+  min_frames: 12          # never seal a run younger than this, whatever the numbers say
+
+seeds:
+  # The first description of each run. Deliberately concrete and strange: the
+  # literature's finding is that the START barely matters, so these are chosen to
+  # be easy to measure drift AWAY from rather than to be interesting forever.
+  - subject: "a tall thin figure made of folded brass sheet"
+    posture: "standing square to the viewer, arms held slightly away from the body"
+    setting: "an empty tiled room with a drain in the floor"
+    light: "one bare bulb overhead, hard shadows"
+    materials: "polished brass, white ceramic tile, grey grout"
+    anomaly: "the figure has no face, only a hinge where a face would be"
+  - subject: "a seated figure wrapped entirely in printed paper tape"
+    posture: "seated on a wooden stool, hands on knees, head tilted down"
+    setting: "a photographer's studio with a paper backdrop half rolled up"
+    light: "soft frontal light from a large diffuser"
+    materials: "newsprint tape, pale wood, matte grey paper"
+    anomaly: "one hand has been wrapped so thickly it is now a smooth club"
+  - subject: "a figure assembled from stacked terracotta drainage pipes"
+    posture: "leaning against a wall, one shoulder taking the weight"
+    setting: "a builder's yard at dusk, pallets stacked behind"
+    light: "low orange sun from the left, long shadows"
+    materials: "unglazed terracotta, galvanised steel, dry concrete"
+    anomaly: "grass is growing out of the topmost pipe where a head would be"
