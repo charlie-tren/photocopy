@@ -47,8 +47,11 @@ body{margin:0;background:var(--bg);color:var(--fg);
 header{margin:0 0 1.5rem;}
 /* Title and the way back out share a line, baseline-aligned, so the name is
    the first thing on the page and the exit is not buried in a footer. */
+/* wrap, not nowrap: the title and the link sit on one line wherever there is
+   room, and the link drops beneath rather than pushing the page sideways on a
+   narrow phone. Silkscreen has no narrow cut to fall back on. */
 .titlerow{display:flex;justify-content:space-between;align-items:baseline;
-  gap:1rem;}
+  gap:0.5rem 1rem;flex-wrap:wrap;}
 h1{font-family:'Silkscreen',monospace;font-size:2.3rem;margin:0;
   font-weight:700;letter-spacing:0.01em;line-height:1.1;}
 .back{flex:0 0 auto;font-family:'Silkscreen',monospace;font-size:0.78rem;
@@ -105,7 +108,8 @@ h1{font-family:'Silkscreen',monospace;font-size:2.3rem;margin:0;
 .note a{color:var(--accent);}
 @media (max-width:30rem){
   .caption{font-size:0.95rem;}
-  h1{font-size:1.7rem;}
+  h1{font-size:1.55rem;}
+  .back{font-size:0.68rem;}
 }
 """
 
