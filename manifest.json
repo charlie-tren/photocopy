@@ -23,6 +23,22 @@
       ],
       "text": null,
       "image_distance": null
+    },
+    {
+      "frame": 2,
+      "date": "2026-08-12",
+      "image": "assets/img/f0002.jpg",
+      "alt": "a featureless gold metallic mannequin figure",
+      "fields": [
+        "a featureless gold metallic mannequin figure",
+        "standing upright facing forward with arms outstretched to either side and palms facing up",
+        "a small enclosed room covered entirely in white square ceramic tiles on the floor and walls",
+        "white overhead light originating from a single bare bulb hanging from the ceiling",
+        "gold metal, white ceramic tile, grey iron, and glass",
+        "a large circular iron storm-drain grate embedded in the center of the tiled room floor"
+      ],
+      "text": 0.3835,
+      "image_distance": 17.0
     }
   ]
 }
