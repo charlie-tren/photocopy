@@ -7,5 +7,22 @@
     "materials": "polished brass, white ceramic tile, grey grout",
     "anomaly": "the figure has no face, only a hinge where a face would be"
   },
-  "frames": []
+  "frames": [
+    {
+      "frame": 1,
+      "date": "2026-08-12",
+      "image": "assets/img/f0001.jpg",
+      "alt": "a tall thin figure made of folded brass sheet",
+      "fields": [
+        "a tall thin figure made of folded brass sheet",
+        "standing square to the viewer, arms held slightly away from the body",
+        "an empty tiled room with a drain in the floor",
+        "one bare bulb overhead, hard shadows",
+        "polished brass, white ceramic tile, grey grout",
+        "the figure has no face, only a hinge where a face would be"
+      ],
+      "text": null,
+      "image_distance": null
+    }
+  ]
 }
