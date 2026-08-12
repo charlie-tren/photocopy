@@ -14,12 +14,10 @@
       "image": "assets/img/f0001.jpg",
       "alt": "a tall thin figure made of folded brass sheet",
       "fields": [
-        "a tall thin figure made of folded brass sheet",
-        "standing square to the viewer, arms held slightly away from the body",
-        "an empty tiled room with a drain in the floor",
-        "one bare bulb overhead, hard shadows",
-        "polished brass, white ceramic tile, grey grout",
-        "the figure has no face, only a hinge where a face would be"
+        "A tall thin figure made of folded brass sheet. An empty tiled room with a drain in the floor. Polished brass, white ceramic tile, grey grout.",
+        "Standing square to the viewer, arms held slightly away from the body.",
+        "One bare bulb overhead, hard shadows.",
+        "The figure has no face, only a hinge where a face would be."
       ],
       "text": null,
       "image_distance": null
@@ -30,12 +28,10 @@
       "image": "assets/img/f0002.jpg",
       "alt": "a featureless gold metallic mannequin figure",
       "fields": [
-        "a featureless gold metallic mannequin figure",
-        "standing upright facing forward with arms outstretched to either side and palms facing up",
-        "a small enclosed room covered entirely in white square ceramic tiles on the floor and walls",
-        "white overhead light originating from a single bare bulb hanging from the ceiling",
-        "gold metal, white ceramic tile, grey iron, and glass",
-        "a large circular iron storm-drain grate embedded in the center of the tiled room floor"
+        "A featureless gold metallic mannequin figure. A small enclosed room covered entirely in white square ceramic tiles on the floor and walls. Gold metal, white ceramic tile, grey iron, and glass.",
+        "Standing upright facing forward with arms outstretched to either side and palms facing up.",
+        "White overhead light originating from a single bare bulb hanging from the ceiling.",
+        "A large circular iron storm-drain grate embedded in the center of the tiled room floor."
       ],
       "text": 0.3835,
       "image_distance": 17.0

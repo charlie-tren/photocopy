@@ -58,8 +58,14 @@ Needs `GEMINI_API_KEY`, `CF_ACCOUNT_ID` and `CF_API_TOKEN`, from a gitignored
 
 ## The site
 
-One page. Arrows and the left/right keys step through the chain a frame at a
-time, Home and End jump to the ends, the slider scrubs, and the URL hash
-(`#f14`) makes any frame linkable. Deliberately not a page per frame: the whole
+One page. Two buttons and the left/right keys step through the chain a frame at
+a time, Home and End jump to the ends, and the URL hash (`#f14`) makes any frame
+linkable. No slider: the whole value is in comparing one frame with the next, and
+a scrubber invites skimming past exactly that.
+
+The six captured slots are shown as four blocks - subject, setting and materials
+read as one thought, while pose, light and the anomaly stay separate. The anomaly
+gets its own line on purpose: it is the slot that decides what survives into the
+next frame. Deliberately not a page per frame: the whole
 point is comparing frame N with frame N+1, and a document load between them puts
 a white flash exactly where the comparison happens.
