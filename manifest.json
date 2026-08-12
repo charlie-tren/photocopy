@@ -29,6 +29,17 @@
       "anomaly": "A large circular iron storm-drain grate embedded in the center of the tiled room floor.",
       "text": 0.3835,
       "image_distance": 17.0
+    },
+    {
+      "frame": 3,
+      "date": "2026-08-13",
+      "image": "assets/img/f0003.jpg",
+      "alt": "a gold-colored metallic mannequin of a human figure",
+      "from": 2,
+      "caption": "A gold-colored metallic mannequin of a human figure. It stands upright facing forward with its arms held out to the sides and palms open upward. A small enclosed room with white square tiled walls and floor beneath a flat ceiling. Bright white light emanates downward from a single ceiling-mounted light bulb fixture. Gold metal, white ceramic tile, and dark grey iron.",
+      "anomaly": "A large circular iron drain grate built into the center of the tiled floor.",
+      "text": 0.4609,
+      "image_distance": 21.33
     }
   ]
 }
