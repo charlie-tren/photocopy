@@ -43,6 +43,7 @@ def main(argv: list[str]) -> int:
             image, prompt = draw.draw(description, settings)
         except Exception as exc:                       # noqa: BLE001
             print(f"frame {i}: DRAW FAILED ({type(exc).__name__}: {exc})")
+            print(f"  description was: {json.dumps(description, ensure_ascii=False)}")
             break
         path = os.path.join(out_dir, f"p{i:03d}.jpg")
         with open(path, "wb") as fh:

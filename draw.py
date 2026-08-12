@@ -13,6 +13,7 @@ import io
 import json
 import os
 import sys
+import urllib.error
 import urllib.request
 
 from PIL import Image
@@ -55,8 +56,17 @@ def _cf_image(prompt: str, settings: dict) -> bytes:
     body = json.dumps({"prompt": prompt, "steps": cfg["steps"]}).encode()
     req = urllib.request.Request(url, data=body, headers={
         "Authorization": f"Bearer {tok}", "Content-Type": "application/json"})
-    with urllib.request.urlopen(req, timeout=cfg.get("timeout", 120)) as resp:
-        data = json.load(resp)
+    try:
+        with urllib.request.urlopen(req, timeout=cfg.get("timeout", 120)) as resp:
+            data = json.load(resp)
+    except urllib.error.HTTPError as exc:
+        # urllib raises before anyone reads the body, and Cloudflare puts the
+        # actual reason there. Without this a 400 is indistinguishable from a
+        # 400, which is how an entire probe run was wasted.
+        detail = exc.read().decode("utf-8", "replace")[:400]
+        raise RuntimeError(
+            f"Cloudflare HTTP {exc.code}: {detail} | prompt was: "
+            f"{prompt[:300]!r}") from exc
     if not data.get("success") or "result" not in data:
         raise RuntimeError(f"Cloudflare returned no image: {str(data.get('errors'))[:200]}")
     return base64.b64decode(data["result"]["image"])
