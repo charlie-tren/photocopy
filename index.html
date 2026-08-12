@@ -8,7 +8,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Photocopy">
 <meta property="og:title" content="Photocopy">
-<meta property="og:description" content="Each picture is drawn from a description of the one before">
+<meta property="og:description" content="Each picture is a rumour of the one before">
 <style>
 :root{
   --bg:#faf9f7; --card:#fff; --fg:#17150f; --muted:#7a7468; --faint:#a8a294;
@@ -23,13 +23,15 @@ body{margin:0;background:var(--bg);color:var(--fg);
   font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;
   line-height:1.55;-webkit-font-smoothing:antialiased;}
 .wrap{max-width:40rem;margin:0 auto;padding:1.25rem 1.25rem 4rem;}
-/* Top bar: the way back out comes first, not buried in a footer. */
-.top{display:flex;justify-content:space-between;align-items:center;
-  margin:0 0 2.25rem;font-size:0.78rem;}
-.top a{color:var(--muted);text-decoration:none;}
-.top a:hover{color:var(--accent);}
 header{margin:0 0 1.5rem;}
+/* Title and the way back out share a line, baseline-aligned, so the name is
+   the first thing on the page and the exit is not buried in a footer. */
+.titlerow{display:flex;justify-content:space-between;align-items:baseline;
+  gap:1rem;}
 h1{font-size:1.6rem;margin:0;font-weight:600;letter-spacing:-0.015em;}
+.back{flex:0 0 auto;font-size:0.78rem;color:var(--muted);text-decoration:none;
+  white-space:nowrap;}
+.back:hover{color:var(--accent);}
 .tag{color:var(--muted);font-size:0.85rem;margin-top:0.25rem;}
 .frame{position:relative;aspect-ratio:1/1;overflow:hidden;border-radius:3px;
   background:var(--card);box-shadow:0 1px 2px rgba(0,0,0,0.06),
@@ -73,13 +75,13 @@ dl.desc dd:empty::after{content:"-";color:var(--faint);}
 </head>
 <body>
   <div class="wrap">
-    <nav class="top">
-      <a href="https://charlietrenorden.com/">&larr; Other Projects</a>
-      <a href="https://github.com/charlie-tren/photocopy">Source</a>
-    </nav>
     <header>
-      <h1>Photocopy</h1>
-      <div class="tag">Each picture is drawn from a description of the one before</div>
+      <div class="titlerow">
+        <h1>Photocopy</h1>
+        <a class="back" href="https://charlietrenorden.com/">&larr; Other
+          Projects</a>
+      </div>
+      <div class="tag">Each picture is a rumour of the one before</div>
     </header>
     
     <div class="frame"><img id="shot" alt=""></div>
@@ -96,9 +98,7 @@ dl.desc dd:empty::after{content:"-";color:var(--faint);}
     <dl class="desc"><div><dt>scene</dt><dd id="f0"></dd></div><div><dt>pose</dt><dd id="f1"></dd></div><div><dt>light</dt><dd id="f2"></dd></div><div class="anomaly"><dt>anomaly</dt><dd id="f3"></dd></div></dl>
     <div class="note">
       <p>A vision model is shown yesterday's picture and nothing else. What it
-      writes above is the entire prompt for today's. The chain is never reset.
-      <a href="https://github.com/charlie-tren/photocopy/blob/main/docs/collapse.md">Why
-      that is harder than it sounds</a>.</p>
+      writes above is the entire prompt for today's. The chain is never reset.</p>
     </div>
   </div>
   <script>window.__PHOTOCOPY__={"frames": [{"frame": 1, "date": "2026-08-12", "image": "assets/img/f0001.jpg", "alt": "a tall thin figure made of folded brass sheet", "fields": ["A tall thin figure made of folded brass sheet. An empty tiled room with a drain in the floor. Polished brass, white ceramic tile, grey grout.", "Standing square to the viewer, arms held slightly away from the body.", "One bare bulb overhead, hard shadows.", "The figure has no face, only a hinge where a face would be."], "text": null, "image_distance": null}, {"frame": 2, "date": "2026-08-12", "image": "assets/img/f0002.jpg", "alt": "a featureless gold metallic mannequin figure", "fields": ["A featureless gold metallic mannequin figure. A small enclosed room covered entirely in white square ceramic tiles on the floor and walls. Gold metal, white ceramic tile, grey iron, and glass.", "Standing upright facing forward with arms outstretched to either side and palms facing up.", "White overhead light originating from a single bare bulb hanging from the ceiling.", "A large circular iron storm-drain grate embedded in the center of the tiled room floor."], "text": 0.3835, "image_distance": 17.0}]};</script>

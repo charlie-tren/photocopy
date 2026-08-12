@@ -27,13 +27,15 @@ body{margin:0;background:var(--bg);color:var(--fg);
   font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;
   line-height:1.55;-webkit-font-smoothing:antialiased;}
 .wrap{max-width:40rem;margin:0 auto;padding:1.25rem 1.25rem 4rem;}
-/* Top bar: the way back out comes first, not buried in a footer. */
-.top{display:flex;justify-content:space-between;align-items:center;
-  margin:0 0 2.25rem;font-size:0.78rem;}
-.top a{color:var(--muted);text-decoration:none;}
-.top a:hover{color:var(--accent);}
 header{margin:0 0 1.5rem;}
+/* Title and the way back out share a line, baseline-aligned, so the name is
+   the first thing on the page and the exit is not buried in a footer. */
+.titlerow{display:flex;justify-content:space-between;align-items:baseline;
+  gap:1rem;}
 h1{font-size:1.6rem;margin:0;font-weight:600;letter-spacing:-0.015em;}
+.back{flex:0 0 auto;font-size:0.78rem;color:var(--muted);text-decoration:none;
+  white-space:nowrap;}
+.back:hover{color:var(--accent);}
 .tag{color:var(--muted);font-size:0.85rem;margin-top:0.25rem;}
 .frame{position:relative;aspect-ratio:1/1;overflow:hidden;border-radius:3px;
   background:var(--card);box-shadow:0 1px 2px rgba(0,0,0,0.06),
@@ -196,12 +198,12 @@ def render_page(frames_raw: list[dict], meta: dict) -> str:
 </head>
 <body>
   <div class="wrap">
-    <nav class="top">
-      <a href="https://charlietrenorden.com/">&larr; Other Projects</a>
-      <a href="https://github.com/charlie-tren/photocopy">Source</a>
-    </nav>
     <header>
-      <h1>{html.escape(meta['site_name'])}</h1>
+      <div class="titlerow">
+        <h1>{html.escape(meta['site_name'])}</h1>
+        <a class="back" href="https://charlietrenorden.com/">&larr; Other
+          Projects</a>
+      </div>
       <div class="tag">{html.escape(meta['tagline'])}</div>
     </header>
     {empty}
@@ -219,9 +221,7 @@ def render_page(frames_raw: list[dict], meta: dict) -> str:
     <dl class="desc">{rows}</dl>
     <div class="note">
       <p>A vision model is shown yesterday's picture and nothing else. What it
-      writes above is the entire prompt for today's. The chain is never reset.
-      <a href="https://github.com/charlie-tren/photocopy/blob/main/docs/collapse.md">Why
-      that is harder than it sounds</a>.</p>
+      writes above is the entire prompt for today's. The chain is never reset.</p>
     </div>
   </div>
   <script>window.__PHOTOCOPY__={payload};</script>

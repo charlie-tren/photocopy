@@ -3,7 +3,7 @@ site:
   # NOT "draws itself" - nothing in the loop tells the model the figure is it,
   # and there is no self-portrait anywhere in the chain. It is shown a picture,
   # it describes what it sees, and the description draws the next picture.
-  tagline: "Each picture is drawn from a description of the one before"
+  tagline: "Each picture is a rumour of the one before"
   # Project Pages under charlie-tren, so GitHub serves this off the hub's own
   # custom domain at /<repo>/. No subdomain, no DNS record.
   base_url: "https://charlietrenorden.com/photocopy/"
