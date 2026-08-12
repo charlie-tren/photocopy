@@ -36,7 +36,8 @@ kind of automatic reset, which was considered and cut on purpose.
 
 ```bash
 pip install -r requirements.txt
-python step.py            # advance the chain one frame
+python step.py            # advance the chain one frame (no-op if today has one)
+python step.py --force    # ...even if today already has one
 python step.py --render   # rebuild the site from existing data, no API calls
 python -m pytest tests/ -q
 ```

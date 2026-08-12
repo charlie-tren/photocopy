@@ -160,3 +160,15 @@ def test_normalise_gives_every_frame_one_width():
 def test_draw_refuses_a_description_too_sparse_to_be_a_prompt():
     with pytest.raises(ValueError):
         draw.draw(desc(subject="a figure"), {"image": {"store_width": 768}})
+
+
+# --- one frame per day ------------------------------------------------------
+
+def test_filed_on_guards_a_second_run_in_the_same_day():
+    # The backup cron runs every day, so on a normal day it MUST find the work
+    # already done and do nothing. Without this the chain files twice.
+    import chain
+    frames = [{"n": 1, "date": "2026-08-12"}, {"n": 2, "date": "2026-08-13"}]
+    assert chain.filed_on(frames, "2026-08-13")
+    assert not chain.filed_on(frames, "2026-08-14")
+    assert not chain.filed_on([], "2026-08-14")

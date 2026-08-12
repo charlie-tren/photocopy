@@ -35,6 +35,17 @@ def save_frame(frame: dict) -> str:
     return write_json(frame_path(frame["n"]), frame)
 
 
+def filed_on(frames: list[dict], date: str) -> bool:
+    """Has a frame already been drawn for this date?
+
+    Without this the workflow is not safe to run twice in a day, and the whole
+    conceit is one frame per day - frames 1 and 2 both carry 2026-08-12 because
+    the job was dispatched twice by hand on the first day, which is exactly the
+    mistake this prevents.
+    """
+    return any(f.get("date") == date for f in frames)
+
+
 def make_frame(n: int, date: str, description: dict, prompt: str,
                image: str, dhash: int, reading: dict) -> dict:
     return {

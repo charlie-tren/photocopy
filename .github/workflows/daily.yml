@@ -5,7 +5,12 @@ on:
     # 20:40 UTC / 06:40 AEST. Deliberately off the hour: The Aftertimes found
     # that the on-the-hour slot is congested enough on GitHub's schedulers to be
     # dropped or run an hour late.
-    - cron: "40 20 * * *"
+    # Two crons, both inside the same UTC day so the already-filed guard in
+    # step.py makes the second one a no-op when the first worked. The Aftertimes
+    # learned this the hard way: a single on-the-hour schedule ran 40-64 minutes
+    # late and was sometimes dropped entirely.
+    - cron: "40 20 * * *"   # 20:40 UTC / 06:40 AEST - primary
+    - cron: "40 22 * * *"   # 22:40 UTC / 08:40 AEST - backup if the primary was dropped
   workflow_dispatch:
 
 permissions:

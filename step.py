@@ -1,6 +1,7 @@
 """One day of the loop.
 
     python step.py            # advance the chain by one frame
+    python step.py --force    # ...even if today already has one
     python step.py --render   # rebuild the site from what already exists
 
 The order matters. The image is written to disk BEFORE the frame record is saved,
@@ -47,10 +48,16 @@ def _read_image(rel_path: str) -> bytes:
         return fh.read()
 
 
-def advance(settings: dict) -> dict:
-    """Add one frame to the chain."""
+def advance(settings: dict, force: bool = False) -> dict | None:
+    """Add one frame to the chain, unless today already has one."""
     frames = chain.load_frames()
     today = tz_now(settings).date().isoformat()
+
+    if not force and chain.filed_on(frames, today):
+        # Not an error: the backup cron exists precisely so a dropped primary
+        # still files, which means most days it runs and finds the work done.
+        print(f"already filed for {today}; nothing to do")
+        return None
 
     if not frames:
         # Frame 1 is drawn straight from the written seed: there is no previous
@@ -99,7 +106,7 @@ def main(argv: list[str]) -> int:
         print("rebuilt site")
         return 0
     _load_dotenv()
-    advance(settings)
+    advance(settings, force="--force" in argv)
     return 0
 
 
