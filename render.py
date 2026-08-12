@@ -25,13 +25,19 @@ _CSS = """
 @font-face{font-family:'Silkscreen';font-style:normal;font-weight:700;
   font-display:swap;src:url(assets/fonts/silkscreen-700-latin.woff2) format('woff2');
   unicode-range:U+0000-00FF,U+2018-201A,U+201C-201E,U+2022,U+2026,U+2039-203A;}
+/* --muted and --faint both carry real text, including the provenance line and
+   the frame counter, which are 9-10px bitmap type. Both therefore clear WCAG AA
+   (4.5:1) against their own background, measured, not eyeballed:
+   light  muted 6.33  faint 4.68   dark  muted 6.38  faint 4.98
+   The earlier values were 4.41/2.42 on light and 6.38/3.35 on dark, so the
+   small print was failing in both themes and badly in light. */
 :root{
-  --bg:#faf9f7; --card:#fff; --fg:#17150f; --muted:#7a7468; --faint:#a8a294;
+  --bg:#faf9f7; --card:#fff; --fg:#17150f; --muted:#615c50; --faint:#767061;
   --rule:#e3dfd6; --accent:#8a3a1e;
 }
 @media (prefers-color-scheme:dark){
   :root{--bg:#131211; --card:#1b1a18; --fg:#eceae5; --muted:#9d968a;
-        --faint:#6e675c; --rule:#2c2a26; --accent:#d97a55;}
+        --faint:#8a8377; --rule:#2c2a26; --accent:#d97a55;}
 }
 *{box-sizing:border-box;}
 body{margin:0;background:var(--bg);color:var(--fg);
