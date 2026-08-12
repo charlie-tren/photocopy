@@ -7,7 +7,11 @@ today's photograph. Then it is shown that one.
 No memory, no earlier picture, no earlier words, no idea what it is looking at.
 One frame a day, forever. One chain, started once, never reset.
 
-Live at <https://likeness.charlietrenorden.com> (pending DNS).
+Live at <https://charlietrenorden.com/the-likeness/>.
+
+It is not a self-portrait. Nothing in the loop tells the model that the figure
+is it, and nothing asks it to draw itself - it is shown a picture, it writes
+down what it can see, and that description draws the next picture.
 
 ## The loop
 
