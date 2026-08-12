@@ -14,13 +14,16 @@ import chain
 from common import BEACON, hyphenate, load_settings, rel, write_json
 
 _CSS = """
-/* Bodoni Moda for the title only. High thick-thin contrast reads as a gallery
-   wall label at display size and turns to hairlines at body size, so it is
-   never used below the tagline. Self-hosted: no third-party request, and the
-   page renders the same if Google Fonts is blocked. SIL OFL, see
-   assets/fonts/README.md. */
-@font-face{font-family:'Bodoni Moda';font-style:normal;font-weight:400 700;
-  font-display:swap;src:url(assets/fonts/bodoni-moda-latin.woff2) format('woff2');
+/* Silkscreen for the chrome only: title, frame counter, small print. It is a
+   bitmap face drawn on a pixel grid, so it has no curves and only looks right
+   where the grid lands on whole pixels - which also makes it unreadable as
+   running prose, hence the description below stays in the system font.
+   Self-hosted, SIL OFL, see assets/fonts/README.md. */
+@font-face{font-family:'Silkscreen';font-style:normal;font-weight:400;
+  font-display:swap;src:url(assets/fonts/silkscreen-400-latin.woff2) format('woff2');
+  unicode-range:U+0000-00FF,U+2018-201A,U+201C-201E,U+2022,U+2026,U+2039-203A;}
+@font-face{font-family:'Silkscreen';font-style:normal;font-weight:700;
+  font-display:swap;src:url(assets/fonts/silkscreen-700-latin.woff2) format('woff2');
   unicode-range:U+0000-00FF,U+2018-201A,U+201C-201E,U+2022,U+2026,U+2039-203A;}
 :root{
   --bg:#faf9f7; --card:#fff; --fg:#17150f; --muted:#7a7468; --faint:#a8a294;
@@ -40,10 +43,10 @@ header{margin:0 0 1.5rem;}
    the first thing on the page and the exit is not buried in a footer. */
 .titlerow{display:flex;justify-content:space-between;align-items:baseline;
   gap:1rem;}
-h1{font-family:'Bodoni Moda',Georgia,serif;font-size:2.4rem;margin:0;
-  font-weight:400;letter-spacing:0;line-height:1.05;}
-.back{flex:0 0 auto;font-size:0.78rem;color:var(--muted);text-decoration:none;
-  white-space:nowrap;}
+h1{font-family:'Silkscreen',monospace;font-size:1.9rem;margin:0;
+  font-weight:700;letter-spacing:0.01em;line-height:1.1;}
+.back{flex:0 0 auto;font-family:'Silkscreen',monospace;font-size:0.62rem;
+  color:var(--muted);text-decoration:none;white-space:nowrap;}
 .back:hover{color:var(--accent);}
 .tag{color:var(--muted);font-size:0.85rem;margin-top:0.25rem;}
 .frame{position:relative;aspect-ratio:1/1;overflow:hidden;border-radius:3px;
@@ -61,27 +64,23 @@ h1{font-family:'Bodoni Moda',Georgia,serif;font-size:2.4rem;margin:0;
 .nav:disabled{opacity:0.28;cursor:default;}
 .nav:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
 .pos{flex:1 1 auto;text-align:center;min-width:0;}
-.pos .where{display:block;font-size:0.9rem;font-weight:600;}
-.pos .sub{display:block;font-size:0.7rem;color:var(--faint);margin-top:0.1rem;}
-dl.desc{margin:2rem 0 0;padding-top:1.25rem;border-top:1px solid var(--rule);
-  display:grid;grid-template-columns:4.5rem 1fr;gap:0.7rem 1rem;}
-/* display:contents so dt and dd are themselves grid items - without it each
-   wrapper div is one cell, the labels wrap inside a 4.5rem column, and the
-   block triples in height. */
-dl.desc > div{display:contents;}
-dl.desc dt{color:var(--faint);font-size:0.62rem;letter-spacing:0.14em;
-  text-transform:uppercase;padding-top:0.28rem;}
-dl.desc dd{margin:0;font-size:0.94rem;}
-dl.desc dd:empty::after{content:"-";color:var(--faint);}
-.anomaly dd{color:var(--accent);}
+.pos .where{display:block;font-family:'Silkscreen',monospace;font-size:0.8rem;
+  font-weight:700;}
+.pos .sub{display:block;font-family:'Silkscreen',monospace;font-size:0.6rem;
+  color:var(--faint);margin-top:0.3rem;}
+/* One caption, not a labelled form. The six captured slots read as a single
+   paragraph; the anomaly keeps the accent colour so the detail the chain is
+   carrying is still visible, but without a jargon label announcing it. */
+.caption{margin:1.75rem 0 0;padding-top:1.25rem;border-top:1px solid var(--rule);
+  font-size:1rem;line-height:1.6;}
+.caption .anom{color:var(--accent);}
 .note{margin:1.75rem 0 0;padding-top:1.1rem;border-top:1px solid var(--rule);
   color:var(--muted);font-size:0.78rem;}
 .note p{margin:0;}
 .note a{color:var(--accent);}
 @media (max-width:30rem){
-  dl.desc{grid-template-columns:1fr;gap:0.1rem;}
-  dl.desc dt{padding-top:0.75rem;}
-  h1{font-size:2rem;}
+  .caption{font-size:0.95rem;}
+  h1{font-size:1.4rem;}
 }
 """
 
@@ -93,7 +92,8 @@ _JS = r"""
   if(!F.length)return;
   var img=document.getElementById('shot'),prev=document.getElementById('prev'),
       next=document.getElementById('next'),where=document.getElementById('where'),
-      sub=document.getElementById('sub');
+      sub=document.getElementById('sub'),cap=document.getElementById('cap'),
+      anom=document.getElementById('anom');
   var pre=[];
   function warm(k){[k-1,k+1].forEach(function(j){
     if(j<0||j>=F.length)return;var im=new Image();im.src=F[j].image;pre.push(im);
@@ -106,8 +106,7 @@ _JS = r"""
     sub.textContent=f.date+(f.text==null?'':
       '  \u00b7  '+Math.round(f.text*100)+'% alike, '
       +Math.round(f.image_distance)+'/64 apart');
-    f.fields.forEach(function(v,n){
-      document.getElementById('f'+n).textContent=v;});
+    cap.textContent=f.caption;anom.textContent=f.anomaly;
     prev.disabled=(i===0);next.disabled=(i===F.length-1);
     if(push)history.replaceState(null,'','#f'+f.frame);
     warm(i);
@@ -131,35 +130,28 @@ _JS = r"""
 """
 
 
-#: How the six captured slots are shown. Subject, setting and materials are one
-#: thought - what the thing is and what it is made of - and three separate
-#: labelled rows for them made the page read like a form. Pose, light and the
-#: anomaly stay on their own: the anomaly in particular is the slot that decides
-#: what survives into the next frame, so it should not be buried in a paragraph.
-DISPLAY = (
-    ("scene", ("subject", "setting", "materials")),
-    ("pose", ("posture",)),
-    ("light", ("light",)),
-    ("anomaly", ("anomaly",)),
-)
+#: The description is shown as one caption, in this order. The anomaly comes
+#: last and is coloured rather than labelled: it is the slot that decides which
+#: detail survives into the next frame, so it is worth seeing, but "anomaly" is
+#: a word from the pipeline and means nothing to anyone looking at a picture.
+CAPTION_SLOTS = ("subject", "posture", "setting", "light", "materials")
+ACCENT_SLOT = "anomaly"
 
 
 def _sentence(text: str) -> str:
     """One model clause as a sentence. They arrive uncapitalised and mostly
-    unpunctuated, and three of them run together need both to be readable."""
+    unpunctuated, and six of them run together need both to be readable."""
     text = (text or "").strip().rstrip(".")
     if not text:
         return ""
     return text[0].upper() + text[1:] + "."
 
 
-def group(desc: dict) -> list[str]:
-    """The description as the four blocks the page shows."""
-    out = []
-    for _label, slots in DISPLAY:
-        parts = [_sentence(hyphenate(desc.get(slot, ""))) for slot in slots]
-        out.append(" ".join(p for p in parts if p))
-    return out
+def caption(desc: dict) -> tuple[str, str]:
+    """(the caption, the anomaly clause shown after it in the accent colour)."""
+    body = " ".join(
+        p for p in (_sentence(hyphenate(desc.get(s, ""))) for s in CAPTION_SLOTS) if p)
+    return body, _sentence(hyphenate(desc.get(ACCENT_SLOT, "")))
 
 
 def flatten(frames: list[dict]) -> list[dict]:
@@ -168,12 +160,14 @@ def flatten(frames: list[dict]) -> list[dict]:
     for frame in frames:
         desc = frame.get("description", {})
         reading = frame.get("reading") or {}
+        body, anom = caption(desc)
         out.append({
             "frame": frame["n"],
             "date": frame.get("date", ""),
             "image": frame["image"],
             "alt": (desc.get("subject") or "One frame of the chain")[:180],
-            "fields": group(desc),
+            "caption": body,
+            "anomaly": anom,
             "text": reading.get("text"),
             "image_distance": reading.get("image"),
         })
@@ -182,10 +176,6 @@ def flatten(frames: list[dict]) -> list[dict]:
 
 def render_page(frames_raw: list[dict], meta: dict) -> str:
     frames = flatten(frames_raw)
-    rows = "".join(
-        '<div{cls}><dt>{name}</dt><dd id="f{i}"></dd></div>'.format(
-            cls=' class="anomaly"' if name == "anomaly" else "", name=name, i=i)
-        for i, (name, _slots) in enumerate(DISPLAY))
     payload = json.dumps({"frames": frames}, ensure_ascii=False)
     empty = "" if frames else (
         '<p class="note">The chain has not started yet. The first frame is drawn '
@@ -227,7 +217,7 @@ def render_page(frames_raw: list[dict], meta: dict) -> str:
       <button class="nav" id="next" type="button" aria-label="Next frame"
               aria-keyshortcuts="ArrowRight">&rarr;</button>
     </div>
-    <dl class="desc">{rows}</dl>
+    <p class="caption"><span id="cap"></span> <span class="anom" id="anom"></span></p>
     <div class="note">
       <p>A vision model is shown yesterday's picture and nothing else. What it
       writes above is the entire prompt for today's. The chain is never reset.</p>

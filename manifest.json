@@ -13,12 +13,8 @@
       "date": "2026-08-12",
       "image": "assets/img/f0001.jpg",
       "alt": "a tall thin figure made of folded brass sheet",
-      "fields": [
-        "A tall thin figure made of folded brass sheet. An empty tiled room with a drain in the floor. Polished brass, white ceramic tile, grey grout.",
-        "Standing square to the viewer, arms held slightly away from the body.",
-        "One bare bulb overhead, hard shadows.",
-        "The figure has no face, only a hinge where a face would be."
-      ],
+      "caption": "A tall thin figure made of folded brass sheet. Standing square to the viewer, arms held slightly away from the body. An empty tiled room with a drain in the floor. One bare bulb overhead, hard shadows. Polished brass, white ceramic tile, grey grout.",
+      "anomaly": "The figure has no face, only a hinge where a face would be.",
       "text": null,
       "image_distance": null
     },
@@ -27,12 +23,8 @@
       "date": "2026-08-12",
       "image": "assets/img/f0002.jpg",
       "alt": "a featureless gold metallic mannequin figure",
-      "fields": [
-        "A featureless gold metallic mannequin figure. A small enclosed room covered entirely in white square ceramic tiles on the floor and walls. Gold metal, white ceramic tile, grey iron, and glass.",
-        "Standing upright facing forward with arms outstretched to either side and palms facing up.",
-        "White overhead light originating from a single bare bulb hanging from the ceiling.",
-        "A large circular iron storm-drain grate embedded in the center of the tiled room floor."
-      ],
+      "caption": "A featureless gold metallic mannequin figure. Standing upright facing forward with arms outstretched to either side and palms facing up. A small enclosed room covered entirely in white square ceramic tiles on the floor and walls. White overhead light originating from a single bare bulb hanging from the ceiling. Gold metal, white ceramic tile, grey iron, and glass.",
+      "anomaly": "A large circular iron storm-drain grate embedded in the center of the tiled room floor.",
       "text": 0.3835,
       "image_distance": 17.0
     }

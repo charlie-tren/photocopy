@@ -63,9 +63,13 @@ a time, Home and End jump to the ends, and the URL hash (`#f14`) makes any frame
 linkable. No slider: the whole value is in comparing one frame with the next, and
 a scrubber invites skimming past exactly that.
 
-The six captured slots are shown as four blocks - subject, setting and materials
-read as one thought, while pose, light and the anomaly stay separate. The anomaly
-gets its own line on purpose: it is the slot that decides what survives into the
-next frame. Deliberately not a page per frame: the whole
+The six captured slots are shown as one caption rather than a labelled form. The
+anomaly clause comes last in the accent colour: it is the slot that decides which
+detail survives into the next frame, so it is worth seeing, but "anomaly" is a
+word from the pipeline and means nothing to a reader looking at a picture.
+
+Silkscreen sets the chrome - title, frame counter, small print. It is a bitmap
+face with no curves, unreadable as running prose, so the caption stays in the
+system font. Deliberately not a page per frame: the whole
 point is comparing frame N with frame N+1, and a document load between them puts
 a white flash exactly where the comparison happens.
