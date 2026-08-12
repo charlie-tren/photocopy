@@ -71,8 +71,27 @@ h1{font-family:'Silkscreen',monospace;font-size:1.9rem;margin:0;
 /* One caption, not a labelled form. The six captured slots read as a single
    paragraph; the anomaly keeps the accent colour so the detail the chain is
    carrying is still visible, but without a jargon label announcing it. */
-.caption{margin:1.75rem 0 0;padding-top:1.25rem;border-top:1px solid var(--rule);
-  font-size:1rem;line-height:1.6;}
+.info{font-family:'Silkscreen',monospace;font-size:0.55rem;line-height:1;
+  margin-left:0.45rem;width:1.05rem;height:1.05rem;padding:0;cursor:pointer;
+  border:1px solid var(--rule);border-radius:50%;background:transparent;
+  color:var(--faint);vertical-align:0.05rem;position:relative;}
+/* The dot is 17px, well under the 44px a thumb needs. Grow the hit area
+   without growing the mark. */
+.info::after{content:"";position:absolute;inset:-14px;}
+.info:hover,.info[aria-expanded="true"]{border-color:var(--accent);
+  color:var(--accent);}
+.infobox{margin:1rem 0 0;padding:0.9rem 1rem;border:1px solid var(--rule);
+  border-radius:3px;background:var(--card);color:var(--muted);font-size:0.78rem;}
+.infobox p{margin:0 0 0.55rem;}
+.infobox p:last-child{margin:0;}
+.infobox b{color:var(--fg);font-weight:600;}
+/* The caption was written while looking at the PREVIOUS frame - it is the
+   prompt that drew this one, not a description of it. Unlabelled, everyone
+   reads it the wrong way round. */
+.prov{margin:1.75rem 0 0.5rem;padding-top:1.25rem;
+  border-top:1px solid var(--rule);font-family:'Silkscreen',monospace;
+  font-size:0.58rem;color:var(--faint);line-height:1.5;}
+.caption{margin:0;font-size:1rem;line-height:1.6;}
 .caption .anom{color:var(--accent);}
 .note{margin:1.75rem 0 0;padding-top:1.1rem;border-top:1px solid var(--rule);
   color:var(--muted);font-size:0.78rem;}
@@ -93,7 +112,8 @@ _JS = r"""
   var img=document.getElementById('shot'),prev=document.getElementById('prev'),
       next=document.getElementById('next'),where=document.getElementById('where'),
       sub=document.getElementById('sub'),cap=document.getElementById('cap'),
-      anom=document.getElementById('anom');
+      anom=document.getElementById('anom'),prov=document.getElementById('prov'),
+      info=document.getElementById('info'),box=document.getElementById('infobox');
   var pre=[];
   function warm(k){[k-1,k+1].forEach(function(j){
     if(j<0||j>=F.length)return;var im=new Image();im.src=F[j].image;pre.push(im);
@@ -103,14 +123,27 @@ _JS = r"""
     var f=F[i];
     img.src=f.image;img.alt=f.alt;
     where.textContent='Frame '+f.frame+' of '+F.length;
+    // Frame 1 has no pair to compare against, so there is nothing for the
+    // info button to explain and it would sit beside a bare date.
+    info.hidden=(f.text==null);
+    if(f.text==null&&!box.hasAttribute('hidden')){
+      box.setAttribute('hidden','');info.setAttribute('aria-expanded','false');}
     sub.textContent=f.date+(f.text==null?'':
       '  \u00b7  '+Math.round(f.text*100)+'% alike, '
       +Math.round(f.image_distance)+'/64 apart');
     cap.textContent=f.caption;anom.textContent=f.anomaly;
+    prov.textContent=(f.from==null)
+      ?'The written seed. Nothing came before it.'
+      :'Written while looking at frame '+f.from+'. These words were the whole '
+       +'prompt that drew the picture above.';
     prev.disabled=(i===0);next.disabled=(i===F.length-1);
     if(push)history.replaceState(null,'','#f'+f.frame);
     warm(i);
   }
+  info.addEventListener('click',function(){
+    var open=box.hasAttribute('hidden');
+    if(open){box.removeAttribute('hidden');}else{box.setAttribute('hidden','');}
+    info.setAttribute('aria-expanded',open?'true':'false');});
   function jump(d){show(i+d,true);}
   prev.addEventListener('click',function(){jump(-1);});
   next.addEventListener('click',function(){jump(1);});
@@ -166,6 +199,11 @@ def flatten(frames: list[dict]) -> list[dict]:
             "date": frame.get("date", ""),
             "image": frame["image"],
             "alt": (desc.get("subject") or "One frame of the chain")[:180],
+            # Which frame the model was looking at when it wrote this. Frame 1
+            # has none: it came from the written seed. Without this the caption
+            # reads as a description OF the picture, which is backwards - it is
+            # the description that DREW it.
+            "from": frame["n"] - 1 if frame["n"] > 1 else None,
             "caption": body,
             "anomaly": anom,
             "text": reading.get("text"),
@@ -212,11 +250,27 @@ def render_page(frames_raw: list[dict], meta: dict) -> str:
               aria-keyshortcuts="ArrowLeft">&larr;</button>
       <div class="pos">
         <span class="where" id="where"></span>
-        <span class="sub" id="sub"></span>
+        <span class="sub"><span id="sub"></span><button type="button" id="info"
+          class="info" aria-expanded="false" aria-controls="infobox"
+          title="How these numbers are worked out">i</button></span>
       </div>
       <button class="nav" id="next" type="button" aria-label="Next frame"
               aria-keyshortcuts="ArrowRight">&rarr;</button>
     </div>
+    <div id="infobox" class="infobox" hidden>
+      <p><b>alike</b> compares the words. Content words of four letters or more
+      are pulled out of each description, stopwords dropped, and each pair of
+      recent frames scored on how much those sets overlap. Sets, not counts, so
+      a word repeated nine times in one description still counts once.</p>
+      <p><b>apart</b> compares the pictures. Each image is shrunk to a 9x8 grid
+      of grey, every pixel compared with its right-hand neighbour to give 64
+      bits, and two frames scored by how many of those bits differ. It reads
+      structure and ignores brightness. 0 is identical, about 32 is what two
+      unrelated pictures score, 64 is inverted.</p>
+      <p>Both are averaged over every pair in the last five frames. Nothing acts
+      on them.</p>
+    </div>
+    <p class="prov" id="prov"></p>
     <p class="caption"><span id="cap"></span> <span class="anom" id="anom"></span></p>
     <div class="note">
       <p>A vision model is shown yesterday's picture and nothing else. What it

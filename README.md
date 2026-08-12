@@ -68,6 +68,12 @@ anomaly clause comes last in the accent colour: it is the slot that decides whic
 detail survives into the next frame, so it is worth seeing, but "anomaly" is a
 word from the pipeline and means nothing to a reader looking at a picture.
 
+A line above the caption says which frame the model was looking at when it wrote
+it. This is load-bearing, not decoration: the caption shown with frame N was
+written from frame N-1 and is the prompt that DREW frame N. Without the line
+every reader takes it as a description of the picture they are looking at, which
+is exactly backwards.
+
 Silkscreen sets the chrome - title, frame counter, small print. It is a bitmap
 face with no curves, unreadable as running prose, so the caption stays in the
 system font. Deliberately not a page per frame: the whole
