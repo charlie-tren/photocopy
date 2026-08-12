@@ -39,9 +39,9 @@ header{margin:0 0 1.5rem;}
    the first thing on the page and the exit is not buried in a footer. */
 .titlerow{display:flex;justify-content:space-between;align-items:baseline;
   gap:1rem;}
-h1{font-family:'Silkscreen',monospace;font-size:1.9rem;margin:0;
+h1{font-family:'Silkscreen',monospace;font-size:2.3rem;margin:0;
   font-weight:700;letter-spacing:0.01em;line-height:1.1;}
-.back{flex:0 0 auto;font-family:'Silkscreen',monospace;font-size:0.62rem;
+.back{flex:0 0 auto;font-family:'Silkscreen',monospace;font-size:0.78rem;
   color:var(--muted);text-decoration:none;white-space:nowrap;}
 .back:hover{color:var(--accent);}
 .tag{color:var(--muted);font-size:0.85rem;margin-top:0.25rem;}
@@ -95,7 +95,7 @@ h1{font-family:'Silkscreen',monospace;font-size:1.9rem;margin:0;
 .note a{color:var(--accent);}
 @media (max-width:30rem){
   .caption{font-size:0.95rem;}
-  h1{font-size:1.4rem;}
+  h1{font-size:1.7rem;}
 }
 </style>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "32b821209b5441a08df42ccf61c9e6c2"}'></script>
@@ -125,23 +125,17 @@ h1{font-family:'Silkscreen',monospace;font-size:1.9rem;margin:0;
               aria-keyshortcuts="ArrowRight">&rarr;</button>
     </div>
     <div id="infobox" class="infobox" hidden>
-      <p><b>alike</b> compares the words. Content words of four letters or more
-      are pulled out of each description, stopwords dropped, and each pair of
-      recent frames scored on how much those sets overlap. Sets, not counts, so
-      a word repeated nine times in one description still counts once.</p>
-      <p><b>apart</b> compares the pictures. Each image is shrunk to a 9x8 grid
-      of grey, every pixel compared with its right-hand neighbour to give 64
-      bits, and two frames scored by how many of those bits differ. It reads
-      structure and ignores brightness. 0 is identical, about 32 is what two
-      unrelated pictures score, 64 is inverted.</p>
-      <p>Both are averaged over every pair in the last five frames. Nothing acts
-      on them.</p>
+      <p><b>alike</b> is how many of the same words the recent descriptions
+      use.</p>
+      <p><b>apart</b> is how different the recent pictures are in structure.
+      0 is identical, about 32 is two unrelated pictures, 64 is inverted.</p>
+      <p>Both averaged over the last five frames. Nothing acts on them.</p>
     </div>
     <p class="prov" id="prov"></p>
     <p class="caption"><span id="cap"></span> <span class="anom" id="anom"></span></p>
     <div class="note">
-      <p>A vision model is shown yesterday's picture and nothing else. What it
-      writes above is the entire prompt for today's. The chain is never reset.</p>
+      <p>The model only ever sees the previous picture. Its description becomes
+      the next prompt. Nothing else carries over.</p>
     </div>
   </div>
   <script>window.__PHOTOCOPY__={"frames": [{"frame": 1, "date": "2026-08-12", "image": "assets/img/f0001.jpg", "alt": "a tall thin figure made of folded brass sheet", "from": null, "caption": "A tall thin figure made of folded brass sheet. Standing square to the viewer, arms held slightly away from the body. An empty tiled room with a drain in the floor. One bare bulb overhead, hard shadows. Polished brass, white ceramic tile, grey grout.", "anomaly": "The figure has no face, only a hinge where a face would be.", "text": null, "image_distance": null}, {"frame": 2, "date": "2026-08-12", "image": "assets/img/f0002.jpg", "alt": "a featureless gold metallic mannequin figure", "from": 1, "caption": "A featureless gold metallic mannequin figure. Standing upright facing forward with arms outstretched to either side and palms facing up. A small enclosed room covered entirely in white square ceramic tiles on the floor and walls. White overhead light originating from a single bare bulb hanging from the ceiling. Gold metal, white ceramic tile, grey iron, and glass.", "anomaly": "A large circular iron storm-drain grate embedded in the center of the tiled room floor.", "text": 0.3835, "image_distance": 17.0}]};</script>
@@ -173,9 +167,8 @@ h1{font-family:'Silkscreen',monospace;font-size:1.9rem;margin:0;
       +Math.round(f.image_distance)+'/64 apart');
     cap.textContent=f.caption;anom.textContent=f.anomaly;
     prov.textContent=(f.from==null)
-      ?'The written seed. Nothing came before it.'
-      :'Written while looking at frame '+f.from+'. These words were the whole '
-       +'prompt that drew the picture above.';
+      ?'Written seed. Nothing before it.'
+      :'Description generated from frame '+f.from;
     prev.disabled=(i===0);next.disabled=(i===F.length-1);
     if(push)history.replaceState(null,'','#f'+f.frame);
     warm(i);
