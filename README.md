@@ -1,4 +1,4 @@
-# The Likeness
+# Photocopy
 
 A machine is shown yesterday's photograph and nothing else. It fills in six
 slots describing what it can see. Those six lines are the entire prompt for
@@ -7,7 +7,7 @@ today's photograph. Then it is shown that one.
 No memory, no earlier picture, no earlier words, no idea what it is looking at.
 One frame a day, forever. One chain, started once, never reset.
 
-Live at <https://charlietrenorden.com/the-likeness/>.
+Live at <https://charlietrenorden.com/photocopy/>.
 
 It is not a self-portrait. Nothing in the loop tells the model that the figure
 is it, and nothing asks it to draw itself - it is shown a picture, it writes

@@ -69,7 +69,7 @@ footer{margin-top:2.4rem;padding-top:1rem;border-top:1px solid var(--rule);
 
 _JS = """
 (function(){
-  var M=window.__LIKENESS__||{frames:[]},F=M.frames,i=F.length-1;
+  var M=window.__PHOTOCOPY__||{frames:[]},F=M.frames,i=F.length-1;
   if(!F.length)return;
   var img=document.getElementById('shot'),prev=document.getElementById('prev'),
       next=document.getElementById('next'),scrub=document.getElementById('scrub'),
@@ -216,7 +216,7 @@ def render_page(frames_raw: list[dict], meta: dict) -> str:
       <a href="https://charlietrenorden.com/">&larr; Other Projects</a>
     </footer>
   </div>
-  <script>window.__LIKENESS__={payload};</script>
+  <script>window.__PHOTOCOPY__={payload};</script>
   <script>{_JS}</script>
 </body>
 </html>
