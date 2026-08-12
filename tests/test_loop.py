@@ -172,3 +172,35 @@ def test_filed_on_guards_a_second_run_in_the_same_day():
     assert chain.filed_on(frames, "2026-08-13")
     assert not chain.filed_on(frames, "2026-08-14")
     assert not chain.filed_on([], "2026-08-14")
+
+
+# --- text artefacts ---------------------------------------------------------
+
+def test_text_artefacts_are_stripped_from_descriptions():
+    # The real failure: an 18-frame probe rendered a watermark, the describer
+    # correctly named it as the most distinctive thing, and it went into the
+    # next prompt as an instruction to draw text. It got bigger. Text must
+    # never survive into a description.
+    real = ("dark cast bronze, polished concrete. the white text reading "
+            "'PREKS-OT CONGLIONCE' printed in the bottom left corner")
+    assert describe.strip_text_artefacts(real) == "dark cast bronze, polished concrete."
+    assert describe.parse({"subject": "a bronze man", "anomaly": real})["anomaly"] \
+        == "dark cast bronze, polished concrete."
+
+
+def test_stripping_is_surgical_not_blunt():
+    # Only the offending sentence goes; the rest of the observation survives.
+    src = "A row of grey lockers. The word EXIT is written above the door. The floor is wet."
+    assert describe.strip_text_artefacts(src) == "A row of grey lockers. The floor is wet."
+
+
+def test_innocent_descriptions_are_untouched():
+    for s in ("a brass hinge where a face would be",
+              "a large circular iron storm-drain grate embedded in the floor",
+              "one bare bulb overhead, hard shadows",
+              ""):
+        assert describe.strip_text_artefacts(s) == s
+
+
+def test_describer_is_told_to_ignore_lettering():
+    assert "IGNORE IT COMPLETELY" in describe.build_prompt()

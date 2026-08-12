@@ -18,6 +18,7 @@ than supplied from outside:
 from __future__ import annotations
 
 import base64
+import re
 
 import gemini
 
@@ -35,6 +36,32 @@ _GUIDE = {
                 "generic version of this picture would NOT have. Name it exactly."),
 }
 
+#: Rendered lettering is an artefact of the image generator, not part of the
+#: scene, and it is a RUNAWAY if it ever reaches a description. The anomaly slot
+#: asks for the most distinctive thing in the frame, and text is always the most
+#: distinctive thing in a photograph, so one stray watermark gets promoted into
+#: the next prompt as an instruction to draw text - which draws bigger text,
+#: which is more distinctive still. Observed live: an 18-frame probe grew
+#: "PREKS-OT CONGLIONCE" from a corner mark to a banner in two frames.
+_TEXT_ARTEFACT = re.compile(
+    r"\b(text|lettering|letters|words?|writing|written|caption|watermark|"
+    r"signature|logo|label|signage|inscription|inscribed|typeface|font|"
+    r"printed|imprint|numerals?)\b", re.I)
+
+_SENTENCE = re.compile(r"(?<=[.;])\s+")
+
+
+def strip_text_artefacts(value: str) -> str:
+    """Drop any sentence that talks about lettering in the picture.
+
+    Surgical rather than blunt: a slot is usually several clauses and only one
+    of them is about the watermark, so the rest of the observation survives.
+    """
+    if not value or not _TEXT_ARTEFACT.search(value):
+        return value
+    kept = [s for s in _SENTENCE.split(value) if not _TEXT_ARTEFACT.search(s)]
+    return " ".join(k.strip() for k in kept if k.strip()).strip()
+
 
 def build_prompt(avoid_block: str = "") -> str:
     slots = "\n".join(f'  "{f}": "{_GUIDE[f]}"' for f in FIELDS)
@@ -46,7 +73,12 @@ def build_prompt(avoid_block: str = "") -> str:
         f"{{\n{slots}\n}}\n\n"
         "Each value is one plain sentence or clause. Be concrete and specific. "
         "Name things rather than qualifying them: 'a brass hinge where the mouth "
-        "would be' rather than 'an unsettling facial feature'."
+        "would be' rather than 'an unsettling facial feature'.\n\n"
+        "If the image contains any lettering, text, numbers, a watermark or a "
+        "signature, IGNORE IT COMPLETELY. It is a flaw in how the picture was "
+        "made, not something in the scene, and it must never appear in any "
+        "value - least of all the anomaly. Describe what the lettering sits on "
+        "instead, or choose a different detail."
     )
     if avoid_block:
         prompt += f"\n\n{avoid_block}"
@@ -62,7 +94,11 @@ def parse(raw) -> dict:
     """
     if not isinstance(raw, dict):
         raise ValueError(f"description must be an object, got {type(raw).__name__}")
-    return {f: str(raw.get(f, "") or "").strip() for f in FIELDS}
+    # Stripped here, not at draw time, so the stored and displayed description
+    # is clean too - otherwise the page would show a watermark being described
+    # even though the prompt never saw it.
+    return {f: strip_text_artefacts(str(raw.get(f, "") or "").strip())
+            for f in FIELDS}
 
 
 def is_usable(desc: dict) -> bool:
