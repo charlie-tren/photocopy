@@ -58,7 +58,11 @@ def _post(payload: dict, settings: dict) -> str:
                 timeout=g["timeout_seconds"],
                 headers={"Content-Type": "application/json"})
             if resp.status_code >= 500 or resp.status_code == 429:
-                last = GeminiError(f"HTTP {resp.status_code}: {resp.text[:200]}")
+                # 800, not 200: a 429 body carries the quotaId and quotaValue,
+                # which is the difference between "too fast, wait a minute" and
+                # "no more today". Truncating at 200 hid exactly that and cost
+                # an afternoon of guessing.
+                last = GeminiError(f"HTTP {resp.status_code}: {resp.text[:800]}")
                 time.sleep(2 * (attempt + 1))
                 continue
             resp.raise_for_status()

@@ -10,6 +10,14 @@ that, and until a chain has actually been run there is no evidence either way.
 It touches NOTHING the site reads. No data/frames, no assets/img, no
 manifest.json, no index.html - everything lands in probe-out/, which is
 gitignored. The real chain is a separate sequence and stays a separate sequence.
+
+IT IS NOT FREE, THOUGH. One vision call per frame, against a Gemini free tier
+that emptied at roughly 25 image calls in a day - measured, on 2026-08-12, at
+about 4.5 requests a minute, so it is a daily ceiling and not a rate limit. An
+18-frame probe therefore spends most of a day's allowance, and a probe run
+before the daily job has filed can cost the chain its frame. Run it AFTER the
+day's frame exists, and remember the free day rolls over at midnight Pacific
+(07:00 UTC), not at midnight here.
 """
 from __future__ import annotations
 
