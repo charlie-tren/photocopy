@@ -10,6 +10,14 @@
 <meta property="og:title" content="Photocopy">
 <meta property="og:description" content="Each picture is a rumour of the one before">
 <style>
+/* Bodoni Moda for the title only. High thick-thin contrast reads as a gallery
+   wall label at display size and turns to hairlines at body size, so it is
+   never used below the tagline. Self-hosted: no third-party request, and the
+   page renders the same if Google Fonts is blocked. SIL OFL, see
+   assets/fonts/README.md. */
+@font-face{font-family:'Bodoni Moda';font-style:normal;font-weight:400 700;
+  font-display:swap;src:url(assets/fonts/bodoni-moda-latin.woff2) format('woff2');
+  unicode-range:U+0000-00FF,U+2018-201A,U+201C-201E,U+2022,U+2026,U+2039-203A;}
 :root{
   --bg:#faf9f7; --card:#fff; --fg:#17150f; --muted:#7a7468; --faint:#a8a294;
   --rule:#e3dfd6; --accent:#8a3a1e;
@@ -28,7 +36,8 @@ header{margin:0 0 1.5rem;}
    the first thing on the page and the exit is not buried in a footer. */
 .titlerow{display:flex;justify-content:space-between;align-items:baseline;
   gap:1rem;}
-h1{font-size:1.6rem;margin:0;font-weight:600;letter-spacing:-0.015em;}
+h1{font-family:'Bodoni Moda',Georgia,serif;font-size:2.4rem;margin:0;
+  font-weight:400;letter-spacing:0;line-height:1.05;}
 .back{flex:0 0 auto;font-size:0.78rem;color:var(--muted);text-decoration:none;
   white-space:nowrap;}
 .back:hover{color:var(--accent);}
@@ -68,7 +77,7 @@ dl.desc dd:empty::after{content:"-";color:var(--faint);}
 @media (max-width:30rem){
   dl.desc{grid-template-columns:1fr;gap:0.1rem;}
   dl.desc dt{padding-top:0.75rem;}
-  h1{font-size:1.4rem;}
+  h1{font-size:2rem;}
 }
 </style>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "32b821209b5441a08df42ccf61c9e6c2"}'></script>
