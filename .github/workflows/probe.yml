@@ -1,0 +1,48 @@
+name: probe
+
+# Manual only. Runs a throwaway chain to see how fast it stops moving, and
+# commits nothing: everything lands in probe-out/ and leaves as an artifact.
+# The real chain is untouched.
+on:
+  workflow_dispatch:
+    inputs:
+      frames:
+        description: "How many frames to draw"
+        required: false
+        default: "18"
+
+concurrency:
+  # Shares the same Gemini and Cloudflare quota as the daily job, so it must
+  # never run alongside it.
+  group: chain
+  cancel-in-progress: false
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install deps
+        run: pip install -r requirements.txt
+      - name: Run the throwaway chain
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+        run: python tools/probe.py ${{ github.event.inputs.frames || '18' }}
+      - name: Keep the frames and the numbers
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: probe
+          path: probe-out/
+          retention-days: 7
+      - name: Prove the real chain was not touched
+        run: |
+          git status --porcelain
+          test -z "$(git status --porcelain -- data assets manifest.json index.html)" \
+            && echo "real chain untouched" \
+            || (echo "PROBE WROTE TO THE REAL CHAIN" && exit 1)
