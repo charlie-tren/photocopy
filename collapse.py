@@ -1,20 +1,18 @@
-"""Has the run stopped moving?
+"""How far has the chain moved lately?
 
-The published research on image->describe->image loops is unanimous that they
-converge: across 700 runs they fell into roughly a dozen stock scenes regardless
-of where they started. describe.py's schema and avoid.py's ban list are there to
-delay that. This module is the admission that they will not prevent it, and turns
-the failure into the measurement: a run's score is how many frames it survived.
+This module REPORTS and never acts. There is no detector that ends a run, because
+there are no runs: the chain is one unbroken sequence and it is never reset.
 
-BOTH signals must agree before a run is sealed, because either alone lies:
+It still measures, because the alternative is having no idea whether the schema
+in describe.py and the ban list in avoid.py are doing anything at all. Two
+numbers per frame, both cheap:
 
-- Text only. A run can hold one subject while genuinely restyling it every day.
-  The words repeat; the pictures do not. Sealing there throws away a live run.
-- Image only. Two frames can be near-identical while the description is visibly
-  casting around for a way out - that run is still trying, and often escapes.
+- how alike the recent DESCRIPTIONS are (cosine over content-word sets)
+- how alike the recent IMAGES are (mean pairwise dHash distance, 0-64)
 
-So: descriptions have stopped moving AND pictures have stopped moving, for
-`patience` consecutive frames, and never before `min_frames`.
+Both are needed to read the chain honestly, because either alone lies. The words
+can repeat while the pictures genuinely change, and two frames can look identical
+while the description is visibly casting around for a way out.
 """
 from __future__ import annotations
 
@@ -29,8 +27,8 @@ import avoid
 
 def text_similarity(a: dict, b: dict) -> float:
     """Cosine over content-word sets. Set-based, not counts: two descriptions
-    that name the same six things are the same description for our purposes,
-    however many times each word appears."""
+    naming the same six things are the same description for this purpose, however
+    many times each word appears."""
     ta, tb = avoid.terms(a), avoid.terms(b)
     if not ta or not tb:
         return 0.0
@@ -71,25 +69,17 @@ def mean_image_distance(hashes: list[int]) -> float:
 
 
 def assess(frames: list[dict], cfg: dict) -> dict:
-    """Report on the tail of a run. `frames` carry `description` and `dhash`."""
+    """A reading on the tail of the chain. `frames` carry `description` and
+    `dhash`. Nothing consumes this to make a decision - it is recorded on the
+    frame and shown on the page."""
     window = frames[-cfg["window"]:]
     if len(window) < 2:
-        return {"stuck": False, "text": 0.0, "image": 64.0, "n": len(window)}
-    text = mean_text_similarity([f["description"] for f in window])
-    image = mean_image_distance([int(f["dhash"]) for f in window])
+        # None, not 0.0/64.0: there is nothing to compare frame 1 against, and a
+        # placeholder here renders on the page as a real measurement of maximum
+        # movement, which is the opposite of what it means.
+        return {"text": None, "image": None, "n": len(window)}
     return {
-        "stuck": text >= cfg["text_similarity"] and image <= cfg["image_distance"],
-        "text": round(text, 4),
-        "image": round(image, 2),
+        "text": round(mean_text_similarity([f["description"] for f in window]), 4),
+        "image": round(mean_image_distance([int(f["dhash"]) for f in window]), 2),
         "n": len(window),
     }
-
-
-def should_seal(frames: list[dict], strikes: int, cfg: dict) -> tuple[bool, dict]:
-    """(seal?, this frame's reading). `strikes` is the consecutive-stuck count
-    BEFORE this frame; the caller carries it on the run record."""
-    reading = assess(frames, cfg)
-    now = strikes + 1 if reading["stuck"] else 0
-    reading["strikes"] = now
-    seal = now >= cfg["patience"] and len(frames) >= cfg["min_frames"]
-    return seal, reading

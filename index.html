@@ -30,7 +30,7 @@ h1{font-size:clamp(1.5rem,5vw,2.1rem);margin:0;font-weight:600;letter-spacing:-0
 .rowmeta{display:flex;flex-wrap:wrap;gap:0.5rem 1.2rem;align-items:baseline;
   margin:0.9rem 0 0;font-size:0.8rem;color:var(--muted);}
 .rowmeta .where{color:var(--fg);font-weight:600;font-size:0.95rem;}
-.sealed{color:var(--accent);font-weight:600;}
+
 .scrub{width:100%;margin:0.9rem 0 0;accent-color:var(--accent);}
 dl.desc{margin:1.6rem 0 0;padding-top:1rem;border-top:1px solid var(--rule);
   display:grid;grid-template-columns:7.5rem 1fr;gap:0.55rem 1.2rem;}
@@ -95,12 +95,12 @@ footer{margin-top:2.4rem;padding-top:1rem;border-top:1px solid var(--rule);
       today's photograph. Then it is shown that one, and so on.</p>
       <p>Loops like this are known to converge rather than wander: left alone
       they settle into a stock scene and stay there. Two rules push back, and
-      both are generated from the run's own past rather than supplied from
+      both are generated from the chain's own past rather than supplied from
       outside - the fixed slots, which stop the description dissolving into
-      atmosphere, and a ban on whatever words the run has leaned on lately. When
-      the pictures and the descriptions both stop moving anyway, the run is
-      sealed and a new one starts from a fresh written seed.</p>
-      <p class="runs">No run has collapsed yet, so there is nothing to compare the live one against.</p>
+      atmosphere, and a ban on whatever words the chain has leaned on lately.
+      Nothing else intervenes. There is one chain, it started once, and it is
+      never reset.</p>
+      <p class="runs">Not enough frames yet to say whether the chain is moving.</p>
     </div>
     <footer>
       Every image is machine-made and depicts nothing that exists.
@@ -110,7 +110,7 @@ footer{margin-top:2.4rem;padding-top:1rem;border-top:1px solid var(--rule);
   <script>window.__LIKENESS__={"frames": []};</script>
   <script>
 (function(){
-  var M=window.__LIKENESS__||{frames:[],runs:[]},F=M.frames,i=F.length-1;
+  var M=window.__LIKENESS__||{frames:[]},F=M.frames,i=F.length-1;
   if(!F.length)return;
   var img=document.getElementById('shot'),prev=document.getElementById('prev'),
       next=document.getElementById('next'),scrub=document.getElementById('scrub'),
@@ -125,15 +125,16 @@ footer{margin-top:2.4rem;padding-top:1rem;border-top:1px solid var(--rule);
     i=Math.max(0,Math.min(F.length-1,k));
     var f=F[i];
     img.src=f.image;img.alt=f.alt;
-    where.textContent='Run '+f.run+', frame '+f.frame;
+    where.textContent='Frame '+f.frame+' of '+F.length;
     when.textContent=f.date;
-    state.textContent=f.sealed?'run sealed here after '+f.run_frames+' frames':'';
-    state.className=f.sealed?'sealed':'';
+    state.textContent=(f.text==null)?'':
+      'last 5 frames: '+Math.round(f.text*100)+'% alike in words, '
+      +Math.round(f.image_distance)+'/64 apart in pixels';
     F[i].fields.forEach(function(v,n){
       document.getElementById('f'+n).textContent=v;});
     scrub.value=i;
     prev.disabled=(i===0);next.disabled=(i===F.length-1);
-    if(push)history.replaceState(null,'','#r'+f.run+'f'+f.frame);
+    if(push)history.replaceState(null,'','#f'+f.frame);
     warm(i);
   }
   function jump(d){show(i+d,true);}
@@ -147,10 +148,10 @@ footer{margin-top:2.4rem;padding-top:1rem;border-top:1px solid var(--rule);
     else if(e.key==='Home'){show(0,true);e.preventDefault();}
     else if(e.key==='End'){show(F.length-1,true);e.preventDefault();}
   });
-  var m=/^#r(\d+)f(\d+)$/.exec(location.hash||'');
+  var m=/^#f(\d+)$/.exec(location.hash||'');
   var start=F.length-1;
   if(m){for(var k=0;k<F.length;k++){
-    if(F[k].run===+m[1]&&F[k].frame===+m[2]){start=k;break;}}}
+    if(F[k].frame===+m[1]){start=k;break;}}}
   show(start,false);
 })();
 </script>

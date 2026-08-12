@@ -35,7 +35,7 @@ h1{font-size:clamp(1.5rem,5vw,2.1rem);margin:0;font-weight:600;letter-spacing:-0
 .rowmeta{display:flex;flex-wrap:wrap;gap:0.5rem 1.2rem;align-items:baseline;
   margin:0.9rem 0 0;font-size:0.8rem;color:var(--muted);}
 .rowmeta .where{color:var(--fg);font-weight:600;font-size:0.95rem;}
-.sealed{color:var(--accent);font-weight:600;}
+
 .scrub{width:100%;margin:0.9rem 0 0;accent-color:var(--accent);}
 dl.desc{margin:1.6rem 0 0;padding-top:1rem;border-top:1px solid var(--rule);
   display:grid;grid-template-columns:7.5rem 1fr;gap:0.55rem 1.2rem;}
@@ -69,7 +69,7 @@ footer{margin-top:2.4rem;padding-top:1rem;border-top:1px solid var(--rule);
 
 _JS = """
 (function(){
-  var M=window.__LIKENESS__||{frames:[],runs:[]},F=M.frames,i=F.length-1;
+  var M=window.__LIKENESS__||{frames:[]},F=M.frames,i=F.length-1;
   if(!F.length)return;
   var img=document.getElementById('shot'),prev=document.getElementById('prev'),
       next=document.getElementById('next'),scrub=document.getElementById('scrub'),
@@ -84,15 +84,16 @@ _JS = """
     i=Math.max(0,Math.min(F.length-1,k));
     var f=F[i];
     img.src=f.image;img.alt=f.alt;
-    where.textContent='Run '+f.run+', frame '+f.frame;
+    where.textContent='Frame '+f.frame+' of '+F.length;
     when.textContent=f.date;
-    state.textContent=f.sealed?'run sealed here after '+f.run_frames+' frames':'';
-    state.className=f.sealed?'sealed':'';
+    state.textContent=(f.text==null)?'':
+      'last 5 frames: '+Math.round(f.text*100)+'% alike in words, '
+      +Math.round(f.image_distance)+'/64 apart in pixels';
     F[i].fields.forEach(function(v,n){
       document.getElementById('f'+n).textContent=v;});
     scrub.value=i;
     prev.disabled=(i===0);next.disabled=(i===F.length-1);
-    if(push)history.replaceState(null,'','#r'+f.run+'f'+f.frame);
+    if(push)history.replaceState(null,'','#f'+f.frame);
     warm(i);
   }
   function jump(d){show(i+d,true);}
@@ -106,48 +107,48 @@ _JS = """
     else if(e.key==='Home'){show(0,true);e.preventDefault();}
     else if(e.key==='End'){show(F.length-1,true);e.preventDefault();}
   });
-  var m=/^#r(\\d+)f(\\d+)$/.exec(location.hash||'');
+  var m=/^#f(\\d+)$/.exec(location.hash||'');
   var start=F.length-1;
   if(m){for(var k=0;k<F.length;k++){
-    if(F[k].run===+m[1]&&F[k].frame===+m[2]){start=k;break;}}}
+    if(F[k].frame===+m[1]){start=k;break;}}}
   show(start,false);
 })();
 """
 
 
-def flatten(runs: list[dict]) -> list[dict]:
-    """Every frame of every run, in order, as the viewer wants them."""
+def flatten(frames: list[dict]) -> list[dict]:
+    """The chain as the viewer wants it."""
     out = []
-    for run in runs:
-        total = len(run["frames"])
-        for frame in run["frames"]:
-            desc = frame.get("description", {})
-            out.append({
-                "run": run["n"],
-                "frame": frame["n"],
-                "date": frame.get("date", ""),
-                "image": frame["image"],
-                "alt": (desc.get("subject") or "One frame of the chain")[:180],
-                "fields": [hyphenate(desc.get(f, "")) for f in FIELDS],
-                "sealed": bool(run.get("sealed")) and frame["n"] == total,
-                "run_frames": total,
-            })
+    for frame in frames:
+        desc = frame.get("description", {})
+        reading = frame.get("reading") or {}
+        out.append({
+            "frame": frame["n"],
+            "date": frame.get("date", ""),
+            "image": frame["image"],
+            "alt": (desc.get("subject") or "One frame of the chain")[:180],
+            "fields": [hyphenate(desc.get(f, "")) for f in FIELDS],
+            "text": reading.get("text"),
+            "image_distance": reading.get("image"),
+        })
     return out
 
 
-def _runs_line(runs: list[dict]) -> str:
-    sealed = [r for r in runs if r.get("sealed")]
-    if not sealed:
-        return ("No run has collapsed yet, so there is nothing to compare the "
-                "live one against.")
-    lengths = ", ".join(f"run {r['n']}: <b>{len(r['frames'])}</b>" for r in sealed)
-    best = max(sealed, key=lambda r: len(r["frames"]))
-    return (f"Frames survived before collapse - {lengths}. Longest so far is run "
-            f"{best['n']} at <b>{len(best['frames'])}</b>.")
+def _movement_line(frames: list[dict]) -> str:
+    """The two numbers, in words. Reported, never acted on."""
+    if len(frames) < 2:
+        return "Not enough frames yet to say whether the chain is moving."
+    reading = frames[-1].get("reading") or {}
+    text, dist = reading.get("text"), reading.get("image")
+    if text is None or dist is None:
+        return ""
+    return (f"Across the last {reading.get('n', 0)} frames the descriptions are "
+            f"<b>{text:.0%}</b> alike and the pictures differ by <b>{dist:.0f}</b> "
+            "of a possible 64.")
 
 
-def render_page(runs: list[dict], meta: dict) -> str:
-    frames = flatten(runs)
+def render_page(frames_raw: list[dict], meta: dict) -> str:
+    frames = flatten(frames_raw)
     rows = "".join(
         '<div{cls}><dt>{name}</dt><dd id="f{i}"></dd></div>'.format(
             cls=' class="anomaly"' if name == "anomaly" else "", name=name, i=i)
@@ -203,12 +204,12 @@ def render_page(runs: list[dict], meta: dict) -> str:
       today's photograph. Then it is shown that one, and so on.</p>
       <p>Loops like this are known to converge rather than wander: left alone
       they settle into a stock scene and stay there. Two rules push back, and
-      both are generated from the run's own past rather than supplied from
+      both are generated from the chain's own past rather than supplied from
       outside - the fixed slots, which stop the description dissolving into
-      atmosphere, and a ban on whatever words the run has leaned on lately. When
-      the pictures and the descriptions both stop moving anyway, the run is
-      sealed and a new one starts from a fresh written seed.</p>
-      <p class="runs">{_runs_line(runs)}</p>
+      atmosphere, and a ban on whatever words the chain has leaned on lately.
+      Nothing else intervenes. There is one chain, it started once, and it is
+      never reset.</p>
+      <p class="runs">{_movement_line(frames_raw)}</p>
     </div>
     <footer>
       Every image is machine-made and depicts nothing that exists.
@@ -224,19 +225,17 @@ def render_page(runs: list[dict], meta: dict) -> str:
 
 def build() -> str:
     settings = load_settings()
-    runs = chain.load_runs()
+    frames = chain.load_frames()
     meta = {"site_name": settings["site"]["name"],
             "tagline": settings["site"]["tagline"]}
     # The manifest is not read by the page (the payload is inlined, so the viewer
     # works on first paint with no second request). It is written for anyone who
     # wants the chain as data.
-    write_json("manifest.json", {"runs": [
-        {"n": r["n"], "started": r["started"], "sealed": r.get("sealed"),
-         "frames": len(r["frames"]), "seed": r["seed"]} for r in runs],
-        "frames": flatten(runs)})
+    write_json("manifest.json", {"seed": settings["seed"],
+                                 "frames": flatten(frames)})
     out = rel(settings["output_html"])
     with open(out, "w", encoding="utf-8") as fh:
-        fh.write(render_page(runs, meta))
+        fh.write(render_page(frames, meta))
     return out
 
 

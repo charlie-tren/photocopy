@@ -1,4 +1,11 @@
 {
-  "runs": [],
+  "seed": {
+    "subject": "a tall thin figure made of folded brass sheet",
+    "posture": "standing square to the viewer, arms held slightly away from the body",
+    "setting": "an empty tiled room with a drain in the floor",
+    "light": "one bare bulb overhead, hard shadows",
+    "materials": "polished brass, white ceramic tile, grey grout",
+    "anomaly": "the figure has no face, only a hinge where a face would be"
+  },
   "frames": []
 }

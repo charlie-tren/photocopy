@@ -1,5 +1,5 @@
 """The loop's pure logic: description handling, the self-generated avoid list,
-and the collapse detector."""
+and the movement reading."""
 import io
 
 import pytest
@@ -11,8 +11,7 @@ import describe
 import draw
 
 LOOP = {"avoid_window": 6, "avoid_min_count": 4, "avoid_term_cap": 14}
-COL = {"window": 5, "text_similarity": 0.72, "image_distance": 8,
-       "patience": 3, "min_frames": 12}
+COL = {"window": 5}
 
 
 def desc(**kw):
@@ -51,8 +50,8 @@ def test_describer_prompt_carries_the_avoid_block():
 # --- avoid ------------------------------------------------------------------
 
 def test_overused_counts_presence_not_frequency():
-    # "brass" nine times in ONE description is a tic inside that frame; the run
-    # is only circling if it recurs across frames.
+    # "brass" nine times in ONE description is a tic inside that frame; the
+    # chain is only circling if it recurs across frames.
     heavy = desc(subject="brass brass brass brass brass brass brass brass brass")
     hits = avoid.overused([heavy] * 1 + [desc(subject="tile")] * 5, 6, 4, 14)
     assert "brass" not in hits
@@ -77,7 +76,7 @@ def test_block_is_empty_string_when_nothing_is_overused():
     assert avoid.block([desc(subject="a brass figure")], LOOP) == ""
 
 
-# --- collapse ---------------------------------------------------------------
+# --- movement ---------------------------------------------------------------
 
 def _img(seed: int, size: int = 64) -> bytes:
     im = Image.new("L", (size, size))
@@ -99,40 +98,41 @@ def test_text_similarity_bounds():
     assert collapse.text_similarity(a, desc(subject="")) == 0.0
 
 
-def test_both_signals_must_agree_before_a_run_is_sealed():
-    same = desc(subject="a brass figure standing in a tiled room")
-    # Identical text, but the pictures are still moving: not stuck.
-    moving = [{"description": same, "dhash": str(collapse.dhash(_img(i)))}
-              for i in range(1, 6)]
-    assert not collapse.assess(moving, COL)["stuck"]
-    # Identical pictures, but the description is casting around: not stuck.
-    one = str(collapse.dhash(_img(9)))
-    talking = [{"description": desc(subject=f"a figure of {w}"), "dhash": one}
-               for w in ("brass", "cloth", "stone", "glass", "wax")]
-    assert not collapse.assess(talking, COL)["stuck"]
-    # Both frozen: stuck.
-    frozen = [{"description": same, "dhash": one} for _ in range(5)]
-    assert collapse.assess(frozen, COL)["stuck"]
-
-
-def test_sealing_needs_patience_and_a_minimum_run_length():
+def test_assess_separates_the_two_kinds_of_stillness():
     same = desc(subject="a brass figure standing in a tiled room")
     one = str(collapse.dhash(_img(9)))
-    frozen = [{"description": same, "dhash": one} for _ in range(20)]
-    # Stuck, but not for long enough yet.
-    assert collapse.should_seal(frozen, 0, COL)[0] is False
-    assert collapse.should_seal(frozen, 1, COL)[0] is False
-    assert collapse.should_seal(frozen, 2, COL)[0] is True
-    # Stuck for long enough, but the run is too young to seal.
-    assert collapse.should_seal(frozen[:6], 2, COL)[0] is False
+    # Words frozen, pictures still moving.
+    words_stuck = collapse.assess(
+        [{"description": same, "dhash": str(collapse.dhash(_img(i)))}
+         for i in range(1, 6)], COL)
+    assert words_stuck["text"] == pytest.approx(1.0)
+    assert words_stuck["image"] > 0
+    # Pictures frozen, words still casting around.
+    pics_stuck = collapse.assess(
+        [{"description": desc(subject=f"a figure of {w}"), "dhash": one}
+         for w in ("brass", "cloth", "stone", "glass", "wax")], COL)
+    assert pics_stuck["image"] == 0.0
+    assert pics_stuck["text"] < 1.0
 
 
-def test_strikes_reset_the_moment_a_run_moves():
-    moving = [{"description": desc(subject=f"a figure of {w}"),
-               "dhash": str(collapse.dhash(_img(i)))}
-              for i, w in enumerate(("brass", "cloth", "stone", "glass", "wax"), 1)]
-    _seal, reading = collapse.should_seal(moving, 2, COL)
-    assert reading["strikes"] == 0
+def test_assess_reports_and_never_decides():
+    # Nothing in this module may tell the chain to stop: there are no runs and it
+    # is never reset. A verdict key creeping back in is the regression to catch.
+    frozen = [{"description": desc(subject="a brass figure"),
+               "dhash": str(collapse.dhash(_img(9)))} for _ in range(8)]
+    reading = collapse.assess(frozen, COL)
+    assert set(reading) == {"text", "image", "n"}
+    assert not hasattr(collapse, "should_seal")
+
+
+def test_assess_is_honest_about_a_chain_too_short_to_read():
+    # Frame 1 has nothing to be compared with. A zero here would render on the
+    # page as "0% alike, 64/64 apart", i.e. maximum movement, which is a lie.
+    assert collapse.assess([], COL)["n"] == 0
+    one = collapse.assess([{"description": desc(subject="a figure"),
+                            "dhash": "1"}], COL)
+    assert one["n"] == 1
+    assert one["text"] is None and one["image"] is None
 
 
 # --- draw -------------------------------------------------------------------

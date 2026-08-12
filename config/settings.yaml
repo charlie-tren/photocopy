@@ -30,36 +30,18 @@ loop:
   avoid_min_count: 4
   avoid_term_cap: 14
 
-collapse:
-  # A run is sealed when the descriptions have stopped moving AND the images have
-  # stopped moving, for `patience` consecutive frames. Both, because either alone
-  # gives false positives: a run can hold a subject while restyling it, and it can
-  # rephrase a description without the picture changing.
-  window: 5               # frames compared
-  text_similarity: 0.72   # mean pairwise cosine over description tokens
-  image_distance: 8       # mean pairwise dHash Hamming distance (0-64); lower = stuck
-  patience: 3
-  min_frames: 12          # never seal a run younger than this, whatever the numbers say
+# How far the chain has moved lately. REPORTED ONLY - nothing acts on these
+# numbers. The chain is never reset, so there is no threshold to cross; this is
+# here so it is possible to tell whether the schema and the ban list are working.
+movement:
+  window: 5               # frames compared against each other
 
-seeds:
-  # The first description of each run. Deliberately concrete and strange: the
-  # literature's finding is that the START barely matters, so these are chosen to
-  # be easy to measure drift AWAY from rather than to be interesting forever.
-  - subject: "a tall thin figure made of folded brass sheet"
-    posture: "standing square to the viewer, arms held slightly away from the body"
-    setting: "an empty tiled room with a drain in the floor"
-    light: "one bare bulb overhead, hard shadows"
-    materials: "polished brass, white ceramic tile, grey grout"
-    anomaly: "the figure has no face, only a hinge where a face would be"
-  - subject: "a seated figure wrapped entirely in printed paper tape"
-    posture: "seated on a wooden stool, hands on knees, head tilted down"
-    setting: "a photographer's studio with a paper backdrop half rolled up"
-    light: "soft frontal light from a large diffuser"
-    materials: "newsprint tape, pale wood, matte grey paper"
-    anomaly: "one hand has been wrapped so thickly it is now a smooth club"
-  - subject: "a figure assembled from stacked terracotta drainage pipes"
-    posture: "leaning against a wall, one shoulder taking the weight"
-    setting: "a builder's yard at dusk, pallets stacked behind"
-    light: "low orange sun from the left, long shadows"
-    materials: "unglazed terracotta, galvanised steel, dry concrete"
-    anomaly: "grass is growing out of the topmost pipe where a head would be"
+seed:
+  # The one written description in the whole project. Everything after frame 1
+  # comes from the chain itself.
+  subject: "a tall thin figure made of folded brass sheet"
+  posture: "standing square to the viewer, arms held slightly away from the body"
+  setting: "an empty tiled room with a drain in the floor"
+  light: "one bare bulb overhead, hard shadows"
+  materials: "polished brass, white ceramic tile, grey grout"
+  anomaly: "the figure has no face, only a hinge where a face would be"
