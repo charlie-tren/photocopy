@@ -78,8 +78,9 @@ h1{font-family:'Silkscreen',monospace;font-size:2.3rem;margin:0;
 .pos .sub{display:block;font-family:'Silkscreen',monospace;font-size:0.6rem;
   color:var(--faint);margin-top:0.3rem;}
 /* One caption, not a labelled form. The six captured slots read as a single
-   paragraph; the anomaly keeps the accent colour so the detail the chain is
-   carrying is still visible, but without a jargon label announcing it. */
+   paragraph, undifferentiated - the anomaly is the last clause and nothing
+   marks it out. It is a pipeline word, and colouring it invited the question
+   of what the colour meant. */
 .info{font-family:'Silkscreen',monospace;font-size:0.55rem;line-height:1;
   margin-left:0.45rem;width:1.05rem;height:1.05rem;padding:0;cursor:pointer;
   border:1px solid var(--rule);border-radius:50%;background:transparent;
@@ -101,7 +102,6 @@ h1{font-family:'Silkscreen',monospace;font-size:2.3rem;margin:0;
   border-top:1px solid var(--rule);font-family:'Silkscreen',monospace;
   font-size:0.58rem;color:var(--faint);line-height:1.5;}
 .caption{margin:0;font-size:1rem;line-height:1.6;}
-.caption .anom{color:var(--accent);}
 .note{margin:1.75rem 0 0;padding-top:1.1rem;border-top:1px solid var(--rule);
   color:var(--muted);font-size:0.78rem;}
 .note p{margin:0;}
@@ -139,8 +139,8 @@ _JS = r"""
     if(f.text==null&&!box.hasAttribute('hidden')){
       box.setAttribute('hidden','');info.setAttribute('aria-expanded','false');}
     sub.textContent=f.date+(f.text==null?'':
-      '  \u00b7  '+Math.round(f.text*100)+'% alike, '
-      +Math.round(f.image_distance)+'/64 apart');
+      '  \u00b7  words '+Math.round(f.text*100)+'% shared, pictures '
+      +Math.round(f.image_distance)+'/64 different');
     cap.textContent=f.caption;anom.textContent=f.anomaly;
     prov.textContent=(f.from==null)
       ?'Written seed. Nothing before it.'
@@ -173,11 +173,11 @@ _JS = r"""
 
 
 #: The description is shown as one caption, in this order. The anomaly comes
-#: last and is coloured rather than labelled: it is the slot that decides which
-#: detail survives into the next frame, so it is worth seeing, but "anomaly" is
-#: a word from the pipeline and means nothing to anyone looking at a picture.
+#: last because it is the slot that decides which detail survives into the next
+#: frame, but it is not marked out: "anomaly" is a word from the pipeline and
+#: means nothing to anyone looking at a picture.
 CAPTION_SLOTS = ("subject", "posture", "setting", "light", "materials")
-ACCENT_SLOT = "anomaly"
+LAST_SLOT = "anomaly"
 
 
 def _sentence(text: str) -> str:
@@ -190,10 +190,10 @@ def _sentence(text: str) -> str:
 
 
 def caption(desc: dict) -> tuple[str, str]:
-    """(the caption, the anomaly clause shown after it in the accent colour)."""
+    """(the caption, the anomaly clause appended after it)."""
     body = " ".join(
         p for p in (_sentence(hyphenate(desc.get(s, ""))) for s in CAPTION_SLOTS) if p)
-    return body, _sentence(hyphenate(desc.get(ACCENT_SLOT, "")))
+    return body, _sentence(hyphenate(desc.get(LAST_SLOT, "")))
 
 
 def flatten(frames: list[dict]) -> list[dict]:
@@ -267,10 +267,10 @@ def render_page(frames_raw: list[dict], meta: dict) -> str:
               aria-keyshortcuts="ArrowRight">&rarr;</button>
     </div>
     <div id="infobox" class="infobox" hidden>
-      <p><b>alike</b> is how many of the same words the recent descriptions
-      use.</p>
-      <p><b>apart</b> is how different the recent pictures are in structure.
-      0 is identical, about 32 is two unrelated pictures, 64 is inverted.</p>
+      <p><b>words shared</b> is how much the recent descriptions reuse the
+      same words.</p>
+      <p><b>pictures different</b> is how far apart the recent images are in
+      structure. 0 is identical, about 32 is two unrelated pictures.</p>
       <p>Both averaged over the last five frames. Nothing acts on them.</p>
     </div>
     <p class="prov" id="prov"></p>
