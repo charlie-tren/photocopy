@@ -45,5 +45,10 @@ jobs:
           git config user.name "photocopy bot"
           git config user.email "actions@github.com"
           git add -A
-          git diff --staged --quiet || git commit -m "frame: $(date -u +%Y-%m-%d)"
+          # The frame itself is stamped in Australia/Sydney (common.tz_now), so
+          # the runner's UTC date disagrees with it for the ~10h either side of
+          # midnight - which is exactly when this job runs. Read the date off
+          # the frame rather than asking the runner.
+          DATE=$(python -c "import chain; print(chain.load_frames()[-1]['date'])")
+          git diff --staged --quiet || git commit -m "frame: $DATE"
           git push

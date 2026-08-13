@@ -7,8 +7,14 @@
 | P3 | 2.1 | 15 min | Auto | P1 | **Decide whether the drawer needs a text fix too, or only the describer.** The describer side is closed. The image model still renders lettering occasionally on its own (frame 17 of the first probe, unprompted). That is harmless now it cannot reach a description, but if it becomes frequent the options are a stronger negative, a different model, or cropping a band the way The Aftertimes does. Only act if P1 shows it recurring. |
 | P4 | 2.2 | 5 min | Auto | - | **Frames 1 and 2 share a date (2026-08-12).** Historical artefact of two manual dispatches on day one, before `chain.filed_on()` existed. Harmless and only visible in the data. Leave it unless the duplicate date ever confuses the viewer. |
 | P5 | 3.1 | 10 min | Auto | - | **Bricolage Grotesque was never evaluated.** It failed to download from Google Fonts during the specimen build, so it is the one shortlisted face Charlie never saw. Only worth revisiting if Silkscreen is ever reconsidered. |
+| P6 | 2.3 | 10 min | Auto | - | **`index.html` is written by two authors and can silently ship stale.** It is a build artefact committed to the repo (Pages serves it from `main`), so the bot regenerates it on every frame and I regenerate it on every render change. On 13/08/2026 a rebase replayed a render commit over the bot's frame-3 build; it merged cleanly and the live page was correct, but a dirtier conflict would resolve to a page missing a frame with nothing failing. Either rebuild-and-verify after every rebase (current practice, manual) or have CI regenerate it so the committed copy is never authoritative. |
 
 ## Notes
+
+**The backup cron earns its place.** On 12/08/2026 the 20:40 UTC run fired at 21:27 - 47
+minutes late, matching the lateness The Aftertimes documents. It still filed frame 3 and
+the 22:40 backup correctly did nothing, because `chain.filed_on()` saw the date was taken.
+Do not remove either cron on the grounds that "the first one always works".
 
 **Quota.** One Gemini vision call per frame. Daily ceiling, not a rate limit - measured at
 about 4.5 requests a minute when it emptied. The free day rolls over at midnight Pacific
