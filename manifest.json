@@ -51,6 +51,17 @@
       "anomaly": "A large circular dark metal drain grate embedded in the tiled floor directly beneath the figure's feet.",
       "text": 0.5128,
       "image_distance": 24.33
+    },
+    {
+      "frame": 5,
+      "date": "2026-08-15",
+      "image": "assets/img/f0005.jpg",
+      "alt": "a polished gold male mannequin",
+      "from": 4,
+      "caption": "A polished gold male mannequin. Standing upright facing the back wall with upper limbs extended to the sides. A narrow shower stall lined with pale grid paneling and topped with a ceiling shower fixture. Soft diffuse neutral illumination directed from above. Gold plating, glazed porcelain, chrome, and cast iron.",
+      "anomaly": "A heavy circular street-style storm grate embedded in the shower base.",
+      "text": 0.3972,
+      "image_distance": 24.4
     }
   ]
 }
