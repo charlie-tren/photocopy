@@ -62,6 +62,17 @@
       "anomaly": "A heavy circular street-style storm grate embedded in the shower base.",
       "text": 0.3972,
       "image_distance": 24.4
+    },
+    {
+      "frame": 6,
+      "date": "2026-08-16",
+      "image": "assets/img/f0006.jpg",
+      "alt": "a metallic yellow statue of a male body",
+      "from": 5,
+      "caption": "A metallic yellow statue of a male body. Standing upright with its back turned directly toward the camera. A shower enclosure lined with white square tiles on three walls. Soft, bright white lighting coming from overhead. Glazed tile, polished resin, and chrome metal.",
+      "anomaly": "A spoked metal water outlet centered in the shower tray directly beneath the feet.",
+      "text": 0.3939,
+      "image_distance": 21.6
     }
   ]
 }
