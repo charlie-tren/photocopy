@@ -73,6 +73,17 @@
       "anomaly": "A spoked metal water outlet centered in the shower tray directly beneath the feet.",
       "text": 0.3939,
       "image_distance": 21.6
+    },
+    {
+      "frame": 7,
+      "date": "2026-08-17",
+      "image": "assets/img/f0007.jpg",
+      "alt": "a glossy yellow plastic life-sized mannequin",
+      "from": 6,
+      "caption": "A glossy yellow plastic life-sized mannequin. It rests on both feet with its back turned toward the viewer. An enclosed shower cubicle lined with pale rectangular wall blocks and a shallow tray base. Soft overhead illumination creating smooth glints along the back muscles and quiet shadows near the feet. Glossy plastic, stainless steel, acrylic resin, and wall grout.",
+      "anomaly": "A large round stainless steel water waste grate set into the tray directly at the mannequin's heels.",
+      "text": 0.2848,
+      "image_distance": 21.0
     }
   ]
 }

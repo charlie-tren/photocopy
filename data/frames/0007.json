@@ -1,0 +1,20 @@
+{
+  "n": 7,
+  "date": "2026-08-17",
+  "description": {
+    "subject": "a glossy yellow plastic life-sized mannequin",
+    "posture": "it rests on both feet with its back turned toward the viewer",
+    "setting": "an enclosed shower cubicle lined with pale rectangular wall blocks and a shallow tray base",
+    "light": "soft overhead illumination creating smooth glints along the back muscles and quiet shadows near the feet",
+    "materials": "glossy plastic, stainless steel, acrylic resin, and wall grout",
+    "anomaly": "a large round stainless steel water waste grate set into the tray directly at the mannequin's heels"
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. a glossy yellow plastic life-sized mannequin, it rests on both feet with its back turned toward the viewer. an enclosed shower cubicle lined with pale rectangular wall blocks and a shallow tray base. Light: soft overhead illumination creating smooth glints along the back muscles and quiet shadows near the feet. Materials: glossy plastic, stainless steel, acrylic resin, and wall grout. a large round stainless steel water waste grate set into the tray directly at the mannequin's heels. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image.",
+  "image": "assets/img/f0007.jpg",
+  "dhash": "7587956727279947535",
+  "reading": {
+    "text": 0.2848,
+    "image": 21.0,
+    "n": 5
+  }
+}
