@@ -1,0 +1,30 @@
+name: check-guard
+
+# Manual only. Runs the decency classifier against the five real frames that were
+# pulled from the chain on 17/08/2026, and fails if it disagrees with the human
+# call on any of them. Draws nothing, commits nothing, changes nothing.
+#
+# This is the gate to clear before Pages goes back on for this repo. The unit
+# tests stub the classifier out, so they cannot tell you whether it can actually
+# see the thing it exists to catch.
+on:
+  workflow_dispatch:
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # The frames under test were deleted, so their blobs are only reachable
+          # through history. A shallow clone cannot see them.
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Check the guard against the frames that caused it
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GUARD_REF: ${{ github.sha }}
+        run: python tools/checkguard.py

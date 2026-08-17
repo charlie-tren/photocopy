@@ -26,6 +26,16 @@ image:
   # thousand of them still fit in a git repo without LFS.
   store_width: 768
 
+# The decency floor. Unlike everything under `loop:`, this IS an outside
+# constraint and is meant to be - see safety.py and the exception noted in
+# docs/collapse.md. Added 17/08/2026 after frames 3-7 drifted into nudity.
+safety:
+  temperature: 0.0        # a classifier, not a writer
+  # Redraws before the day is abandoned. Low on purpose: flux is stochastic so a
+  # redraw often fixes it, but three failures in a row means the description is
+  # steering and another attempt is just spend.
+  max_attempts: 3
+
 # Everything that resists collapse. See docs/collapse.md for why each exists.
 loop:
   # Terms appearing in this many of the last `avoid_window` descriptions are

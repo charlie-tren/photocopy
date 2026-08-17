@@ -14,6 +14,11 @@ than supplied from outside:
   the important one: it forces the single most specific thing in the frame to
   survive into the next prompt, where free prose would have smoothed it away.
 - THE AVOID LIST. Terms the run has leaned on lately, forbidden (see avoid.py).
+
+A third constraint, added 17/08/2026 and NOT self-generated: the describer is
+told not to record anatomy or undress, and any sentence that does is stripped
+before it can reach a prompt. That is an outside rule and it is meant to be -
+see safety.py.
 """
 from __future__ import annotations
 
@@ -21,6 +26,7 @@ import base64
 import re
 
 import gemini
+import safety
 
 #: The description IS the data model. Order matters - it is also the order the
 #: fields are assembled into the next image prompt.
@@ -78,7 +84,8 @@ def build_prompt(avoid_block: str = "") -> str:
         "signature, IGNORE IT COMPLETELY. It is a flaw in how the picture was "
         "made, not something in the scene, and it must never appear in any "
         "value - least of all the anomaly. Describe what the lettering sits on "
-        "instead, or choose a different detail."
+        "instead, or choose a different detail.\n\n"
+        f"{safety.describe_clause()}"
     )
     if avoid_block:
         prompt += f"\n\n{avoid_block}"
@@ -96,8 +103,10 @@ def parse(raw) -> dict:
         raise ValueError(f"description must be an object, got {type(raw).__name__}")
     # Stripped here, not at draw time, so the stored and displayed description
     # is clean too - otherwise the page would show a watermark being described
-    # even though the prompt never saw it.
-    return {f: strip_text_artefacts(str(raw.get(f, "") or "").strip())
+    # even though the prompt never saw it. The same applies to anatomy: the
+    # caption is published, so a slot that names a body part is a problem on the
+    # page as well as in tomorrow's prompt.
+    return {f: safety.strip(strip_text_artefacts(str(raw.get(f, "") or "").strip()))
             for f in FIELDS}
 
 

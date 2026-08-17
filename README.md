@@ -7,7 +7,9 @@ today's photograph. Then it is shown that one.
 No memory, no earlier picture, no earlier words, no idea what it is looking at.
 One frame a day, forever. One chain, started once, never reset.
 
-Live at <https://charlietrenorden.com/photocopy/>.
+**OFFLINE as at 17/08/2026.** Pages is disabled on this repo while the decency
+guard is verified - see "The floor" below. Re-enabling Pages on `main` puts it
+back at <https://charlietrenorden.com/photocopy/>.
 
 It is not a self-portrait. Nothing in the loop tells the model that the figure
 is it, and nothing asks it to draw itself - it is shown a picture, it writes
@@ -20,6 +22,7 @@ down what it can see, and that description draws the next picture.
 | Describe | `describe.py` | Gemini vision looks at frame N and fills six slots |
 | Avoid | `avoid.py` | Words the run has leaned on lately are banned from that description |
 | Draw | `draw.py` | The six slots become the prompt; Cloudflare Workers AI draws frame N+1 |
+| Check | `safety.py` | The drawn frame is looked at; anything indecent is redrawn or the day is dropped |
 | Measure | `collapse.py` | How far have the words and the pictures moved lately? Reported, never acted on |
 | Render | `render.py` | Rebuild the viewer |
 
@@ -31,6 +34,15 @@ a schema and a self-generated ban list can hold it off without anything entering
 from outside. **Read [docs/collapse.md](docs/collapse.md) before changing
 anything in `describe.py` or `avoid.py`** - and in particular before adding any
 kind of automatic reset, which was considered and cut on purpose.
+
+## The floor
+
+Frames 3-7 drifted into nudity and were removed on 17/08/2026; the chain is back
+to frame 1. `safety.py` is a deliberate outside constraint on what may be
+published - the only one in the project - and `docs/collapse.md` explains why it
+is an exception to "nothing enters the chain from outside". Before the site goes
+back up, run the `check-guard` workflow: it puts the classifier in front of the
+five real frames that caused this and fails if it disagrees with the human call.
 
 ## Running it
 

@@ -20,6 +20,7 @@ import collapse
 import describe
 import draw
 import render
+import safety
 from common import load_settings, rel, tz_now
 
 
@@ -46,6 +47,38 @@ def _write_image(rel_path: str, data: bytes) -> None:
 def _read_image(rel_path: str) -> bytes:
     with open(rel(rel_path), "rb") as fh:
         return fh.read()
+
+
+class Unpublishable(RuntimeError):
+    """Every attempt at today's frame failed the decency check."""
+
+
+def _draw_something_publishable(description: dict, settings: dict) -> tuple[bytes, str]:
+    """Draw, look at what came back, and only then accept it.
+
+    Retries because flux is stochastic: the same prompt that drew a bare figure
+    often draws a clothed one on the next seed, so a redraw is a real fix and not
+    a dice-roll dressed up as one. It is bounded because if several attempts in a
+    row come back unsafe, the DESCRIPTION is steering there and no number of
+    redraws will help - that wants a human, not another API call.
+
+    Raising is the right failure. A gap in the chain is visible, explicable and
+    fixable tomorrow; publishing the frame anyway is not.
+    """
+    attempts = int(settings.get("safety", {}).get("max_attempts", 3))
+    last = "no attempt made"
+    for attempt in range(1, attempts + 1):
+        image, prompt = draw.draw(description, settings)
+        safe, reason = safety.check_image(image, settings)
+        if safe:
+            if attempt > 1:
+                print(f"    decency check passed on attempt {attempt}")
+            return image, prompt
+        last = reason
+        print(f"    !! attempt {attempt}/{attempts} rejected: {reason}")
+    raise Unpublishable(
+        f"no publishable frame after {attempts} attempts (last: {last}). "
+        f"The description is steering it: {description}")
 
 
 def advance(settings: dict, force: bool = False) -> dict | None:
@@ -80,7 +113,7 @@ def advance(settings: dict, force: bool = False) -> dict | None:
                            f"{description}")
     print(f">>> DESCRIBE (from {source}): {description['subject'][:70]}")
 
-    image, prompt = draw.draw(description, settings)
+    image, prompt = _draw_something_publishable(description, settings)
     n = len(frames) + 1
     image_rel = chain.image_path(n)
     _write_image(image_rel, image)

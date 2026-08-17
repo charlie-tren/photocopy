@@ -19,6 +19,7 @@ import urllib.request
 from PIL import Image
 
 import describe
+import safety
 from common import rel
 
 _STYLE = ("A photograph. Sharp focus, natural depth of field, no visible camera "
@@ -42,7 +43,12 @@ def build_prompt(desc: dict) -> str:
         value = (desc.get(field) or "").strip()
         if value:
             parts.append(f"{prefix}{value}".rstrip(".") + ".")
+    # Clothing goes AFTER the slots and the negative goes last. flux weights the
+    # tail of a prompt more heavily, and the slots are exactly what kept drawing
+    # an undressed figure, so a clause in front of them loses the argument.
+    parts.append(safety.draw_clause())
     parts.append(_NEGATIVE)
+    parts.append(safety.NEGATIVE)
     return " ".join(parts)
 
 

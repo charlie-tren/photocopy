@@ -51,6 +51,45 @@ day after frame 40, and that will be the result. Do not quietly add a reset late
 to make the page look livelier. If the mechanisms above are not enough, the
 interesting fact is that they were not enough.
 
+## Where this does not apply
+
+Everything above is an argument about **aesthetics**: movement that came from
+Charlie is not evidence of anything, so the chain is not nudged toward or away
+from any subject. That argument has a boundary, and `safety.py` is on the other
+side of it.
+
+Frames 3-7 walked from a folded-brass figure to a nude male body seen from
+behind, and by frame 7 to a crouched figure whose buttocks filled the frame. The
+site came down on 17/08/2026 and those frames were removed.
+
+The instructive part: **no description was ever lewd.** The words stayed flat and
+clinical - "a polished gold male mannequin", "standing upright facing the back
+wall" - and a word filter would have caught nothing. The nudity came from the
+image model reading an unclothed mannequin in a tiled wet room, and then from the
+describer accurately recording what had been drawn, which drew it harder. The
+loop was working exactly as designed. That is the point: **an unsupervised loop
+publishing daily under someone's own name needs a floor that is not itself part
+of the loop.**
+
+So the guard is an outside constraint, deliberately, and it is not pretending
+otherwise:
+
+- the describer is told not to record anatomy, and stripped if it does
+- the drawn prompt clothes the figure
+- **every frame is looked at by a vision classifier before it is kept**, and a
+  frame that fails is redrawn up to three times, after which the day is
+  abandoned with no frame at all
+
+Only the third layer knows what was actually drawn; the first two are wording
+that either model is free to ignore. Do not remove the classifier and keep the
+wording - that is a guard in appearance only. A missing frame is a visible,
+explicable gap. A bad frame is on the internet under Charlie's name.
+
+This costs the project something real and it should be said plainly: the chain
+can no longer go everywhere it might have gone, and "unsupervised" is now
+"unsupervised within a floor". That is a smaller claim than the one the project
+started with, and it is the honest one.
+
 ## What is still measured
 
 `collapse.py` reports and never acts. Two numbers are recorded on every frame and
