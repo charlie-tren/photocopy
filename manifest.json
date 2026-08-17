@@ -1,23 +1,11 @@
 {
   "seed": {
-    "subject": "a tall thin figure made of folded brass sheet",
-    "posture": "standing square to the viewer, arms held slightly away from the body",
-    "setting": "an empty tiled room with a drain in the floor",
-    "light": "one bare bulb overhead, hard shadows",
-    "materials": "polished brass, white ceramic tile, grey grout",
-    "anomaly": "the figure has no face, only a hinge where a face would be"
+    "subject": "a deep-sea diver in a brass helmet and heavy canvas suit",
+    "posture": "standing square to the viewer, arms at its sides, boots planted",
+    "setting": "a wheat field in high summer, the crop up to its waist, no horizon",
+    "light": "flat overcast daylight, no shadows",
+    "materials": "tarnished brass, rubberised canvas, dry wheat, leather straps",
+    "anomaly": "the helmet's faceplate is dark and reflects nothing back"
   },
-  "frames": [
-    {
-      "frame": 1,
-      "date": "2026-08-12",
-      "image": "assets/img/f0001.jpg",
-      "alt": "a tall thin figure made of folded brass sheet",
-      "from": null,
-      "caption": "A tall thin figure made of folded brass sheet. Standing square to the viewer, arms held slightly away from the body. An empty tiled room with a drain in the floor. One bare bulb overhead, hard shadows. Polished brass, white ceramic tile, grey grout.",
-      "anomaly": "The figure has no face, only a hinge where a face would be.",
-      "text": null,
-      "image_distance": null
-    }
-  ]
+  "frames": []
 }

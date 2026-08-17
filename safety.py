@@ -85,6 +85,37 @@ def strip(value: str) -> str:
     return " ".join(k.strip() for k in kept if k.strip()).strip()
 
 
+#: Rewritten, not stripped. The drift was legible in the describer's own words
+#: long before anyone looked at the pictures: "mannequin" -> "male body" ->
+#: "statue of a male body". But stripping a sentence that says "body" would have
+#: blanked the SUBJECT slot, and a description with no subject fails
+#: `is_usable` and kills the chain - so the fix has to be a rewrite that keeps
+#: the sentence standing while taking the anatomy out of it.
+_DEANATOMISE = [
+    (re.compile(r"\b(?:male|female|human|man'?s|woman'?s)\s+"
+                r"(?:body|bodies|torso|figure|form|nude|anatomy)\b", re.I), "mannequin"),
+    (re.compile(r"\b(?:male|female)\s+(?:mannequin|statue|sculpture)\b", re.I), "mannequin"),
+    (re.compile(r"\b(?:body|torso|anatomy)\b", re.I), "form"),
+    (re.compile(r"\b(?:lifelike|life-?like|realistic|anatomical(?:ly)?)\b", re.I), "plain"),
+    (re.compile(r"\b(?:flesh|skin)\b", re.I), "surface"),
+]
+
+
+def deanatomise(value: str) -> str:
+    """Take the anatomy out of a slot without destroying it.
+
+    Runs AFTER `strip`: strip removes whole sentences about undress, this
+    neutralises the quieter words that were carrying the drift - "a metallic
+    yellow statue of a male body" becomes "a metallic yellow statue of a
+    mannequin", which is both accurate and no longer an instruction.
+    """
+    if not value:
+        return value
+    for pattern, replacement in _DEANATOMISE:
+        value = pattern.sub(replacement, value)
+    return value
+
+
 def flagged(text: str) -> list[str]:
     """Which banned terms appear. For logging - a silent guard is unauditable."""
     return sorted({m.group(0).lower() for m in _BODY.finditer(text or "")})

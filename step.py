@@ -11,6 +11,7 @@ describe step would have nothing to look at and the chain would be broken).
 """
 from __future__ import annotations
 
+import json
 import os
 import sys
 import time
@@ -54,6 +55,38 @@ class Unpublishable(RuntimeError):
     """Every attempt at today's frame failed the decency check."""
 
 
+#: Rejections are worth keeping even though the images are not. A rejection rate
+#: climbing from zero-a-week to daily is the chain walking somewhere again, and
+#: this is the only place that would show it BEFORE a visitor does. The image is
+#: never written - only the words that asked for it and the verdict that refused.
+REJECT_LOG = "data/rejections.jsonl"
+
+
+def _log_rejection(description: dict, prompt: str, attempt: int, reason: str,
+                   settings: dict) -> None:
+    """Never raises. This is an audit trail, and an audit trail that can take
+    the run down with it is a liability rather than a safeguard."""
+    try:
+        path = rel(REJECT_LOG)
+        os.makedirs(os.path.dirname(path), exist_ok=True)
+        try:
+            date = tz_now(settings).date().isoformat()
+        except Exception:                          # noqa: BLE001
+            date = "unknown"
+        row = {
+            "date": date,
+            "attempt": attempt,
+            "reason": reason,
+            "subject": description.get("subject", ""),
+            "posture": description.get("posture", ""),
+            "prompt": prompt,
+        }
+        with open(path, "a", encoding="utf-8") as fh:
+            fh.write(json.dumps(row, ensure_ascii=False) + "\n")
+    except Exception as exc:                       # noqa: BLE001 - see docstring
+        print(f"    (could not write the rejection log: {exc})")
+
+
 def _draw_something_publishable(description: dict, settings: dict) -> tuple[bytes, str]:
     """Draw, look at what came back, and only then accept it.
 
@@ -86,6 +119,7 @@ def _draw_something_publishable(description: dict, settings: dict) -> tuple[byte
             return image, prompt
         last = reason
         print(f"    !! attempt {attempt}/{attempts} rejected: {reason}")
+        _log_rejection(description, prompt, attempt, reason, settings)
     raise Unpublishable(
         f"no publishable frame after {attempts} attempts (last: {last}). "
         f"The description is steering it: {description}")
@@ -142,6 +176,13 @@ def advance(settings: dict, force: bool = False) -> dict | None:
     return frame
 
 
+#: A day refused on content is not the same failure as a crash, and the workflow
+#: has to be able to tell them apart to raise the right alarm. Before this, an
+#: abandoned day looked exactly like a broken build - which is to say, like
+#: nothing, because the site simply stopped gaining frames and no one was told.
+EXIT_UNPUBLISHABLE = 3
+
+
 def main(argv: list[str]) -> int:
     settings = load_settings()
     if "--render" in argv:
@@ -149,7 +190,11 @@ def main(argv: list[str]) -> int:
         print("rebuilt site")
         return 0
     _load_dotenv()
-    advance(settings, force="--force" in argv)
+    try:
+        advance(settings, force="--force" in argv)
+    except Unpublishable as exc:
+        print(f"::error::{exc}", file=sys.stderr)
+        return EXIT_UNPUBLISHABLE
     return 0
 
 

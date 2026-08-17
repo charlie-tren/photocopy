@@ -128,3 +128,43 @@ def test_a_redraw_that_comes_back_clean_is_accepted(monkeypatch):
     monkeypatch.setattr(step.safety, "check_image", lambda *a, **kw: next(verdicts))
     assert step._draw_something_publishable(
         FRAME_6, {"safety": {"retry_pause_seconds": 0}})[0] == b"img"
+
+
+# --- the describer's own words were the early warning ------------------------
+
+def test_deanatomise_keeps_the_slot_standing():
+    # Stripping this sentence would blank the SUBJECT, which fails is_usable and
+    # kills the chain. It has to be rewritten, not removed.
+    out = describe.parse({"subject": FRAME_6["subject"]})
+    assert out["subject"] == "a metallic yellow statue of a mannequin"
+    assert describe.is_usable({**FRAME_6, "subject": out["subject"]})
+
+
+def test_deanatomise_catches_the_actual_drift_words():
+    # Verbatim progression from frames 2, 5 and 6 of the live chain.
+    seen = [
+        "a featureless gold metallic mannequin figure",
+        "a polished gold male mannequin",
+        "a metallic yellow statue of a male body",
+    ]
+    cleaned = [safety.deanatomise(s) for s in seen]
+    assert "male" not in " ".join(cleaned)
+    assert "body" not in " ".join(cleaned)
+    # ...and the harmless one is left alone.
+    assert cleaned[0] == seen[0]
+
+
+def test_rejections_are_logged_without_the_image(tmp_path, monkeypatch):
+    import json as _json
+    monkeypatch.setattr(step, "rel", lambda p: str(tmp_path / p))
+    monkeypatch.setattr(step.draw, "draw", lambda d, s: (b"img", "the prompt"))
+    monkeypatch.setattr(step.safety, "check_image", lambda *a, **kw: (False, "bare buttocks"))
+    settings = {"safety": {"max_attempts": 2, "retry_pause_seconds": 0},
+                "timezone": "Australia/Sydney"}
+    with pytest.raises(step.Unpublishable):
+        step._draw_something_publishable(FRAME_6, settings)
+    rows = [_json.loads(l) for l in
+            (tmp_path / step.REJECT_LOG).read_text(encoding="utf-8").splitlines()]
+    assert len(rows) == 2
+    assert rows[0]["reason"] == "bare buttocks" and rows[0]["prompt"] == "the prompt"
+    assert "image" not in rows[0]

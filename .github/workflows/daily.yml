@@ -15,6 +15,7 @@ on:
 
 permissions:
   contents: write
+  issues: write        # the alarm when a day is refused on content
 
 concurrency:
   # Two frames in one day would both describe the same parent, and the chain's
@@ -35,11 +36,21 @@ jobs:
       - name: Test
         run: python -m pytest tests/ -q
       - name: Advance the chain
+        id: advance
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
           CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
-        run: python step.py
+        # Exit 3 means the decency check refused every attempt - a real outcome,
+        # not a broken build, and the rejection log is worth committing either
+        # way. Anything else is still a hard failure.
+        run: |
+          set +e
+          python step.py
+          code=$?
+          set -e
+          echo "code=$code" >> "$GITHUB_OUTPUT"
+          if [ "$code" != "0" ] && [ "$code" != "3" ]; then exit "$code"; fi
       - name: Commit and push
         run: |
           git config user.name "photocopy bot"
@@ -49,6 +60,31 @@ jobs:
           # the runner's UTC date disagrees with it for the ~10h either side of
           # midnight - which is exactly when this job runs. Read the date off
           # the frame rather than asking the runner.
-          DATE=$(python -c "import chain; print(chain.load_frames()[-1]['date'])")
-          git diff --staged --quiet || git commit -m "frame: $DATE"
+          DATE=$(python -c "import chain; f=chain.load_frames(); print(f[-1]['date'] if f else 'none')")
+          if [ "${{ steps.advance.outputs.code }}" = "3" ]; then
+            git diff --staged --quiet || git commit -m "no publishable frame - rejections logged"
+          else
+            git diff --staged --quiet || git commit -m "frame: $DATE"
+          fi
           git push
+
+      # A silent gap is how a guard stops being a guard: before this, an
+      # abandoned day looked identical to nothing happening, and the site would
+      # simply stop gaining frames until someone noticed weeks later. One issue
+      # per day, so a run of bad days is a readable list rather than a flood.
+      - name: Raise the alarm if the day was refused
+        if: steps.advance.outputs.code == '3'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          DATE=$(date -u +%Y-%m-%d)
+          TITLE="Photocopy: no publishable frame ($DATE)"
+          if gh issue list --state open --search "$TITLE in:title" | grep -q .; then
+            echo "already raised"
+            exit 0
+          fi
+          gh issue create --title "$TITLE"             --body "The decency check refused every attempt today, so no frame was published and the chain did not advance.
+
+          The last few rejections, with the prompt that caused each, are in \`data/rejections.jsonl\`. If the reasons all name the same thing, the description is steering there and the seed or the describer needs looking at - redrawing will not fix it.
+
+          Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"

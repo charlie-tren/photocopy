@@ -106,7 +106,8 @@ def parse(raw) -> dict:
     # even though the prompt never saw it. The same applies to anatomy: the
     # caption is published, so a slot that names a body part is a problem on the
     # page as well as in tomorrow's prompt.
-    return {f: safety.strip(strip_text_artefacts(str(raw.get(f, "") or "").strip()))
+    return {f: safety.deanatomise(
+                safety.strip(strip_text_artefacts(str(raw.get(f, "") or "").strip())))
             for f in FIELDS}
 
 

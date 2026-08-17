@@ -58,9 +58,20 @@ movement:
 seed:
   # The one written description in the whole project. Everything after frame 1
   # comes from the chain itself.
-  subject: "a tall thin figure made of folded brass sheet"
-  posture: "standing square to the viewer, arms held slightly away from the body"
-  setting: "an empty tiled room with a drain in the floor"
-  light: "one bare bulb overhead, hard shadows"
-  materials: "polished brass, white ceramic tile, grey grout"
-  anomaly: "the figure has no face, only a hinge where a face would be"
+  #
+  # REPLACED 17/08/2026. The first seed was "an empty tiled room with a drain in
+  # the floor" - which the image model reads as a wet room, and an unclothed
+  # mannequin in a wet room is a strong pull toward a nude. That is precisely
+  # the path frames 2-7 walked. The guard blocks the destination now, but a seed
+  # that keeps aiming at it burns three redraws a day and eventually finds a gap.
+  #
+  # This one closes the category instead of policing it: the figure is sealed
+  # inside a diving suit, so there is no skin anywhere in the concept for the
+  # chain to find. The setting mismatch - a diver, on land, in wheat - is also a
+  # durable anomaly, which is the other thing a seed has to supply.
+  subject: "a deep-sea diver in a brass helmet and heavy canvas suit"
+  posture: "standing square to the viewer, arms at its sides, boots planted"
+  setting: "a wheat field in high summer, the crop up to its waist, no horizon"
+  light: "flat overcast daylight, no shadows"
+  materials: "tarnished brass, rubberised canvas, dry wheat, leather straps"
+  anomaly: "the helmet's faceplate is dark and reflects nothing back"
