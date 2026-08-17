@@ -109,7 +109,8 @@ def test_unsafe_frames_are_redrawn_then_the_day_is_abandoned(monkeypatch):
     monkeypatch.setattr(step.safety, "check_image",
                         lambda *a, **kw: (False, "bare buttocks"))
     with pytest.raises(step.Unpublishable):
-        step._draw_something_publishable(FRAME_6, {"safety": {"max_attempts": 3}})
+        step._draw_something_publishable(
+            FRAME_6, {"safety": {"max_attempts": 3, "retry_pause_seconds": 0}})
     assert calls["draw"] == 3
 
 
@@ -125,4 +126,5 @@ def test_a_redraw_that_comes_back_clean_is_accepted(monkeypatch):
     verdicts = iter([(False, "bare buttocks"), (True, "clothed figure")])
     monkeypatch.setattr(step.draw, "draw", lambda d, s: (b"img", "prompt"))
     monkeypatch.setattr(step.safety, "check_image", lambda *a, **kw: next(verdicts))
-    assert step._draw_something_publishable(FRAME_6, {"safety": {}})[0] == b"img"
+    assert step._draw_something_publishable(
+        FRAME_6, {"safety": {"retry_pause_seconds": 0}})[0] == b"img"
