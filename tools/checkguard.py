@@ -20,6 +20,7 @@ from __future__ import annotations
 import os
 import subprocess
 import sys
+import time
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
@@ -49,12 +50,27 @@ def main() -> int:
     ref = os.environ.get("GUARD_REF", BEFORE_REMOVAL)
     failures = []
 
+    # gemini-3.6-flash on the free tier allows 5 requests per MINUTE. The first
+    # run of this fired seven back to back, and frames 6 and 7 came back as
+    # "UNSAFE (check failed: HTTP 429)" - which fail-closed correctly reports as
+    # unsafe, and which is therefore indistinguishable from a real verdict unless
+    # you read the reason. Pace it.
+    spacing = float(os.environ.get("GUARD_SPACING", "14"))
+    first = True
+
     for n in sorted(SHOULD_PASS + SHOULD_FAIL + UNASSERTED):
         data = frame_bytes(n, ref)
         if data is None:
             print(f"frame {n}: NOT FOUND in git at {ref} - skipped")
             continue
+        if not first:
+            time.sleep(spacing)
+        first = False
         safe, reason = safety.check_image(data, settings)
+        if "429" in reason or "check failed" in reason:
+            print(f"frame {n}: NO VERDICT - {reason[:90]}")
+            failures.append(n)
+            continue
         verdict = "SAFE  " if safe else "UNSAFE"
         note = ""
         if n in SHOULD_FAIL and safe:

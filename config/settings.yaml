@@ -35,6 +35,10 @@ safety:
   # redraw often fixes it, but three failures in a row means the description is
   # steering and another attempt is just spend.
   max_attempts: 3
+  # gemini-3.6-flash is 5 requests/MINUTE on the free tier and its own backoff
+  # is 2-4s, so back-to-back redraws lose the day to a 429 rather than to the
+  # picture. Measured 17/08/2026: seven checks in a row 429'd from the sixth.
+  retry_pause_seconds: 15
 
 # Everything that resists collapse. See docs/collapse.md for why each exists.
 loop:

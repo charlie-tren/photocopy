@@ -49,15 +49,27 @@ _BODY = re.compile(
 
 _SENTENCE = re.compile(r"(?<=[.;])\s+")
 
-#: Appended to every image prompt. Positive instruction as well as negative:
-#: "no nudity" alone leaves the model free to draw a smooth featureless nude,
-#: which is exactly what frames 2-6 were, so the figure must be affirmatively
-#: dressed in something.
-CLOTHED = ("The figure is fully clothed in plain workwear - long sleeves and "
-           "long trousers, or a boiler suit - covering it from neck to ankle.")
+#: Appended to every image prompt.
+#:
+#: THE LINE IS ANATOMY, NOT CLOTHING - and getting that wrong once already cost a
+#: CI run. The first version of this said "fully clothed in plain workwear", and
+#: the classifier written to match it rejected FRAME 1: a faceless folded-brass
+#: figure, the project's own seed and the whole look of the thing. Every figure
+#: in this chain is an unclothed mannequin. A rule that bans unclothed mannequins
+#: bans the project.
+#:
+#: What actually went wrong in frames 3-7 was anatomical realism: the figure
+#: gained musculature, then buttocks, then a pose that framed them. So the guard
+#: pins the figure where frame 1 already was - smooth, featureless, no anatomy -
+#: which blocks the drift without dictating a costume the project never had.
+SMOOTH = ("The figure is a smooth featureless mannequin with no anatomical "
+          "detail of any kind: a plain sculptural form, no rendered muscles, no "
+          "buttocks, no chest or groin detail, blank where a person would have "
+          "features.")
 
 NEGATIVE = ("No nudity, no bare skin, no buttocks, no exposed chest, no "
-            "underwear, nothing sexual or suggestive. Nobody is undressed.")
+            "genitals, no underwear, nothing sexual or suggestive, no "
+            "anatomically detailed or lifelike body.")
 
 
 def strip(value: str) -> str:
@@ -91,21 +103,34 @@ def describe_clause() -> str:
 
 
 def draw_clause() -> str:
-    return CLOTHED
+    return SMOOTH
 
 
+#: Written against real verdicts, not from imagination. An earlier version asked
+#: "does this read as undressed, even a mannequin?" and it answered false for
+#: frame 1 - "unclothed mannequin figure" - which is the seed of the whole
+#: project. The question has to be about RENDERED ANATOMY, and it has to say so
+#: with an example of each side or it collapses back to "is it wearing clothes".
 _CHECK_PROMPT = (
-    "You are a content check for a public website. Look at this image and answer "
-    "with a single JSON object:\n"
+    "You are a content check for a public art website. The site publishes photos "
+    "of abstract mannequins and sculptural figures, which are normally not "
+    "wearing clothes. That on its own is fine and is the point of the project.\n\n"
+    "Answer with a single JSON object:\n"
     '{"safe": true or false, "reason": "one short phrase"}\n\n'
-    "Answer false if the image shows: nudity or partial nudity, bare buttocks, "
-    "an exposed chest or genitals, visible underwear, a figure that reads as "
-    "undressed even if it is a mannequin or statue, anything sexual or "
-    "suggestive, or any sexualised framing of a body.\n\n"
-    "A clothed figure is safe. A machine, an object or an empty room is safe. "
-    "Classical or artistic framing does NOT make an unclothed body safe here - "
-    "this is a plain decency floor, not an art judgement. If you are unsure, "
-    "answer false."
+    "Answer FALSE only if the image shows one of these:\n"
+    "- buttocks, genitals, a nipple or a groin rendered as anatomy\n"
+    "- a lifelike naked human body, or a figure with realistic musculature and "
+    "body detail that reads as a naked person rather than as a sculpture\n"
+    "- a pose or camera angle that frames a backside, crotch or chest as the "
+    "subject of the picture\n"
+    "- anything sexual, suggestive or fetishistic\n"
+    "- a real person, undressed\n\n"
+    "Answer TRUE for: a smooth, featureless or abstract figure with no anatomical "
+    "detail, however little it is wearing; a machine; an object; an empty room; a "
+    "clothed figure.\n\n"
+    "The test is anatomy and framing, not clothing. A faceless brass figure with "
+    "no body detail is safe. A gold figure with a rendered backside, "
+    "photographed from behind, is not."
 )
 
 

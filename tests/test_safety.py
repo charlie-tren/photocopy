@@ -56,13 +56,25 @@ def test_parse_applies_the_filter_to_every_slot():
 
 # --- the drawn prompt -------------------------------------------------------
 
-def test_prompt_clothes_the_figure_and_says_so_last():
+def test_prompt_de_anatomises_the_figure_and_says_so_last():
     prompt = draw.build_prompt(FRAME_6)
-    assert "fully clothed" in prompt
+    assert "no anatomical detail" in prompt
     # Tail position is load-bearing: flux weights the end of a prompt, and the
     # slots in the middle are exactly what kept drawing an undressed figure.
-    assert prompt.index("fully clothed") > prompt.index(FRAME_6["subject"])
+    assert prompt.index("smooth featureless") > prompt.index(FRAME_6["subject"])
     assert prompt.rstrip().endswith(safety.NEGATIVE)
+
+
+def test_the_rule_is_anatomy_not_clothing():
+    # The first version demanded "fully clothed in plain workwear" and the
+    # matching classifier then rejected FRAME 1 - a faceless brass figure, the
+    # project's own seed. Every figure in this chain is an unclothed mannequin,
+    # so a clothing rule bans the project. Guard the distinction explicitly.
+    assert "clothed" not in safety.SMOOTH
+    assert "featureless" in safety.SMOOTH
+    check = safety._CHECK_PROMPT
+    assert "The test is anatomy and framing, not clothing." in check
+    assert "normally not wearing clothes" in check
 
 
 def test_describer_is_told_not_to_record_anatomy():

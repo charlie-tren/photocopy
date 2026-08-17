@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import os
 import sys
+import time
 
 import avoid
 import chain
@@ -65,9 +66,18 @@ def _draw_something_publishable(description: dict, settings: dict) -> tuple[byte
     Raising is the right failure. A gap in the chain is visible, explicable and
     fixable tomorrow; publishing the frame anyway is not.
     """
-    attempts = int(settings.get("safety", {}).get("max_attempts", 3))
+    cfg = settings.get("safety", {})
+    attempts = int(cfg.get("max_attempts", 3))
+    # gemini-3.6-flash allows 5 requests per MINUTE on the free tier. A day that
+    # redraws twice spends describe + 3 checks inside a few seconds, which trips
+    # it - and gemini.py's own backoff is 2s and 4s, nowhere near the ~42s the
+    # quota actually asks for. Spacing the retries is cheaper than losing the day
+    # to a rate limit that had nothing to say about the picture.
+    pause = float(cfg.get("retry_pause_seconds", 15))
     last = "no attempt made"
     for attempt in range(1, attempts + 1):
+        if attempt > 1 and pause:
+            time.sleep(pause)
         image, prompt = draw.draw(description, settings)
         safe, reason = safety.check_image(image, settings)
         if safe:
