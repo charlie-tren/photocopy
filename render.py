@@ -247,8 +247,7 @@ def render_page(frames_raw: list[dict], meta: dict) -> str:
     <header>
       <div class="titlerow">
         <h1>{html.escape(meta['site_name'])}</h1>
-        <a class="back" href="https://charlietrenorden.com/">&larr; Other
-          Projects</a>
+        <a class="back" href="https://charlietrenorden.com/">&larr;&nbsp;Other projects</a>
       </div>
       <div class="tag">{html.escape(meta['tagline'])}</div>
     </header>
