@@ -8,8 +8,15 @@ that were pulled from the live chain on 17/08/2026.
 
     python tools/checkguard.py
 
-Needs GEMINI_API_KEY. The frames are read out of git history - they were removed
-from the working tree, deliberately, and should stay removed.
+Needs GEMINI_API_KEY, and the fixture frames.
+
+THE FRAMES ARE NO LONGER IN GIT. They were purged from history on 17/08/2026
+(`git filter-repo`, force-pushed), because this repo is public and "deleted from
+the working tree" is not "deleted from the internet". So the fixtures now live
+OUTSIDE the repo, at ~/dev/.photocopy-guard-fixtures, and this test only runs on
+a machine that has them. Point GUARD_FIXTURES elsewhere if they move. If they
+are lost, the acceptance test is lost with them - there is no way to regenerate
+frames that took a live chain five days to drift into.
 
 Expected: frame 1 passes, frames 3-7 fail. Frame 2 is the interesting one - a
 front-facing figure with no anatomy rendered, which is where the drift started -
@@ -18,7 +25,6 @@ so its verdict is reported but not asserted either way.
 from __future__ import annotations
 
 import os
-import subprocess
 import sys
 import time
 
@@ -27,28 +33,29 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import safety                                    # noqa: E402
 from common import load_settings                 # noqa: E402
 
-#: The commit before the removal - the last one where all seven frames exist.
-BEFORE_REMOVAL = "HEAD"
+#: Where the fixtures live now that git no longer carries them.
+FIXTURES = os.path.expanduser(
+    os.environ.get("GUARD_FIXTURES", "~/dev/.photocopy-guard-fixtures"))
 SHOULD_PASS = [1]
 SHOULD_FAIL = [3, 4, 5, 6, 7]
 UNASSERTED = [2]
 
 
-def frame_bytes(n: int, ref: str) -> bytes | None:
-    path = f"assets/img/f{n:04d}.jpg"
-    for candidate in (ref, f"{ref}~1", f"{ref}~2", f"{ref}~3"):
-        try:
-            return subprocess.check_output(
-                ["git", "show", f"{candidate}:{path}"], stderr=subprocess.DEVNULL)
-        except subprocess.CalledProcessError:
-            continue
-    return None
+def frame_bytes(n: int) -> bytes | None:
+    path = os.path.join(FIXTURES, f"f{n:04d}.jpg")
+    if not os.path.exists(path):
+        return None
+    with open(path, "rb") as fh:
+        return fh.read()
 
 
 def main() -> int:
     settings = load_settings()
-    ref = os.environ.get("GUARD_REF", BEFORE_REMOVAL)
     failures = []
+    if not os.path.isdir(FIXTURES):
+        print(f"No fixtures at {FIXTURES} - this check can only run on a machine "
+              f"that has them. See the module docstring.")
+        return 2
 
     # gemini-3.6-flash on the free tier allows 5 requests per MINUTE. The first
     # run of this fired seven back to back, and frames 6 and 7 came back as
@@ -59,9 +66,9 @@ def main() -> int:
     first = True
 
     for n in sorted(SHOULD_PASS + SHOULD_FAIL + UNASSERTED):
-        data = frame_bytes(n, ref)
+        data = frame_bytes(n)
         if data is None:
-            print(f"frame {n}: NOT FOUND in git at {ref} - skipped")
+            print(f"frame {n}: NOT FOUND in {FIXTURES} - skipped")
             continue
         if not first:
             time.sleep(spacing)
