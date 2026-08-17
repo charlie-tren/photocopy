@@ -1,0 +1,20 @@
+{
+  "n": 1,
+  "date": "2026-08-17",
+  "description": {
+    "subject": "a deep-sea diver in a brass helmet and heavy canvas suit",
+    "posture": "standing square to the viewer, arms at its sides, boots planted",
+    "setting": "a wheat field in high summer, the crop up to its waist, no horizon",
+    "light": "flat overcast daylight, no shadows",
+    "materials": "tarnished brass, rubberised canvas, dry wheat, leather straps",
+    "anomaly": "the helmet's faceplate is dark and reflects nothing back"
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. a deep-sea diver in a brass helmet and heavy canvas suit, standing square to the viewer, arms at its sides, boots planted. a wheat field in high summer, the crop up to its waist, no horizon. Light: flat overcast daylight, no shadows. Materials: tarnished brass, rubberised canvas, dry wheat, leather straps. the helmet's faceplate is dark and reflects nothing back. The figure is a smooth featureless mannequin with no anatomical detail of any kind: a plain sculptural form, no rendered muscles, no buttocks, no chest or groin detail, blank where a person would have features. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no buttocks, no exposed chest, no genitals, no underwear, nothing sexual or suggestive, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0001.jpg",
+  "dhash": "17063238302571076925",
+  "reading": {
+    "text": null,
+    "image": null,
+    "n": 1
+  }
+}

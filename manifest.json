@@ -7,5 +7,17 @@
     "materials": "tarnished brass, rubberised canvas, dry wheat, leather straps",
     "anomaly": "the helmet's faceplate is dark and reflects nothing back"
   },
-  "frames": []
+  "frames": [
+    {
+      "frame": 1,
+      "date": "2026-08-17",
+      "image": "assets/img/f0001.jpg",
+      "alt": "a deep-sea diver in a brass helmet and heavy canvas suit",
+      "from": null,
+      "caption": "A deep-sea diver in a brass helmet and heavy canvas suit. Standing square to the viewer, arms at its sides, boots planted. A wheat field in high summer, the crop up to its waist, no horizon. Flat overcast daylight, no shadows. Tarnished brass, rubberised canvas, dry wheat, leather straps.",
+      "anomaly": "The helmet's faceplate is dark and reflects nothing back.",
+      "text": null,
+      "image_distance": null
+    }
+  ]
 }
