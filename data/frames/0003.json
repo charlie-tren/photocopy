@@ -1,0 +1,20 @@
+{
+  "n": 3,
+  "date": "2026-08-19",
+  "description": {
+    "subject": "A figure dressed in a beige fabric jumpsuit, dark gloves, and a gold-colored metal helmet",
+    "posture": "It stands straight upright with arms at its sides, facing directly toward the camera",
+    "setting": "An open field of tall, golden wheat under an overcast gray sky",
+    "light": "Soft, diffused white light coming from directly overhead",
+    "materials": "Metal, woven cloth, leather, and dried plant stalks",
+    "anomaly": "A spherical brass deep-sea diving helmet attached to a buttoned cloth jumpsuit in a wheat field"
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. A figure dressed in a beige fabric jumpsuit, dark gloves, and a gold-colored metal helmet, It stands straight upright with arms at its sides, facing directly toward the camera. An open field of tall, golden wheat under an overcast gray sky. Light: Soft, diffused white light coming from directly overhead. Materials: Metal, woven cloth, leather, and dried plant stalks. A spherical brass deep-sea diving helmet attached to a buttoned cloth jumpsuit in a wheat field. The figure is a smooth featureless mannequin with no anatomical detail of any kind: a plain sculptural form, no rendered muscles, no buttocks, no chest or groin detail, blank where a person would have features. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no buttocks, no exposed chest, no genitals, no underwear, nothing sexual or suggestive, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0003.jpg",
+  "dhash": "17351329015110454796",
+  "reading": {
+    "text": 0.4006,
+    "image": 16.67,
+    "n": 3
+  }
+}
