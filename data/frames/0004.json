@@ -1,0 +1,20 @@
+{
+  "n": 4,
+  "date": "2026-08-20",
+  "description": {
+    "subject": "a figure wearing a beige fabric jumpsuit, heavy black leather gauntlet gloves, and a gold-colored diving helmet with a black visor",
+    "posture": "standing upright facing directly forward with arms hanging straight down at its sides",
+    "setting": "a field of tall, ripe wheat stretching to a flat horizon beneath an overcast gray sky",
+    "light": "soft, diffused overhead daylight creating minimal shading",
+    "materials": "polished gold metal, beige woven fabric, black leather, and dry wheat stalks",
+    "anomaly": "a gold deep-sea diving helmet worn on a figure standing in a wheat field"
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. a figure wearing a beige fabric jumpsuit, heavy black leather gauntlet gloves, and a gold-colored diving helmet with a black visor, standing upright facing directly forward with arms hanging straight down at its sides. a field of tall, ripe wheat stretching to a flat horizon beneath an overcast gray sky. Light: soft, diffused overhead daylight creating minimal shading. Materials: polished gold metal, beige woven fabric, black leather, and dry wheat stalks. a gold deep-sea diving helmet worn on a figure standing in a wheat field. The figure is a smooth featureless mannequin with no anatomical detail of any kind: a plain sculptural form, no rendered muscles, no buttocks, no chest or groin detail, blank where a person would have features. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no buttocks, no exposed chest, no genitals, no underwear, nothing sexual or suggestive, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0004.jpg",
+  "dhash": "17351468610103973074",
+  "reading": {
+    "text": 0.458,
+    "image": 15.67,
+    "n": 4
+  }
+}
