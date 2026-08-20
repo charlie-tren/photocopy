@@ -7,9 +7,7 @@ today's photograph. Then it is shown that one.
 No memory, no earlier picture, no earlier words, no idea what it is looking at.
 One frame a day, forever. One chain, started once, never reset.
 
-**OFFLINE as at 17/08/2026.** Pages is disabled on this repo while the decency
-guard is verified - see "The floor" below. Re-enabling Pages on `main` puts it
-back at <https://charlietrenorden.com/photocopy/>.
+**https://charlietrenorden.com/photocopy/**
 
 It is not a self-portrait. Nothing in the loop tells the model that the figure
 is it, and nothing asks it to draw itself - it is shown a picture, it writes
