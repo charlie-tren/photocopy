@@ -1,0 +1,20 @@
+{
+  "n": 5,
+  "date": "2026-08-21",
+  "description": {
+    "subject": "a figure clad in a beige fabric outfit, long black gauntlets, and a gold metallic diving dome",
+    "posture": "standing completely upright, facing directly toward the camera with hands lowered",
+    "setting": "a farm crop of golden grain stems under an overcast, pale sky",
+    "light": "diffused white light coming softly from above with minimal shading",
+    "materials": "gold-toned metal, black rubber, beige textile, and dried grain stalks",
+    "anomaly": "a vintage diving dome with a black circular window worn above a beige cloth top among dry agricultural crops"
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. a figure clad in a beige fabric outfit, long black gauntlets, and a gold metallic diving dome, standing completely upright, facing directly toward the camera with hands lowered. a farm crop of golden grain stems under an overcast, pale sky. Light: diffused white light coming softly from above with minimal shading. Materials: gold-toned metal, black rubber, beige textile, and dried grain stalks. a vintage diving dome with a black circular window worn above a beige cloth top among dry agricultural crops. The figure is a smooth featureless mannequin with no anatomical detail of any kind: a plain sculptural form, no rendered muscles, no buttocks, no chest or groin detail, blank where a person would have features. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no buttocks, no exposed chest, no genitals, no underwear, nothing sexual or suggestive, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0005.jpg",
+  "dhash": "14469200101413537954",
+  "reading": {
+    "text": 0.3957,
+    "image": 17.2,
+    "n": 5
+  }
+}
