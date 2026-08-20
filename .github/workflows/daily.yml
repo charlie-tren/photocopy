@@ -35,6 +35,19 @@ jobs:
         run: pip install -r requirements.txt
       - name: Test
         run: python -m pytest tests/ -q
+      # The tests run before the chain advances and the commit step is a blanket
+      # `git add -A`, so anything a test writes into the working copy gets
+      # committed as if the chain had produced it. That is how 32 fixture rows
+      # reached data/rejections.jsonl - the one file that is supposed to show a
+      # real refusal. Fail here rather than let it happen quietly again.
+      - name: The tests must not have written anything
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            echo 'pytest dirtied the working copy:'
+            git status --porcelain
+            git diff
+            exit 1
+          fi
       - name: Advance the chain
         id: advance
         env:
