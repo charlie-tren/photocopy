@@ -51,6 +51,17 @@
       "anomaly": "A gold deep-sea diving helmet worn on a figure standing in a wheat field.",
       "text": 0.458,
       "image_distance": 15.67
+    },
+    {
+      "frame": 5,
+      "date": "2026-08-21",
+      "image": "assets/img/f0005.jpg",
+      "alt": "a figure clad in a beige fabric outfit, long black gauntlets, and a gold metallic diving dome",
+      "from": 4,
+      "caption": "A figure clad in a beige fabric outfit, long black gauntlets, and a gold metallic diving dome. Standing completely upright, facing directly toward the camera with hands lowered. A farm crop of golden grain stems under an overcast, pale sky. Diffused white light coming softly from above with minimal shading. Gold-toned metal, black rubber, beige textile, and dried grain stalks.",
+      "anomaly": "A vintage diving dome with a black circular window worn above a beige cloth top among dry agricultural crops.",
+      "text": 0.3957,
+      "image_distance": 17.2
     }
   ]
 }
