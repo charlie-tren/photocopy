@@ -247,6 +247,7 @@ def render_page(frames_raw: list[dict], meta: dict) -> str:
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="{html.escape(meta['site_name'])}">
 <meta property="og:title" content="{html.escape(meta['site_name'])}">
+<meta name="description" content="{html.escape(meta['tagline'])}">
 <meta property="og:description" content="{html.escape(meta['tagline'])}">
 <style>{_CSS}</style>
 {BEACON}
