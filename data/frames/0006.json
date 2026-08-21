@@ -1,0 +1,20 @@
+{
+  "n": 6,
+  "date": "2026-08-22",
+  "description": {
+    "subject": "a life-sized prop dressed in a tan textile top, matching trousers, black rubber gloves, and a brass headpiece",
+    "posture": "standing upright, oriented toward the camera with gloves held forward near midsection height",
+    "setting": "a plantation of mature wheat under a light gray sky with a red machine blurred on the distant horizon",
+    "light": "soft, even white top-lighting creating gentle shading beneath the garments",
+    "materials": "brass, cotton, rubber, wheat",
+    "anomaly": "a protruding cylindrical dark-windowed viewport positioned at the front center of the brass headpiece"
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. a life-sized prop dressed in a tan textile top, matching trousers, black rubber gloves, and a brass headpiece, standing upright, oriented toward the camera with gloves held forward near midsection height. a plantation of mature wheat under a light gray sky with a red machine blurred on the distant horizon. Light: soft, even white top-lighting creating gentle shading beneath the garments. Materials: brass, cotton, rubber, wheat. a protruding cylindrical dark-windowed viewport positioned at the front center of the brass headpiece. The figure is a smooth featureless mannequin with no anatomical detail of any kind: a plain sculptural form, no rendered muscles, no buttocks, no chest or groin detail, blank where a person would have features. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no buttocks, no exposed chest, no genitals, no underwear, nothing sexual or suggestive, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0006.jpg",
+  "dhash": "14720240014433504459",
+  "reading": {
+    "text": 0.3878,
+    "image": 18.8,
+    "n": 5
+  }
+}

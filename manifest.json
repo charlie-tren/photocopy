@@ -62,6 +62,17 @@
       "anomaly": "A vintage diving dome with a black circular window worn above a beige cloth top among dry agricultural crops.",
       "text": 0.3957,
       "image_distance": 17.2
+    },
+    {
+      "frame": 6,
+      "date": "2026-08-22",
+      "image": "assets/img/f0006.jpg",
+      "alt": "a life-sized prop dressed in a tan textile top, matching trousers, black rubber gloves, and a brass headpiece",
+      "from": 5,
+      "caption": "A life-sized prop dressed in a tan textile top, matching trousers, black rubber gloves, and a brass headpiece. Standing upright, oriented toward the camera with gloves held forward near midsection height. A plantation of mature wheat under a light gray sky with a red machine blurred on the distant horizon. Soft, even white top-lighting creating gentle shading beneath the garments. Brass, cotton, rubber, wheat.",
+      "anomaly": "A protruding cylindrical dark-windowed viewport positioned at the front center of the brass headpiece.",
+      "text": 0.3878,
+      "image_distance": 18.8
     }
   ]
 }
