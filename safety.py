@@ -62,10 +62,17 @@ _SENTENCE = re.compile(r"(?<=[.;])\s+")
 #: gained musculature, then buttocks, then a pose that framed them. So the guard
 #: pins the figure where frame 1 already was - smooth, featureless, no anatomy -
 #: which blocks the drift without dictating a costume the project never had.
+#: "wherever it is not covered" rather than "where a person would have features".
+#: The old wording described a bare body, which fought NEGATIVE's "no exposed
+#: chest" in the same prompt: flux drew the smooth bare torso the first clause
+#: asked for and the classifier refused it under the second. That contradiction
+#: is what produced the 22/08 probe's rejection loop at steps 6 and 7. The line
+#: is still anatomy and not costume - it dictates nothing to wear, it just stops
+#: insisting the figure is uncovered.
 SMOOTH = ("The figure is a smooth featureless mannequin with no anatomical "
           "detail of any kind: a plain sculptural form, no rendered muscles, no "
-          "buttocks, no chest or groin detail, blank where a person would have "
-          "features.")
+          "buttocks, no chest or groin detail, blank and unmodelled wherever it "
+          "is not covered.")
 
 NEGATIVE = ("No nudity, no bare skin, no buttocks, no exposed chest, no "
             "genitals, no underwear, nothing sexual or suggestive, no "

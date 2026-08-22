@@ -30,10 +30,23 @@ import safety
 
 #: The description IS the data model. Order matters - it is also the order the
 #: fields are assembled into the next image prompt.
-FIELDS = ("subject", "posture", "setting", "light", "materials", "anomaly")
+#: "covering" is a slot rather than an instruction on purpose. On 22/08/2026 a
+#: probe watched the chain undress itself in four steps: the subject went from
+#: "a plastic mannequin wearing a tan turtleneck sweater and grey cargo
+#: trousers" to "A mannequin made of smooth white plastic", and the clothes
+#: survived only as "knitted fabric, denim" in materials, which is far too weak
+#: to draw from. Two frames later the classifier was rejecting bare torsos.
+#: Telling the describer to keep clothing in the subject would have been rule
+#: number five in a prompt that already has four; giving it a slot of its own
+#: removes the choice instead.
+FIELDS = ("subject", "covering", "posture", "setting", "light", "materials",
+          "anomaly")
 
 _GUIDE = {
     "subject": "what the figure is made of and what it is, in one clause",
+    "covering": ("what the figure is wearing or wrapped in, named plainly - the "
+                 "garments, suit, casing or shell that cover it. If it is "
+                 "genuinely covered by nothing, say 'bare sculptural form'."),
     "posture": "how it is standing or sitting, and where it is facing",
     "setting": "the room or place around it",
     "light": "direction, hardness and colour of the light",
