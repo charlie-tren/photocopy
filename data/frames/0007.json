@@ -1,0 +1,21 @@
+{
+  "n": 7,
+  "date": "2026-08-23",
+  "description": {
+    "subject": "a mannequin-like figure topped with a yellow spherical headpiece",
+    "covering": "a tan high-neck shirt, tan trousers fastened with a belt, and black rubber gloves",
+    "posture": "positioned vertically toward the camera, holding one palm raised forward",
+    "setting": "an agricultural crop landscape with a red tractor on the horizon under a hazy sky",
+    "light": "soft, uniform illumination from an overcast white sky",
+    "materials": "rubber, painted plastic, woven textile, and dried crop stalks",
+    "anomaly": "a yellow helmet with a circular black void in place of a face"
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. a mannequin-like figure topped with a yellow spherical headpiece, wearing a tan high-neck shirt, tan trousers fastened with a belt, and black rubber gloves, positioned vertically toward the camera, holding one palm raised forward. an agricultural crop landscape with a red tractor on the horizon under a hazy sky. Light: soft, uniform illumination from an overcast white sky. Materials: rubber, painted plastic, woven textile, and dried crop stalks. a yellow helmet with a circular black void in place of a face. The figure is a smooth featureless mannequin with no anatomical detail of any kind: a plain sculptural form, no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no buttocks, no exposed chest, no genitals, no underwear, nothing sexual or suggestive, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0007.jpg",
+  "dhash": "14577215856515304013",
+  "reading": {
+    "text": 0.3045,
+    "image": 21.8,
+    "n": 5
+  }
+}
