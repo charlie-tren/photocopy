@@ -24,14 +24,48 @@ from __future__ import annotations
 import json
 import os
 import sys
+import time
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import avoid
+import chain
 import collapse
 import describe
 import draw
+import safety
 from common import load_settings, rel
+
+
+def _publishable(description, settings, out_dir, i):
+    """draw + decency check + bounded redraw - the same loop step.py runs.
+
+    The probe already inherits three of the four safety layers for free:
+    describe.py applies describe_clause/strip/deanatomise, and draw.py appends
+    the clothing clause and the negative. Only the classifier was missing, so
+    a probe was NOT a like-for-like rehearsal of the live chain - it was the
+    live chain minus the layer that actually refuses a picture.
+
+    Rejections are written to probe-out/, never to data/rejections.jsonl: that
+    file is the real chain's early-warning signal and probe noise would bury it."""
+    cfg = settings.get('safety', {})
+    attempts = int(cfg.get('max_attempts', 3))
+    pause = float(cfg.get('retry_pause_seconds', 15))
+    last = 'no attempt made'
+    for attempt in range(1, attempts + 1):
+        if attempt > 1 and pause:
+            time.sleep(pause)
+        image, prompt = draw.draw(description, settings)
+        safe, reason = safety.check_image(image, settings)
+        if safe:
+            return image, prompt
+        last = reason
+        print(f'    !! frame {i} attempt {attempt}/{attempts} rejected: {reason}')
+        with open(os.path.join(out_dir, 'rejections.jsonl'), 'a', encoding='utf-8') as fh:
+            fh.write(json.dumps({'frame': i, 'attempt': attempt, 'reason': reason,
+                                 'subject': description.get('subject', '')},
+                                ensure_ascii=False) + "\n")
+    raise RuntimeError(f'no publishable frame at {i} after {attempts} attempts (last: {last})')
 
 OUT = "probe-out"
 
@@ -43,12 +77,23 @@ def main(argv: list[str]) -> int:
     os.makedirs(out_dir, exist_ok=True)
 
     frames: list[dict] = []
-    description = dict(settings["seed"])
-    source = "seed"
+    # 'continue' starts from the live chain's newest description instead of the
+    # seed, which answers a different and more useful question: not 'what does a
+    # fresh chain do' but 'where is THIS one going next'.
+    if len(argv) > 1 and argv[1] == 'continue':
+        live = chain.load_frames()
+        if not live:
+            print('no live frames to continue from'); return 1
+        description = dict(live[-1]['description'])
+        source = f"live frame {live[-1]['n']}"
+        print(f'continuing from {source}: {description["subject"][:60]}')
+    else:
+        description = dict(settings["seed"])
+        source = "seed"
 
     for i in range(1, n + 1):
         try:
-            image, prompt = draw.draw(description, settings)
+            image, prompt = _publishable(description, settings, out_dir, i)
         except Exception as exc:                       # noqa: BLE001
             print(f"frame {i}: DRAW FAILED ({type(exc).__name__}: {exc})")
             print(f"  description was: {json.dumps(description, ensure_ascii=False)}")
