@@ -14,7 +14,18 @@
 | P5 | 3.1 | 10 min | Auto | - | **Bricolage Grotesque was never evaluated.** It failed to download from Google Fonts during the specimen build, so it is the one shortlisted face Charlie never saw. Only worth revisiting if Silkscreen is ever reconsidered. |
 | P6 | 2.3 | 10 min | Auto | - | **`index.html` is written by two authors and can silently ship stale.** It is a build artefact committed to the repo (Pages serves it from `main`), so the bot regenerates it on every frame and I regenerate it on every render change. On 13/08/2026 a rebase replayed a render commit over the bot's frame-3 build; it merged cleanly and the live page was correct, but a dirtier conflict would resolve to a page missing a frame with nothing failing. Either rebuild-and-verify after every rebase (current practice, manual) or have CI regenerate it so the committed copy is never authoritative. |
 
+| P7 | 1.3 | 15 min | Charlie | - | **`deanatomise` misses the "of a man" phrasing, and closing the gap makes drift worse.** Tested against the 18 real subject lines from the 12/08 chain: it rewrote 4 of 18, all of the `male body` / `male statue` form quoted in 025e71f, and left every `sculpture of a man` / `statue of a man` untouched - which is the phrasing frames 9-18 actually used. The patterns were fitted to the exact strings from the incident. This is not an open door (the image classifier is what actually stops nudity, and it fails closed), but the layer is not doing the job its docstring claims. **The reason this needs a decision rather than a patch: widening it adds to the restoring force that is already suppressing drift** (see the 56% fixed-prompt finding below). Fixing the safety gap and keeping the chain moving pull in opposite directions. |
+
 ## Notes
+
+**Every prompt is now 56% boilerplate, up from 32%.** Measured on live frame 3: 170 words,
+of which 95 are byte-identical every day - the style line, the clothing clause (35 words),
+the no-text negative and the no-nudity negative. On the unguarded 12/08 probe the fixed
+share was 36/111. The chain's own six slots went from 68% of the prompt to 44%, and the 59
+new fixed words sit in the TAIL, which draw.py puts there precisely because flux weights it
+hardest. The clothing clause also pushes toward `smooth featureless mannequin`, which is the
+SEED concept - so it is a restoring force toward the start, applied every frame. This is a
+mechanism, not a proof: the causal test is still a guarded probe.
 
 **The backup cron earns its place.** On 12/08/2026 the 20:40 UTC run fired at 21:27 - 47
 minutes late, matching the lateness The Aftertimes documents. It still filed frame 3 and
