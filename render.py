@@ -11,6 +11,7 @@ import html
 import json
 
 import chain
+import collapse
 from common import BEACON, hyphenate, load_settings, rel, write_json
 
 _CSS = """
@@ -135,12 +136,12 @@ _JS = r"""
     where.textContent='Frame '+f.frame+' of '+F.length;
     // Frame 1 has no pair to compare against, so there is nothing for the
     // info button to explain and it would sit beside a bare date.
-    info.hidden=(f.text==null);
-    if(f.text==null&&!box.hasAttribute('hidden')){
+    info.hidden=(f.seed_text==null);
+    if(f.seed_text==null&&!box.hasAttribute('hidden')){
       box.setAttribute('hidden','');info.setAttribute('aria-expanded','false');}
-    sub.textContent=f.date+(f.text==null?'':
-      '  \u00b7  words '+Math.round(f.text*100)+'% shared, pictures '
-      +Math.round(f.image_distance)+'/64 different');
+    sub.textContent=f.date+(f.seed_text==null?'':
+      '  \u00b7  vs frame 1: words '+Math.round(f.seed_text*100)+'% shared, picture '
+      +f.seed_image+'/64 different');
     cap.textContent=f.caption;anom.textContent=f.anomaly;
     prov.textContent=(f.from==null)
       ?'Written seed. Nothing before it.'
@@ -199,10 +200,24 @@ def caption(desc: dict) -> tuple[str, str]:
 def flatten(frames: list[dict]) -> list[dict]:
     """The chain as the viewer wants it."""
     out = []
+    # Measured against frame 1, not against yesterday. The consecutive number
+    # was the one on the page and it is the misleading one: on the live chain it
+    # sat at 17, 14, 15, 17, 18 and read as "pinned", while distance from the
+    # seed over the same frames went 17, 19, 16, 19, 25. Flat steps mean the
+    # chain is drifting at a CONSTANT rate, not that it has stopped. A chain
+    # that is genuinely converging shows shrinking steps - the unguarded probe
+    # of 12/08 did exactly that, 36 -> 23 -> 17.8.
+    seed_desc = frames[0].get("description", {}) if frames else {}
+    seed_hash = int(frames[0]["dhash"]) if frames and frames[0].get("dhash") else None
     for frame in frames:
         desc = frame.get("description", {})
         reading = frame.get("reading") or {}
         body, anom = caption(desc)
+        seed_text = seed_image = None
+        if frame["n"] > 1:
+            seed_text = round(collapse.text_similarity(seed_desc, desc), 4)
+            if seed_hash is not None and frame.get("dhash"):
+                seed_image = collapse.hamming(seed_hash, int(frame["dhash"]))
         out.append({
             "frame": frame["n"],
             "date": frame.get("date", ""),
@@ -217,6 +232,8 @@ def flatten(frames: list[dict]) -> list[dict]:
             "anomaly": anom,
             "text": reading.get("text"),
             "image_distance": reading.get("image"),
+            "seed_text": seed_text,
+            "seed_image": seed_image,
         })
     return out
 
@@ -276,11 +293,13 @@ def render_page(frames_raw: list[dict], meta: dict) -> str:
               aria-keyshortcuts="ArrowRight">&rarr;</button>
     </div>
     <div id="infobox" class="infobox" hidden>
-      <p><b>words shared</b> is how much the recent descriptions reuse the
-      same words.</p>
-      <p><b>pictures different</b> is how far apart the recent images are in
+      <p>Both are measured against frame 1, so they show how far the chain has
+      travelled from where it started.</p>
+      <p><b>words shared</b> is how much of frame 1's wording this description
+      still uses.</p>
+      <p><b>picture different</b> is how far this image is from frame 1 in
       structure. 0 is identical, about 32 is two unrelated pictures.</p>
-      <p>Both averaged over the last five frames. Nothing acts on them.</p>
+      <p>Nothing acts on either.</p>
     </div>
     <p class="prov" id="prov"></p>
     <p class="caption"><span id="cap"></span> <span class="anom" id="anom"></span></p>

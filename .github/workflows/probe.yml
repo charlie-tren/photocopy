@@ -11,6 +11,13 @@ on:
         required: false
         default: "18"
 
+      start:
+        description: "seed = fresh chain, continue = carry on from the live chain's newest frame"
+        required: false
+        default: "continue"
+        type: choice
+        options: ["continue", "seed"]
+
 concurrency:
   # Shares the same Gemini and Cloudflare quota as the daily job, so it must
   # never run alongside it.
@@ -32,7 +39,7 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
           CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
-        run: python tools/probe.py ${{ github.event.inputs.frames || '18' }}
+        run: python tools/probe.py ${{ github.event.inputs.frames || '18' }} ${{ github.event.inputs.start || 'continue' }}
       - name: Keep the frames and the numbers
         if: always()
         uses: actions/upload-artifact@v4
