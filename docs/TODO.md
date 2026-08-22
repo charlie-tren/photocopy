@@ -18,6 +18,19 @@
 
 ## Notes
 
+**The page shows the least informative of the two drift numbers.** Consecutive-pair distance
+on the live chain runs 17, 14, 15, 17, 18 - flat, which reads as pinned. Distance from the
+SEED runs 0, 17, 19, 16, 19, 25 and word overlap with the seed falls 1.00 -> 0.31 -> 0.07,
+so the chain is accumulating distance at a steady rate, not converging. Flat consecutive
+steps mean CONSTANT drift, not absent drift. The 12/08 unguarded probe was the opposite:
+consecutive fell 36 -> 23 -> 17.8, which is what converging actually looks like. Worth
+showing distance-from-seed on the page, or at least logging it.
+
+**One safety word has leaked into the chain.** Frame 6's subject is "a life-sized prop";
+"prop" comes verbatim from describe_clause(). Frames 2-5 only echoed "figure", which is
+the natural word. One word, not a takeover - but it is outside vocabulary entering a chain
+whose whole rule is that nothing does. Watch whether frame 7 keeps it.
+
 **Every prompt is now 56% boilerplate, up from 32%.** Measured on live frame 3: 170 words,
 of which 95 are byte-identical every day - the style line, the clothing clause (35 words),
 the no-text negative and the no-nudity negative. On the unguarded 12/08 probe the fixed
