@@ -86,6 +86,19 @@
       "image_distance": 18.8,
       "seed_text": 0.127,
       "seed_image": 22
+    },
+    {
+      "frame": 7,
+      "date": "2026-08-23",
+      "image": "assets/img/f0007.jpg",
+      "alt": "a mannequin-like figure topped with a yellow spherical headpiece",
+      "from": 6,
+      "caption": "A mannequin-like figure topped with a yellow spherical headpiece. A tan high-neck shirt, tan trousers fastened with a belt, and black rubber gloves. Positioned vertically toward the camera, holding one palm raised forward. An agricultural crop landscape with a red tractor on the horizon under a hazy sky. Soft, uniform illumination from an overcast white sky. Rubber, painted plastic, woven textile, and dried crop stalks.",
+      "anomaly": "A yellow helmet with a circular black void in place of a face.",
+      "text": 0.3045,
+      "image_distance": 21.8,
+      "seed_text": 0.1297,
+      "seed_image": 26
     }
   ]
 }
