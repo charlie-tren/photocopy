@@ -177,7 +177,8 @@ _JS = r"""
 #: last because it is the slot that decides which detail survives into the next
 #: frame, but it is not marked out: "anomaly" is a word from the pipeline and
 #: means nothing to anyone looking at a picture.
-CAPTION_SLOTS = ("subject", "posture", "setting", "light", "materials")
+CAPTION_SLOTS = ("subject", "covering", "posture", "setting", "light",
+                 "materials")
 LAST_SLOT = "anomaly"
 
 

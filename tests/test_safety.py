@@ -168,3 +168,45 @@ def test_rejections_are_logged_without_the_image(tmp_path, monkeypatch):
     assert len(rows) == 2
     assert rows[0]["reason"] == "bare buttocks" and rows[0]["prompt"] == "the prompt"
     assert "image" not in rows[0]
+
+
+# --- the covering slot ------------------------------------------------------
+# Added 22/08/2026 after a probe watched the chain undress itself in four steps.
+# The failure was silent: every existing test still passed with the clothing
+# gone, because nothing asserted the schema's shape or where a slot lands in the
+# prompt. These are the two checks that would have caught it.
+
+def test_covering_is_a_slot_the_describer_cannot_drop():
+    import describe
+    assert "covering" in describe.FIELDS
+    assert "covering" in describe.build_prompt()
+    parsed = describe.parse({"subject": "a mannequin"})
+    assert "covering" in parsed
+
+
+def test_covering_rides_in_the_lead_not_in_the_tail():
+    import draw
+    prompt = draw.build_prompt({
+        "subject": "a mannequin", "covering": "a tan turtleneck and grey trousers",
+        "posture": "standing", "setting": "a wheat field", "light": "flat",
+        "materials": "plastic, denim", "anomaly": "a yellow helmet"})
+    assert "tan turtleneck" in prompt
+    # Before the subject's clothes went missing this was implicit. Now it is not:
+    # a garment named after the setting is a garment flux mostly ignores.
+    assert prompt.index("tan turtleneck") < prompt.index("wheat field")
+    assert "wearing a tan turtleneck" in prompt
+
+
+def test_the_seed_is_covered():
+    from common import load_settings
+    seed = load_settings()["seed"]
+    assert seed.get("covering"), "a bare seed is how the last chain started"
+
+
+def test_the_smooth_clause_does_not_contradict_the_negative():
+    import safety
+    # SMOOTH used to say "blank where a person would have features", i.e. bare,
+    # while NEGATIVE forbids an exposed chest in the same prompt. flux drew the
+    # first and the classifier refused it under the second.
+    assert "where a person would have features" not in safety.SMOOTH
+    assert "not covered" in safety.SMOOTH

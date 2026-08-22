@@ -35,8 +35,16 @@ def build_prompt(desc: dict) -> str:
     "Light: ." as an instruction about punctuation and it shows.
     """
     subject = (desc.get("subject") or "").strip()
+    covering = (desc.get("covering") or "").strip()
     posture = (desc.get("posture") or "").strip()
-    lead = ", ".join(p for p in (subject, posture) if p) or "a figure"
+    # Covering rides in the LEAD, immediately after the subject. It was the
+    # subject slot quietly losing the clothes that undressed the chain on
+    # 22/08/2026, and a garment named only under "materials" does not survive
+    # the trip - "knitted fabric, denim" drew a bare torso in jeans.
+    if covering and not covering.lower().startswith(
+            ("wearing", "clad", "dressed", "wrapped", "in ", "a sealed")):
+        covering = f"wearing {covering}"
+    lead = ", ".join(p for p in (subject, covering, posture) if p) or "a figure"
     parts = [_STYLE, lead + "."]
     for field, prefix in (("setting", ""), ("light", "Light: "),
                           ("materials", "Materials: "), ("anomaly", "")):

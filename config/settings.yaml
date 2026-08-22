@@ -70,6 +70,7 @@ seed:
   # chain to find. The setting mismatch - a diver, on land, in wheat - is also a
   # durable anomaly, which is the other thing a seed has to supply.
   subject: "a deep-sea diver in a brass helmet and heavy canvas suit"
+  covering: "a sealed canvas diving suit, leather straps and brass fittings"
   posture: "standing square to the viewer, arms at its sides, boots planted"
   setting: "a wheat field in high summer, the crop up to its waist, no horizon"
   light: "flat overcast daylight, no shadows"
