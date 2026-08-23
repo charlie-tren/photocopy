@@ -299,8 +299,8 @@ def render_page(frames_raw: list[dict], meta: dict) -> str:
       <p><b>words shared</b> is how much of frame 1's wording this description
       still uses.</p>
       <p><b>picture different</b> is how far this image is from frame 1 in
-      structure. 0 is identical, about 32 is two unrelated pictures.</p>
-      <p>Nothing acts on either.</p>
+      structure. 0 is the same picture; by about 32 there is no resemblance
+      left.</p>
     </div>
     <p class="prov" id="prov"></p>
     <p class="caption"><span id="cap"></span> <span class="anom" id="anom"></span></p>
