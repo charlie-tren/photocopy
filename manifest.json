@@ -99,6 +99,19 @@
       "image_distance": 21.8,
       "seed_text": 0.1297,
       "seed_image": 26
+    },
+    {
+      "frame": 8,
+      "date": "2026-08-24",
+      "image": "assets/img/f0008.jpg",
+      "alt": "a smooth white mannequin",
+      "from": 7,
+      "caption": "A smooth white mannequin. A tan turtleneck shirt, matching pants with a belt, and a yellow helmet. Standing positioned toward the right side of the frame. A harvested agricultural field under an overcast grey sky with a red tractor in the background. Even, flat daylight from an overcast sky. Molded plastic, rubber, woven cloth, and metal.",
+      "anomaly": "A dark rubber glove hovering in mid-air without an arm connecting it to the form.",
+      "text": 0.2397,
+      "image_distance": 20.4,
+      "seed_text": 0.206,
+      "seed_image": 16
     }
   ]
 }
