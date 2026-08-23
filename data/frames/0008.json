@@ -1,0 +1,21 @@
+{
+  "n": 8,
+  "date": "2026-08-24",
+  "description": {
+    "subject": "a smooth white mannequin",
+    "covering": "a tan turtleneck shirt, matching pants with a belt, and a yellow helmet",
+    "posture": "standing positioned toward the right side of the frame",
+    "setting": "a harvested agricultural field under an overcast grey sky with a red tractor in the background",
+    "light": "even, flat daylight from an overcast sky",
+    "materials": "molded plastic, rubber, woven cloth, and metal",
+    "anomaly": "a dark rubber glove hovering in mid-air without an arm connecting it to the form"
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. a smooth white mannequin, wearing a tan turtleneck shirt, matching pants with a belt, and a yellow helmet, standing positioned toward the right side of the frame. a harvested agricultural field under an overcast grey sky with a red tractor in the background. Light: even, flat daylight from an overcast sky. Materials: molded plastic, rubber, woven cloth, and metal. a dark rubber glove hovering in mid-air without an arm connecting it to the form. The figure is a smooth featureless mannequin with no anatomical detail of any kind: a plain sculptural form, no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no buttocks, no exposed chest, no genitals, no underwear, nothing sexual or suggestive, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0008.jpg",
+  "dhash": "17027208921456266317",
+  "reading": {
+    "text": 0.2397,
+    "image": 20.4,
+    "n": 5
+  }
+}
