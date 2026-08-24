@@ -1,0 +1,21 @@
+{
+  "n": 9,
+  "date": "2026-08-25",
+  "description": {
+    "subject": "A pale grey plastic mannequin representing a farm laborer.",
+    "covering": "A tan turtleneck shirt, light grey trousers with a patterned belt, an orange protective hard hat, and a dark gauntlet.",
+    "posture": "Posed in profile facing toward the left side of the frame with the left arm raised.",
+    "setting": "A harvested farm field with dry crop residue and two blurred tractors in the distance beneath a pale sky.",
+    "light": "Diffuse, cool daylight falling evenly from above with minimal shading.",
+    "materials": "Molded plastic, knit fabric, synthetic leather, and denim.",
+    "anomaly": "An oversized dark gauntlet on the left arm that is several times larger than the mannequin head."
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. A pale grey plastic mannequin representing a farm laborer., wearing A tan turtleneck shirt, light grey trousers with a patterned belt, an orange protective hard hat, and a dark gauntlet., Posed in profile facing toward the left side of the frame with the left arm raised.. A harvested farm field with dry crop residue and two blurred tractors in the distance beneath a pale sky. Light: Diffuse, cool daylight falling evenly from above with minimal shading. Materials: Molded plastic, knit fabric, synthetic leather, and denim. An oversized dark gauntlet on the left arm that is several times larger than the mannequin head. The figure is a smooth featureless mannequin with no anatomical detail of any kind: a plain sculptural form, no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no buttocks, no exposed chest, no genitals, no underwear, nothing sexual or suggestive, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0009.jpg",
+  "dhash": "3471268550261116107",
+  "reading": {
+    "text": 0.2113,
+    "image": 20.8,
+    "n": 5
+  }
+}
