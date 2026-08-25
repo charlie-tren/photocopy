@@ -125,6 +125,19 @@
       "image_distance": 20.8,
       "seed_text": 0.1231,
       "seed_image": 29
+    },
+    {
+      "frame": 10,
+      "date": "2026-08-26",
+      "image": "assets/img/f0010.jpg",
+      "alt": "a mannequin made of smooth grey plastic",
+      "from": 9,
+      "caption": "A mannequin made of smooth grey plastic. An orange hard hat, a tan turtleneck sweater, light blue trousers with a woven belt, and long dark gauntlet gloves. Upright and facing to the right with its right arm raised aloft. A harvested agricultural field with two tractors in the distance. Soft, diffuse natural daylight coming from a pale overhead sky. Plastic, denim, knit fabric, and leather.",
+      "anomaly": "A dark gauntlet glove extending past the elbow on the raised right arm.",
+      "text": 0.2524,
+      "image_distance": 20.6,
+      "seed_text": 0.1074,
+      "seed_image": 31
     }
   ]
 }
