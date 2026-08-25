@@ -1,0 +1,21 @@
+{
+  "n": 10,
+  "date": "2026-08-26",
+  "description": {
+    "subject": "a mannequin made of smooth grey plastic",
+    "covering": "an orange hard hat, a tan turtleneck sweater, light blue trousers with a woven belt, and long dark gauntlet gloves",
+    "posture": "upright and facing to the right with its right arm raised aloft",
+    "setting": "a harvested agricultural field with two tractors in the distance",
+    "light": "soft, diffuse natural daylight coming from a pale overhead sky",
+    "materials": "plastic, denim, knit fabric, and leather",
+    "anomaly": "a dark gauntlet glove extending past the elbow on the raised right arm"
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. a mannequin made of smooth grey plastic, wearing an orange hard hat, a tan turtleneck sweater, light blue trousers with a woven belt, and long dark gauntlet gloves, upright and facing to the right with its right arm raised aloft. a harvested agricultural field with two tractors in the distance. Light: soft, diffuse natural daylight coming from a pale overhead sky. Materials: plastic, denim, knit fabric, and leather. a dark gauntlet glove extending past the elbow on the raised right arm. The figure is a smooth featureless mannequin with no anatomical detail of any kind: a plain sculptural form, no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no buttocks, no exposed chest, no genitals, no underwear, nothing sexual or suggestive, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0010.jpg",
+  "dhash": "19435576508565705",
+  "reading": {
+    "text": 0.2524,
+    "image": 20.6,
+    "n": 5
+  }
+}
