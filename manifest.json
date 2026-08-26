@@ -138,6 +138,19 @@
       "image_distance": 20.6,
       "seed_text": 0.1074,
       "seed_image": 31
+    },
+    {
+      "frame": 11,
+      "date": "2026-08-27",
+      "image": "assets/img/f0011.jpg",
+      "alt": "a smooth grey synthetic dummy",
+      "from": 10,
+      "caption": "A smooth grey synthetic dummy. An orange short-sleeved shirt, blue denim jeans, a brown leather waist strap, and an orange hardhat. It stands facing into the distance with its back partly turned and its left arm raised high. A wide field of dry brown crop stalks in furrowed rows with two tractors in the distance. Even, soft illumination cast from a pale sky. Synthetic resin, cotton denim, knitted cloth, and black latex.",
+      "anomaly": "A single long black glove stretching up the entire raised left arm beneath a short sleeve.",
+      "text": 0.2795,
+      "image_distance": 21.6,
+      "seed_text": 0.1256,
+      "seed_image": 23
     }
   ]
 }
