@@ -9,8 +9,24 @@ on:
     # step.py makes the second one a no-op when the first worked. The Aftertimes
     # learned this the hard way: a single on-the-hour schedule ran 40-64 minutes
     # late and was sometimes dropped entirely.
-    - cron: "40 20 * * *"   # 20:40 UTC / 06:40 AEST - primary
-    - cron: "40 22 * * *"   # 22:40 UTC / 08:40 AEST - backup if the primary was dropped
+    #
+    # THE BACKUP MUST LAND BEFORE CHARLIE LOOKS, which is 07:55 AEST / 21:55 UTC.
+    # On 26/08/2026 GitHub dropped the 20:40 primary here, in The Aftertimes and in
+    # the hub's thumbnail job, all three in the same 20:40-21:05 UTC band. Every one
+    # of them had a backup and every backup was scheduled AFTER 07:55, so he opened
+    # the site to yesterday's frame and the system quietly healed an hour later.
+    # A backup that runs after the reader has gone is not a backup.
+    #
+    # Allow 16-22 minutes of scheduler lateness on every line below - that is
+    # measured, not assumed, and it is why 21:05 is the last slot that still clears
+    # 21:55 with room.
+    - cron: "40 19 * * *"   # 19:40 UTC / 05:40 AEST - primary. Moved an hour earlier
+                            # than the old 20:40: One Story sits at 18:00/19:00 and was
+                            # the ONLY daily job GitHub did not drop on 26/08.
+    - cron: "05 21 * * *"   # 21:05 UTC / 07:05 AEST - backup, lands ~07:21-07:27, so
+                            # a dropped primary is still fixed before he opens the page.
+    - cron: "40 22 * * *"   # 22:40 UTC / 08:40 AEST - third line. Too late to save the
+                            # morning, kept because a frame is better late than missing.
   workflow_dispatch:
 
 permissions:
