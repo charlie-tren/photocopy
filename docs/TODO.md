@@ -29,16 +29,24 @@ that category off ("there is no skin anywhere in the concept for the chain to fi
 face is the first skin. Frame 7 drew clean with no rejections and the guards are holding, so
 this is a thing to watch rather than a thing to fix. The signal to act on is a MOUTH, or a
 second frame with more skin than this one - not the distance-from-frame-1 number, which is
-doing what it should (16, 18, 16, 19, 22, 26 - furthest yet, and well short of the ~32 where
-nothing would be recognisable).
+doing what it should (16, 18, 16, 19, 22, 26, 16, 29, 31 through frame 10).
 
-**The page shows the least informative of the two drift numbers.** Consecutive-pair distance
+**Struck 26/08/2026: there is no "~32 where nothing would be recognisable".** That figure
+was in this note and on the page, and it is the textbook distance between two RANDOM 64-bit
+strings. Image hash bits are neither unbiased nor independent, so it does not transfer.
+Measured: pairs of images with nothing to do with each other averaged 25.5 (18 portraits)
+and 28.2 (16 project cards), and frame 1 against that same unrelated set ran 24 to 44.
+Unrelated is a wide band overlapping the chain's own range, not a line. Frame 10 sits at 31
+and plainly still reads as the same lineage. The number is a trend, not a threshold, which
+only strengthens the note's own point: watch the face.
+
+**The page shows the least informative of the two drift numbers.** DONE - the page now
+measures from frame 1. Kept for the reasoning, which is the useful part. Consecutive-pair distance
 on the live chain runs 17, 14, 15, 17, 18 - flat, which reads as pinned. Distance from the
 SEED runs 0, 17, 19, 16, 19, 25 and word overlap with the seed falls 1.00 -> 0.31 -> 0.07,
 so the chain is accumulating distance at a steady rate, not converging. Flat consecutive
 steps mean CONSTANT drift, not absent drift. The 12/08 unguarded probe was the opposite:
-consecutive fell 36 -> 23 -> 17.8, which is what converging actually looks like. Worth
-showing distance-from-seed on the page, or at least logging it.
+consecutive fell 36 -> 23 -> 17.8, which is what converging actually looks like.
 
 **One safety word has leaked into the chain.** Frame 6's subject is "a life-sized prop";
 "prop" comes verbatim from describe_clause(). Frames 2-5 only echoed "figure", which is
