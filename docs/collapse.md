@@ -90,6 +90,38 @@ can no longer go everywhere it might have gone, and "unsupervised" is now
 "unsupervised within a floor". That is a smaller claim than the one the project
 started with, and it is the honest one.
 
+## The second failure: erosion, not drift (28/08/2026)
+
+The nudity in frames 3-7 was drift - the chain walking somewhere. What happened
+between frames 2 and 12 of the diver chain was different and worth naming
+separately, because the fix is different.
+
+The clothes came off one thread at a time, and the `covering` slot recorded every
+step of it:
+
+    2-4   jumpsuit
+    5-9   top, shirt, turtleneck
+    10    a tan turtleneck sweater
+    11    an orange short-sleeved shirt
+    12    an orange sleeveless top
+
+Nothing anatomical was ever drawn. No frame was refused. Every step was a
+faithful description of the frame before it. **Clothing is incidental detail -
+it is never the subject and never the anomaly - and a lossy describer drops a
+little incidental detail every frame.** The figure is the stable core; the
+clothes are the thing that erodes off it.
+
+That is a general property of this loop, not a fact about clothes. Anything the
+schema does not actively hold in place will thin out over enough frames, and the
+`anomaly` slot only protects ONE detail per frame. The 22/08 `covering` slot was
+the right instinct and was not enough on its own: giving a detail a slot makes
+its erosion legible, it does not stop it.
+
+What stops it is re-assertion from outside the loop. The clothing floor is
+stated by the DRAWER on every single frame, independently of what the describer
+noticed, because anything that depends on the description inherits the
+description's decay.
+
 ## What is still measured
 
 `collapse.py` reports and never acts. Two numbers are recorded on every frame and
