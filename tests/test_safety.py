@@ -278,6 +278,11 @@ def test_the_drawer_asserts_clothing_regardless_of_the_description():
 def test_the_classifier_is_told_coverage_as_well_as_anatomy():
     check = safety._CHECK_PROMPT
     assert "a bare torso, a bare back, bare shoulders" in check
+    # The floor is the TORSO. An earlier draft demanded "sleeves to the wrist"
+    # and CI rejected f0010 - the fully clothed turtleneck frame the chain was
+    # rolled back to - for having the wrong sleeves. Enforce the line Charlie
+    # actually drew (shirtless / near-shirtless), not a stricter one.
+    assert "sleeve length is not the test" in check
     # The frame-12 case named explicitly, so a future edit that loosens this
     # has to argue with the example rather than delete an abstraction.
     assert "orange vest top with its bare back" in check
