@@ -151,6 +151,19 @@
       "image_distance": 21.6,
       "seed_text": 0.1256,
       "seed_image": 23
+    },
+    {
+      "frame": 12,
+      "date": "2026-08-28",
+      "image": "assets/img/f0012.jpg",
+      "alt": "a slate-toned synthetic dummy figure wearing an orange safety helmet",
+      "from": 11,
+      "caption": "A slate-toned synthetic dummy figure wearing an orange safety helmet. An orange sleeveless top, blue jeans, a brown leather waist band, and a black arm sleeve. Standing with its back turned, facing toward the horizon with its right arm extended straight up. A vast harvested agricultural plot featuring long rows of crop stalks and a far-off tractor. Diffuse, flat daylight from an overcast white sky. Denim, molded resin, leather, and woven fabric.",
+      "anomaly": "The figure lacks a left arm entirely, terminating at the shoulder socket seam.",
+      "text": 0.3053,
+      "image_distance": 24.2,
+      "seed_text": 0.2216,
+      "seed_image": 32
     }
   ]
 }
