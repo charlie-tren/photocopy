@@ -1,0 +1,17 @@
+{
+  "_note": "Acceptance cases for the decency floor. Blob SHAs rather than paths or refs: the frames these point at were removed from the working tree, and a SHA stays valid as history moves while `HEAD~4:path` does not. Old-chain frames (the 2026-08 buttocks drift) were purged from git entirely and live only in the local fixtures directory, so they are listed by file instead.",
+  "git": [
+    {"sha": "8f73d7807d66d8452388254db5768fe1f25e585a", "label": "f0001 diver, sealed suit", "expect": "safe"},
+    {"sha": "e44bcdf4b3e4cec4a37dabb7eab2513b9821a5b5", "label": "f0010 turtleneck and trousers", "expect": "safe"},
+    {"sha": "8a83c0172c2b17c17e2eaf0f6b28508be8623a60", "label": "f0011 strapless top, bare shoulders", "expect": "unsafe"},
+    {"sha": "4d80b0e4ce4194399544f542006d40209335ce89", "label": "f0012 vest top, bare back", "expect": "unsafe"}
+  ],
+  "files": [
+    {"name": "oldchain/f0001.jpg", "label": "old f0001 brass figure", "expect": "safe"},
+    {"name": "oldchain/f0003.jpg", "label": "old f0003 rear nude", "expect": "unsafe"},
+    {"name": "oldchain/f0004.jpg", "label": "old f0004 rear nude", "expect": "unsafe"},
+    {"name": "oldchain/f0005.jpg", "label": "old f0005 rear nude", "expect": "unsafe"},
+    {"name": "oldchain/f0006.jpg", "label": "old f0006 rear nude", "expect": "unsafe"},
+    {"name": "oldchain/f0007.jpg", "label": "old f0007 crouched", "expect": "unsafe"}
+  ]
+}

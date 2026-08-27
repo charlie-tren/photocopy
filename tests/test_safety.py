@@ -65,16 +65,26 @@ def test_prompt_de_anatomises_the_figure_and_says_so_last():
     assert prompt.rstrip().endswith(safety.NEGATIVE)
 
 
-def test_the_rule_is_anatomy_not_clothing():
-    # The first version demanded "fully clothed in plain workwear" and the
-    # matching classifier then rejected FRAME 1 - a faceless brass figure, the
-    # project's own seed. Every figure in this chain is an unclothed mannequin,
-    # so a clothing rule bans the project. Guard the distinction explicitly.
-    assert "clothed" not in safety.SMOOTH
-    assert "featureless" in safety.SMOOTH
-    check = safety._CHECK_PROMPT
-    assert "The test is anatomy and framing, not clothing." in check
-    assert "normally not wearing clothes" in check
+def test_the_rule_is_anatomy_AND_coverage():
+    """Both, and the history of this test is the point.
+
+    17/08/2026 it asserted the opposite - "the test is anatomy and framing, NOT
+    clothing" - because a clothing rule had rejected the old brass-figure seed.
+    That was right about that seed and wrong as a general rule, and it cost
+    frames 11-12: a grey mannequin in a vest top with a bare back, which passed
+    the anatomy-only check exactly as written.
+
+    The reconciliation is that the two clauses do different jobs. SMOOTH keeps
+    the figure unmodelled so no anatomy is ever rendered; CLOTHED keeps it
+    covered so there is nothing to render. Neither alone was enough.
+    """
+    assert "featureless" in safety.SMOOTH          # anatomy floor, unchanged
+    assert "no anatomical detail" in safety.SMOOTH
+    assert "long-sleeved top to the wrists" in safety.CLOTHED   # coverage floor
+    assert "Nothing sleeveless" in safety.CLOTHED
+    # Both reach the drawer on every frame, not one or the other.
+    clause = safety.draw_clause()
+    assert "featureless" in clause and "long-sleeved" in clause
 
 
 def test_describer_is_told_not_to_record_anatomy():
@@ -210,3 +220,70 @@ def test_the_smooth_clause_does_not_contradict_the_negative():
     # first and the classifier refused it under the second.
     assert "where a person would have features" not in safety.SMOOTH
     assert "not covered" in safety.SMOOTH
+
+
+# --- the clothing floor (28/08/2026) -----------------------------------------
+
+#: Verbatim `covering` slots, frames 10-12. The erosion is fully legible here and
+#: no rule was reading it: sweater -> short-sleeved shirt -> sleeveless top.
+COVERING = {
+    10: "an orange hard hat, a tan turtleneck sweater, light blue trousers with a woven belt, and long dark gauntlet gloves",
+    11: "an orange short-sleeved shirt, blue denim jeans, a brown leather waist strap, and an orange hardhat",
+    12: "an orange sleeveless top, blue jeans, a brown leather waist band, and a black arm sleeve",
+}
+
+
+def test_the_garment_that_ended_the_chain_is_repaired_not_deleted():
+    # "sleeveless" sat in frame 12's covering slot in plain sight. Deleting the
+    # sentence would empty the slot; the repair keeps it and puts sleeves back.
+    fixed = safety.reclothe(COVERING[12])
+    assert "sleeveless" not in fixed
+    assert "long-sleeved top" in fixed
+    assert "blue jeans" in fixed and "brown leather waist band" in fixed
+
+
+def test_every_near_shirtless_garment_is_repaired():
+    for bad, want in (
+        ("an orange vest top", "long-sleeved shirt"),
+        ("a grey tank top", "long-sleeved shirt"),
+        ("a strapless orange top", "long-sleeved"),
+        ("a crop top", "long-sleeved shirt"),
+        ("bare shoulders", "covered shoulders"),
+        ("an exposed midriff", "covered midriff"),
+        ("a shirtless dummy", "fully clothed"),
+    ):
+        assert want in safety.reclothe(bad), bad
+
+
+def test_clothing_survives_the_repair_untouched():
+    for good in (COVERING[10], "a long-sleeved boiler suit and heavy boots",
+                 "one bare bulb overhead, hard shadows", "a bare tiled wall", ""):
+        assert safety.reclothe(good) == good
+
+
+def test_the_drawer_asserts_clothing_regardless_of_the_description():
+    # The whole lesson of frames 2-12: clothing cannot live in the description,
+    # because incidental detail erodes. It has to be re-stated every frame.
+    naked_desc = {"subject": "a smooth grey synthetic dummy", "covering": "",
+                  "posture": "standing with its back turned", "setting": "a field",
+                  "light": "flat overcast", "materials": "grey plastic",
+                  "anomaly": "a tractor on the horizon"}
+    prompt = draw.build_prompt(naked_desc)
+    assert "long-sleeved top to the wrists" in prompt
+    assert "full-length trousers" in prompt
+    for phrase in ("Not shirtless", "not sleeveless", "no bare shoulders"):
+        assert phrase in prompt
+
+
+def test_the_classifier_is_told_coverage_as_well_as_anatomy():
+    check = safety._CHECK_PROMPT
+    assert "a bare torso, a bare back, bare shoulders" in check
+    # The frame-12 case named explicitly, so a future edit that loosens this
+    # has to argue with the example rather than delete an abstraction.
+    assert "orange vest top with its bare back" in check
+    assert "should not pass this one" in check
+
+
+def test_the_covering_slot_no_longer_teaches_the_bare_state():
+    assert "bare sculptural form" not in describe._GUIDE["covering"]
+    assert "sleeves to the wrist" in describe._GUIDE["covering"]

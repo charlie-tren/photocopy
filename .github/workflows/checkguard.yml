@@ -1,0 +1,29 @@
+name: check-guard
+
+# Manual only. Puts the decency classifier in front of the real frames that
+# caused each tightening and fails if it disagrees with the human call. Draws
+# nothing, commits nothing, changes nothing.
+#
+# Run this after ANY edit to safety.py. The unit tests stub the classifier out,
+# so they cannot tell you whether it can see the thing it exists to catch - and
+# twice now a rule that passed every unit test was wrong about a real picture.
+on:
+  workflow_dispatch:
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          # The frames under test are not in the working tree - they are read
+          # out of history by blob SHA. A shallow clone has no objects to find.
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Check the guard against the frames that caused it
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python tools/checkguard.py
