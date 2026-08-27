@@ -138,6 +138,19 @@
       "image_distance": 20.6,
       "seed_text": 0.1074,
       "seed_image": 31
+    },
+    {
+      "frame": 11,
+      "date": "2026-08-28",
+      "image": "assets/img/f0011.jpg",
+      "alt": "a grey synthetic display figure",
+      "from": 10,
+      "caption": "A grey synthetic display figure. A long-sleeved orange top, blue denim jeans secured by a brown waist strap, an orange safety helmet, and a black extended glove covering the left arm. Standing with its back to the viewer and facing into the open field with its left arm raised straight up. A harvested crop field with furrows stretching into the distance and two tractors parked in the background. Soft diffuse daytime illumination coming from an overcast sky with gentle shadows. Denim fabric, synthetic fiberglass, woven textile, and dried plant stalks.",
+      "anomaly": "The single black elbow-length glove fitted over the figure's raised left arm.",
+      "text": 0.291,
+      "image_distance": 21.4,
+      "seed_text": 0.1895,
+      "seed_image": 29
     }
   ]
 }
