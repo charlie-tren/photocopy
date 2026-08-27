@@ -47,6 +47,43 @@ _BODY = re.compile(
     r"pubic|loins|erotic|sensual|seductive|provocative|suggestive|"
     r"topless|bottomless|lingerie|underwear)\b", re.I)
 
+
+#: The garment vocabulary of the 28/08/2026 erosion. REPAIRED, NOT STRIPPED, and
+#: the distinction is load-bearing: these words turn up in the SUBJECT slot ("a
+#: dummy in a sleeveless orange top"), and strip() takes out whole sentences, so
+#: routing them there would blank the subject, fail is_usable and kill the chain.
+#: Rewriting puts the sleeves back instead, which also means the repair
+#: propagates - tomorrow's describer sees a covered figure and says so.
+_RECLOTHE = [
+    (re.compile(r"\b(?:sleeveless|strapless|off[- ]the[- ]shoulder)\b", re.I), "long-sleeved"),
+    (re.compile(r"\b(?:tank|vest|crop|halter|camisole|singlet)[- ]?tops?\b", re.I),
+     "long-sleeved shirt"),
+    (re.compile(r"\b(?:camisole|singlet)s?\b", re.I), "long-sleeved shirt"),
+    (re.compile(r"\bshirtless|\bbare[- ]chested\b", re.I), "fully clothed"),
+    (re.compile(r"\bbare[- ]?(shoulders?|back|arms?|torso|midriff)\b", re.I),
+     lambda m: "covered " + m.group(1)),
+    (re.compile(r"\b(?:exposed|uncovered)\s+(shoulders?|back|arms?|torso|midriff|chest)\b", re.I),
+     lambda m: "covered " + m.group(1)),
+]
+
+
+def reclothe(value: str) -> str:
+    """Put the sleeves back on a slot rather than deleting the sentence."""
+    if not value:
+        return value
+    for pattern, replacement in _RECLOTHE:
+        value = pattern.sub(replacement, value)
+    return value
+
+
+#: Audit only - what `flagged` reports. Wider than what is stripped, so a garment
+#: word shows up in the log even though it is repaired rather than removed.
+_GARMENT = re.compile(
+    r"\b(shirtless|sleeveless|strapless|halter|camisole|singlet|"
+    r"(?:crop|tank|vest)[- ]?tops?|midriff|off[- ]the[- ]shoulder|"
+    r"(?:bare|exposed|uncovered)[- ]?(?:shoulders?|back|arms?|torso|chest|midriff))\b",
+    re.I)
+
 _SENTENCE = re.compile(r"(?<=[.;])\s+")
 
 #: Appended to every image prompt.
@@ -74,9 +111,33 @@ SMOOTH = ("The figure is a smooth featureless mannequin with no anatomical "
           "buttocks, no chest or groin detail, blank and unmodelled wherever it "
           "is not covered.")
 
+#: THE CLOTHING FLOOR, added 28/08/2026, and the reason it exists is worth
+#: keeping because I removed the first version of it and this is what happened.
+#:
+#: On 17/08 the rule was set as "anatomy, not clothing", because a clothing rule
+#: had rejected the old brass-figure seed. That reasoning was right about the OLD
+#: seed and wrong about this one - the diver is clothed by construction, so a
+#: clothing floor costs the project nothing. Removing it cost twelve frames:
+#:
+#:   2-4  jumpsuit      7-9  shirt, turtleneck     11  sleeve
+#:   5-6  top          10  turtleneck, sweater     12  SLEEVELESS
+#:
+#: Nothing was wrong with any single step. Clothing is incidental detail - it is
+#: never the subject and never the anomaly - and a lossy describer drops a little
+#: incidental detail every frame. "Figure" is the stable core; the clothes erode
+#: off it. So the clothes cannot live in the description. They have to be
+#: re-asserted by the DRAWER on every frame, independently of what the describer
+#: happened to notice, or they will keep sliding off.
+CLOTHED = ("It is dressed in plain workwear that covers it completely: a "
+           "long-sleeved top to the wrists and full-length trousers to the "
+           "ankles. Shoulders, arms, chest, back and midriff are all covered. "
+           "Nothing sleeveless, nothing off-the-shoulder, no bare torso.")
+
 NEGATIVE = ("No nudity, no bare skin, no buttocks, no exposed chest, no "
             "genitals, no underwear, nothing sexual or suggestive, no "
-            "anatomically detailed or lifelike body.")
+            "anatomically detailed or lifelike body. Not shirtless, not "
+            "sleeveless, no vest top, no tank top, no bare shoulders, no bare "
+            "back, no bare arms, no exposed midriff.")
 
 
 def strip(value: str) -> str:
@@ -124,8 +185,10 @@ def deanatomise(value: str) -> str:
 
 
 def flagged(text: str) -> list[str]:
-    """Which banned terms appear. For logging - a silent guard is unauditable."""
-    return sorted({m.group(0).lower() for m in _BODY.finditer(text or "")})
+    """Which watched terms appear. For logging - a silent guard is unauditable."""
+    text = text or ""
+    return sorted({m.group(0).lower() for m in _BODY.finditer(text)}
+                  | {m.group(0).lower() for m in _GARMENT.finditer(text)})
 
 
 def describe_clause() -> str:
@@ -136,12 +199,19 @@ def describe_clause() -> str:
         "private on a person - not in any slot, and least of all the anomaly. If "
         "the figure appears unclothed, say nothing at all about that; describe "
         "its material and posture and move on. Never use the words nude, naked, "
-        "bare, buttocks or any anatomical term."
+        "bare, buttocks or any anatomical term.\n\n"
+        "The figure is clothed. Describe the clothing as covering it - long "
+        "sleeves, full-length trousers - and never as sleeveless, strapless, "
+        "off-the-shoulder, a vest or a tank top, and never mention bare "
+        "shoulders, a bare back or a bare torso. If the clothing looks skimpy "
+        "or partial, describe it as full-length workwear instead."
     )
 
 
 def draw_clause() -> str:
-    return SMOOTH
+    """SMOOTH pins the anatomy, CLOTHED pins the coverage. Both, every frame -
+    the 28/08 erosion happened in the gap where only the first one existed."""
+    return SMOOTH + " " + CLOTHED
 
 
 #: Written against real verdicts, not from imagination. An earlier version asked
@@ -155,20 +225,24 @@ _CHECK_PROMPT = (
     "wearing clothes. That on its own is fine and is the point of the project.\n\n"
     "Answer with a single JSON object:\n"
     '{"safe": true or false, "reason": "one short phrase"}\n\n'
-    "Answer FALSE only if the image shows one of these:\n"
+    "Answer FALSE if the image shows any of these:\n"
     "- buttocks, genitals, a nipple or a groin rendered as anatomy\n"
+    "- a bare torso, a bare back, bare shoulders or a bare midriff - including on a smooth featureless mannequin. It should be dressed in something with sleeves to the wrist and full-length trousers; a vest, tank top, singlet, crop top or strapless top is NOT enough and answers false. A bare head, face, hands and feet are fine.\n"
     "- a lifelike naked human body, or a figure with realistic musculature and "
     "body detail that reads as a naked person rather than as a sculpture\n"
     "- a pose or camera angle that frames a backside, crotch or chest as the "
     "subject of the picture\n"
     "- anything sexual, suggestive or fetishistic\n"
     "- a real person, undressed\n\n"
-    "Answer TRUE for: a smooth, featureless or abstract figure with no anatomical "
-    "detail, however little it is wearing; a machine; an object; an empty room; a "
-    "clothed figure.\n\n"
-    "The test is anatomy and framing, not clothing. A faceless brass figure with "
-    "no body detail is safe. A gold figure with a rendered backside, "
-    "photographed from behind, is not."
+    "Answer TRUE for: a figure covered by sleeves to the wrist and "
+    "full-length trousers, however abstract or featureless it is; a "
+    "machine; an object; an empty room.\n\n"
+    "Two tests, and it fails on either. ANATOMY: a gold figure with a rendered "
+    "backside, photographed from behind, is not safe. COVERAGE: a grey "
+    "mannequin in an orange vest top with its bare back to the camera is not "
+    "safe either, even though nothing anatomical is rendered - that one passed "
+    "an earlier version of this check and should not pass this one. A faceless "
+    "figure in a long-sleeved jumpsuit is safe."
 )
 
 

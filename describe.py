@@ -44,9 +44,17 @@ FIELDS = ("subject", "covering", "posture", "setting", "light", "materials",
 
 _GUIDE = {
     "subject": "what the figure is made of and what it is, in one clause",
+    # The fallback used to read "if it is genuinely covered by nothing, say
+    # 'bare sculptural form'" - an escape hatch that told the describer how to
+    # write the undressed state, in the one slot built to prevent it. The slot
+    # then recorded the erosion faithfully instead of resisting it: sweater ->
+    # short-sleeved shirt -> sleeveless top, frames 10 to 12. There is no bare
+    # option any more; a figure is covered, and a non-figure has no covering.
     "covering": ("what the figure is wearing or wrapped in, named plainly - the "
-                 "garments, suit, casing or shell that cover it. If it is "
-                 "genuinely covered by nothing, say 'bare sculptural form'."),
+                 "garments, suit, casing or shell that cover it. It always has "
+                 "sleeves to the wrist and legs to the ankle unless it is a "
+                 "sealed suit. If the subject is not a figure at all, say "
+                 "'not a figure'."),
     "posture": "how it is standing or sitting, and where it is facing",
     "setting": "the room or place around it",
     "light": "direction, hardness and colour of the light",
@@ -119,8 +127,8 @@ def parse(raw) -> dict:
     # even though the prompt never saw it. The same applies to anatomy: the
     # caption is published, so a slot that names a body part is a problem on the
     # page as well as in tomorrow's prompt.
-    return {f: safety.deanatomise(
-                safety.strip(strip_text_artefacts(str(raw.get(f, "") or "").strip())))
+    return {f: safety.reclothe(safety.deanatomise(
+                safety.strip(strip_text_artefacts(str(raw.get(f, "") or "").strip()))))
             for f in FIELDS}
 
 
