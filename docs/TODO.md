@@ -20,6 +20,18 @@
 
 ## Notes
 
+
+**Watch the face, not the drift number.** Frame 7 (23/08/2026) is the first frame where the
+figure has cheeks and a chin instead of a sealed helmet - the helmet flattened into a yellow
+cap over a visible face. Every frame before it was sealed. The 17/08 incident came from
+exactly this direction: a sealed prop becoming a human body. The seed was chosen to close
+that category off ("there is no skin anywhere in the concept for the chain to find"), and a
+face is the first skin. Frame 7 drew clean with no rejections and the guards are holding, so
+this is a thing to watch rather than a thing to fix. The signal to act on is a MOUTH, or a
+second frame with more skin than this one - not the distance-from-frame-1 number, which is
+doing what it should (16, 18, 16, 19, 22, 26 - furthest yet, and well short of the ~32 where
+nothing would be recognisable).
+
 **The page shows the least informative of the two drift numbers.** Consecutive-pair distance
 on the live chain runs 17, 14, 15, 17, 18 - flat, which reads as pinned. Distance from the
 SEED runs 0, 17, 19, 16, 19, 25 and word overlap with the seed falls 1.00 -> 0.31 -> 0.07,
