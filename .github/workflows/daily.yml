@@ -20,9 +20,18 @@ on:
     # Allow 16-22 minutes of scheduler lateness on every line below - that is
     # measured, not assumed, and it is why 21:05 is the last slot that still clears
     # 21:55 with room.
-    - cron: "40 19 * * *"   # 19:40 UTC / 05:40 AEST - primary. Moved an hour earlier
-                            # than the old 20:40: One Story sits at 18:00/19:00 and was
-                            # the ONLY daily job GitHub did not drop on 26/08.
+    #
+    # WHY 19:40 AND NOT THE OLD 20:40 - the honest version, corrected 28/08/2026.
+    # It was moved on 27/08 on the theory that GitHub's 20:00-21:00 UTC band is
+    # congested, inferred from One Story surviving that day at 18:00/19:00. That
+    # inference was WRONG. GitHub's status history shows four Actions incidents
+    # on 26/08 (15:09, 15:11, 22:56 plus a billing disruption at 23:37) and the
+    # run distribution shows 168 scheduled runs starting happily in the 18:00-
+    # 23:00 UTC window over the preceding week. The old time was not congested;
+    # the platform was broken, and One Story failed the next day too.
+    # The earlier slot is kept only because it costs nothing and buys margin.
+    # Do not "optimise" the other jobs onto this reasoning - it does not hold.
+    - cron: "40 19 * * *"   # 19:40 UTC / 05:40 AEST - primary
     - cron: "05 21 * * *"   # 21:05 UTC / 07:05 AEST - backup, lands ~07:21-07:27, so
                             # a dropped primary is still fixed before he opens the page.
     - cron: "40 22 * * *"   # 22:40 UTC / 08:40 AEST - third line. Too late to save the
