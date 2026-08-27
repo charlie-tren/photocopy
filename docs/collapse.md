@@ -122,6 +122,20 @@ stated by the DRAWER on every single frame, independently of what the describer
 noticed, because anything that depends on the description inherits the
 description's decay.
 
+**And the ban list was making it worse.** `avoid.py` forbids any content word
+present in four of the last six descriptions - so a figure that stays dressed
+the same way for a week gets its own clothes banned. The live block on 28/08
+read: *belt, dark, field, grey, harvested, **mannequin**, plastic, raised, soft,
+**trousers**, woven*. The describer was being told, in writing, that it may not
+say trousers; and with "mannequin" gone too it reaches for "figure", "dummy",
+"body" - the exact anatomy vocabulary the other floor exists to undo.
+
+So the two anti-collapse mechanisms were quietly fighting the two safety floors,
+and the floors were losing one word at a time. `safety.PROTECTED` is now excluded
+from the counter. It is deliberately short: every exemption is a small hole in
+the thing that stops the chain circling, and these are only cheap because
+clothing is not what the project is measuring.
+
 ## What is still measured
 
 `collapse.py` reports and never acts. Two numbers are recorded on every frame and

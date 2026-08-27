@@ -292,3 +292,38 @@ def test_the_classifier_is_told_coverage_as_well_as_anatomy():
 def test_the_covering_slot_no_longer_teaches_the_bare_state():
     assert "bare sculptural form" not in describe._GUIDE["covering"]
     assert "sleeves to the wrist" in describe._GUIDE["covering"]
+
+
+# --- the ban list must not undress the figure (28/08/2026) -------------------
+
+def test_the_avoid_list_cannot_ban_the_clothes():
+    """The two anti-collapse mechanisms were fighting the two safety floors.
+
+    avoid.py bans any content word in four of the last six descriptions. A
+    figure that stays dressed the same way for a week gets its own clothes
+    banned - the live block on 28/08 literally contained "mannequin" and
+    "trousers", i.e. the describer was told in writing not to say trousers.
+    """
+    import avoid
+    dressed = {"subject": "a grey mannequin", "covering": "a long-sleeved "
+               "jumpsuit, heavy boots and a helmet", "posture": "standing",
+               "setting": "a harvested field", "light": "flat overcast",
+               "materials": "grey plastic, orange nylon", "anomaly": "a tractor"}
+    history = [dressed] * 6
+    block = avoid.block(history, {"avoid_window": 6, "avoid_min_count": 4,
+                                  "avoid_term_cap": 14})
+    for word in ("mannequin", "trousers", "sleeved", "jumpsuit", "boots",
+                 "helmet", "covering"):
+        assert word not in block, f"the ban list would undress it: {word}"
+    # ...but it still bans the scene words it exists to ban.
+    assert "harvested" in block and "plastic" in block
+
+
+def test_protected_words_never_reach_the_counter():
+    import avoid
+    got = avoid.terms({"subject": "a grey mannequin in a jumpsuit",
+                       "covering": "trousers and gloves", "posture": "",
+                       "setting": "a harvested field", "light": "", 
+                       "materials": "", "anomaly": ""})
+    assert "mannequin" not in got and "trousers" not in got
+    assert "harvested" in got

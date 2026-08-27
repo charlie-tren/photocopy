@@ -15,6 +15,7 @@ import re
 from collections import Counter
 
 import describe
+import safety
 
 #: Words that carry no subject matter, so banning them would only make the
 #: describer write worse English without moving the picture.
@@ -32,9 +33,16 @@ _WORD = re.compile(r"[a-z]{4,}")
 
 
 def terms(desc: dict) -> set[str]:
-    """Content words in one description, deduplicated."""
+    """Content words in one description, deduplicated.
+
+    `safety.PROTECTED` is excluded here rather than filtered later, so a
+    protected word can never reach the counter at all. See that constant: a
+    figure that stays dressed the same way for a week was getting its own
+    clothes banned, which is an instruction to undress it.
+    """
     text = " ".join(str(desc.get(f, "")) for f in describe.FIELDS).lower()
-    return {w for w in _WORD.findall(text) if w not in _STOP}
+    return {w for w in _WORD.findall(text)
+            if w not in _STOP and w not in safety.PROTECTED}
 
 
 def overused(history: list[dict], window: int, min_count: int,

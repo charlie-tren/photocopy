@@ -268,3 +268,34 @@ def check_image(image_bytes: bytes, settings: dict,
         return False, f"check returned no verdict: {str(verdict)[:120]}"
     reason = str(verdict.get("reason", "") or "").strip()[:160]
     return bool(verdict["safe"]) is True, reason or "no reason given"
+
+
+#: Words `avoid.py` may never ban. Discovered 28/08/2026, and it is the deeper
+#: cause of the erosion rather than a tidy-up.
+#:
+#: The avoid list forbids any content word present in four of the last six
+#: descriptions. A figure that stays dressed in the same workwear for a week
+#: therefore gets its own clothes banned: on 28/08 the live block handed to the
+#: describer was "belt, dark, field, grey, harvested, MANNEQUIN, plastic, raised,
+#: soft, TROUSERS, woven" - i.e. it was told, in writing, that it may not say
+#: trousers. The covering slot then has to reach for another word or drop the
+#: legwear, and "mannequin" being banned pushes the subject toward "figure",
+#: "dummy", "body" - the exact anatomy drift deanatomise exists to undo.
+#:
+#: So the two anti-collapse mechanisms were quietly fighting the two safety
+#: floors, and the safety floors were losing one word at a time. The guard is
+#: already a documented exception to "nothing enters from outside"; this makes
+#: the exception hold in the one place it was being overruled.
+#:
+#: Keep this list SHORT and only for words a floor depends on. The avoid list is
+#: what stops the chain circling, and every exemption is a small hole in it -
+#: these are cheap because clothing is not what the project is measuring.
+PROTECTED = frozenset({
+    # the neutral subject - the alternative to these is anatomy vocabulary
+    "mannequin", "mannequins", "figure", "form", "dummy", "prop", "sculpture",
+    # coverage - banning any of these is an instruction to undress the figure
+    "clothed", "covered", "covering", "clothing", "garment", "garments",
+    "sleeve", "sleeves", "sleeved", "trousers", "jumpsuit", "overalls",
+    "coverall", "coveralls", "jacket", "shirt", "suit", "gloves", "boots",
+    "helmet", "collar", "cuffs", "workwear",
+})
