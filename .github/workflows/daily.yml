@@ -37,6 +37,13 @@ on:
     - cron: "40 22 * * *"   # 22:40 UTC / 08:40 AEST - third line. Too late to save the
                             # morning, kept because a frame is better late than missing.
   workflow_dispatch:
+  # Fired by the heartbeat Worker (site-stats/heartbeat) at 20:30 UTC, from
+  # OUTSIDE GitHub Actions. On 26/08/2026 GitHub's scheduler went down and took
+  # every cron on the estate with it, catch-ups included; a backup that shares a
+  # failure domain with the thing it backs up is not a backup. Safe to fire
+  # redundantly - the already-filed guard makes a second run of the day a no-op.
+  repository_dispatch:
+    types: [heartbeat]
 
 permissions:
   contents: write
