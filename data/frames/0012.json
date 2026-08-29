@@ -1,0 +1,21 @@
+{
+  "n": 12,
+  "date": "2026-08-29",
+  "description": {
+    "subject": "a mannequin made of smooth slate-coloured resin",
+    "covering": "an orange long-sleeved shirt, blue denim jeans, a brown leather waist-band, an orange safety helmet, and a black sleeve over the left limb",
+    "posture": "standing facing the horizon with its left limb held high",
+    "setting": "an agricultural plain of dry crop stalks under an overcast sky, with a tractor parked to the right",
+    "light": "diffuse white daylight from an overcast sky creating muted overhead lighting",
+    "materials": "denim, cotton, leather, metal",
+    "anomaly": "the black fabric sleeve covering only the left limb of the mannequin"
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. a mannequin made of smooth slate-coloured resin, wearing an orange long-sleeved shirt, blue denim jeans, a brown leather waist-band, an orange safety helmet, and a black sleeve over the left limb, standing facing the horizon with its left limb held high. an agricultural plain of dry crop stalks under an overcast sky, with a tractor parked to the right. Light: diffuse white daylight from an overcast sky creating muted overhead lighting. Materials: denim, cotton, leather, metal. the black fabric sleeve covering only the left limb of the mannequin. The figure is a smooth featureless mannequin with no anatomical detail of any kind: a plain sculptural form, no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. It is dressed in plain workwear that covers it completely: a long-sleeved top to the wrists and full-length trousers to the ankles. Shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, nothing off-the-shoulder, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no buttocks, no exposed chest, no genitals, no underwear, nothing sexual or suggestive, no anatomically detailed or lifelike body. Not shirtless, not sleeveless, no vest top, no tank top, no bare shoulders, no bare back, no bare arms, no exposed midriff.",
+  "image": "assets/img/f0012.jpg",
+  "dhash": "588472391840222412",
+  "reading": {
+    "text": 0.3121,
+    "image": 20.6,
+    "n": 5
+  }
+}
