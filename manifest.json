@@ -32,7 +32,7 @@
       "anomaly": "A metallic deep-sea diving helmet worn in a dry wheat field.",
       "text": 0.3186,
       "image_distance": 16.0,
-      "seed_text": 0.3186,
+      "seed_text": 0.3216,
       "seed_image": 16
     },
     {
@@ -45,7 +45,7 @@
       "anomaly": "A spherical brass deep-sea diving helmet attached to a buttoned cloth jumpsuit in a wheat field.",
       "text": 0.4006,
       "image_distance": 16.67,
-      "seed_text": 0.2624,
+      "seed_text": 0.2598,
       "seed_image": 18
     },
     {
@@ -58,7 +58,7 @@
       "anomaly": "A gold deep-sea diving helmet worn on a figure standing in a wheat field.",
       "text": 0.458,
       "image_distance": 15.67,
-      "seed_text": 0.3301,
+      "seed_text": 0.3341,
       "seed_image": 16
     },
     {
@@ -71,7 +71,7 @@
       "anomaly": "A vintage diving dome with a black circular window worn above a beige cloth top among dry agricultural crops.",
       "text": 0.3957,
       "image_distance": 17.2,
-      "seed_text": 0.0746,
+      "seed_text": 0.0791,
       "seed_image": 19
     },
     {
@@ -84,7 +84,7 @@
       "anomaly": "A protruding cylindrical dark-windowed viewport positioned at the front center of the brass headpiece.",
       "text": 0.3878,
       "image_distance": 18.8,
-      "seed_text": 0.127,
+      "seed_text": 0.1392,
       "seed_image": 22
     },
     {
@@ -97,7 +97,7 @@
       "anomaly": "A yellow helmet with a circular black void in place of a face.",
       "text": 0.3045,
       "image_distance": 21.8,
-      "seed_text": 0.1297,
+      "seed_text": 0.1169,
       "seed_image": 26
     },
     {
@@ -110,7 +110,7 @@
       "anomaly": "A dark rubber glove hovering in mid-air without an arm connecting it to the form.",
       "text": 0.2397,
       "image_distance": 20.4,
-      "seed_text": 0.206,
+      "seed_text": 0.1967,
       "seed_image": 16
     },
     {
@@ -123,7 +123,7 @@
       "anomaly": "An oversized dark gauntlet on the left arm that is several times larger than the mannequin head.",
       "text": 0.2113,
       "image_distance": 20.8,
-      "seed_text": 0.1231,
+      "seed_text": 0.1332,
       "seed_image": 29
     },
     {
@@ -136,7 +136,7 @@
       "anomaly": "A dark gauntlet glove extending past the elbow on the raised right arm.",
       "text": 0.2524,
       "image_distance": 20.6,
-      "seed_text": 0.1074,
+      "seed_text": 0.1169,
       "seed_image": 31
     },
     {
@@ -149,8 +149,21 @@
       "anomaly": "The single black elbow-length glove fitted over the figure's raised left arm.",
       "text": 0.291,
       "image_distance": 21.4,
-      "seed_text": 0.1895,
+      "seed_text": 0.1807,
       "seed_image": 29
+    },
+    {
+      "frame": 12,
+      "date": "2026-08-29",
+      "image": "assets/img/f0012.jpg",
+      "alt": "a mannequin made of smooth slate-coloured resin",
+      "from": 11,
+      "caption": "A mannequin made of smooth slate-coloured resin. An orange long-sleeved shirt, blue denim jeans, a brown leather waist-band, an orange safety helmet, and a black sleeve over the left limb. Standing facing the horizon with its left limb held high. An agricultural plain of dry crop stalks under an overcast sky, with a tractor parked to the right. Diffuse white daylight from an overcast sky creating muted overhead lighting. Denim, cotton, leather, metal.",
+      "anomaly": "The black fabric sleeve covering only the left limb of the mannequin.",
+      "text": 0.3121,
+      "image_distance": 20.6,
+      "seed_text": 0.2309,
+      "seed_image": 28
     }
   ]
 }
