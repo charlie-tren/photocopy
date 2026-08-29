@@ -164,6 +164,19 @@
       "image_distance": 20.6,
       "seed_text": 0.2309,
       "seed_image": 28
+    },
+    {
+      "frame": 13,
+      "date": "2026-08-30",
+      "image": "assets/img/f0013.jpg",
+      "alt": "a dark charcoal mannequin constructed from synthetic resin",
+      "from": 12,
+      "caption": "A dark charcoal mannequin constructed from synthetic resin. A bright amber long-sleeved shirt with black lower cuffs, blue jeans, and a hard helmet. Standing upright turned to the left with its right arm raised toward the sky. A vast expanse of dry corn stalks under an open sky next to a red tractor. Soft shadowless illumination from an even white sky. Molded resin, cotton twill, painted metal, and rubber.",
+      "anomaly": "The figure's right arm is raised in a hailing motion with a black sleeve extending over the hand.",
+      "text": 0.2933,
+      "image_distance": 22.2,
+      "seed_text": 0.0585,
+      "seed_image": 27
     }
   ]
 }
