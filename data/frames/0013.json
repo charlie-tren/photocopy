@@ -1,0 +1,21 @@
+{
+  "n": 13,
+  "date": "2026-08-30",
+  "description": {
+    "subject": "a dark charcoal mannequin constructed from synthetic resin",
+    "covering": "a bright amber long-sleeved shirt with black lower cuffs, blue jeans, and a hard helmet",
+    "posture": "standing upright turned to the left with its right arm raised toward the sky",
+    "setting": "a vast expanse of dry corn stalks under an open sky next to a red tractor",
+    "light": "soft shadowless illumination from an even white sky",
+    "materials": "molded resin, cotton twill, painted metal, and rubber",
+    "anomaly": "the figure's right arm is raised in a hailing motion with a black sleeve extending over the hand"
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. a dark charcoal mannequin constructed from synthetic resin, wearing a bright amber long-sleeved shirt with black lower cuffs, blue jeans, and a hard helmet, standing upright turned to the left with its right arm raised toward the sky. a vast expanse of dry corn stalks under an open sky next to a red tractor. Light: soft shadowless illumination from an even white sky. Materials: molded resin, cotton twill, painted metal, and rubber. the figure's right arm is raised in a hailing motion with a black sleeve extending over the hand. The figure is a smooth featureless mannequin with no anatomical detail of any kind: a plain sculptural form, no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. It is dressed in plain workwear that covers it completely: a long-sleeved top to the wrists and full-length trousers to the ankles. Shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, nothing off-the-shoulder, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no buttocks, no exposed chest, no genitals, no underwear, nothing sexual or suggestive, no anatomically detailed or lifelike body. Not shirtless, not sleeveless, no vest top, no tank top, no bare shoulders, no bare back, no bare arms, no exposed midriff.",
+  "image": "assets/img/f0013.jpg",
+  "dhash": "10704383751473219139",
+  "reading": {
+    "text": 0.2933,
+    "image": 22.2,
+    "n": 5
+  }
+}
