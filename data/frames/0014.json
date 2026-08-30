@@ -1,0 +1,21 @@
+{
+  "n": 14,
+  "date": "2026-08-31",
+  "description": {
+    "subject": "a matte black plastic mannequin",
+    "covering": "an amber polo shirt worn over a black undershirt extending to the wrists and indigo cotton trousers covering the legs to the ankles",
+    "posture": "positioned with its back to the camera and its right arm elevated overhead with open palm",
+    "setting": "a dry corn plantation next to a red tractor under an overcast sky",
+    "light": "soft overhead white illumination without harsh shadows",
+    "materials": "matte plastic, cotton cloth, painted metal, dry plant stalks",
+    "anomaly": "a smooth featureless matte black head devoid of eyes, nose, or mouth"
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. a matte black plastic mannequin, wearing an amber polo shirt worn over a black undershirt extending to the wrists and indigo cotton trousers covering the legs to the ankles, positioned with its back to the camera and its right arm elevated overhead with open palm. a dry corn plantation next to a red tractor under an overcast sky. Light: soft overhead white illumination without harsh shadows. Materials: matte plastic, cotton cloth, painted metal, dry plant stalks. a smooth featureless matte black head devoid of eyes, nose, or mouth. The figure is a smooth featureless mannequin with no anatomical detail of any kind: a plain sculptural form, no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. It is dressed in plain workwear that covers it completely: a long-sleeved top to the wrists and full-length trousers to the ankles. Shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, nothing off-the-shoulder, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no buttocks, no exposed chest, no genitals, no underwear, nothing sexual or suggestive, no anatomically detailed or lifelike body. Not shirtless, not sleeveless, no vest top, no tank top, no bare shoulders, no bare back, no bare arms, no exposed midriff.",
+  "image": "assets/img/f0014.jpg",
+  "dhash": "12834938282678261930",
+  "reading": {
+    "text": 0.2713,
+    "image": 25.8,
+    "n": 5
+  }
+}

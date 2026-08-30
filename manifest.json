@@ -177,6 +177,19 @@
       "image_distance": 22.2,
       "seed_text": 0.0585,
       "seed_image": 27
+    },
+    {
+      "frame": 14,
+      "date": "2026-08-31",
+      "image": "assets/img/f0014.jpg",
+      "alt": "a matte black plastic mannequin",
+      "from": 13,
+      "caption": "A matte black plastic mannequin. An amber polo shirt worn over a black undershirt extending to the wrists and indigo cotton trousers covering the legs to the ankles. Positioned with its back to the camera and its right arm elevated overhead with open palm. A dry corn plantation next to a red tractor under an overcast sky. Soft overhead white illumination without harsh shadows. Matte plastic, cotton cloth, painted metal, dry plant stalks.",
+      "anomaly": "A smooth featureless matte black head devoid of eyes, nose, or mouth.",
+      "text": 0.2713,
+      "image_distance": 25.8,
+      "seed_text": 0.0563,
+      "seed_image": 29
     }
   ]
 }
