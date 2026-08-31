@@ -190,6 +190,19 @@
       "image_distance": 25.8,
       "seed_text": 0.0563,
       "seed_image": 29
+    },
+    {
+      "frame": 15,
+      "date": "2026-09-01",
+      "image": "assets/img/f0015.jpg",
+      "alt": "a dark plastic mannequin figure",
+      "from": 14,
+      "caption": "A dark plastic mannequin figure. A copper collared work shirt with sleeves to the wrists and dark grey trousers reaching the ankles. Standing with its back turned to the camera, right arm lifted toward the sky. A dry maize field in front of a red agricultural tractor. Even, white overhead illumination from an overcast sky. Plastic, polyester, painted steel, rubber.",
+      "anomaly": "A completely featureless dark mannequin form placed in an open agricultural field.",
+      "text": 0.2606,
+      "image_distance": 26.6,
+      "seed_text": 0.1333,
+      "seed_image": 30
     }
   ]
 }
