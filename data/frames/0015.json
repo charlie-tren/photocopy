@@ -1,0 +1,21 @@
+{
+  "n": 15,
+  "date": "2026-09-01",
+  "description": {
+    "subject": "a dark plastic mannequin figure",
+    "covering": "a copper collared work shirt with sleeves to the wrists and dark grey trousers reaching the ankles",
+    "posture": "standing with its back turned to the camera, right arm lifted toward the sky",
+    "setting": "a dry maize field in front of a red agricultural tractor",
+    "light": "even, white overhead illumination from an overcast sky",
+    "materials": "plastic, polyester, painted steel, rubber",
+    "anomaly": "a completely featureless dark mannequin form placed in an open agricultural field"
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. a dark plastic mannequin figure, wearing a copper collared work shirt with sleeves to the wrists and dark grey trousers reaching the ankles, standing with its back turned to the camera, right arm lifted toward the sky. a dry maize field in front of a red agricultural tractor. Light: even, white overhead illumination from an overcast sky. Materials: plastic, polyester, painted steel, rubber. a completely featureless dark mannequin form placed in an open agricultural field. The figure is a smooth featureless mannequin with no anatomical detail of any kind: a plain sculptural form, no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. It is dressed in plain workwear that covers it completely: a long-sleeved top to the wrists and full-length trousers to the ankles. Shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, nothing off-the-shoulder, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no buttocks, no exposed chest, no genitals, no underwear, nothing sexual or suggestive, no anatomically detailed or lifelike body. Not shirtless, not sleeveless, no vest top, no tank top, no bare shoulders, no bare back, no bare arms, no exposed midriff.",
+  "image": "assets/img/f0015.jpg",
+  "dhash": "5480756540615740620",
+  "reading": {
+    "text": 0.2606,
+    "image": 26.6,
+    "n": 5
+  }
+}
