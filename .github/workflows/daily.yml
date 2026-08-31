@@ -31,11 +31,21 @@ on:
     # the platform was broken, and One Story failed the next day too.
     # The earlier slot is kept only because it costs nothing and buys margin.
     # Do not "optimise" the other jobs onto this reasoning - it does not hold.
-    - cron: "40 19 * * *"   # 19:40 UTC / 05:40 AEST - primary
-    - cron: "05 21 * * *"   # 21:05 UTC / 07:05 AEST - backup, lands ~07:21-07:27, so
-                            # a dropped primary is still fixed before he opens the page.
-    - cron: "40 22 * * *"   # 22:40 UTC / 08:40 AEST - third line. Too late to save the
-                            # morning, kept because a frame is better late than missing.
+    #
+    # MOVED EARLIER 31/08/2026, and the "~07:21-07:27" below is stale by two hours.
+    # Measured across four repos on 31/08: every scheduled workflow on this estate
+    # is now created 2h05-2h50 after its cron, where it was 16-31 min through to
+    # 26/08. It is not queue or quota - jobs start 3s after the run is created, so
+    # the delay is entirely GitHub deciding when to create it. This ladder was
+    # landing 22:03, 23:15 and 00:47 UTC, i.e. the frame arrived at 08:03 AEST at
+    # the earliest and the last rung had crossed midnight UTC.
+    #
+    # Each rung is pulled back four hours so that even at the worst slippage seen
+    # the primary lands ~18:10 UTC / 04:10 AEST and the third ~21:10 UTC, all
+    # ahead of the 21:55 UTC read and all inside one UTC day.
+    - cron: "40 15 * * *"   # 15:40 UTC - primary. Lands 15:45-18:10.
+    - cron: "05 17 * * *"   # 17:05 UTC - backup.
+    - cron: "40 18 * * *"   # 18:40 UTC - third line, lands 18:45-21:10.
   workflow_dispatch:
   # Fired by the heartbeat Worker (site-stats/heartbeat) at 20:30 UTC, from
   # OUTSIDE GitHub Actions. On 26/08/2026 GitHub's scheduler went down and took
