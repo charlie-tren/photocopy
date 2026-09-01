@@ -203,6 +203,19 @@
       "image_distance": 26.6,
       "seed_text": 0.1333,
       "seed_image": 30
+    },
+    {
+      "frame": 16,
+      "date": "2026-09-02",
+      "image": "assets/img/f0016.jpg",
+      "alt": "a dark grey mannequin made of smooth plastic",
+      "from": 15,
+      "caption": "A dark grey mannequin made of smooth plastic. A brown button-down shirt reaching the wrists and dark slate trousers reaching the ankles. Positioned with its back to the viewer, facing forward with its right arm raised near its brow. A dried corn field with a large red farm machine in the background. Flat pale daylight from a hazy grey sky, casting subtle shadows. Smooth synthetic resin, woven cloth, painted steel, and dried corn leaves.",
+      "anomaly": "A smooth featureless mannequin wearing human garments raises its arm to shade where eyes would be in a farm field.",
+      "text": 0.2481,
+      "image_distance": 25.4,
+      "seed_text": 0.1633,
+      "seed_image": 24
     }
   ]
 }
