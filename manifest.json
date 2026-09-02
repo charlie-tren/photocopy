@@ -216,6 +216,19 @@
       "image_distance": 25.4,
       "seed_text": 0.1633,
       "seed_image": 24
+    },
+    {
+      "frame": 17,
+      "date": "2026-09-03",
+      "image": "assets/img/f0017.jpg",
+      "alt": "a smooth grey plastic mannequin figure seen from behind",
+      "from": 16,
+      "caption": "A smooth grey plastic mannequin figure seen from behind. A long-sleeved brown collared shirt tucked into dark slate trousers. Upright with its back turned, right arm bent with hand resting above the forehead facing toward the distant background. A dry agricultural field filled with mature crop plants, with a large red combine machine in the background under a muted sky. Soft, flat pale grey daylight coming from directly above. Moulded synthetic resin, woven fabric, dry foliage, metal.",
+      "anomaly": "A featureless grey mannequin figure raising its hand to shade its brow in an agricultural crop field.",
+      "text": 0.2605,
+      "image_distance": 24.6,
+      "seed_text": 0.1318,
+      "seed_image": 24
     }
   ]
 }
