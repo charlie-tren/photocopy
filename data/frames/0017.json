@@ -1,0 +1,21 @@
+{
+  "n": 17,
+  "date": "2026-09-03",
+  "description": {
+    "subject": "a smooth grey plastic mannequin figure seen from behind",
+    "covering": "a long-sleeved brown collared shirt tucked into dark slate trousers",
+    "posture": "upright with its back turned, right arm bent with hand resting above the forehead facing toward the distant background",
+    "setting": "a dry agricultural field filled with mature crop plants, with a large red combine machine in the background under a muted sky",
+    "light": "soft, flat pale grey daylight coming from directly above",
+    "materials": "moulded synthetic resin, woven fabric, dry foliage, metal",
+    "anomaly": "a featureless grey mannequin figure raising its hand to shade its brow in an agricultural crop field"
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. a smooth grey plastic mannequin figure seen from behind, wearing a long-sleeved brown collared shirt tucked into dark slate trousers, upright with its back turned, right arm bent with hand resting above the forehead facing toward the distant background. a dry agricultural field filled with mature crop plants, with a large red combine machine in the background under a muted sky. Light: soft, flat pale grey daylight coming from directly above. Materials: moulded synthetic resin, woven fabric, dry foliage, metal. a featureless grey mannequin figure raising its hand to shade its brow in an agricultural crop field. The figure is a smooth featureless mannequin with no anatomical detail of any kind: a plain sculptural form, no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. It is dressed in plain workwear that covers it completely: a long-sleeved top to the wrists and full-length trousers to the ankles. Shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, nothing off-the-shoulder, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no buttocks, no exposed chest, no genitals, no underwear, nothing sexual or suggestive, no anatomically detailed or lifelike body. Not shirtless, not sleeveless, no vest top, no tank top, no bare shoulders, no bare back, no bare arms, no exposed midriff.",
+  "image": "assets/img/f0017.jpg",
+  "dhash": "5623177126746049677",
+  "reading": {
+    "text": 0.2605,
+    "image": 24.6,
+    "n": 5
+  }
+}
