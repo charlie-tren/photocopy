@@ -229,6 +229,19 @@
       "image_distance": 24.6,
       "seed_text": 0.1318,
       "seed_image": 24
+    },
+    {
+      "frame": 18,
+      "date": "2026-09-04",
+      "image": "assets/img/f0018.jpg",
+      "alt": "a mannequin made of matte grey synthetic material",
+      "from": 17,
+      "caption": "A mannequin made of matte grey synthetic material. A tan long-sleeved collared shirt tucked into slate-blue trousers. Standing facing away from the viewer towards an open field with its left hand resting against the side of its head. A broad field of dry crop stalks with red combine harvesters under a cloudy sky. Soft diffuse daylight from an overcast sky. Woven fabric, dry plant stalks, soil, and glass.",
+      "anomaly": "A grey mannequin holding its head while standing in a dry crop field alongside red harvesting machinery.",
+      "text": 0.2549,
+      "image_distance": 21.6,
+      "seed_text": 0.1754,
+      "seed_image": 28
     }
   ]
 }
