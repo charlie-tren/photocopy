@@ -242,6 +242,19 @@
       "image_distance": 21.6,
       "seed_text": 0.1754,
       "seed_image": 28
+    },
+    {
+      "frame": 19,
+      "date": "2026-09-05",
+      "image": "assets/img/f0019.jpg",
+      "alt": "a mannequin constructed from smooth slate-colored resin",
+      "from": 18,
+      "caption": "A mannequin constructed from smooth slate-colored resin. A tan long-sleeved button-down shirt and slate-blue trousers. Standing upright with its back to the viewer, holding one hand up toward its forehead. A ripe grain farmland with several red combine harvesters under a cloudy sky. Even, diffuse white daylight from an overcast sky. Woven fabric, polished metal, resin, dry straw.",
+      "anomaly": "A slate-colored mannequin standing in a grain crop alongside large red combine harvesters.",
+      "text": 0.2817,
+      "image_distance": 17.4,
+      "seed_text": 0.1566,
+      "seed_image": 23
     }
   ]
 }
