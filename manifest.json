@@ -255,6 +255,19 @@
       "image_distance": 17.4,
       "seed_text": 0.1566,
       "seed_image": 23
+    },
+    {
+      "frame": 20,
+      "date": "2026-09-06",
+      "image": "assets/img/f0020.jpg",
+      "alt": "a mannequin made of matte ash-toned resin",
+      "from": 19,
+      "caption": "A mannequin made of matte ash-toned resin. A light-tan long-sleeved shirt and blue trousers extending to the ankles. Standing facing away from the camera, with its right hand raised to touch the side of its head. A dense crop of tall wheat flanked by several large red combine harvesters under a cloudy sky. Diffuse, soft white light falling evenly from above. Wheat stalks, painted steel, cloth, resin.",
+      "anomaly": "A mannequin posing with a hand to its head as if confused while surrounded by large red combine harvesters.",
+      "text": 0.3219,
+      "image_distance": 18.2,
+      "seed_text": 0.0855,
+      "seed_image": 24
     }
   ]
 }

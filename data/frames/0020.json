@@ -1,0 +1,21 @@
+{
+  "n": 20,
+  "date": "2026-09-06",
+  "description": {
+    "subject": "a mannequin made of matte ash-toned resin",
+    "covering": "a light-tan long-sleeved shirt and blue trousers extending to the ankles",
+    "posture": "standing facing away from the camera, with its right hand raised to touch the side of its head",
+    "setting": "a dense crop of tall wheat flanked by several large red combine harvesters under a cloudy sky",
+    "light": "diffuse, soft white light falling evenly from above",
+    "materials": "wheat stalks, painted steel, cloth, resin",
+    "anomaly": "a mannequin posing with a hand to its head as if confused while surrounded by large red combine harvesters"
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. a mannequin made of matte ash-toned resin, wearing a light-tan long-sleeved shirt and blue trousers extending to the ankles, standing facing away from the camera, with its right hand raised to touch the side of its head. a dense crop of tall wheat flanked by several large red combine harvesters under a cloudy sky. Light: diffuse, soft white light falling evenly from above. Materials: wheat stalks, painted steel, cloth, resin. a mannequin posing with a hand to its head as if confused while surrounded by large red combine harvesters. The figure is a smooth featureless mannequin with no anatomical detail of any kind: a plain sculptural form, no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. It is dressed in plain workwear that covers it completely: a long-sleeved top to the wrists and full-length trousers to the ankles. Shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, nothing off-the-shoulder, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no buttocks, no exposed chest, no genitals, no underwear, nothing sexual or suggestive, no anatomically detailed or lifelike body. Not shirtless, not sleeveless, no vest top, no tank top, no bare shoulders, no bare back, no bare arms, no exposed midriff.",
+  "image": "assets/img/f0020.jpg",
+  "dhash": "17350342736375244020",
+  "reading": {
+    "text": 0.3219,
+    "image": 18.2,
+    "n": 5
+  }
+}
