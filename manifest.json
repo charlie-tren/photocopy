@@ -268,6 +268,19 @@
       "image_distance": 18.2,
       "seed_text": 0.0855,
       "seed_image": 24
+    },
+    {
+      "frame": 21,
+      "date": "2026-09-07",
+      "image": "assets/img/f0021.jpg",
+      "alt": "a smooth plastic mannequin figure",
+      "from": 20,
+      "caption": "A smooth plastic mannequin figure. A beige shirt extending sleeves to the wrists and blue denim trousers reaching to the ankles. Positioned upright with its back turned toward the camera and one arm raised to touch its head. A dense plantation of grain stalks framed by several red agricultural harvesters under a cloudy sky. Diffuse, soft white illumination from an overcast sky. Molded plastic, denim fabric, painted steel, cereal stalks.",
+      "anomaly": "A featureless store mannequin posed amidst cereal stalks directly in front of a row of red harvesters.",
+      "text": 0.3311,
+      "image_distance": 21.6,
+      "seed_text": 0.0289,
+      "seed_image": 32
     }
   ]
 }
