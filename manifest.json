@@ -281,6 +281,19 @@
       "image_distance": 21.6,
       "seed_text": 0.0289,
       "seed_image": 32
+    },
+    {
+      "frame": 22,
+      "date": "2026-09-08",
+      "image": "assets/img/f0022.jpg",
+      "alt": "a mannequin made of smooth tan plastic",
+      "from": 21,
+      "caption": "A mannequin made of smooth tan plastic. A beige collared shirt with full sleeves and denim trousers reaching the ankles. Standing with its back toward the viewer, right arm hanging down and left arm raised to rest against its head. A field of ripe grain with a line of heavy red agricultural machinery behind it. Soft, directionless white light from an overcast sky. Plastic, denim, woven cotton, and metal.",
+      "anomaly": "A completely featureless mannequin standing in a grain field with one arm resting against its bald head.",
+      "text": 0.333,
+      "image_distance": 22.6,
+      "seed_text": 0.1543,
+      "seed_image": 29
     }
   ]
 }
