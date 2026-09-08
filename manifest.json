@@ -294,6 +294,19 @@
       "image_distance": 22.6,
       "seed_text": 0.1543,
       "seed_image": 29
+    },
+    {
+      "frame": 23,
+      "date": "2026-09-09",
+      "image": "assets/img/f0023.jpg",
+      "alt": "a molded plastic display mannequin",
+      "from": 22,
+      "caption": "A molded plastic display mannequin. A tan button-down shirt and indigo denim cargo pants. Upright facing away from the viewer with its right arm bent up to touch its scalp. An open agricultural grain field with large red threshing machinery in the background. Flat, pale daylight from an even sky casting subtle downward shadows. Molded plastic, denim, woven cloth, and dry cereal grain stalks.",
+      "anomaly": "A featureless plastic mannequin posed inside an agricultural grain field facing heavy machinery.",
+      "text": 0.2831,
+      "image_distance": 23.8,
+      "seed_text": 0.1754,
+      "seed_image": 33
     }
   ]
 }

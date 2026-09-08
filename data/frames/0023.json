@@ -1,0 +1,21 @@
+{
+  "n": 23,
+  "date": "2026-09-09",
+  "description": {
+    "subject": "a molded plastic display mannequin",
+    "covering": "a tan button-down shirt and indigo denim cargo pants",
+    "posture": "upright facing away from the viewer with its right arm bent up to touch its scalp",
+    "setting": "an open agricultural grain field with large red threshing machinery in the background",
+    "light": "flat, pale daylight from an even sky casting subtle downward shadows",
+    "materials": "molded plastic, denim, woven cloth, and dry cereal grain stalks",
+    "anomaly": "a featureless plastic mannequin posed inside an agricultural grain field facing heavy machinery"
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. a molded plastic display mannequin, wearing a tan button-down shirt and indigo denim cargo pants, upright facing away from the viewer with its right arm bent up to touch its scalp. an open agricultural grain field with large red threshing machinery in the background. Light: flat, pale daylight from an even sky casting subtle downward shadows. Materials: molded plastic, denim, woven cloth, and dry cereal grain stalks. a featureless plastic mannequin posed inside an agricultural grain field facing heavy machinery. The figure is a smooth featureless mannequin with no anatomical detail of any kind: a plain sculptural form, no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. It is dressed in plain workwear that covers it completely: a long-sleeved top to the wrists and full-length trousers to the ankles. Shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, nothing off-the-shoulder, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no buttocks, no exposed chest, no genitals, no underwear, nothing sexual or suggestive, no anatomically detailed or lifelike body. Not shirtless, not sleeveless, no vest top, no tank top, no bare shoulders, no bare back, no bare arms, no exposed midriff.",
+  "image": "assets/img/f0023.jpg",
+  "dhash": "14016933113604394176",
+  "reading": {
+    "text": 0.2831,
+    "image": 23.8,
+    "n": 5
+  }
+}
