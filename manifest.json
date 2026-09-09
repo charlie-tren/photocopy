@@ -307,6 +307,19 @@
       "image_distance": 23.8,
       "seed_text": 0.1754,
       "seed_image": 33
+    },
+    {
+      "frame": 24,
+      "date": "2026-09-10",
+      "image": "assets/img/f0024.jpg",
+      "alt": "a smooth tan plastic mannequin",
+      "from": 23,
+      "caption": "A smooth tan plastic mannequin. A beige long-sleeved button-down shirt and dark denim cargo trousers. Upright with its back turned, raising one arm to place a hand on top of its hairless scalp. A field of ripe agricultural crop with a large red combine machine positioned in the background. Warm directional low-angle sunlight from the side. Moulded plastic, denim, cotton fabric, painted steel.",
+      "anomaly": "The person positioned in the field is a featureless hairless mannequin.",
+      "text": 0.2765,
+      "image_distance": 26.0,
+      "seed_text": 0.0926,
+      "seed_image": 27
     }
   ]
 }

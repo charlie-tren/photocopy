@@ -1,0 +1,21 @@
+{
+  "n": 24,
+  "date": "2026-09-10",
+  "description": {
+    "subject": "a smooth tan plastic mannequin",
+    "covering": "a beige long-sleeved button-down shirt and dark denim cargo trousers",
+    "posture": "upright with its back turned, raising one arm to place a hand on top of its hairless scalp",
+    "setting": "a field of ripe agricultural crop with a large red combine machine positioned in the background",
+    "light": "warm directional low-angle sunlight from the side",
+    "materials": "moulded plastic, denim, cotton fabric, painted steel",
+    "anomaly": "the person positioned in the field is a featureless hairless mannequin"
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. a smooth tan plastic mannequin, wearing a beige long-sleeved button-down shirt and dark denim cargo trousers, upright with its back turned, raising one arm to place a hand on top of its hairless scalp. a field of ripe agricultural crop with a large red combine machine positioned in the background. Light: warm directional low-angle sunlight from the side. Materials: moulded plastic, denim, cotton fabric, painted steel. the person positioned in the field is a featureless hairless mannequin. The figure is a smooth featureless mannequin with no anatomical detail of any kind: a plain sculptural form, no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. It is dressed in plain workwear that covers it completely: a long-sleeved top to the wrists and full-length trousers to the ankles. Shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, nothing off-the-shoulder, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no buttocks, no exposed chest, no genitals, no underwear, nothing sexual or suggestive, no anatomically detailed or lifelike body. Not shirtless, not sleeveless, no vest top, no tank top, no bare shoulders, no bare back, no bare arms, no exposed midriff.",
+  "image": "assets/img/f0024.jpg",
+  "dhash": "5190431195867745701",
+  "reading": {
+    "text": 0.2765,
+    "image": 26.0,
+    "n": 5
+  }
+}
