@@ -320,6 +320,19 @@
       "image_distance": 26.0,
       "seed_text": 0.0926,
       "seed_image": 27
+    },
+    {
+      "frame": 25,
+      "date": "2026-09-11",
+      "image": "assets/img/f0025.jpg",
+      "alt": "a mannequin figure made of surface-toned molded resin",
+      "from": 24,
+      "caption": "A mannequin figure made of surface-toned molded resin. A tan long-sleeved shirt tucked into blue heavy-duty utility trousers. Standing facing away from the viewer toward a distant harvester, with its right hand raised to the back of its head. A field of green leafy crops with a red combine harvester in the background. Warm, low-angle side sunlight casting soft shadows across the crops and figure. Molded resin, woven cotton, plant foliage, painted metal.",
+      "anomaly": "A hairless mannequin head with a hand resting against its scalp in the middle of a crop row.",
+      "text": 0.2857,
+      "image_distance": 26.8,
+      "seed_text": 0.1671,
+      "seed_image": 24
     }
   ]
 }
