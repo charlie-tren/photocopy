@@ -10,6 +10,7 @@ from __future__ import annotations
 import html
 import json
 
+import card
 import chain
 import collapse
 from common import BEACON, hyphenate, load_settings, rel, write_json
@@ -262,11 +263,20 @@ def render_page(frames_raw: list[dict], meta: dict) -> str:
 <link rel="icon" href="favicon-192.png" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <title>{html.escape(meta['site_name'])}</title>
+<link rel="canonical" href="https://charlietrenorden.com/photocopy/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="{html.escape(meta['site_name'])}">
 <meta property="og:title" content="{html.escape(meta['site_name'])}">
 <meta name="description" content="{html.escape(meta['tagline'])}">
 <meta property="og:description" content="{html.escape(meta['tagline'])}">
+<meta property="og:url" content="https://charlietrenorden.com/photocopy/">
+<meta property="og:image" content="https://charlietrenorden.com/photocopy/assets/card.jpg">
+<meta property="og:image:secure_url" content="https://charlietrenorden.com/photocopy/assets/card.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The newest frame in the chain">
+<meta name="twitter:card" content="summary_large_image">
 <style>{_CSS}</style>
 {BEACON}
 </head>
@@ -332,6 +342,10 @@ def build() -> str:
     # wants the chain as data.
     write_json("manifest.json", {"seed": settings["seed"],
                                  "frames": flatten(frames)})
+    # Rebuilt here rather than on a timer of its own: the card is the newest
+    # frame, so anything that changes the site changes the card, and a card on a
+    # separate schedule advertises yesterday's image with nobody able to see it.
+    card.build()
     out = rel(settings["output_html"])
     with open(out, "w", encoding="utf-8") as fh:
         fh.write(render_page(frames, meta))
