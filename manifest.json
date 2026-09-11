@@ -333,6 +333,19 @@
       "image_distance": 26.8,
       "seed_text": 0.1671,
       "seed_image": 24
+    },
+    {
+      "frame": 26,
+      "date": "2026-09-12",
+      "image": "assets/img/f0026.jpg",
+      "alt": "a smooth white mannequin made of synthetic resin",
+      "from": 25,
+      "caption": "A smooth white mannequin made of synthetic resin. A long-sleeved tan shirt and blue cotton trousers with back pockets. Standing with its back to the camera, facing forward with its right hand touching the side of its upper crown. Rows of broad green crop plants under a yellow sky with a large red combine harvester in the background. Warm golden light coming from the front-left horizon. Synthetic resin, woven cotton, plant foliage, and earth.",
+      "anomaly": "A smooth white mannequin standing in a row of crops in front of a red combine harvester.",
+      "text": 0.274,
+      "image_distance": 27.2,
+      "seed_text": 0.09,
+      "seed_image": 35
     }
   ]
 }
