@@ -1,0 +1,21 @@
+{
+  "n": 27,
+  "date": "2026-09-13",
+  "description": {
+    "subject": "a white resin mannequin figure",
+    "covering": "a long-sleeved tan shirt and full-length blue trousers",
+    "posture": "standing with its back to the camera, right arm hanging down and left hand raised to its head",
+    "setting": "rows of green leaf crops leading to a red combine harvester under a hazy orange sky",
+    "light": "soft, warm yellow-orange light from the horizon",
+    "materials": "resin, fabric, metal, earth",
+    "anomaly": "a horizontal rectangular blue fabric tab attached to the lower back seam of the tan shirt"
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. a white resin mannequin figure, wearing a long-sleeved tan shirt and full-length blue trousers, standing with its back to the camera, right arm hanging down and left hand raised to its head. rows of green leaf crops leading to a red combine harvester under a hazy orange sky. Light: soft, warm yellow-orange light from the horizon. Materials: resin, fabric, metal, earth. a horizontal rectangular blue fabric tab attached to the lower back seam of the tan shirt. The figure is a smooth featureless mannequin with no anatomical detail of any kind: a plain sculptural form, no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. It is dressed in plain workwear that covers it completely: a long-sleeved top to the wrists and full-length trousers to the ankles. Shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, nothing off-the-shoulder, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no buttocks, no exposed chest, no genitals, no underwear, nothing sexual or suggestive, no anatomically detailed or lifelike body. Not shirtless, not sleeveless, no vest top, no tank top, no bare shoulders, no bare back, no bare arms, no exposed midriff.",
+  "image": "assets/img/f0027.jpg",
+  "dhash": "16201871831598287643",
+  "reading": {
+    "text": 0.2699,
+    "image": 29.2,
+    "n": 5
+  }
+}
