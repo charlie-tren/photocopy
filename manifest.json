@@ -346,6 +346,19 @@
       "image_distance": 27.2,
       "seed_text": 0.09,
       "seed_image": 35
+    },
+    {
+      "frame": 27,
+      "date": "2026-09-13",
+      "image": "assets/img/f0027.jpg",
+      "alt": "a white resin mannequin figure",
+      "from": 26,
+      "caption": "A white resin mannequin figure. A long-sleeved tan shirt and full-length blue trousers. Standing with its back to the camera, right arm hanging down and left hand raised to its head. Rows of green leaf crops leading to a red combine harvester under a hazy orange sky. Soft, warm yellow-orange light from the horizon. Resin, fabric, metal, earth.",
+      "anomaly": "A horizontal rectangular blue fabric tab attached to the lower back seam of the tan shirt.",
+      "text": 0.2699,
+      "image_distance": 29.2,
+      "seed_text": 0.0626,
+      "seed_image": 21
     }
   ]
 }
