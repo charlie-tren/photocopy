@@ -359,6 +359,19 @@
       "image_distance": 29.2,
       "seed_text": 0.0626,
       "seed_image": 21
+    },
+    {
+      "frame": 28,
+      "date": "2026-09-14",
+      "image": "assets/img/f0028.jpg",
+      "alt": "a smooth white plastic mannequin",
+      "from": 27,
+      "caption": "A smooth white plastic mannequin. A tan shirt with sleeves to the wrists and blue trousers. Upright on both feet, facing away toward the horizon with its right arm lifted to its head. Rows of green crops in dirt beneath an amber sky with a red harvester in the distance. Soft, low-angle golden light from the horizon. Molded plastic, synthetic fabric, leaves, and soil.",
+      "anomaly": "A blue patch pocket sewn onto the lower right back hem of the tan shirt.",
+      "text": 0.3109,
+      "image_distance": 29.0,
+      "seed_text": 0.0309,
+      "seed_image": 28
     }
   ]
 }
