@@ -1,0 +1,21 @@
+{
+  "n": 28,
+  "date": "2026-09-14",
+  "description": {
+    "subject": "a smooth white plastic mannequin",
+    "covering": "a tan shirt with sleeves to the wrists and blue trousers",
+    "posture": "upright on both feet, facing away toward the horizon with its right arm lifted to its head",
+    "setting": "rows of green crops in dirt beneath an amber sky with a red harvester in the distance",
+    "light": "soft, low-angle golden light from the horizon",
+    "materials": "molded plastic, synthetic fabric, leaves, and soil",
+    "anomaly": "a blue patch pocket sewn onto the lower right back hem of the tan shirt"
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. a smooth white plastic mannequin, wearing a tan shirt with sleeves to the wrists and blue trousers, upright on both feet, facing away toward the horizon with its right arm lifted to its head. rows of green crops in dirt beneath an amber sky with a red harvester in the distance. Light: soft, low-angle golden light from the horizon. Materials: molded plastic, synthetic fabric, leaves, and soil. a blue patch pocket sewn onto the lower right back hem of the tan shirt. The figure is a smooth featureless mannequin with no anatomical detail of any kind: a plain sculptural form, no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. It is dressed in plain workwear that covers it completely: a long-sleeved top to the wrists and full-length trousers to the ankles. Shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, nothing off-the-shoulder, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no buttocks, no exposed chest, no genitals, no underwear, nothing sexual or suggestive, no anatomically detailed or lifelike body. Not shirtless, not sleeveless, no vest top, no tank top, no bare shoulders, no bare back, no bare arms, no exposed midriff.",
+  "image": "assets/img/f0028.jpg",
+  "dhash": "17279846440048053958",
+  "reading": {
+    "text": 0.3109,
+    "image": 29.0,
+    "n": 5
+  }
+}
