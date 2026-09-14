@@ -372,6 +372,19 @@
       "image_distance": 29.0,
       "seed_text": 0.0309,
       "seed_image": 28
+    },
+    {
+      "frame": 29,
+      "date": "2026-09-15",
+      "image": "assets/img/f0029.jpg",
+      "alt": "a featureless mannequin made of smooth white plastic",
+      "from": 28,
+      "caption": "A featureless mannequin made of smooth white plastic. A light brown button-down shirt and teal trousers. Standing with its back to the camera, touching its temple with raised right fingers. A cultivated agricultural field with neatly planted rows under an amber sky. Soft golden light originating from the horizon ahead. Molded plastic, woven cloth, dirt, plant foliage.",
+      "anomaly": "A featureless mannequin standing in an agricultural field.",
+      "text": 0.3409,
+      "image_distance": 30.6,
+      "seed_text": 0.1271,
+      "seed_image": 21
     }
   ]
 }

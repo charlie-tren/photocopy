@@ -1,0 +1,21 @@
+{
+  "n": 29,
+  "date": "2026-09-15",
+  "description": {
+    "subject": "a featureless mannequin made of smooth white plastic",
+    "covering": "a light brown button-down shirt and teal trousers",
+    "posture": "standing with its back to the camera, touching its temple with raised right fingers",
+    "setting": "a cultivated agricultural field with neatly planted rows under an amber sky",
+    "light": "soft golden light originating from the horizon ahead",
+    "materials": "molded plastic, woven cloth, dirt, plant foliage",
+    "anomaly": "a featureless mannequin standing in an agricultural field"
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. a featureless mannequin made of smooth white plastic, wearing a light brown button-down shirt and teal trousers, standing with its back to the camera, touching its temple with raised right fingers. a cultivated agricultural field with neatly planted rows under an amber sky. Light: soft golden light originating from the horizon ahead. Materials: molded plastic, woven cloth, dirt, plant foliage. a featureless mannequin standing in an agricultural field. The figure is a smooth featureless mannequin with no anatomical detail of any kind: a plain sculptural form, no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. It is dressed in plain workwear that covers it completely: a long-sleeved top to the wrists and full-length trousers to the ankles. Shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, nothing off-the-shoulder, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no buttocks, no exposed chest, no genitals, no underwear, nothing sexual or suggestive, no anatomically detailed or lifelike body. Not shirtless, not sleeveless, no vest top, no tank top, no bare shoulders, no bare back, no bare arms, no exposed midriff.",
+  "image": "assets/img/f0029.jpg",
+  "dhash": "578937319728231719",
+  "reading": {
+    "text": 0.3409,
+    "image": 30.6,
+    "n": 5
+  }
+}
