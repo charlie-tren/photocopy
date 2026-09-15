@@ -385,6 +385,19 @@
       "image_distance": 30.6,
       "seed_text": 0.1271,
       "seed_image": 21
+    },
+    {
+      "frame": 30,
+      "date": "2026-09-16",
+      "image": "assets/img/f0030.jpg",
+      "alt": "a mannequin figure made of featureless white molded plastic",
+      "from": 29,
+      "caption": "A mannequin figure made of featureless white molded plastic. A tan button-up shirt with full sleeves, teal trousers extending to the ankles, and white shoes. Stationed on both feet facing away from the camera with its right arm raised toward its forehead. An agricultural field of low leafy plants in tilled soil trenches beneath an amber sky. Direct golden solar illumination coming from the far background. Molded plastic, woven fabric, rubber, and dark soil.",
+      "anomaly": "A featureless white mannequin head attached to the form.",
+      "text": 0.3252,
+      "image_distance": 28.6,
+      "seed_text": 0.0577,
+      "seed_image": 27
     }
   ]
 }
