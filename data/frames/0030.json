@@ -1,0 +1,21 @@
+{
+  "n": 30,
+  "date": "2026-09-16",
+  "description": {
+    "subject": "a mannequin figure made of featureless white molded plastic",
+    "covering": "a tan button-up shirt with full sleeves, teal trousers extending to the ankles, and white shoes",
+    "posture": "stationed on both feet facing away from the camera with its right arm raised toward its forehead",
+    "setting": "an agricultural field of low leafy plants in tilled soil trenches beneath an amber sky",
+    "light": "direct golden solar illumination coming from the far background",
+    "materials": "molded plastic, woven fabric, rubber, and dark soil",
+    "anomaly": "a featureless white mannequin head attached to the form"
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. a mannequin figure made of featureless white molded plastic, wearing a tan button-up shirt with full sleeves, teal trousers extending to the ankles, and white shoes, stationed on both feet facing away from the camera with its right arm raised toward its forehead. an agricultural field of low leafy plants in tilled soil trenches beneath an amber sky. Light: direct golden solar illumination coming from the far background. Materials: molded plastic, woven fabric, rubber, and dark soil. a featureless white mannequin head attached to the form. The figure is a smooth featureless mannequin with no anatomical detail of any kind: a plain sculptural form, no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. It is dressed in plain workwear that covers it completely: a long-sleeved top to the wrists and full-length trousers to the ankles. Shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, nothing off-the-shoulder, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no buttocks, no exposed chest, no genitals, no underwear, nothing sexual or suggestive, no anatomically detailed or lifelike body. Not shirtless, not sleeveless, no vest top, no tank top, no bare shoulders, no bare back, no bare arms, no exposed midriff.",
+  "image": "assets/img/f0030.jpg",
+  "dhash": "17212646514318029362",
+  "reading": {
+    "text": 0.3252,
+    "image": 28.6,
+    "n": 5
+  }
+}
