@@ -398,6 +398,19 @@
       "image_distance": 28.6,
       "seed_text": 0.0577,
       "seed_image": 27
+    },
+    {
+      "frame": 31,
+      "date": "2026-09-17",
+      "image": "assets/img/f0031.jpg",
+      "alt": "a featureless synthetic mannequin prop",
+      "from": 30,
+      "caption": "A featureless synthetic mannequin prop. A tan button-up long-sleeved shirt, teal full-length cargo trousers, and pale lace-up footwear. Standing upright with its back to the viewer, holding one arm up toward its brow. An outdoor agricultural field with furrows of small plant seedlings stretching toward a distant skyline beneath a bright sun. Warm yellow-orange illumination coming from the top right, producing distinct shadows on the tilled dirt. Plastic, woven fabric, rubber, and soil.",
+      "anomaly": "The subject positioned in the middle of the tilled dirt rows is a featureless smooth mannequin instead of a person.",
+      "text": 0.2897,
+      "image_distance": 29.4,
+      "seed_text": 0.1033,
+      "seed_image": 31
     }
   ]
 }
