@@ -1,0 +1,21 @@
+{
+  "n": 31,
+  "date": "2026-09-17",
+  "description": {
+    "subject": "a featureless synthetic mannequin prop",
+    "covering": "a tan button-up long-sleeved shirt, teal full-length cargo trousers, and pale lace-up footwear",
+    "posture": "standing upright with its back to the viewer, holding one arm up toward its brow",
+    "setting": "an outdoor agricultural field with furrows of small plant seedlings stretching toward a distant skyline beneath a bright sun",
+    "light": "warm yellow-orange illumination coming from the top right, producing distinct shadows on the tilled dirt",
+    "materials": "plastic, woven fabric, rubber, and soil",
+    "anomaly": "the subject positioned in the middle of the tilled dirt rows is a featureless smooth mannequin instead of a person"
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. a featureless synthetic mannequin prop, wearing a tan button-up long-sleeved shirt, teal full-length cargo trousers, and pale lace-up footwear, standing upright with its back to the viewer, holding one arm up toward its brow. an outdoor agricultural field with furrows of small plant seedlings stretching toward a distant skyline beneath a bright sun. Light: warm yellow-orange illumination coming from the top right, producing distinct shadows on the tilled dirt. Materials: plastic, woven fabric, rubber, and soil. the subject positioned in the middle of the tilled dirt rows is a featureless smooth mannequin instead of a person. The figure is a smooth featureless mannequin with no anatomical detail of any kind: a plain sculptural form, no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. It is dressed in plain workwear that covers it completely: a long-sleeved top to the wrists and full-length trousers to the ankles. Shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, nothing off-the-shoulder, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no buttocks, no exposed chest, no genitals, no underwear, nothing sexual or suggestive, no anatomically detailed or lifelike body. Not shirtless, not sleeveless, no vest top, no tank top, no bare shoulders, no bare back, no bare arms, no exposed midriff.",
+  "image": "assets/img/f0031.jpg",
+  "dhash": "18227422534786373314",
+  "reading": {
+    "text": 0.2897,
+    "image": 29.4,
+    "n": 5
+  }
+}
