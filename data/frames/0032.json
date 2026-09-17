@@ -1,0 +1,21 @@
+{
+  "n": 32,
+  "date": "2026-09-18",
+  "description": {
+    "subject": "a featureless mannequin made of pale synthetic resin",
+    "covering": "a yellow long-sleeved shirt, teal cargo trousers, and beige footwear",
+    "posture": "upright on both feet facing away toward the sun, raising a hand to its forehead",
+    "setting": "a tilled agricultural field with small green seedlings extending into the distance",
+    "light": "hard, warm orange illumination emanating directly from the setting sun ahead",
+    "materials": "soil, synthetic resin, denim, and rubber",
+    "anomaly": "a line of shoe soles filled with earth planted directly in the furrow beside the crop shoots"
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. a featureless mannequin made of pale synthetic resin, wearing a yellow long-sleeved shirt, teal cargo trousers, and beige footwear, upright on both feet facing away toward the sun, raising a hand to its forehead. a tilled agricultural field with small green seedlings extending into the distance. Light: hard, warm orange illumination emanating directly from the setting sun ahead. Materials: soil, synthetic resin, denim, and rubber. a line of shoe soles filled with earth planted directly in the furrow beside the crop shoots. The figure is a smooth featureless mannequin with no anatomical detail of any kind: a plain sculptural form, no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. It is dressed in plain workwear that covers it completely: a long-sleeved top to the wrists and full-length trousers to the ankles. Shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, nothing off-the-shoulder, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no buttocks, no exposed chest, no genitals, no underwear, nothing sexual or suggestive, no anatomically detailed or lifelike body. Not shirtless, not sleeveless, no vest top, no tank top, no bare shoulders, no bare back, no bare arms, no exposed midriff.",
+  "image": "assets/img/f0032.jpg",
+  "dhash": "14468087515974265028",
+  "reading": {
+    "text": 0.3028,
+    "image": 27.8,
+    "n": 5
+  }
+}
