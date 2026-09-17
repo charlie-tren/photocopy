@@ -411,6 +411,19 @@
       "image_distance": 29.4,
       "seed_text": 0.1033,
       "seed_image": 31
+    },
+    {
+      "frame": 32,
+      "date": "2026-09-18",
+      "image": "assets/img/f0032.jpg",
+      "alt": "a featureless mannequin made of pale synthetic resin",
+      "from": 31,
+      "caption": "A featureless mannequin made of pale synthetic resin. A yellow long-sleeved shirt, teal cargo trousers, and beige footwear. Upright on both feet facing away toward the sun, raising a hand to its forehead. A tilled agricultural field with small green seedlings extending into the distance. Hard, warm orange illumination emanating directly from the setting sun ahead. Soil, synthetic resin, denim, and rubber.",
+      "anomaly": "A line of shoe soles filled with earth planted directly in the furrow beside the crop shoots.",
+      "text": 0.3028,
+      "image_distance": 27.8,
+      "seed_text": 0.0791,
+      "seed_image": 27
     }
   ]
 }
