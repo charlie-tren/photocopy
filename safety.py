@@ -106,10 +106,12 @@ _SENTENCE = re.compile(r"(?<=[.;])\s+")
 #: is what produced the 22/08 probe's rejection loop at steps 6 and 7. The line
 #: is still anatomy and not costume - it dictates nothing to wear, it just stops
 #: insisting the figure is uncovered.
-SMOOTH = ("The figure is a smooth featureless mannequin with no anatomical "
-          "detail of any kind: a plain sculptural form, no rendered muscles, no "
-          "buttocks, no chest or groin detail, blank and unmodelled wherever it "
-          "is not covered.")
+#: NAMES NO SUBJECT, deliberately - see the note above CLOTHED. It used to open
+#: "The figure is a smooth featureless MANNEQUIN", which put the subject noun
+#: into every prompt the chain ever drew.
+SMOOTH = ("The figure has no anatomical detail of any kind: no rendered "
+          "muscles, no buttocks, no chest or groin detail, blank and "
+          "unmodelled wherever it is not covered.")
 
 #: THE CLOTHING FLOOR, added 28/08/2026, and the reason it exists is worth
 #: keeping because I removed the first version of it and this is what happened.
@@ -128,16 +130,19 @@ SMOOTH = ("The figure is a smooth featureless mannequin with no anatomical "
 #: off it. So the clothes cannot live in the description. They have to be
 #: re-asserted by the DRAWER on every frame, independently of what the describer
 #: happened to notice, or they will keep sliding off.
-CLOTHED = ("It is dressed in plain workwear that covers it completely: a "
-           "long-sleeved top to the wrists and full-length trousers to the "
-           "ankles. Shoulders, arms, chest, back and midriff are all covered. "
-           "Nothing sleeveless, nothing off-the-shoulder, no bare torso.")
+#: Concrete about COVERAGE, silent about the GARMENT. It used to specify "plain
+#: workwear ... a long-sleeved top to the wrists and full-length trousers", which
+#: is a costume, not a floor - so the chain could never dress the figure in a
+#: diving suit, a cassock, armour or anything else and still pass.
+CLOTHED = ("Whatever it wears covers it from neck to wrists to ankles: "
+           "shoulders, arms, chest, back and midriff are all covered."
+           " Nothing sleeveless, no bare torso.")
 
-NEGATIVE = ("No nudity, no bare skin, no buttocks, no exposed chest, no "
-            "genitals, no underwear, nothing sexual or suggestive, no "
-            "anatomically detailed or lifelike body. Not shirtless, not "
-            "sleeveless, no vest top, no tank top, no bare shoulders, no bare "
-            "back, no bare arms, no exposed midriff.")
+#: Said ONCE. This used to repeat most of SMOOTH and CLOTHED back again, so the
+#: two clauses together ran to 747 characters - half of every image prompt, and
+#: the half flux weights most heavily.
+NEGATIVE = ("No nudity, no bare skin, no bare torso or shoulders, nothing "
+            "sexual, no anatomically detailed or lifelike body.")
 
 
 def strip(value: str) -> str:
@@ -200,11 +205,12 @@ def describe_clause() -> str:
         "the figure appears unclothed, say nothing at all about that; describe "
         "its material and posture and move on. Never use the words nude, naked, "
         "bare, buttocks or any anatomical term.\n\n"
-        "The figure is clothed. Describe the clothing as covering it - long "
-        "sleeves, full-length trousers - and never as sleeveless, strapless, "
-        "off-the-shoulder, a vest or a tank top, and never mention bare "
-        "shoulders, a bare back or a bare torso. If the clothing looks skimpy "
-        "or partial, describe it as full-length workwear instead."
+        "The figure is covered. Name whatever is actually covering it - a suit, "
+        "a coat, overalls, a shell, wrapping - but never describe it as "
+        "sleeveless, strapless, off-the-shoulder, a vest or a tank top, and "
+        "never mention bare shoulders, a bare back or a bare torso. If the "
+        "covering looks skimpy or partial, describe it as covering the figure "
+        "fully instead."
     )
 
 

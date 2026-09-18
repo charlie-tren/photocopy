@@ -61,7 +61,7 @@ def test_prompt_de_anatomises_the_figure_and_says_so_last():
     assert "no anatomical detail" in prompt
     # Tail position is load-bearing: flux weights the end of a prompt, and the
     # slots in the middle are exactly what kept drawing an undressed figure.
-    assert prompt.index("smooth featureless") > prompt.index(FRAME_6["subject"])
+    assert prompt.index("no anatomical detail") > prompt.index(FRAME_6["subject"])
     assert prompt.rstrip().endswith(safety.NEGATIVE)
 
 
@@ -78,13 +78,20 @@ def test_the_rule_is_anatomy_AND_coverage():
     the figure unmodelled so no anatomy is ever rendered; CLOTHED keeps it
     covered so there is nothing to render. Neither alone was enough.
     """
-    assert "featureless" in safety.SMOOTH          # anatomy floor, unchanged
-    assert "no anatomical detail" in safety.SMOOTH
-    assert "long-sleeved top to the wrists" in safety.CLOTHED   # coverage floor
-    assert "Nothing sleeveless" in safety.CLOTHED
+    assert "no anatomical detail" in safety.SMOOTH              # anatomy floor
+    assert "shoulders, arms, chest, back and midriff" in safety.CLOTHED
+    assert "no bare torso" in safety.CLOTHED                    # coverage floor
     # Both reach the drawer on every frame, not one or the other.
     clause = safety.draw_clause()
-    assert "featureless" in clause and "long-sleeved" in clause
+    assert "no anatomical detail" in clause and "no bare torso" in clause
+
+    # ...and NEITHER names what the figure is or what it wears. 18/09/2026: those
+    # nouns - "mannequin", "long-sleeved top", "full-length trousers" - were half
+    # of every image prompt, so the chain drew the same figure in the same
+    # clothes for 25 frames. A floor says what may not be shown; it does not cast
+    # the subject. If a future edit wants to put a noun back, that is the bug.
+    for costume in ("mannequin", "workwear", "trousers", "long-sleeved top"):
+        assert costume not in clause, f"the floor is casting the subject: {costume}"
 
 
 def test_describer_is_told_not_to_record_anatomy():
@@ -269,9 +276,9 @@ def test_the_drawer_asserts_clothing_regardless_of_the_description():
                   "light": "flat overcast", "materials": "grey plastic",
                   "anomaly": "a tractor on the horizon"}
     prompt = draw.build_prompt(naked_desc)
-    assert "long-sleeved top to the wrists" in prompt
-    assert "full-length trousers" in prompt
-    for phrase in ("Not shirtless", "not sleeveless", "no bare shoulders"):
+    assert "covers it from neck to wrists to ankles" in prompt
+    assert "no bare torso" in prompt
+    for phrase in ("No nudity", "no bare skin", "Nothing sleeveless"):
         assert phrase in prompt
 
 
