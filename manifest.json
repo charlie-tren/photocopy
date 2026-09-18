@@ -424,6 +424,19 @@
       "image_distance": 27.8,
       "seed_text": 0.0791,
       "seed_image": 27
+    },
+    {
+      "frame": 33,
+      "date": "2026-09-19",
+      "image": "assets/img/f0033.jpg",
+      "alt": "a smooth pale resin mannequin seen from behind",
+      "from": 32,
+      "caption": "A smooth pale resin mannequin seen from behind. A yellow long-sleeved shirt, slate cargo pants with side pockets, and light beige slip-on shoes. Standing upright facing the distant horizon with its right hand lifted to touch its temple. A wide expanse of dark tilled earth with tiny green seedlings growing in straight furrows under a setting sun. Strong golden-yellow sunlight shining directly from the low horizon ahead. Earth, synthetic resin, woven textile, rubber.",
+      "anomaly": "The mannequin's hand is raised to touch its temple, though its head is entirely smooth without eyes or ears.",
+      "text": 0.2962,
+      "image_distance": 27.0,
+      "seed_text": 0.0752,
+      "seed_image": 24
     }
   ]
 }
