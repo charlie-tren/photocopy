@@ -1,0 +1,21 @@
+{
+  "n": 33,
+  "date": "2026-09-19",
+  "description": {
+    "subject": "a smooth pale resin mannequin seen from behind",
+    "covering": "a yellow long-sleeved shirt, slate cargo pants with side pockets, and light beige slip-on shoes",
+    "posture": "standing upright facing the distant horizon with its right hand lifted to touch its temple",
+    "setting": "a wide expanse of dark tilled earth with tiny green seedlings growing in straight furrows under a setting sun",
+    "light": "strong golden-yellow sunlight shining directly from the low horizon ahead",
+    "materials": "earth, synthetic resin, woven textile, rubber",
+    "anomaly": "the mannequin's hand is raised to touch its temple, though its head is entirely smooth without eyes or ears"
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. a smooth pale resin mannequin seen from behind, wearing a yellow long-sleeved shirt, slate cargo pants with side pockets, and light beige slip-on shoes, standing upright facing the distant horizon with its right hand lifted to touch its temple. a wide expanse of dark tilled earth with tiny green seedlings growing in straight furrows under a setting sun. Light: strong golden-yellow sunlight shining directly from the low horizon ahead. Materials: earth, synthetic resin, woven textile, rubber. the mannequin's hand is raised to touch its temple, though its head is entirely smooth without eyes or ears. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0033.jpg",
+  "dhash": "16773923928380289717",
+  "reading": {
+    "text": 0.2962,
+    "image": 27.0,
+    "n": 5
+  }
+}
