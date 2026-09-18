@@ -158,6 +158,13 @@ def strip(value: str) -> str:
     return " ".join(k.strip() for k in kept if k.strip()).strip()
 
 
+#: COUPLED TO `PROTECTED`, and the coupling is a trap. Two of these rules rewrite
+#: to the literal word "mannequin", which is currently exempt from the avoid list.
+#: If that exemption is ever lifted to unstick the subject (see docs/TODO S8),
+#: these two replacements must change to "form" in the SAME commit - otherwise the
+#: describer is banned from a word that this code then puts back in its mouth, and
+#: the ban does nothing while looking like it works.
+#:
 #: Rewritten, not stripped. The drift was legible in the describer's own words
 #: long before anyone looked at the pictures: "mannequin" -> "male body" ->
 #: "statue of a male body". But stripping a sentence that says "body" would have
@@ -296,6 +303,8 @@ def check_image(image_bytes: bytes, settings: dict,
 #: Keep this list SHORT and only for words a floor depends on. The avoid list is
 #: what stops the chain circling, and every exemption is a small hole in it -
 #: these are cheap because clothing is not what the project is measuring.
+#: See the note on _DEANATOMISE: removing "mannequin" from this set requires
+#: changing those two rewrite targets to "form" in the same commit.
 PROTECTED = frozenset({
     # the neutral subject - the alternative to these is anatomy vocabulary
     "mannequin", "mannequins", "figure", "form", "dummy", "prop", "sculpture",
