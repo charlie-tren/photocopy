@@ -1,0 +1,21 @@
+{
+  "n": 34,
+  "date": "2026-09-20",
+  "description": {
+    "subject": "a fiberglass mannequin seen from behind",
+    "covering": "a yellow long-sleeved jacket, dark grey cargo trousers, and white shoes",
+    "posture": "standing on both feet with its right hand raised to its brow, oriented toward the sun",
+    "setting": "furrowed dark earth planted with rows of tiny green sprouts stretching to a flat horizon",
+    "light": "low, soft orange backlight coming directly from the sun on the horizon",
+    "materials": "earth, cloth, fiberglass, and leather",
+    "anomaly": "a mannequin raising its hand to its forehead in a sun-shielding gesture despite lacking eyes"
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. a fiberglass mannequin seen from behind, wearing a yellow long-sleeved jacket, dark grey cargo trousers, and white shoes, standing on both feet with its right hand raised to its brow, oriented toward the sun. furrowed dark earth planted with rows of tiny green sprouts stretching to a flat horizon. Light: low, soft orange backlight coming directly from the sun on the horizon. Materials: earth, cloth, fiberglass, and leather. a mannequin raising its hand to its forehead in a sun-shielding gesture despite lacking eyes. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0034.jpg",
+  "dhash": "17927929551188963929",
+  "reading": {
+    "text": 0.2922,
+    "image": 23.4,
+    "n": 5
+  }
+}
