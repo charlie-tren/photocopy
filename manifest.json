@@ -437,6 +437,19 @@
       "image_distance": 27.0,
       "seed_text": 0.0752,
       "seed_image": 24
+    },
+    {
+      "frame": 34,
+      "date": "2026-09-20",
+      "image": "assets/img/f0034.jpg",
+      "alt": "a fiberglass mannequin seen from behind",
+      "from": 33,
+      "caption": "A fiberglass mannequin seen from behind. A yellow long-sleeved jacket, dark grey cargo trousers, and white shoes. Standing on both feet with its right hand raised to its brow, oriented toward the sun. Furrowed dark earth planted with rows of tiny green sprouts stretching to a flat horizon. Low, soft orange backlight coming directly from the sun on the horizon. Earth, cloth, fiberglass, and leather.",
+      "anomaly": "A mannequin raising its hand to its forehead in a sun-shielding gesture despite lacking eyes.",
+      "text": 0.2922,
+      "image_distance": 23.4,
+      "seed_text": 0.1711,
+      "seed_image": 18
     }
   ]
 }
