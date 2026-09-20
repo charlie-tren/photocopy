@@ -1,0 +1,21 @@
+{
+  "n": 35,
+  "date": "2026-09-21",
+  "description": {
+    "subject": "a smooth pale plastic display mannequin",
+    "covering": "an amber jacket with a cinched waist, dark slate utility trousers with flap pockets, and plain white sneakers",
+    "posture": "upright, turned away toward the horizon with its right hand held near its forehead",
+    "setting": "parallel rows of small green shoots growing in dark dirt toward a flat horizon",
+    "light": "warm orange backlight from a bright sun resting on the distant horizon",
+    "materials": "molded plastic, cotton fabric, synthetic leather, and dark dirt",
+    "anomaly": "a synthetic display mannequin positioned among crop rows holding a hand to its forehead to shade its blank head"
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. a smooth pale plastic display mannequin, wearing an amber jacket with a cinched waist, dark slate utility trousers with flap pockets, and plain white sneakers, upright, turned away toward the horizon with its right hand held near its forehead. parallel rows of small green shoots growing in dark dirt toward a flat horizon. Light: warm orange backlight from a bright sun resting on the distant horizon. Materials: molded plastic, cotton fabric, synthetic leather, and dark dirt. a synthetic display mannequin positioned among crop rows holding a hand to its forehead to shade its blank head. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0035.jpg",
+  "dhash": "14432622202051195506",
+  "reading": {
+    "text": 0.2903,
+    "image": 21.8,
+    "n": 5
+  }
+}
