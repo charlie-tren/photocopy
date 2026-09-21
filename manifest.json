@@ -463,6 +463,19 @@
       "image_distance": 21.8,
       "seed_text": 0.1565,
       "seed_image": 32
+    },
+    {
+      "frame": 36,
+      "date": "2026-09-22",
+      "image": "assets/img/f0036.jpg",
+      "alt": "a white plastic mannequin",
+      "from": 35,
+      "caption": "A white plastic mannequin. A copper button-down shirt with sleeves to the wrist, slate-colored trousers extending to the ankles, and white sneakers. Standing turned toward the left with fingers touching the temple. An agricultural field with parallel rows of young plants extending to the horizon beneath a setting sun. Soft warm glow coming low from the sun near the right horizon. Molded plastic, woven fabric, soil, leather.",
+      "anomaly": "A featureless mannequin standing in an agricultural furrow with its fingers pressed against its temple.",
+      "text": 0.2551,
+      "image_distance": 17.4,
+      "seed_text": 0.1201,
+      "seed_image": 22
     }
   ]
 }

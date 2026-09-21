@@ -1,0 +1,21 @@
+{
+  "n": 36,
+  "date": "2026-09-22",
+  "description": {
+    "subject": "a white plastic mannequin",
+    "covering": "a copper button-down shirt with sleeves to the wrist, slate-colored trousers extending to the ankles, and white sneakers",
+    "posture": "standing turned toward the left with fingers touching the temple",
+    "setting": "an agricultural field with parallel rows of young plants extending to the horizon beneath a setting sun",
+    "light": "soft warm glow coming low from the sun near the right horizon",
+    "materials": "molded plastic, woven fabric, soil, leather",
+    "anomaly": "a featureless mannequin standing in an agricultural furrow with its fingers pressed against its temple"
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. a white plastic mannequin, wearing a copper button-down shirt with sleeves to the wrist, slate-colored trousers extending to the ankles, and white sneakers, standing turned toward the left with fingers touching the temple. an agricultural field with parallel rows of young plants extending to the horizon beneath a setting sun. Light: soft warm glow coming low from the sun near the right horizon. Materials: molded plastic, woven fabric, soil, leather. a featureless mannequin standing in an agricultural furrow with its fingers pressed against its temple. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0036.jpg",
+  "dhash": "16773882112314487472",
+  "reading": {
+    "text": 0.2551,
+    "image": 17.4,
+    "n": 5
+  }
+}
