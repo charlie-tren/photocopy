@@ -121,8 +121,29 @@ def test_assess_reports_and_never_decides():
     frozen = [{"description": desc(subject="a brass figure"),
                "dhash": str(collapse.dhash(_img(9)))} for _ in range(8)]
     reading = collapse.assess(frozen, COL)
-    assert set(reading) == {"text", "image", "n"}
+    assert set(reading) == {"text", "image", "subject", "subject_word", "n"}
     assert not hasattr(collapse, "should_seal")
+
+
+def test_the_subject_number_reads_a_lock_and_a_change():
+    """It has to be able to come out LOW, or it is not a measurement.
+
+    Written 22/09/2026 against the real failure: frames 32-36 were the same
+    picture - a mannequin, a hand at its temple, a furrowed field - and the two
+    existing numbers between them did not say so. The image distance fell and
+    the word similarity fell with it, which reads as divergence.
+    """
+    locked = [{"description": desc(subject="a pale plastic mannequin"),
+               "dhash": str(collapse.dhash(_img(i)))} for i in range(5)]
+    assert collapse.assess(locked, COL)["subject"] == 1.0
+    assert collapse.assess(locked, COL)["subject_word"] == "mannequin"
+
+    moving = [{"description": desc(subject=s),
+               "dhash": str(collapse.dhash(_img(i)))}
+              for i, s in enumerate(("a pale plastic mannequin", "a brass form",
+                                     "a stack of folded tarpaulin",
+                                     "a wooden armature", "a gravel heap"))]
+    assert collapse.assess(moving, COL)["subject"] < 0.5
 
 
 def test_assess_is_honest_about_a_chain_too_short_to_read():
