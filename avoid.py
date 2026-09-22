@@ -32,17 +32,24 @@ _STOP = {
 _WORD = re.compile(r"[a-z]{4,}")
 
 
-def terms(desc: dict) -> set[str]:
+def terms(desc: dict, exempt_protected: bool = True) -> set[str]:
     """Content words in one description, deduplicated.
 
     `safety.PROTECTED` is excluded here rather than filtered later, so a
     protected word can never reach the counter at all. See that constant: a
     figure that stays dressed the same way for a week was getting its own
     clothes banned, which is an instruction to undress it.
+
+    `exempt_protected=False` IS FOR MEASURING, NEVER FOR BANNING. The exemption
+    exists to stop a ban being written, and it has no business in a read-only
+    number. Measured over frames 28-36: including the protected words raises
+    collapse.text_similarity by 0.01 to 0.03 and does not change its direction -
+    so this is a correctness fix to the metric, not the reason the metric missed
+    the lock. That reason is in collapse.subject_lock.
     """
     text = " ".join(str(desc.get(f, "")) for f in describe.FIELDS).lower()
-    return {w for w in _WORD.findall(text)
-            if w not in _STOP and w not in safety.PROTECTED}
+    skip = _STOP | safety.PROTECTED if exempt_protected else _STOP
+    return {w for w in _WORD.findall(text) if w not in skip}
 
 
 def overused(history: list[dict], window: int, min_count: int,

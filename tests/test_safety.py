@@ -153,7 +153,9 @@ def test_deanatomise_keeps_the_slot_standing():
     # Stripping this sentence would blank the SUBJECT, which fails is_usable and
     # kills the chain. It has to be rewritten, not removed.
     out = describe.parse({"subject": FRAME_6["subject"]})
-    assert out["subject"] == "a metallic yellow statue of a mannequin"
+    # "mannequin" until 22/09/2026, when that word was un-protected and the two
+    # rewrites had to move to a word the avoid list still cannot reach.
+    assert out["subject"] == "a metallic yellow statue of a form"
     assert describe.is_usable({**FRAME_6, "subject": out["subject"]})
 
 
@@ -319,18 +321,55 @@ def test_the_avoid_list_cannot_ban_the_clothes():
     history = [dressed] * 6
     block = avoid.block(history, {"avoid_window": 6, "avoid_min_count": 4,
                                   "avoid_term_cap": 14})
-    for word in ("mannequin", "trousers", "sleeved", "jumpsuit", "boots",
+    for word in ("trousers", "sleeved", "jumpsuit", "boots",
                  "helmet", "covering"):
         assert word not in block, f"the ban list would undress it: {word}"
-    # ...but it still bans the scene words it exists to ban.
+    # ...but it still bans the scene words it exists to ban - and, since
+    # 22/09/2026, the subject noun as well. Banning "mannequin" is not an
+    # instruction to undress anything, and 29 frames of the same figure is what
+    # the exemption cost. docs/TODO S8 lever (a).
     assert "harvested" in block and "plastic" in block
+    assert "mannequin" in block
 
 
 def test_protected_words_never_reach_the_counter():
     import avoid
     got = avoid.terms({"subject": "a grey mannequin in a jumpsuit",
                        "covering": "trousers and gloves", "posture": "",
-                       "setting": "a harvested field", "light": "", 
+                       "setting": "a harvested field", "light": "",
                        "materials": "", "anomaly": ""})
-    assert "mannequin" not in got and "trousers" not in got
-    assert "harvested" in got
+    assert "trousers" not in got and "jumpsuit" not in got
+    assert "harvested" in got and "mannequin" in got
+
+
+def test_every_rewrite_target_is_protected():
+    """A deanatomise replacement must be a word the ban list cannot reach.
+
+    The trap this closes, which was a comment for a month: two rules rewrote to
+    "mannequin" while "mannequin" was exempt from the avoid list, so lifting that
+    exemption without moving the rewrites in the same commit would ban the
+    describer from a word safety.py then puts straight back in its mouth - a ban
+    that does nothing and reads as though it works. Asserted rather than
+    remembered.
+    """
+    for pattern, replacement in safety._DEANATOMISE:
+        for word in replacement.split():
+            assert word in safety.PROTECTED, (
+                f"{pattern.pattern} rewrites to {word!r}, which the avoid list "
+                f"can ban - either protect it or rewrite to a word that is")
+
+
+def test_the_metric_can_see_a_locked_subject():
+    """text_similarity must read the words the ban list is not allowed to ban.
+
+    It did not until 22/09/2026, and that is why nine days of one mannequin in
+    one shirt in one field read as DIVERGING (0.31 -> 0.26). Two descriptions
+    identical but for the scenery must score high, not low.
+    """
+    import collapse
+    locked = {"subject": "a pale plastic mannequin", "covering": "a yellow "
+              "shirt, slate trousers and white shoes", "posture": "a hand "
+              "raised to its temple", "setting": "a furrowed field", "light":
+              "a low sun", "materials": "plastic", "anomaly": "none"}
+    again = {**locked, "setting": "a gravel yard", "light": "flat overcast"}
+    assert collapse.text_similarity(locked, again) > 0.6

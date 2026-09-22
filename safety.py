@@ -158,12 +158,13 @@ def strip(value: str) -> str:
     return " ".join(k.strip() for k in kept if k.strip()).strip()
 
 
-#: COUPLED TO `PROTECTED`, and the coupling is a trap. Two of these rules rewrite
-#: to the literal word "mannequin", which is currently exempt from the avoid list.
-#: If that exemption is ever lifted to unstick the subject (see docs/TODO S8),
-#: these two replacements must change to "form" in the SAME commit - otherwise the
-#: describer is banned from a word that this code then puts back in its mouth, and
-#: the ban does nothing while looking like it works.
+#: COUPLED TO `PROTECTED`: every replacement word here is one the describer may
+#: be told not to use, so each one has to be exempt from the avoid list or this
+#: module hands back a word the block has just forbidden and the ban does nothing
+#: while looking like it works. The first two rewrote to "mannequin" until
+#: 22/09/2026, when that word was un-protected to unstick the subject (docs/TODO
+#: S8 lever a); they rewrite to "form" now. Pinned by
+#: test_every_rewrite_target_is_protected rather than by this comment.
 #:
 #: Rewritten, not stripped. The drift was legible in the describer's own words
 #: long before anyone looked at the pictures: "mannequin" -> "male body" ->
@@ -173,8 +174,8 @@ def strip(value: str) -> str:
 #: the sentence standing while taking the anatomy out of it.
 _DEANATOMISE = [
     (re.compile(r"\b(?:male|female|human|man'?s|woman'?s)\s+"
-                r"(?:body|bodies|torso|figure|form|nude|anatomy)\b", re.I), "mannequin"),
-    (re.compile(r"\b(?:male|female)\s+(?:mannequin|statue|sculpture)\b", re.I), "mannequin"),
+                r"(?:body|bodies|torso|figure|form|nude|anatomy)\b", re.I), "form"),
+    (re.compile(r"\b(?:male|female)\s+(?:mannequin|statue|sculpture)\b", re.I), "form"),
     (re.compile(r"\b(?:body|torso|anatomy)\b", re.I), "form"),
     (re.compile(r"\b(?:lifelike|life-?like|realistic|anatomical(?:ly)?)\b", re.I), "plain"),
     (re.compile(r"\b(?:flesh|skin)\b", re.I), "surface"),
@@ -303,11 +304,30 @@ def check_image(image_bytes: bytes, settings: dict,
 #: Keep this list SHORT and only for words a floor depends on. The avoid list is
 #: what stops the chain circling, and every exemption is a small hole in it -
 #: these are cheap because clothing is not what the project is measuring.
-#: See the note on _DEANATOMISE: removing "mannequin" from this set requires
-#: changing those two rewrite targets to "form" in the same commit.
+#:
+#: "MANNEQUIN" AND "MANNEQUINS" CAME OUT 22/09/2026 - docs/TODO S8 lever (a).
+#: The subject had read "a [colour] plastic mannequin" for 29 frames, and by
+#: 19-22/09 four consecutive frames were the same picture: the figure, a hand
+#: raised to its temple, a furrowed field, a low sun. Removing the anchor on
+#: 18/09 was not enough on its own, so the word itself is now bannable. The
+#: describer keeps five neutral alternatives below, which is what stops a ban on
+#: this one word being an instruction to reach for anatomy - and it is why the
+#: list is trimmed rather than emptied.
+#:
+#: The two _DEANATOMISE rules that used to rewrite to "mannequin" now rewrite to
+#: "form", in this same commit, or the describer would be banned from a word
+#: this module puts straight back in its mouth. That coupling is no longer a
+#: comment anyone has to remember: test_every_rewrite_target_is_protected pins
+#: it, and fails if a replacement word is not in this set.
 PROTECTED = frozenset({
     # the neutral subject - the alternative to these is anatomy vocabulary
-    "mannequin", "mannequins", "figure", "form", "dummy", "prop", "sculpture",
+    "figure", "form", "dummy", "prop", "sculpture",
+    # the other words _DEANATOMISE hands back: "plain" for lifelike/realistic,
+    # "surface" for flesh/skin. Found 22/09/2026 by the test that pins the
+    # coupling, not by reading the comment that claimed only two rules were
+    # affected - both of these were bannable while safety.py was reinserting
+    # them, which is the same do-nothing ban in a quieter place.
+    "plain", "surface",
     # coverage - banning any of these is an instruction to undress the figure
     "clothed", "covered", "covering", "clothing", "garment", "garments",
     "sleeve", "sleeves", "sleeved", "trousers", "jumpsuit", "overalls",

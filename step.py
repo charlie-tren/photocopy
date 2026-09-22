@@ -167,7 +167,8 @@ def advance(settings: dict, force: bool = False) -> dict | None:
     reading = collapse.assess(
         frames + [{"description": description, "dhash": str(dh)}],
         settings["movement"])
-    print(f"    movement: text {reading['text']} / image {reading['image']}")
+    print(f"    movement: text {reading['text']} / image {reading['image']}"
+          f" / subject {reading['subject']} ({reading['subject_word']})")
 
     frame = chain.make_frame(n, today, description, prompt, image_rel, dh, reading)
     chain.save_frame(frame)
