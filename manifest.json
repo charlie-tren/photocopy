@@ -489,6 +489,19 @@
       "image_distance": 21.2,
       "seed_text": 0.0754,
       "seed_image": 23
+    },
+    {
+      "frame": 38,
+      "date": "2026-09-24",
+      "image": "assets/img/f0038.jpg",
+      "alt": "a smooth grey plastic figure",
+      "from": 37,
+      "caption": "A smooth grey plastic figure. An orange-brown long-sleeved button-down shirt, charcoal trousers, and pale sneakers. Standing upright facing forward and slightly right, with its right arm raised toward its brow. A dry plowed field with long soil ridges stretching toward the setting sun. Warm orange backlighting cast from the low sun behind the figure. Plastic, soil, woven fabric, leather.",
+      "anomaly": "A grey display figure standing fully dressed in a tilled agricultural soil furrow.",
+      "text": 0.283,
+      "image_distance": 24.6,
+      "seed_text": 0.0826,
+      "seed_image": 28
     }
   ]
 }
