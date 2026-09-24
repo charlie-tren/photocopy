@@ -1,0 +1,23 @@
+{
+  "n": 39,
+  "date": "2026-09-25",
+  "description": {
+    "subject": "a smooth, featureless grey dummy figure with no facial features",
+    "covering": "an orange button-down shirt with long sleeves, grey denim trousers, and grey low-top shoes",
+    "posture": "the figure is positioned on both feet in a furrow, facing forward with its right hand placed near its temple",
+    "setting": "a plowed agricultural field featuring long, parallel furrows of dirt",
+    "light": "strong orange light shines from the upper right side, creating directional shadows",
+    "materials": "tilled soil, denim, cotton cloth, and grey composite material",
+    "anomaly": "a completely blank, featureless grey head without eyes, nose, or mouth"
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. a smooth, featureless grey dummy figure with no facial features, wearing an orange button-down shirt with long sleeves, grey denim trousers, and grey low-top shoes, the figure is positioned on both feet in a furrow, facing forward with its right hand placed near its temple. a plowed agricultural field featuring long, parallel furrows of dirt. Light: strong orange light shines from the upper right side, creating directional shadows. Materials: tilled soil, denim, cotton cloth, and grey composite material. a completely blank, featureless grey head without eyes, nose, or mouth. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0039.jpg",
+  "dhash": "17559620627130144407",
+  "reading": {
+    "text": 0.3082,
+    "image": 26.8,
+    "subject": 0.8,
+    "subject_word": "plastic",
+    "n": 5
+  }
+}

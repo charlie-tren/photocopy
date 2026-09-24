@@ -502,6 +502,19 @@
       "image_distance": 24.6,
       "seed_text": 0.0826,
       "seed_image": 28
+    },
+    {
+      "frame": 39,
+      "date": "2026-09-25",
+      "image": "assets/img/f0039.jpg",
+      "alt": "a smooth, featureless grey dummy figure with no facial features",
+      "from": 38,
+      "caption": "A smooth, featureless grey dummy figure with no facial features. An orange button-down shirt with long sleeves, grey denim trousers, and grey low-top shoes. The figure is positioned on both feet in a furrow, facing forward with its right hand placed near its temple. A plowed agricultural field featuring long, parallel furrows of dirt. Strong orange light shines from the upper right side, creating directional shadows. Tilled soil, denim, cotton cloth, and grey composite material.",
+      "anomaly": "A completely blank, featureless grey head without eyes, nose, or mouth.",
+      "text": 0.3082,
+      "image_distance": 26.8,
+      "seed_text": 0.0483,
+      "seed_image": 25
     }
   ]
 }
