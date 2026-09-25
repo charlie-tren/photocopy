@@ -515,6 +515,19 @@
       "image_distance": 26.8,
       "seed_text": 0.0483,
       "seed_image": 25
+    },
+    {
+      "frame": 40,
+      "date": "2026-09-26",
+      "image": "assets/img/f0040.jpg",
+      "alt": "a mannequin figure made of smooth pale composite resin",
+      "from": 39,
+      "caption": "A mannequin figure made of smooth pale composite resin. A long-sleeved bright amber shirt with a collar, slate blue trousers, and low-top laced footwear. Kneeling on one leg within a furrow, facing forward with its right hand raised to its temple. A wide expanse of tilled earth divided into long furrows extending to the horizon. Warm golden sunlight coming from the upper right, casting soft directional shadows. Tilled soil, woven fabric, rubber shoe soles, and smooth composite resin.",
+      "anomaly": "A completely featureless oval head devoid of any facial features.",
+      "text": 0.3354,
+      "image_distance": 30.0,
+      "seed_text": 0.0465,
+      "seed_image": 24
     }
   ]
 }
