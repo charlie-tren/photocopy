@@ -528,6 +528,19 @@
       "image_distance": 30.0,
       "seed_text": 0.0465,
       "seed_image": 24
+    },
+    {
+      "frame": 41,
+      "date": "2026-09-27",
+      "image": "assets/img/f0041.jpg",
+      "alt": "a white synthetic mannequin with an uncarved oval skull",
+      "from": 40,
+      "caption": "A white synthetic mannequin with an uncarved oval skull. A long-sleeved orange collared shirt, dark blue denim trousers, a yellow glove, and lace-up leather boots. Kneeling on its left knee among earth mounds with its right hand raised to its temple. A vast expanse of tilled earth ridges reaching a flat horizon under a low sun. Low, direct golden sunlight coming from the right and casting deep shadows. Compacted dirt, cotton denim, leather, and synthetic resin.",
+      "anomaly": "A solitary human silhouette standing on the distant horizon in the upper left background.",
+      "text": 0.3101,
+      "image_distance": 32.0,
+      "seed_text": 0.1913,
+      "seed_image": 26
     }
   ]
 }

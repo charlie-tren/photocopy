@@ -1,0 +1,23 @@
+{
+  "n": 41,
+  "date": "2026-09-27",
+  "description": {
+    "subject": "a white synthetic mannequin with an uncarved oval skull",
+    "covering": "a long-sleeved orange collared shirt, dark blue denim trousers, a yellow glove, and lace-up leather boots",
+    "posture": "kneeling on its left knee among earth mounds with its right hand raised to its temple",
+    "setting": "a vast expanse of tilled earth ridges reaching a flat horizon under a low sun",
+    "light": "low, direct golden sunlight coming from the right and casting deep shadows",
+    "materials": "compacted dirt, cotton denim, leather, and synthetic resin",
+    "anomaly": "a solitary human silhouette standing on the distant horizon in the upper left background"
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. a white synthetic mannequin with an uncarved oval skull, wearing a long-sleeved orange collared shirt, dark blue denim trousers, a yellow glove, and lace-up leather boots, kneeling on its left knee among earth mounds with its right hand raised to its temple. a vast expanse of tilled earth ridges reaching a flat horizon under a low sun. Light: low, direct golden sunlight coming from the right and casting deep shadows. Materials: compacted dirt, cotton denim, leather, and synthetic resin. a solitary human silhouette standing on the distant horizon in the upper left background. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0041.jpg",
+  "dhash": "9286660580508699815",
+  "reading": {
+    "text": 0.3101,
+    "image": 32.0,
+    "subject": 0.6,
+    "subject_word": "figure",
+    "n": 5
+  }
+}
