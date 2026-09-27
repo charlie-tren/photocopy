@@ -541,6 +541,19 @@
       "image_distance": 32.0,
       "seed_text": 0.1913,
       "seed_image": 26
+    },
+    {
+      "frame": 42,
+      "date": "2026-09-28",
+      "image": "assets/img/f0042.jpg",
+      "alt": "a mannequin figure made of plastic with a white skull head",
+      "from": 41,
+      "caption": "A mannequin figure made of plastic with a white skull head. An orange collared shirt with sleeves to the wrists, blue denim trousers to the ankles, and grey lace-up boots. Kneeling on one knee on the ground, oriented toward the viewer with its right hand resting against its forehead. A vast expanse of dry dirt mounds under a clear sky and bright sun. Warm golden light coming from the upper left. Plastic, denim, cotton, leather.",
+      "anomaly": "A small silhouetted form standing alone on the distant horizon.",
+      "text": 0.325,
+      "image_distance": 32.0,
+      "seed_text": 0.127,
+      "seed_image": 26
     }
   ]
 }
