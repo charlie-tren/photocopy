@@ -554,6 +554,19 @@
       "image_distance": 32.0,
       "seed_text": 0.127,
       "seed_image": 26
+    },
+    {
+      "frame": 43,
+      "date": "2026-09-29",
+      "image": "assets/img/f0043.jpg",
+      "alt": "a plastic mannequin fitted with a smooth white skull top",
+      "from": 42,
+      "caption": "A plastic mannequin fitted with a smooth white skull top. A bright rust button-up shirt with sleeves to the wrists, blue denim trousers, and black lace-up boots. Kneeling on one knee with the other leg extended forward, turned toward the right side. An open dry agricultural plain with furrowed soil extending to low distant hills. Direct warm sunlight from behind on the left side, casting soft shadows across the ground. Plastic, denim, cotton, leather.",
+      "anomaly": "A blurred figure in a pink dress standing far in the background.",
+      "text": 0.3544,
+      "image_distance": 30.0,
+      "seed_text": 0.1005,
+      "seed_image": 30
     }
   ]
 }

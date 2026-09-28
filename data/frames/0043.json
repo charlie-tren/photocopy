@@ -1,0 +1,23 @@
+{
+  "n": 43,
+  "date": "2026-09-29",
+  "description": {
+    "subject": "a plastic mannequin fitted with a smooth white skull top",
+    "covering": "a bright rust button-up shirt with sleeves to the wrists, blue denim trousers, and black lace-up boots",
+    "posture": "kneeling on one knee with the other leg extended forward, turned toward the right side",
+    "setting": "an open dry agricultural plain with furrowed soil extending to low distant hills",
+    "light": "direct warm sunlight from behind on the left side, casting soft shadows across the ground",
+    "materials": "plastic, denim, cotton, leather",
+    "anomaly": "a blurred figure in a pink dress standing far in the background"
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. a plastic mannequin fitted with a smooth white skull top, wearing a bright rust button-up shirt with sleeves to the wrists, blue denim trousers, and black lace-up boots, kneeling on one knee with the other leg extended forward, turned toward the right side. an open dry agricultural plain with furrowed soil extending to low distant hills. Light: direct warm sunlight from behind on the left side, casting soft shadows across the ground. Materials: plastic, denim, cotton, leather. a blurred figure in a pink dress standing far in the background. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0043.jpg",
+  "dhash": "2861109887261750324",
+  "reading": {
+    "text": 0.3544,
+    "image": 30.0,
+    "subject": 0.8,
+    "subject_word": "mannequin",
+    "n": 5
+  }
+}
