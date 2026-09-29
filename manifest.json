@@ -567,6 +567,19 @@
       "image_distance": 30.0,
       "seed_text": 0.1005,
       "seed_image": 30
+    },
+    {
+      "frame": 44,
+      "date": "2026-09-30",
+      "image": "assets/img/f0044.jpg",
+      "alt": "a featureless white plastic display dummy",
+      "from": 43,
+      "caption": "A featureless white plastic display dummy. A rust-red button-down shirt, cuffed indigo trousers, white gloves, and dark laced boots. Lowered onto one knee facing profile with its head tilted downward. A dry plowed agricultural field with distant rolling hills. Hard, warm direct sunlight from the side. Plastic, woven textile, rubber, dry earth.",
+      "anomaly": "A blurred figure wearing a pink dress walking in the background field.",
+      "text": 0.3508,
+      "image_distance": 28.6,
+      "seed_text": 0.0787,
+      "seed_image": 28
     }
   ]
 }

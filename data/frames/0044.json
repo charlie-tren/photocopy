@@ -1,0 +1,23 @@
+{
+  "n": 44,
+  "date": "2026-09-30",
+  "description": {
+    "subject": "a featureless white plastic display dummy",
+    "covering": "a rust-red button-down shirt, cuffed indigo trousers, white gloves, and dark laced boots",
+    "posture": "lowered onto one knee facing profile with its head tilted downward",
+    "setting": "a dry plowed agricultural field with distant rolling hills",
+    "light": "hard, warm direct sunlight from the side",
+    "materials": "plastic, woven textile, rubber, dry earth",
+    "anomaly": "a blurred figure wearing a pink dress walking in the background field"
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. a featureless white plastic display dummy, wearing a rust-red button-down shirt, cuffed indigo trousers, white gloves, and dark laced boots, lowered onto one knee facing profile with its head tilted downward. a dry plowed agricultural field with distant rolling hills. Light: hard, warm direct sunlight from the side. Materials: plastic, woven textile, rubber, dry earth. a blurred figure wearing a pink dress walking in the background field. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0044.jpg",
+  "dhash": "17336759385562072805",
+  "reading": {
+    "text": 0.3508,
+    "image": 28.6,
+    "subject": 0.8,
+    "subject_word": "mannequin",
+    "n": 5
+  }
+}
