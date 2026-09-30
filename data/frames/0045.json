@@ -1,0 +1,23 @@
+{
+  "n": 45,
+  "date": "2026-10-01",
+  "description": {
+    "subject": "a smooth pale grey synthetic display figure",
+    "covering": "a long-sleeved red button-down shirt, dark trousers, and lace-up brown leather boots",
+    "posture": "crouched down on the dirt ground facing left",
+    "setting": "a dry tilled soil field with rolling hills and a blurred person in a pink dress behind",
+    "light": "hard direct daylight from above, casting clear highlights across the scene",
+    "materials": "smooth plastic, leather, dry dirt, fabric",
+    "anomaly": "a second brown boot lying detached on its side on the ground beneath the figure"
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. a smooth pale grey synthetic display figure, wearing a long-sleeved red button-down shirt, dark trousers, and lace-up brown leather boots, crouched down on the dirt ground facing left. a dry tilled soil field with rolling hills and a blurred person in a pink dress behind. Light: hard direct daylight from above, casting clear highlights across the scene. Materials: smooth plastic, leather, dry dirt, fabric. a second brown boot lying detached on its side on the ground beneath the figure. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0045.jpg",
+  "dhash": "14685647699192505486",
+  "reading": {
+    "text": 0.3516,
+    "image": 28.6,
+    "subject": 0.8,
+    "subject_word": "white",
+    "n": 5
+  }
+}

@@ -580,6 +580,19 @@
       "image_distance": 28.6,
       "seed_text": 0.0787,
       "seed_image": 28
+    },
+    {
+      "frame": 45,
+      "date": "2026-10-01",
+      "image": "assets/img/f0045.jpg",
+      "alt": "a smooth pale grey synthetic display figure",
+      "from": 44,
+      "caption": "A smooth pale grey synthetic display figure. A long-sleeved red button-down shirt, dark trousers, and lace-up brown leather boots. Crouched down on the dirt ground facing left. A dry tilled soil field with rolling hills and a blurred person in a pink dress behind. Hard direct daylight from above, casting clear highlights across the scene. Smooth plastic, leather, dry dirt, fabric.",
+      "anomaly": "A second brown boot lying detached on its side on the ground beneath the figure.",
+      "text": 0.3516,
+      "image_distance": 28.6,
+      "seed_text": 0.1297,
+      "seed_image": 25
     }
   ]
 }
