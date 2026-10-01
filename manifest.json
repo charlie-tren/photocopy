@@ -593,6 +593,19 @@
       "image_distance": 28.6,
       "seed_text": 0.1297,
       "seed_image": 25
+    },
+    {
+      "frame": 46,
+      "date": "2026-10-02",
+      "image": "assets/img/f0046.jpg",
+      "alt": "a smooth grey featureless dummy figure",
+      "from": 45,
+      "caption": "A smooth grey featureless dummy figure. A red long-sleeved collared shirt and dark navy trousers. Crouched low to the ground facing downward. A dry ploughed agricultural field with furrowed soil and rolling yellow hills behind. Bright clear daylight from the upper left creating sharp dark shadows. Woven cloth fabric, rubber, dry soil, stone.",
+      "anomaly": "A third brown boot resting on the ground beneath the figure's hand.",
+      "text": 0.3436,
+      "image_distance": 29.2,
+      "seed_text": 0.1062,
+      "seed_image": 29
     }
   ]
 }

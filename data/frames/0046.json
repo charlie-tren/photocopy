@@ -1,0 +1,23 @@
+{
+  "n": 46,
+  "date": "2026-10-02",
+  "description": {
+    "subject": "a smooth grey featureless dummy figure",
+    "covering": "a red long-sleeved collared shirt and dark navy trousers",
+    "posture": "crouched low to the ground facing downward",
+    "setting": "a dry ploughed agricultural field with furrowed soil and rolling yellow hills behind",
+    "light": "bright clear daylight from the upper left creating sharp dark shadows",
+    "materials": "woven cloth fabric, rubber, dry soil, stone",
+    "anomaly": "a third brown boot resting on the ground beneath the figure's hand"
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. a smooth grey featureless dummy figure, wearing a red long-sleeved collared shirt and dark navy trousers, crouched low to the ground facing downward. a dry ploughed agricultural field with furrowed soil and rolling yellow hills behind. Light: bright clear daylight from the upper left creating sharp dark shadows. Materials: woven cloth fabric, rubber, dry soil, stone. a third brown boot resting on the ground beneath the figure's hand. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0046.jpg",
+  "dhash": "17361614713959274720",
+  "reading": {
+    "text": 0.3436,
+    "image": 29.2,
+    "subject": 0.6,
+    "subject_word": "figure",
+    "n": 5
+  }
+}
