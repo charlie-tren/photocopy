@@ -606,6 +606,19 @@
       "image_distance": 29.2,
       "seed_text": 0.1062,
       "seed_image": 29
+    },
+    {
+      "frame": 47,
+      "date": "2026-10-03",
+      "image": "assets/img/f0047.jpg",
+      "alt": "a smooth grey featureless mannequin figure made of matte composite",
+      "from": 46,
+      "caption": "A smooth grey featureless mannequin figure made of matte composite. A red long-sleeved collared shirt, blue trousers, and tan ankle boots. Crouched low in a furrowed field, reaching one grey hand down toward its right boot. A wide tilled agricultural field of brown soil leading to yellow rolling slopes. Bright warm sunlight casting soft shadows across the tilled soil. Furrowed soil, woven cotton fabric, denim, and smooth grey mannequin resin.",
+      "anomaly": "A smooth featureless grey head devoid of eyes, nose, or mouth.",
+      "text": 0.3793,
+      "image_distance": 30.6,
+      "seed_text": 0.0762,
+      "seed_image": 26
     }
   ]
 }

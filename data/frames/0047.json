@@ -1,0 +1,23 @@
+{
+  "n": 47,
+  "date": "2026-10-03",
+  "description": {
+    "subject": "a smooth grey featureless mannequin figure made of matte composite",
+    "covering": "a red long-sleeved collared shirt, blue trousers, and tan ankle boots",
+    "posture": "crouched low in a furrowed field, reaching one grey hand down toward its right boot",
+    "setting": "a wide tilled agricultural field of brown soil leading to yellow rolling slopes",
+    "light": "bright warm sunlight casting soft shadows across the tilled soil",
+    "materials": "furrowed soil, woven cotton fabric, denim, and smooth grey mannequin resin",
+    "anomaly": "a smooth featureless grey head devoid of eyes, nose, or mouth"
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. a smooth grey featureless mannequin figure made of matte composite, wearing a red long-sleeved collared shirt, blue trousers, and tan ankle boots, crouched low in a furrowed field, reaching one grey hand down toward its right boot. a wide tilled agricultural field of brown soil leading to yellow rolling slopes. Light: bright warm sunlight casting soft shadows across the tilled soil. Materials: furrowed soil, woven cotton fabric, denim, and smooth grey mannequin resin. a smooth featureless grey head devoid of eyes, nose, or mouth. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0047.jpg",
+  "dhash": "4388914309187914561",
+  "reading": {
+    "text": 0.3793,
+    "image": 30.6,
+    "subject": 0.8,
+    "subject_word": "smooth",
+    "n": 5
+  }
+}
