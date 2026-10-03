@@ -619,6 +619,19 @@
       "image_distance": 30.6,
       "seed_text": 0.0762,
       "seed_image": 26
+    },
+    {
+      "frame": 48,
+      "date": "2026-10-04",
+      "image": "assets/img/f0048.jpg",
+      "alt": "a featureless mannequin figure made of matte synthetic resin",
+      "from": 47,
+      "caption": "A featureless mannequin figure made of matte synthetic resin. A red long-sleeved collared shirt, dark blue denim trousers, and tan leather boots. Crouching low facing forward with one hand resting on the dirt. A wide expanse of parallel tilled furrows stretching to distant yellow crop lines. Hard, direct daylight from above right casting crisp shadows to the bottom right. Denim, leather, dirt, and resin.",
+      "anomaly": "A completely blank head with no eyes, nose, or mouth.",
+      "text": 0.3783,
+      "image_distance": 29.6,
+      "seed_text": 0.1524,
+      "seed_image": 36
     }
   ]
 }

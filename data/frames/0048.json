@@ -1,0 +1,23 @@
+{
+  "n": 48,
+  "date": "2026-10-04",
+  "description": {
+    "subject": "a featureless mannequin figure made of matte synthetic resin",
+    "covering": "a red long-sleeved collared shirt, dark blue denim trousers, and tan leather boots",
+    "posture": "crouching low facing forward with one hand resting on the dirt",
+    "setting": "a wide expanse of parallel tilled furrows stretching to distant yellow crop lines",
+    "light": "hard, direct daylight from above right casting crisp shadows to the bottom right",
+    "materials": "denim, leather, dirt, and resin",
+    "anomaly": "a completely blank head with no eyes, nose, or mouth"
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. a featureless mannequin figure made of matte synthetic resin, wearing a red long-sleeved collared shirt, dark blue denim trousers, and tan leather boots, crouching low facing forward with one hand resting on the dirt. a wide expanse of parallel tilled furrows stretching to distant yellow crop lines. Light: hard, direct daylight from above right casting crisp shadows to the bottom right. Materials: denim, leather, dirt, and resin. a completely blank head with no eyes, nose, or mouth. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0048.jpg",
+  "dhash": "10545352841238968922",
+  "reading": {
+    "text": 0.3783,
+    "image": 29.6,
+    "subject": 0.8,
+    "subject_word": "featureless",
+    "n": 5
+  }
+}
