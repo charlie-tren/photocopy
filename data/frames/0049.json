@@ -1,0 +1,23 @@
+{
+  "n": 49,
+  "date": "2026-10-05",
+  "description": {
+    "subject": "a mannequin made of matte beige plastic",
+    "covering": "a red long-sleeved shirt with black suspenders, denim jeans, and tan leather boots",
+    "posture": "squatting in a dirt furrow with its head bowed toward the ground",
+    "setting": "an expanse of tilled earth furrows running toward yellow plants at the horizon",
+    "light": "warm bright sunlight from overhead creating high contrast and crisp highlights",
+    "materials": "plastic, denim, leather, earth",
+    "anomaly": "an egg-shaped head entirely devoid of eyes, nose, mouth, and ears attached to the collared shirt"
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. a mannequin made of matte beige plastic, wearing a red long-sleeved shirt with black suspenders, denim jeans, and tan leather boots, squatting in a dirt furrow with its head bowed toward the ground. an expanse of tilled earth furrows running toward yellow plants at the horizon. Light: warm bright sunlight from overhead creating high contrast and crisp highlights. Materials: plastic, denim, leather, earth. an egg-shaped head entirely devoid of eyes, nose, mouth, and ears attached to the collared shirt. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0049.jpg",
+  "dhash": "17352032945208856036",
+  "reading": {
+    "text": 0.3812,
+    "image": 30.6,
+    "subject": 0.8,
+    "subject_word": "figure",
+    "n": 5
+  }
+}
