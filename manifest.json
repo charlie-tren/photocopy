@@ -632,6 +632,19 @@
       "image_distance": 29.6,
       "seed_text": 0.1524,
       "seed_image": 36
+    },
+    {
+      "frame": 49,
+      "date": "2026-10-05",
+      "image": "assets/img/f0049.jpg",
+      "alt": "a mannequin made of matte beige plastic",
+      "from": 48,
+      "caption": "A mannequin made of matte beige plastic. A red long-sleeved shirt with black suspenders, denim jeans, and tan leather boots. Squatting in a dirt furrow with its head bowed toward the ground. An expanse of tilled earth furrows running toward yellow plants at the horizon. Warm bright sunlight from overhead creating high contrast and crisp highlights. Plastic, denim, leather, earth.",
+      "anomaly": "An egg-shaped head entirely devoid of eyes, nose, mouth, and ears attached to the collared shirt.",
+      "text": 0.3812,
+      "image_distance": 30.6,
+      "seed_text": 0.1027,
+      "seed_image": 23
     }
   ]
 }
