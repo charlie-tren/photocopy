@@ -645,6 +645,19 @@
       "image_distance": 30.6,
       "seed_text": 0.1027,
       "seed_image": 23
+    },
+    {
+      "frame": 50,
+      "date": "2026-10-06",
+      "image": "assets/img/f0050.jpg",
+      "alt": "a mannequin figure made of smooth molded plastic",
+      "from": 49,
+      "caption": "A mannequin figure made of smooth molded plastic. A red shirt with full sleeves, blue denim trousers, black shoulder straps, and brown leather boots. Crouched on both feet with hands resting near the knees, looking downward at the ground. Straight agricultural furrows of soil lined with rows of flowering plants under an open sky. Direct hard daylight casting sharp shadows on the ground. Plastic, denim, leather, and soil.",
+      "anomaly": "A completely smooth, blank mannequin face lacking eyes, nose, mouth, or hair.",
+      "text": 0.3737,
+      "image_distance": 29.6,
+      "seed_text": 0.1219,
+      "seed_image": 33
     }
   ]
 }

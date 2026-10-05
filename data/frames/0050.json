@@ -1,0 +1,23 @@
+{
+  "n": 50,
+  "date": "2026-10-06",
+  "description": {
+    "subject": "a mannequin figure made of smooth molded plastic",
+    "covering": "a red shirt with full sleeves, blue denim trousers, black shoulder straps, and brown leather boots",
+    "posture": "crouched on both feet with hands resting near the knees, looking downward at the ground",
+    "setting": "straight agricultural furrows of soil lined with rows of flowering plants under an open sky",
+    "light": "direct hard daylight casting sharp shadows on the ground",
+    "materials": "plastic, denim, leather, and soil",
+    "anomaly": "a completely smooth, blank mannequin face lacking eyes, nose, mouth, or hair"
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. a mannequin figure made of smooth molded plastic, wearing a red shirt with full sleeves, blue denim trousers, black shoulder straps, and brown leather boots, crouched on both feet with hands resting near the knees, looking downward at the ground. straight agricultural furrows of soil lined with rows of flowering plants under an open sky. Light: direct hard daylight casting sharp shadows on the ground. Materials: plastic, denim, leather, and soil. a completely smooth, blank mannequin face lacking eyes, nose, mouth, or hair. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0050.jpg",
+  "dhash": "15848104066057807010",
+  "reading": {
+    "text": 0.3737,
+    "image": 29.6,
+    "subject": 0.8,
+    "subject_word": "figure",
+    "n": 5
+  }
+}
