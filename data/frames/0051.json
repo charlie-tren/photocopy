@@ -1,0 +1,23 @@
+{
+  "n": 51,
+  "date": "2026-10-07",
+  "description": {
+    "subject": "a smooth white plastic human dummy",
+    "covering": "a red button-up shirt with sleeves to the wrists, blue trousers down to the ankles, dark suspenders, and laced work boots",
+    "posture": "squatting down on one knee in a soil ridge and facing forward while looking downward",
+    "setting": "an outdoor agricultural field with raised soil furrows and rows of small flowering plants reaching toward the horizon",
+    "light": "harsh overhead direct white sunlight creating sharp shadows on the dirt",
+    "materials": "plastic, soil, cotton, and rubber",
+    "anomaly": "a featureless white plastic figure squatting in a farmed field to inspect the dirt"
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. a smooth white plastic human dummy, wearing a red button-up shirt with sleeves to the wrists, blue trousers down to the ankles, dark suspenders, and laced work boots, squatting down on one knee in a soil ridge and facing forward while looking downward. an outdoor agricultural field with raised soil furrows and rows of small flowering plants reaching toward the horizon. Light: harsh overhead direct white sunlight creating sharp shadows on the dirt. Materials: plastic, soil, cotton, and rubber. a featureless white plastic figure squatting in a farmed field to inspect the dirt. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0051.jpg",
+  "dhash": "16206428163555637305",
+  "reading": {
+    "text": 0.3607,
+    "image": 28.6,
+    "subject": 0.8,
+    "subject_word": "made",
+    "n": 5
+  }
+}
