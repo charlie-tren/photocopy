@@ -658,6 +658,19 @@
       "image_distance": 29.6,
       "seed_text": 0.1219,
       "seed_image": 33
+    },
+    {
+      "frame": 51,
+      "date": "2026-10-07",
+      "image": "assets/img/f0051.jpg",
+      "alt": "a smooth white plastic human dummy",
+      "from": 50,
+      "caption": "A smooth white plastic human dummy. A red button-up shirt with sleeves to the wrists, blue trousers down to the ankles, dark suspenders, and laced work boots. Squatting down on one knee in a soil ridge and facing forward while looking downward. An outdoor agricultural field with raised soil furrows and rows of small flowering plants reaching toward the horizon. Harsh overhead direct white sunlight creating sharp shadows on the dirt. Plastic, soil, cotton, and rubber.",
+      "anomaly": "A featureless white plastic figure squatting in a farmed field to inspect the dirt.",
+      "text": 0.3607,
+      "image_distance": 28.6,
+      "seed_text": 0.1219,
+      "seed_image": 15
     }
   ]
 }
