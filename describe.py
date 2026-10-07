@@ -42,6 +42,30 @@ import safety
 FIELDS = ("subject", "covering", "posture", "setting", "light", "materials",
           "anomaly")
 
+#: One slot a day is NOT asked for, cycling. The chain locked for sixteen frames
+#: in Sept-Oct 2026 - same mannequin, same red shirt, same crouch, same furrowed
+#: field - because the describer answers the same seven questions about the same
+#: picture every day and gets the same seven answers, which draw the same picture.
+#: Withholding a slot leaves the drawer nothing to copy that element from, so it
+#: has to invent one. The novelty comes from the drawer's own priors, not from
+#: outside the loop, so "nothing else carries over" still holds.
+#:
+#: `subject` and `covering` are never withheld. The subject anchors the chain, and
+#: an unasked covering is how the chain undressed itself on 22/08/2026 - that slot
+#: exists precisely because losing the clothes once cost twelve frames.
+WITHHOLDABLE = ("setting", "light", "materials", "posture", "anomaly")
+
+
+def withhold_for(n: int) -> str:
+    """Which slot frame `n` is not allowed to ask about.
+
+    Deterministic on the frame number, so a frame can be explained from its own
+    record months later without a log. Five slots on a one-a-day cycle means any
+    given element is re-invented every fifth frame.
+    """
+    return WITHHOLDABLE[n % len(WITHHOLDABLE)]
+
+
 _GUIDE = {
     "subject": "what the figure is made of and what it is, in one clause",
     # The fallback used to read "if it is genuinely covered by nothing, say
@@ -90,8 +114,12 @@ def strip_text_artefacts(value: str) -> str:
     return " ".join(k.strip() for k in kept if k.strip()).strip()
 
 
-def build_prompt(avoid_block: str = "") -> str:
-    slots = "\n".join(f'  "{f}": "{_GUIDE[f]}"' for f in FIELDS)
+def build_prompt(avoid_block: str = "", withheld: str = "") -> str:
+    # The withheld slot is simply absent from the schema. Saying 'do not
+    # describe the setting' would put the word setting in the prompt, which
+    # is the opposite of the point.
+    asked = [f for f in FIELDS if f != withheld]
+    slots = "\n".join(f'  "{f}": "{_GUIDE[f]}"' for f in asked)
     prompt = (
         "You are cataloguing a photograph for an archive. Describe ONLY what is "
         "visible. Do not interpret it, do not say what it evokes, do not use the "
@@ -142,10 +170,15 @@ def is_usable(desc: dict) -> bool:
 
 
 def describe(image_bytes: bytes, settings: dict, avoid_block: str = "",
-             mime: str = "image/jpeg") -> dict:
-    """Look at one frame, return the next description."""
+             mime: str = "image/jpeg", withheld: str = "") -> dict:
+    """Look at one frame, return the next description.
+
+    `withheld` is a slot not to ask for. `parse` fills it with an empty
+    string and `draw.build_prompt` skips empty slots, so tomorrow's drawer
+    gets no copy of that element and has to invent one.
+    """
     payload = base64.b64encode(image_bytes).decode("ascii")
     raw = gemini.generate_with_image(
-        build_prompt(avoid_block), payload, mime, settings,
+        build_prompt(avoid_block, withheld), payload, mime, settings,
         settings["gemini"]["temperature"])
     return parse(gemini.extract_json(raw))

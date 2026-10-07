@@ -225,3 +225,37 @@ def test_innocent_descriptions_are_untouched():
 
 def test_describer_is_told_to_ignore_lettering():
     assert "IGNORE IT COMPLETELY" in describe.build_prompt()
+
+def test_withheld_slot_is_absent_from_the_schema_not_forbidden_in_words():
+    # Saying "do not describe the setting" would put the word in the prompt and
+    # invite the describer to work around it. The key is simply not asked for.
+    p = describe.build_prompt(withheld="setting")
+    assert '"setting"' not in p
+    assert "setting" not in p.lower()
+    for other in ("subject", "covering", "posture", "light", "materials", "anomaly"):
+        assert f'"{other}"' in p
+
+
+def test_the_subject_and_the_clothes_are_never_withheld():
+    # The subject anchors the chain, and an unasked covering is how the chain
+    # undressed itself on 22/08/2026.
+    assert "subject" not in describe.WITHHOLDABLE
+    assert "covering" not in describe.WITHHOLDABLE
+    asked = {describe.withhold_for(n) for n in range(40)}
+    assert asked == set(describe.WITHHOLDABLE)
+
+
+def test_withholding_cycles_so_every_element_comes_round():
+    seen = [describe.withhold_for(n) for n in range(len(describe.WITHHOLDABLE) * 2)]
+    assert seen[:len(describe.WITHHOLDABLE)] == seen[len(describe.WITHHOLDABLE):]
+
+
+def test_a_withheld_slot_leaves_nothing_for_the_drawer_to_copy():
+    # The end of the mechanism: an unasked slot parses to "" and the image prompt
+    # skips it, so the drawer has to invent that element rather than redraw it.
+    desc = describe.parse({"subject": "a bronze figure", "covering": "a sealed suit",
+                           "posture": "standing", "light": "hard overhead light",
+                           "materials": "bronze, concrete", "anomaly": "a brass hinge"})
+    assert desc["setting"] == ""
+    assert "a tiled room" not in draw.build_prompt(desc)
+    assert describe.is_usable(desc)
