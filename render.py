@@ -7,6 +7,7 @@ and a hash in the URL so any frame is still linkable.
 """
 from __future__ import annotations
 
+import datetime
 import html
 import json
 
@@ -267,7 +268,7 @@ def render_page(frames_raw: list[dict], meta: dict) -> str:
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="{html.escape(meta['site_name'])}">
 <meta property="og:title" content="{html.escape(meta['site_name'])}">
-<meta name="description" content="{html.escape(meta['tagline'])}">
+<meta name="description" content="{html.escape(meta['search_description'])}">
 <meta property="og:description" content="{html.escape(meta['tagline'])}">
 <meta property="og:url" content="https://charlietrenorden.com/photocopy/">
 <meta property="og:image" content="https://charlietrenorden.com/photocopy/assets/card.jpg">
@@ -337,6 +338,15 @@ def build() -> str:
     frames = chain.load_frames()
     meta = {"site_name": settings["site"]["name"],
             "tagline": settings["site"]["tagline"]}
+    # The description TAG is written for search and AI answer engines and never
+    # shown to a reader (07/10/2026); the tagline stays the visible line, the share
+    # line and the hub card. The start date is read off the first frame, so a
+    # restarted chain cannot leave it claiming the wrong day.
+    start = datetime.date.fromisoformat(frames[0]["date"]) if frames else None
+    meta["search_description"] = (
+        "An AI image telephone game: each day an AI describes yesterday's picture and "
+        "another AI draws today's from that description alone. One unbroken chain, one "
+        "image a day" + (f", since {start.day} {start:%B %Y}." if start else "."))
     # The manifest is not read by the page (the payload is inlined, so the viewer
     # works on first paint with no second request). It is written for anyone who
     # wants the chain as data.
