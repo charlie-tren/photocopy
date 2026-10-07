@@ -671,6 +671,19 @@
       "image_distance": 28.6,
       "seed_text": 0.1219,
       "seed_image": 15
+    },
+    {
+      "frame": 52,
+      "date": "2026-10-08",
+      "image": "assets/img/f0052.jpg",
+      "alt": "A white plastic stylized form",
+      "from": 51,
+      "caption": "A white plastic stylized form. A red button-down shirt, dark suspenders, trousers of a sky-colored fabric, and grey leather boots. Crouching low in a dirt trench, facing forward and slightly to the left. A plowed field with rows of tilled soil and small green plants. Bright, direct sunlight from above, casting sharp highlights on the figure's head and shoulders.",
+      "anomaly": "A flat, gray, molded plastic piece shaped like a shoe sole embedded in the dirt in the foreground.",
+      "text": 0.3293,
+      "image_distance": 31.2,
+      "seed_text": 0.1256,
+      "seed_image": 42
     }
   ]
 }
