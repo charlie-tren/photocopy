@@ -129,6 +129,7 @@ def advance(settings: dict, force: bool = False) -> dict | None:
     """Add one frame to the chain, unless today already has one."""
     frames = chain.load_frames()
     today = tz_now(settings).date().isoformat()
+    n = len(frames) + 1
 
     if not force and chain.filed_on(frames, today):
         # Not an error: the backup cron exists precisely so a dropped primary
@@ -142,14 +143,20 @@ def advance(settings: dict, force: bool = False) -> dict | None:
         # nothing in the chain produced.
         description, source = dict(settings["seed"]), "the seed"
         avoid_block = ""
+        # Nothing is withheld from the seed: it is the one authored input
+        # and withholding part of it would just be editing it.
+        withheld = ""
     else:
         last = frames[-1]
         avoid_block = avoid.block([f["description"] for f in frames],
                                   settings["loop"])
         if avoid_block:
             print(f"    avoiding {avoid_block.count(',') + 1} term(s)")
+        withheld = describe.withhold_for(n)
+        print(f"    withholding {withheld}")
         description = describe.describe(
-            _read_image(last["image"]), settings, avoid_block)
+            _read_image(last["image"]), settings, avoid_block,
+            withheld=withheld)
         source = f"frame {last['n']}"
 
     if not describe.is_usable(description):
@@ -158,7 +165,6 @@ def advance(settings: dict, force: bool = False) -> dict | None:
     print(f">>> DESCRIBE (from {source}): {description['subject'][:70]}")
 
     image, prompt = _draw_something_publishable(description, settings)
-    n = len(frames) + 1
     image_rel = chain.image_path(n)
     _write_image(image_rel, image)
     print(f">>> DREW {image_rel} ({len(image) // 1024}kB)")
@@ -170,7 +176,8 @@ def advance(settings: dict, force: bool = False) -> dict | None:
     print(f"    movement: text {reading['text']} / image {reading['image']}"
           f" / subject {reading['subject']} ({reading['subject_word']})")
 
-    frame = chain.make_frame(n, today, description, prompt, image_rel, dh, reading)
+    frame = chain.make_frame(n, today, description, prompt, image_rel, dh,
+                             reading, withheld)
     chain.save_frame(frame)
     render.build()
     print(f"    frame {n} saved; site rebuilt")

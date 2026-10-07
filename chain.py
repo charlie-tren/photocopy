@@ -47,10 +47,15 @@ def filed_on(frames: list[dict], date: str) -> bool:
 
 
 def make_frame(n: int, date: str, description: dict, prompt: str,
-               image: str, dhash: int, reading: dict) -> dict:
+               image: str, dhash: int, reading: dict,
+               withheld: str = "") -> dict:
     return {
         "n": n,
         "date": date,
+        # Which slot this frame was not allowed to ask about. Recorded so
+        # that an empty `setting` reads as the design rather than as a
+        # describer that dropped a key.
+        "withheld": withheld,
         "description": description,
         "prompt": prompt,
         "image": image,
