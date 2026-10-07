@@ -1,0 +1,24 @@
+{
+  "n": 52,
+  "date": "2026-10-08",
+  "withheld": "materials",
+  "description": {
+    "subject": "A white plastic stylized form",
+    "covering": "A red button-down shirt, dark suspenders, trousers of a sky-colored fabric, and grey leather boots",
+    "posture": "Crouching low in a dirt trench, facing forward and slightly to the left",
+    "setting": "A plowed field with rows of tilled soil and small green plants",
+    "light": "Bright, direct sunlight from above, casting sharp highlights on the figure's head and shoulders",
+    "materials": "",
+    "anomaly": "A flat, gray, molded plastic piece shaped like a shoe sole embedded in the dirt in the foreground"
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. A white plastic stylized form, wearing A red button-down shirt, dark suspenders, trousers of a sky-colored fabric, and grey leather boots, Crouching low in a dirt trench, facing forward and slightly to the left. A plowed field with rows of tilled soil and small green plants. Light: Bright, direct sunlight from above, casting sharp highlights on the figure's head and shoulders. A flat, gray, molded plastic piece shaped like a shoe sole embedded in the dirt in the foreground. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0052.jpg",
+  "dhash": "2177443884557781467",
+  "reading": {
+    "text": 0.3293,
+    "image": 31.2,
+    "subject": 0.8,
+    "subject_word": "plastic",
+    "n": 5
+  }
+}
