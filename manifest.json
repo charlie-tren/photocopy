@@ -684,6 +684,19 @@
       "image_distance": 31.2,
       "seed_text": 0.1256,
       "seed_image": 42
+    },
+    {
+      "frame": 53,
+      "date": "2026-10-09",
+      "image": "assets/img/f0053.jpg",
+      "alt": "A smooth white plastic humanoid figure crouching down",
+      "from": 52,
+      "caption": "A smooth white plastic humanoid figure crouching down. The figure is clothed in a red long-sleeved shirt, black suspenders, grey trousers, and dark grey boots. An agricultural field with rows of small green sprouts growing in the soil. Bright, harsh sunlight from the upper left that creates distinct shadows to the right. Plastic, woven fabric, and soil.",
+      "anomaly": "A large grey shoe sole lying flat on the soil in front of the figure.",
+      "text": 0.3196,
+      "image_distance": 30.4,
+      "seed_text": 0.1412,
+      "seed_image": 29
     }
   ]
 }

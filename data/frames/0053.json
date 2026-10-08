@@ -1,0 +1,24 @@
+{
+  "n": 53,
+  "date": "2026-10-09",
+  "withheld": "posture",
+  "description": {
+    "subject": "A smooth white plastic humanoid figure crouching down",
+    "covering": "The figure is clothed in a red long-sleeved shirt, black suspenders, grey trousers, and dark grey boots",
+    "posture": "",
+    "setting": "An agricultural field with rows of small green sprouts growing in the soil",
+    "light": "Bright, harsh sunlight from the upper left that creates distinct shadows to the right",
+    "materials": "Plastic, woven fabric, and soil",
+    "anomaly": "A large grey shoe sole lying flat on the soil in front of the figure"
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. A smooth white plastic humanoid figure crouching down, wearing The figure is clothed in a red long-sleeved shirt, black suspenders, grey trousers, and dark grey boots. An agricultural field with rows of small green sprouts growing in the soil. Light: Bright, harsh sunlight from the upper left that creates distinct shadows to the right. Materials: Plastic, woven fabric, and soil. A large grey shoe sole lying flat on the soil in front of the figure. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0053.jpg",
+  "dhash": "7395207793026240142",
+  "reading": {
+    "text": 0.3196,
+    "image": 30.4,
+    "subject": 1.0,
+    "subject_word": "plastic",
+    "n": 5
+  }
+}
