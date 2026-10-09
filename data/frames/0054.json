@@ -1,0 +1,24 @@
+{
+  "n": 54,
+  "date": "2026-10-10",
+  "withheld": "anomaly",
+  "description": {
+    "subject": "a smooth white resin stylized figure",
+    "covering": "a red long-sleeved shirt, gray trousers with black shoulder straps, white gloves, and black boots",
+    "posture": "crouched down on the ground, facing forward while reaching toward the earth",
+    "setting": "a tilled agricultural field with small green seedlings arranged in parallel lines stretching to the horizon",
+    "light": "bright white illumination coming from above, creating sharp highlights",
+    "materials": "smooth resin, rubber, woven cloth, and earth",
+    "anomaly": ""
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. a smooth white resin stylized figure, wearing a red long-sleeved shirt, gray trousers with black shoulder straps, white gloves, and black boots, crouched down on the ground, facing forward while reaching toward the earth. a tilled agricultural field with small green seedlings arranged in parallel lines stretching to the horizon. Light: bright white illumination coming from above, creating sharp highlights. Materials: smooth resin, rubber, woven cloth, and earth. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0054.jpg",
+  "dhash": "2247989798164057557",
+  "reading": {
+    "text": 0.3532,
+    "image": 31.4,
+    "subject": 0.8,
+    "subject_word": "plastic",
+    "n": 5
+  }
+}
