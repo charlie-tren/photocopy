@@ -1,0 +1,24 @@
+{
+  "n": 55,
+  "date": "2026-10-11",
+  "withheld": "setting",
+  "description": {
+    "subject": "a mannequin figure made of composite material with an unfeatured spherical head",
+    "covering": "a red long-sleeve top beneath a grey vest piece with dark straps, paired with grey trousers, dark boots, and light gloves",
+    "posture": "crouching low on the ground between crop furrows, facing downward",
+    "setting": "",
+    "light": "diffused overhead daylight casting soft illumination",
+    "materials": "synthetic fabric, dark earth, rubber, foliage",
+    "anomaly": "a completely blank, featureless globe in place of a face and head"
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. a mannequin figure made of composite material with an unfeatured spherical head, wearing a red long-sleeve top beneath a grey vest piece with dark straps, paired with grey trousers, dark boots, and light gloves, crouching low on the ground between crop furrows, facing downward. Light: diffused overhead daylight casting soft illumination. Materials: synthetic fabric, dark earth, rubber, foliage. a completely blank, featureless globe in place of a face and head. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0055.jpg",
+  "dhash": "15056291687634856743",
+  "reading": {
+    "text": 0.3279,
+    "image": 32.4,
+    "subject": 0.8,
+    "subject_word": "white",
+    "n": 5
+  }
+}

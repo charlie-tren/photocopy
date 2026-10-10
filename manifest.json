@@ -710,6 +710,19 @@
       "image_distance": 31.4,
       "seed_text": 0.1062,
       "seed_image": 38
+    },
+    {
+      "frame": 55,
+      "date": "2026-10-11",
+      "image": "assets/img/f0055.jpg",
+      "alt": "a mannequin figure made of composite material with an unfeatured spherical head",
+      "from": 54,
+      "caption": "A mannequin figure made of composite material with an unfeatured spherical head. A red long-sleeve top beneath a grey vest piece with dark straps, paired with grey trousers, dark boots, and light gloves. Crouching low on the ground between crop furrows, facing downward. Diffused overhead daylight casting soft illumination. Synthetic fabric, dark earth, rubber, foliage.",
+      "anomaly": "A completely blank, featureless globe in place of a face and head.",
+      "text": 0.3279,
+      "image_distance": 32.4,
+      "seed_text": 0.1297,
+      "seed_image": 33
     }
   ]
 }
