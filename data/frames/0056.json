@@ -1,0 +1,24 @@
+{
+  "n": 56,
+  "date": "2026-10-12",
+  "withheld": "light",
+  "description": {
+    "subject": "a mannequin-like figure with an opaque spherical globe in place of a head",
+    "covering": "a long-sleeved red shirt, grey overalls, beige knit gloves, and black lace-up boots",
+    "posture": "crouched low in a trench between earth mounds, oriented toward the camera",
+    "setting": "tilled brown earth with long parallel furrows and scattered sprouts",
+    "light": "",
+    "materials": "knit fabric, rubber, leather, and tilled earth",
+    "anomaly": "a completely featureless light sphere serving as the figure's head"
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. a mannequin-like figure with an opaque spherical globe in place of a head, wearing a long-sleeved red shirt, grey overalls, beige knit gloves, and black lace-up boots, crouched low in a trench between earth mounds, oriented toward the camera. tilled brown earth with long parallel furrows and scattered sprouts. Materials: knit fabric, rubber, leather, and tilled earth. a completely featureless light sphere serving as the figure's head. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0056.jpg",
+  "dhash": "12840761088189869433",
+  "reading": {
+    "text": 0.309,
+    "image": 30.2,
+    "subject": 0.8,
+    "subject_word": "figure",
+    "n": 5
+  }
+}
