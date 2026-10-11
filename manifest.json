@@ -723,6 +723,19 @@
       "image_distance": 32.4,
       "seed_text": 0.1297,
       "seed_image": 33
+    },
+    {
+      "frame": 56,
+      "date": "2026-10-12",
+      "image": "assets/img/f0056.jpg",
+      "alt": "a mannequin-like figure with an opaque spherical globe in place of a head",
+      "from": 55,
+      "caption": "A mannequin-like figure with an opaque spherical globe in place of a head. A long-sleeved red shirt, grey overalls, beige knit gloves, and black lace-up boots. Crouched low in a trench between earth mounds, oriented toward the camera. Tilled brown earth with long parallel furrows and scattered sprouts. Knit fabric, rubber, leather, and tilled earth.",
+      "anomaly": "A completely featureless light sphere serving as the figure's head.",
+      "text": 0.309,
+      "image_distance": 30.2,
+      "seed_text": 0.055,
+      "seed_image": 33
     }
   ]
 }
