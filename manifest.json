@@ -736,6 +736,19 @@
       "image_distance": 30.2,
       "seed_text": 0.055,
       "seed_image": 33
+    },
+    {
+      "frame": 57,
+      "date": "2026-10-13",
+      "image": "assets/img/f0057.jpg",
+      "alt": "a mannequin figure featuring a smooth, featureless alabaster sphere for a head",
+      "from": 56,
+      "caption": "A mannequin figure featuring a smooth, featureless alabaster sphere for a head. A crimson shirt beneath leaden overalls, paired with ribbed knit gloves and black lace-up boots. Crouching low inside a soil trench, oriented directly toward the foreground. A deeply tilled agricultural trench situated between parallel ridges of brown earth stretching to the horizon. Soft overhead neutral daylight creating diffuse downcast shadows.",
+      "anomaly": "A completely smooth, featureless globe mounted in place of a head.",
+      "text": 0.3096,
+      "image_distance": 30.8,
+      "seed_text": 0.0985,
+      "seed_image": 31
     }
   ]
 }
