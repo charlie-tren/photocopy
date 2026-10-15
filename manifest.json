@@ -749,6 +749,19 @@
       "image_distance": 30.8,
       "seed_text": 0.0985,
       "seed_image": 31
+    },
+    {
+      "frame": 58,
+      "date": "2026-10-16",
+      "image": "assets/img/f0058.jpg",
+      "alt": "a featureless white mannequin kneeling within a ground furrow",
+      "from": 57,
+      "caption": "A featureless white mannequin kneeling within a ground furrow. A red shirt extending to the wrists beneath dark brown overalls, textured work gloves, and dark leather footwear. An agricultural field consisting of parallel soil trenches extending toward the background. Warm directional daylight creating soft shadows beneath the central figure. White plastic, red cotton cloth, brown soil, and leather.",
+      "anomaly": "A large smooth white sphere fixed into the front of the upper form.",
+      "text": 0.3163,
+      "image_distance": 27.8,
+      "seed_text": 0.1327,
+      "seed_image": 27
     }
   ]
 }

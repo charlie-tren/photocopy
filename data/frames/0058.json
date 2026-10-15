@@ -1,0 +1,24 @@
+{
+  "n": 58,
+  "date": "2026-10-16",
+  "withheld": "posture",
+  "description": {
+    "subject": "a featureless white mannequin kneeling within a ground furrow",
+    "covering": "a red shirt extending to the wrists beneath dark brown overalls, textured work gloves, and dark leather footwear",
+    "posture": "",
+    "setting": "an agricultural field consisting of parallel soil trenches extending toward the background",
+    "light": "warm directional daylight creating soft shadows beneath the central figure",
+    "materials": "white plastic, red cotton cloth, brown soil, and leather",
+    "anomaly": "a large smooth white sphere fixed into the front of the upper form"
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. a featureless white mannequin kneeling within a ground furrow, wearing a red shirt extending to the wrists beneath dark brown overalls, textured work gloves, and dark leather footwear. an agricultural field consisting of parallel soil trenches extending toward the background. Light: warm directional daylight creating soft shadows beneath the central figure. Materials: white plastic, red cotton cloth, brown soil, and leather. a large smooth white sphere fixed into the front of the upper form. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0058.jpg",
+  "dhash": "17317138349029174975",
+  "reading": {
+    "text": 0.3163,
+    "image": 27.8,
+    "subject": 0.8,
+    "subject_word": "figure",
+    "n": 5
+  }
+}
