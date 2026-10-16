@@ -21,6 +21,8 @@
 
 | P8 | 2.4 | 30 min | Auto | - | **Build a drift timelapse from the frames already on disk, with ffmpeg.** Every frame is a 768px square in `assets/img/`, one added a day, so a crossfade between consecutive frames is the whole drift made watchable - and it costs no quota, no account and no third-party service. Checked 22/08/2026: free no-signup AI video generation effectively does not exist (FlatAI, JAI Portal and Pixelbin all advertise it and all require an account; Hugging Face ZeroGPU allows anonymous use but gives 2 minutes of GPU a day at lowest queue priority). Generating video is the wrong tool anyway - the frames ARE the footage. Open questions: hold time per frame, crossfade length, whether to burn in the date and the distance-from-frame-1 number, and whether it regenerates nightly in the daily workflow or on demand. Do not commit the mp4 to the repo without checking size - the chain runs forever. |
 
+| S9 | 1.4 | 15 min | Auto | - | **Investigate the daily-frame failures of 12-14/10/2026.** Six failed runs (12/10 x1, 13/10 x2, 14/10 x3), then four successes on 15/10. The 14/10 log ends on a Gemini 429 ("Learn more about Gemini API quotas"), so this looks like the P2 quota problem recurring, not a code fault. Check: which day's frame was actually lost, whether a probe or another project shared the key that day, and whether `step.py` should back off and retry on a 429 rather than fail the whole job. Logged 16/10/2026 after the failure emails were found unread. |
+
 ## Notes
 
 
