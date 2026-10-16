@@ -762,6 +762,19 @@
       "image_distance": 27.8,
       "seed_text": 0.1327,
       "seed_image": 27
+    },
+    {
+      "frame": 59,
+      "date": "2026-10-17",
+      "image": "assets/img/f0059.jpg",
+      "alt": "a white composite figure with a blank oval head and a white sphere resting against its chest",
+      "from": 58,
+      "caption": "A white composite figure with a blank oval head and a white sphere resting against its chest. A red shirt with sleeves to the wrists, dark grey overalls, grey knit gloves, and dark leather boots lying on the ground. Kneeling upright in a soil furrow while facing directly toward the camera. A tilled field with deep furrows extending into the distance. Low-angled warm golden sunlight entering from the upper right, casting soft shadows. Molded plastic, woven fabric, knit textile, leather, and soil.",
+      "anomaly": "",
+      "text": 0.34,
+      "image_distance": 27.4,
+      "seed_text": 0.1492,
+      "seed_image": 22
     }
   ]
 }

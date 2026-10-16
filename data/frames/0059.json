@@ -1,0 +1,24 @@
+{
+  "n": 59,
+  "date": "2026-10-17",
+  "withheld": "anomaly",
+  "description": {
+    "subject": "a white composite figure with a blank oval head and a white sphere resting against its chest",
+    "covering": "a red shirt with sleeves to the wrists, dark grey overalls, grey knit gloves, and dark leather boots lying on the ground",
+    "posture": "kneeling upright in a soil furrow while facing directly toward the camera",
+    "setting": "a tilled field with deep furrows extending into the distance",
+    "light": "low-angled warm golden sunlight entering from the upper right, casting soft shadows",
+    "materials": "molded plastic, woven fabric, knit textile, leather, and soil",
+    "anomaly": ""
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. a white composite figure with a blank oval head and a white sphere resting against its chest, wearing a red shirt with sleeves to the wrists, dark grey overalls, grey knit gloves, and dark leather boots lying on the ground, kneeling upright in a soil furrow while facing directly toward the camera. a tilled field with deep furrows extending into the distance. Light: low-angled warm golden sunlight entering from the upper right, casting soft shadows. Materials: molded plastic, woven fabric, knit textile, leather, and soil. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0059.jpg",
+  "dhash": "18226336878234802998",
+  "reading": {
+    "text": 0.34,
+    "image": 27.4,
+    "subject": 0.8,
+    "subject_word": "figure",
+    "n": 5
+  }
+}
