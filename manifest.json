@@ -775,6 +775,19 @@
       "image_distance": 27.4,
       "seed_text": 0.1492,
       "seed_image": 22
+    },
+    {
+      "frame": 60,
+      "date": "2026-10-18",
+      "image": "assets/img/f0060.jpg",
+      "alt": "a smooth white plastic stylized figure set in a soil field",
+      "from": 59,
+      "caption": "A smooth white plastic stylized figure set in a soil field. A red long-sleeved sweater, dark denim overalls, grey knit gloves, and dark boots. The figure is kneeling in a dirt furrow facing forward. Warm golden sunlight casting strong directional shadows from the upper right background. Smooth plastic, denim, knit fabric, and soil.",
+      "anomaly": "The figure holds a smooth white ball against its chest that matches the material and finish of its blank upper dome.",
+      "text": 0.3423,
+      "image_distance": 29.6,
+      "seed_text": 0.1101,
+      "seed_image": 34
     }
   ]
 }
