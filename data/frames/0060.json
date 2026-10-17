@@ -1,0 +1,24 @@
+{
+  "n": 60,
+  "date": "2026-10-18",
+  "withheld": "setting",
+  "description": {
+    "subject": "a smooth white plastic stylized figure set in a soil field",
+    "covering": "a red long-sleeved sweater, dark denim overalls, grey knit gloves, and dark boots",
+    "posture": "the figure is kneeling in a dirt furrow facing forward",
+    "setting": "",
+    "light": "warm golden sunlight casting strong directional shadows from the upper right background",
+    "materials": "smooth plastic, denim, knit fabric, and soil",
+    "anomaly": "the figure holds a smooth white ball against its chest that matches the material and finish of its blank upper dome"
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. a smooth white plastic stylized figure set in a soil field, wearing a red long-sleeved sweater, dark denim overalls, grey knit gloves, and dark boots, the figure is kneeling in a dirt furrow facing forward. Light: warm golden sunlight casting strong directional shadows from the upper right background. Materials: smooth plastic, denim, knit fabric, and soil. the figure holds a smooth white ball against its chest that matches the material and finish of its blank upper dome. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0060.jpg",
+  "dhash": "6498855291973854747",
+  "reading": {
+    "text": 0.3423,
+    "image": 29.6,
+    "subject": 0.8,
+    "subject_word": "figure",
+    "n": 5
+  }
+}
