@@ -14,6 +14,8 @@ import time
 
 import requests
 
+import claude
+
 
 class GeminiError(RuntimeError):
     pass
@@ -120,10 +122,17 @@ def generate(prompt: str, settings: dict, temperature: float) -> str:
 
 
 def generate_with_image(prompt: str, image_b64: str, mime: str,
-                        settings: dict, temperature: float) -> str:
-    """Vision call. The image goes FIRST in the parts list - with the text first
-    the model tends to answer the instruction in the abstract and describe a
-    photograph in general rather than this one."""
+                        settings: dict, temperature: float,
+                        tier: str | None = None) -> str:
+    """Vision call. With a `tier` ("write" or "judge"), Claude is asked first
+    and Gemini answers only if Claude cannot. The image goes FIRST in the parts
+    list - with the text first the model tends to answer the instruction in the
+    abstract and describe a photograph in general rather than this one."""
+    if tier:
+        try:
+            return claude.generate(prompt, tier, image_b64, mime)
+        except claude.ClaudeError:
+            pass
     return _post({
         "contents": [{"parts": [
             {"inline_data": {"mime_type": mime, "data": image_b64}},

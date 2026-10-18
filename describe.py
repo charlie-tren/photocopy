@@ -180,5 +180,5 @@ def describe(image_bytes: bytes, settings: dict, avoid_block: str = "",
     payload = base64.b64encode(image_bytes).decode("ascii")
     raw = gemini.generate_with_image(
         build_prompt(avoid_block, withheld), payload, mime, settings,
-        settings["gemini"]["temperature"])
+        settings["gemini"]["temperature"], tier="write")
     return parse(gemini.extract_json(raw))

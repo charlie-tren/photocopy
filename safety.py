@@ -274,7 +274,7 @@ def check_image(image_bytes: bytes, settings: dict,
     try:
         raw = gemini.generate_with_image(
             _CHECK_PROMPT, payload, mime, settings,
-            settings.get("safety", {}).get("temperature", 0.0))
+            settings.get("safety", {}).get("temperature", 0.0), tier="judge")
         verdict = gemini.extract_json(raw)
     except Exception as exc:                      # noqa: BLE001 - see docstring
         return False, f"check failed ({type(exc).__name__}: {exc})"
