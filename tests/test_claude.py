@@ -1,7 +1,6 @@
 from types import SimpleNamespace
 
 import anthropic
-import httpx2
 import pytest
 
 import claude
@@ -16,6 +15,14 @@ def _msg(text='{"safe": true, "reason": "ok"}', stop="end_turn"):
         content=[SimpleNamespace(type="thinking", thinking=""),
                  SimpleNamespace(type="text", text=text)],
         usage=SimpleNamespace(input_tokens=1000, output_tokens=2000))
+
+
+def _api_error(cls, message):
+    """An SDK error without a live response, whatever HTTP library it uses."""
+    exc = cls.__new__(cls)
+    Exception.__init__(exc, message)
+    exc.message = message
+    return exc
 
 
 class Fake:
@@ -82,9 +89,7 @@ def test_missing_key_falls_back_to_gemini_with_a_warning(live, monkeypatch, caps
 
 
 def test_safety_still_fails_closed_when_both_providers_die(live, monkeypatch):
-    req = httpx2.Request("POST", "https://api.anthropic.com/v1/messages")
-    live.raises = anthropic.InternalServerError(
-        "overloaded", response=httpx2.Response(529, request=req), body=None)
+    live.raises = _api_error(anthropic.InternalServerError, "overloaded")
 
     def dead(payload, settings):
         raise gemini.GeminiError("HTTP 503")
