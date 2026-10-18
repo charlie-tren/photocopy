@@ -788,6 +788,19 @@
       "image_distance": 29.6,
       "seed_text": 0.1101,
       "seed_image": 34
+    },
+    {
+      "frame": 61,
+      "date": "2026-10-19",
+      "image": "assets/img/f0061.jpg",
+      "alt": "A smooth white matte-surfaced doll figure with an oversized rounded oval top and no facial markings, holding a white ball.",
+      "from": 60,
+      "caption": "A smooth white matte-surfaced doll figure with an oversized rounded oval top and no facial markings, holding a white ball. It wears a red ribbed pullover with sleeves to the wrists, denim overalls with straps and shorter legs, pale gloves, and tall black leather boots, covering the figure fully. It sits upright on the ground with its knees bent in front of it, its arms wrapped around the white ball at chest height, and its face turned toward the camera's left. An open field of freshly turned brown earth, broken into clods and small stones that stretch out of focus behind it. Glossy white plastic or ceramic for the form, red ribbed wool, blue denim, black leather, and crumbled clay-brown earth.",
+      "anomaly": "The figure holds a plain white ball as large as its own form, which matches the color of its blank oval top, against the rough clods of earth.",
+      "text": 0.3076,
+      "image_distance": 29.8,
+      "seed_text": 0.104,
+      "seed_image": 34
     }
   ]
 }
