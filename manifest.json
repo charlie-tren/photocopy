@@ -801,6 +801,19 @@
       "image_distance": 29.8,
       "seed_text": 0.104,
       "seed_image": 34
+    },
+    {
+      "frame": 62,
+      "date": "2026-10-20",
+      "image": "assets/img/f0062.jpg",
+      "alt": "A doll-like figure with a glossy, featureless, egg-shaped head and small mitten-like hands, apparently moulded from glazed ceramic or similar hard material, holding a large round b",
+      "from": 61,
+      "caption": "A doll-like figure with a glossy, featureless, egg-shaped head and small mitten-like hands, apparently moulded from glazed ceramic or similar hard material, holding a large round ball. A red ribbed turtleneck sweater with long sleeves, denim dungarees with metal buckles on the shoulder straps and a stitched front pocket, and tall black rubber boots reaching the ankles. It stands upright with its head tilted forward and slightly down, both arms wrapped around a large round ball held against its middle, and its form turned toward the left of the frame in three-quarter view. An open stretch of dry, dark earth strewn with broken stone fragments and small rubble, with the ground blurring into the distance. Soft, diffuse light from the upper left, with gentle edges and a warm, slightly muted amber-grey colour.",
+      "anomaly": "The head has no face at all, just an unbroken, glossy, egg-shaped surface, and it is nearly the same size as the large round ball the figure hugs.",
+      "text": 0.2988,
+      "image_distance": 28.2,
+      "seed_text": 0.0751,
+      "seed_image": 30
     }
   ]
 }
