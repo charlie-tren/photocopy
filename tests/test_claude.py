@@ -9,6 +9,12 @@ import gemini
 import safety
 
 
+@pytest.fixture(autouse=True)
+def _annotations_on(monkeypatch):
+    # claude._live() is False under pytest; these tests assert the CI annotation itself.
+    monkeypatch.setattr(claude, "_live", lambda: True)
+
+
 def _msg(text='{"safe": true, "reason": "ok"}', stop="end_turn"):
     return SimpleNamespace(
         stop_reason=stop,
