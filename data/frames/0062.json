@@ -1,0 +1,24 @@
+{
+  "n": 62,
+  "date": "2026-10-20",
+  "withheld": "materials",
+  "description": {
+    "subject": "A doll-like figure with a glossy, featureless, egg-shaped head and small mitten-like hands, apparently moulded from glazed ceramic or similar hard material, holding a large round ball.",
+    "covering": "A red ribbed turtleneck sweater with long sleeves, denim dungarees with metal buckles on the shoulder straps and a stitched front pocket, and tall black rubber boots reaching the ankles.",
+    "posture": "It stands upright with its head tilted forward and slightly down, both arms wrapped around a large round ball held against its middle, and its form turned toward the left of the frame in three-quarter view.",
+    "setting": "An open stretch of dry, dark earth strewn with broken stone fragments and small rubble, with the ground blurring into the distance.",
+    "light": "Soft, diffuse light from the upper left, with gentle edges and a warm, slightly muted amber-grey colour.",
+    "materials": "",
+    "anomaly": "The head has no face at all, just an unbroken, glossy, egg-shaped surface, and it is nearly the same size as the large round ball the figure hugs."
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. A doll-like figure with a glossy, featureless, egg-shaped head and small mitten-like hands, apparently moulded from glazed ceramic or similar hard material, holding a large round ball., wearing A red ribbed turtleneck sweater with long sleeves, denim dungarees with metal buckles on the shoulder straps and a stitched front pocket, and tall black rubber boots reaching the ankles., It stands upright with its head tilted forward and slightly down, both arms wrapped around a large round ball held against its middle, and its form turned toward the left of the frame in three-quarter view.. An open stretch of dry, dark earth strewn with broken stone fragments and small rubble, with the ground blurring into the distance. Light: Soft, diffuse light from the upper left, with gentle edges and a warm, slightly muted amber-grey colour. The head has no face at all, just an unbroken, glossy, egg-shaped surface, and it is nearly the same size as the large round ball the figure hugs. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0062.jpg",
+  "dhash": "17343935389807529054",
+  "reading": {
+    "text": 0.2988,
+    "image": 28.2,
+    "subject": 0.8,
+    "subject_word": "figure",
+    "n": 5
+  }
+}
