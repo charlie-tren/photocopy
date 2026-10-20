@@ -1,0 +1,24 @@
+{
+  "n": 63,
+  "date": "2026-10-21",
+  "withheld": "posture",
+  "description": {
+    "subject": "A small figure with a blank, featureless, egg-shaped head and molded hands, made of what looks like glossy sculpted resin or vinyl, standing upright and holding a large orange sphere against its midsection with both hands.",
+    "covering": "A red ribbed turtleneck sweater with long sleeves, blue denim overalls with grey buckled straps and cuffed knee-length legs, and black rubber boots.",
+    "posture": "",
+    "setting": "An outdoor stretch of gravelly, crumbly brown earth covered in scattered small stones in grey, green, tan and pink, with a blurred background of the same terrain.",
+    "light": "Diffuse daylight from the upper left, moderately hard, with a neutral to slightly golden tint and a glossy highlight on the orange sphere.",
+    "materials": "Glossy lacquered orange sphere, knitted red wool, faded blue denim, black rubber, and loose stone fragments.",
+    "anomaly": "The head is a perfectly blank peach-colored ovoid with no eyes, nose, mouth or ears, resting directly on the red turtleneck collar."
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. A small figure with a blank, featureless, egg-shaped head and molded hands, made of what looks like glossy sculpted resin or vinyl, standing upright and holding a large orange sphere against its midsection with both hands., wearing A red ribbed turtleneck sweater with long sleeves, blue denim overalls with grey buckled straps and cuffed knee-length legs, and black rubber boots.. An outdoor stretch of gravelly, crumbly brown earth covered in scattered small stones in grey, green, tan and pink, with a blurred background of the same terrain. Light: Diffuse daylight from the upper left, moderately hard, with a neutral to slightly golden tint and a glossy highlight on the orange sphere. Materials: Glossy lacquered orange sphere, knitted red wool, faded blue denim, black rubber, and loose stone fragments. The head is a perfectly blank peach-colored ovoid with no eyes, nose, mouth or ears, resting directly on the red turtleneck collar. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0063.jpg",
+  "dhash": "14894163293606121359",
+  "reading": {
+    "text": 0.2834,
+    "image": 29.2,
+    "subject": 1.0,
+    "subject_word": "figure",
+    "n": 5
+  }
+}
