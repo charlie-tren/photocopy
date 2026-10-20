@@ -814,6 +814,19 @@
       "image_distance": 28.2,
       "seed_text": 0.0751,
       "seed_image": 30
+    },
+    {
+      "frame": 63,
+      "date": "2026-10-21",
+      "image": "assets/img/f0063.jpg",
+      "alt": "A small figure with a blank, featureless, egg-shaped head and molded hands, made of what looks like glossy sculpted resin or vinyl, standing upright and holding a large orange sphe",
+      "from": 62,
+      "caption": "A small figure with a blank, featureless, egg-shaped head and molded hands, made of what looks like glossy sculpted resin or vinyl, standing upright and holding a large orange sphere against its midsection with both hands. A red ribbed turtleneck sweater with long sleeves, blue denim overalls with grey buckled straps and cuffed knee-length legs, and black rubber boots. An outdoor stretch of gravelly, crumbly brown earth covered in scattered small stones in grey, green, tan and pink, with a blurred background of the same terrain. Diffuse daylight from the upper left, moderately hard, with a neutral to slightly golden tint and a glossy highlight on the orange sphere. Glossy lacquered orange sphere, knitted red wool, faded blue denim, black rubber, and loose stone fragments.",
+      "anomaly": "The head is a perfectly blank peach-colored ovoid with no eyes, nose, mouth or ears, resting directly on the red turtleneck collar.",
+      "text": 0.2834,
+      "image_distance": 29.2,
+      "seed_text": 0.0755,
+      "seed_image": 31
     }
   ]
 }
