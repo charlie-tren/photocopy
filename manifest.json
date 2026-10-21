@@ -827,6 +827,19 @@
       "image_distance": 29.2,
       "seed_text": 0.0755,
       "seed_image": 31
+    },
+    {
+      "frame": 64,
+      "date": "2026-10-22",
+      "image": "assets/img/f0064.jpg",
+      "alt": "A small painted figurine with a smooth, round, featureless peach-coloured head, holding a glossy orange ball against its middle.",
+      "from": 63,
+      "caption": "A small painted figurine with a smooth, round, featureless peach-coloured head, holding a glossy orange ball against its middle. A red ribbed turtleneck with long sleeves, pale blue overalls with cuffed legs that reach the ankles, and black leather-look boots. It stands on both feet with its arms wrapped around the orange ball, and its head and form face the camera, angled slightly to the right. A beach or path of small loose pebbles in tan, rust, olive and slate shades, fading into a soft blur behind the figure. Soft, diffuse daylight from the upper front, with gentle shadows and a slightly golden tint. Smooth glossy resin or vinyl for the head and ball, knitted red fabric, soft blue cloth, polished black boot material, and loose stone pebbles.",
+      "anomaly": "",
+      "text": 0.2929,
+      "image_distance": 29.2,
+      "seed_text": 0.1056,
+      "seed_image": 32
     }
   ]
 }
