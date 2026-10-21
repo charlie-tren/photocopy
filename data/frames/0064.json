@@ -1,0 +1,24 @@
+{
+  "n": 64,
+  "date": "2026-10-22",
+  "withheld": "anomaly",
+  "description": {
+    "subject": "A small painted figurine with a smooth, round, featureless peach-coloured head, holding a glossy orange ball against its middle.",
+    "covering": "A red ribbed turtleneck with long sleeves, pale blue overalls with cuffed legs that reach the ankles, and black leather-look boots.",
+    "posture": "It stands on both feet with its arms wrapped around the orange ball, and its head and form face the camera, angled slightly to the right.",
+    "setting": "A beach or path of small loose pebbles in tan, rust, olive and slate shades, fading into a soft blur behind the figure.",
+    "light": "Soft, diffuse daylight from the upper front, with gentle shadows and a slightly golden tint.",
+    "materials": "Smooth glossy resin or vinyl for the head and ball, knitted red fabric, soft blue cloth, polished black boot material, and loose stone pebbles.",
+    "anomaly": ""
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. A small painted figurine with a smooth, round, featureless peach-coloured head, holding a glossy orange ball against its middle., wearing A red ribbed turtleneck with long sleeves, pale blue overalls with cuffed legs that reach the ankles, and black leather-look boots., It stands on both feet with its arms wrapped around the orange ball, and its head and form face the camera, angled slightly to the right.. A beach or path of small loose pebbles in tan, rust, olive and slate shades, fading into a soft blur behind the figure. Light: Soft, diffuse daylight from the upper front, with gentle shadows and a slightly golden tint. Materials: Smooth glossy resin or vinyl for the head and ball, knitted red fabric, soft blue cloth, polished black boot material, and loose stone pebbles. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0064.jpg",
+  "dhash": "16497923367599589068",
+  "reading": {
+    "text": 0.2929,
+    "image": 29.2,
+    "subject": 0.8,
+    "subject_word": "figure",
+    "n": 5
+  }
+}
