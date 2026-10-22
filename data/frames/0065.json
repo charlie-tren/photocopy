@@ -1,0 +1,24 @@
+{
+  "n": 65,
+  "date": "2026-10-23",
+  "withheld": "setting",
+  "description": {
+    "subject": "A painted figurine with a smooth, oversized, peach-colored egg-shaped sphere in place of a face, standing on a bed of pebbles",
+    "covering": "A red knitted turtleneck sweater with sleeves to the wrists, pale blue overalls with gray shoulder straps and cuffed hems at the ankles, and laced leather-look boots.",
+    "posture": "Standing with feet together and both arms wrapped around an orange sphere at its midsection, facing the camera directly.",
+    "setting": "",
+    "light": "Soft, diffuse, warm daylight from the front and slightly above, with gentle highlights and no hard shadows.",
+    "materials": "Smooth painted resin or plastic, knitted wool, stitched cotton twill, and water-worn beach pebbles.",
+    "anomaly": "The figure's featureless peach-colored sphere, with no eyes, nose or mouth, sits directly on the red sweater collar and is far larger than the form beneath it."
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. A painted figurine with a smooth, oversized, peach-colored egg-shaped sphere in place of a face, standing on a bed of pebbles, wearing A red knitted turtleneck sweater with sleeves to the wrists, pale blue overalls with gray shoulder straps and cuffed hems at the ankles, and laced leather-look boots., Standing with feet together and both arms wrapped around an orange sphere at its midsection, facing the camera directly.. Light: Soft, diffuse, warm daylight from the front and slightly above, with gentle highlights and no hard shadows. Materials: Smooth painted resin or plastic, knitted wool, stitched cotton twill, and water-worn beach pebbles. The figure's featureless peach-colored sphere, with no eyes, nose or mouth, sits directly on the red sweater collar and is far larger than the form beneath it. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0065.jpg",
+  "dhash": "1374104548983647110",
+  "reading": {
+    "text": 0.3507,
+    "image": 31.2,
+    "subject": 0.8,
+    "subject_word": "holding",
+    "n": 5
+  }
+}
