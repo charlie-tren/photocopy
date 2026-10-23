@@ -853,6 +853,19 @@
       "image_distance": 31.2,
       "seed_text": 0.1467,
       "seed_image": 38
+    },
+    {
+      "frame": 66,
+      "date": "2026-10-24",
+      "image": "assets/img/f0066.jpg",
+      "alt": "A small figure with a smooth, tan, egg-shaped head, shown as a posed miniature toy or prop.",
+      "from": 65,
+      "caption": "A small figure with a smooth, tan, egg-shaped head, shown as a posed miniature toy or prop. It wears a red knitted turtleneck sweater with sleeves to the wrists, pale washed-out overalls with rolled cuffs reaching the ankles, white gloves, and brown leather lace-up boots. It stands upright and faces the camera, clutching a small orange sphere against its chest with both gloved hands. It stands outdoors on a bed of small, rounded pebbles in grey, brown and cream, with a softly blurred, sunlit scattering of stones behind it. Eggshell, knitted wool, washed cotton twill, leather, and water-worn stone.",
+      "anomaly": "The head is a whole brown eggshell with no features at all, set directly into the red knitted collar, and the figure presses an orange sphere to its chest with white gloved hands.",
+      "text": 0.3533,
+      "image_distance": 29.6,
+      "seed_text": 0.0442,
+      "seed_image": 33
     }
   ]
 }
