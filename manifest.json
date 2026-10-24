@@ -866,6 +866,19 @@
       "image_distance": 29.6,
       "seed_text": 0.0442,
       "seed_image": 33
+    },
+    {
+      "frame": 67,
+      "date": "2026-10-25",
+      "image": "assets/img/f0067.jpg",
+      "alt": "A figure with a brown chicken egg for a head, set on a small doll-like form of fabric, standing as a toy or prop.",
+      "from": 66,
+      "caption": "A figure with a brown chicken egg for a head, set on a small doll-like form of fabric, standing as a toy or prop. It wears a red knitted sweater with a thick ribbed rolled collar, khaki cloth overalls with stitched front pockets, white cotton gloves, and tan leather lace-up boots. It stands upright on its two feet, facing away from the viewer and slightly toward the left, with its gloved hands pressed against an orange ball at its middle. It stands outdoors on a bed of rounded pebbles in grey, tan, brown and cream, which fills the whole background and blurs with distance. Bright, fairly hard sunlight comes from above and slightly to the front, warm in tone, with short soft-edged shadows between the stones.",
+      "anomaly": "The figure's head is an unpainted brown eggshell with a speck-like scuff on its upper surface, set directly into the red knitted collar with no neck, and the white-gloved fingers are spread over a small orange ball.",
+      "text": 0.3596,
+      "image_distance": 28.6,
+      "seed_text": 0.0998,
+      "seed_image": 29
     }
   ]
 }
