@@ -1,0 +1,24 @@
+{
+  "n": 67,
+  "date": "2026-10-25",
+  "withheld": "materials",
+  "description": {
+    "subject": "A figure with a brown chicken egg for a head, set on a small doll-like form of fabric, standing as a toy or prop.",
+    "covering": "It wears a red knitted sweater with a thick ribbed rolled collar, khaki cloth overalls with stitched front pockets, white cotton gloves, and tan leather lace-up boots.",
+    "posture": "It stands upright on its two feet, facing away from the viewer and slightly toward the left, with its gloved hands pressed against an orange ball at its middle.",
+    "setting": "It stands outdoors on a bed of rounded pebbles in grey, tan, brown and cream, which fills the whole background and blurs with distance.",
+    "light": "Bright, fairly hard sunlight comes from above and slightly to the front, warm in tone, with short soft-edged shadows between the stones.",
+    "materials": "",
+    "anomaly": "The figure's head is an unpainted brown eggshell with a speck-like scuff on its upper surface, set directly into the red knitted collar with no neck, and the white-gloved fingers are spread over a small orange ball."
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. A figure with a brown chicken egg for a head, set on a small doll-like form of fabric, standing as a toy or prop., wearing It wears a red knitted sweater with a thick ribbed rolled collar, khaki cloth overalls with stitched front pockets, white cotton gloves, and tan leather lace-up boots., It stands upright on its two feet, facing away from the viewer and slightly toward the left, with its gloved hands pressed against an orange ball at its middle.. It stands outdoors on a bed of rounded pebbles in grey, tan, brown and cream, which fills the whole background and blurs with distance. Light: Bright, fairly hard sunlight comes from above and slightly to the front, warm in tone, with short soft-edged shadows between the stones. The figure's head is an unpainted brown eggshell with a speck-like scuff on its upper surface, set directly into the red knitted collar with no neck, and the white-gloved fingers are spread over a small orange ball. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0067.jpg",
+  "dhash": "18077674770902544068",
+  "reading": {
+    "text": 0.3596,
+    "image": 28.6,
+    "subject": 0.8,
+    "subject_word": "head",
+    "n": 5
+  }
+}
