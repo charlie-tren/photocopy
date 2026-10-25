@@ -879,6 +879,19 @@
       "image_distance": 28.6,
       "seed_text": 0.0998,
       "seed_image": 29
+    },
+    {
+      "frame": 68,
+      "date": "2026-10-26",
+      "image": "assets/img/f0068.jpg",
+      "alt": "A miniature figure with a brown egg in place of a head, standing on a pebble bed and holding a glossy amber sphere against its middle.",
+      "from": 67,
+      "caption": "A miniature figure with a brown egg in place of a head, standing on a pebble bed and holding a glossy amber sphere against its middle. A red ribbed wool collar rolled up around the base of the egg, a red long-sleeved top, khaki overalls with a front bib and pockets that reach the ankle, white cloth gloves, and tan-orange leather boots. Outdoors on a dense bed of rounded gravel and pebbles in white, tan, rust and slate tones, with the background falling out of focus. Soft, warm, low-angled daylight from the upper left, medium-hard, with a golden cast and short gentle shadows between the stones. Eggshell, red wool yarn, khaki cotton twill, white cotton fabric, polished stone pebbles, and tan leather.",
+      "anomaly": "Two tiny hairline cracks on the upper surface of the brown eggshell, standing in for a face on an otherwise smooth egg.",
+      "text": 0.3739,
+      "image_distance": 27.4,
+      "seed_text": 0.1048,
+      "seed_image": 34
     }
   ]
 }

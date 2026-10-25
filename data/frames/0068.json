@@ -1,0 +1,24 @@
+{
+  "n": 68,
+  "date": "2026-10-26",
+  "withheld": "posture",
+  "description": {
+    "subject": "A miniature figure with a brown egg in place of a head, standing on a pebble bed and holding a glossy amber sphere against its middle.",
+    "covering": "A red ribbed wool collar rolled up around the base of the egg, a red long-sleeved top, khaki overalls with a front bib and pockets that reach the ankle, white cloth gloves, and tan-orange leather boots.",
+    "posture": "",
+    "setting": "Outdoors on a dense bed of rounded gravel and pebbles in white, tan, rust and slate tones, with the background falling out of focus.",
+    "light": "Soft, warm, low-angled daylight from the upper left, medium-hard, with a golden cast and short gentle shadows between the stones.",
+    "materials": "Eggshell, red wool yarn, khaki cotton twill, white cotton fabric, polished stone pebbles, and tan leather.",
+    "anomaly": "Two tiny hairline cracks on the upper surface of the brown eggshell, standing in for a face on an otherwise smooth egg."
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. A miniature figure with a brown egg in place of a head, standing on a pebble bed and holding a glossy amber sphere against its middle., wearing A red ribbed wool collar rolled up around the base of the egg, a red long-sleeved top, khaki overalls with a front bib and pockets that reach the ankle, white cloth gloves, and tan-orange leather boots.. Outdoors on a dense bed of rounded gravel and pebbles in white, tan, rust and slate tones, with the background falling out of focus. Light: Soft, warm, low-angled daylight from the upper left, medium-hard, with a golden cast and short gentle shadows between the stones. Materials: Eggshell, red wool yarn, khaki cotton twill, white cotton fabric, polished stone pebbles, and tan leather. Two tiny hairline cracks on the upper surface of the brown eggshell, standing in for a face on an otherwise smooth egg. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0068.jpg",
+  "dhash": "17504620566578841281",
+  "reading": {
+    "text": 0.3739,
+    "image": 27.4,
+    "subject": 0.8,
+    "subject_word": "head",
+    "n": 5
+  }
+}
