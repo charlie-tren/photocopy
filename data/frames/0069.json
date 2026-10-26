@@ -1,0 +1,24 @@
+{
+  "n": 69,
+  "date": "2026-10-27",
+  "withheld": "anomaly",
+  "description": {
+    "subject": "A small figure with an egg-shaped shell form, a dot-eyed face and a single wavy line above the eyes, standing as a posed toy or prop.",
+    "covering": "It wears a red woolen sweater with a thick rolled collar and long sleeves, tan work overalls with flap pockets on the thighs, white gloves on the hands and tawny rubber-style boots reaching the ankles.",
+    "posture": "It stands upright on its two feet, holding a glossy amber glass sphere against its chest in white-gloved hands, facing the camera.",
+    "setting": "It stands on a bed of small smooth river stones in cream, rust, grey and slate tones, with a curved weathered wooden dish or bowl and more stones blurred behind it.",
+    "light": "Warm, golden sunlight comes from the upper left and behind, casting crisp highlights on the egg shell and the glass sphere, with a soft blurred background.",
+    "materials": "Smooth egg shell, red yarn, tan canvas-like fabric, polished amber glass, rounded stones and weathered wood.",
+    "anomaly": ""
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. A small figure with an egg-shaped shell form, a dot-eyed face and a single wavy line above the eyes, standing as a posed toy or prop., wearing It wears a red woolen sweater with a thick rolled collar and long sleeves, tan work overalls with flap pockets on the thighs, white gloves on the hands and tawny rubber-style boots reaching the ankles., It stands upright on its two feet, holding a glossy amber glass sphere against its chest in white-gloved hands, facing the camera.. It stands on a bed of small smooth river stones in cream, rust, grey and slate tones, with a curved weathered wooden dish or bowl and more stones blurred behind it. Light: Warm, golden sunlight comes from the upper left and behind, casting crisp highlights on the egg shell and the glass sphere, with a soft blurred background. Materials: Smooth egg shell, red yarn, tan canvas-like fabric, polished amber glass, rounded stones and weathered wood. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0069.jpg",
+  "dhash": "1203006636680973463",
+  "reading": {
+    "text": 0.3775,
+    "image": 28.0,
+    "subject": 0.8,
+    "subject_word": "figure",
+    "n": 5
+  }
+}
