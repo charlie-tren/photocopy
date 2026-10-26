@@ -892,6 +892,19 @@
       "image_distance": 27.4,
       "seed_text": 0.1048,
       "seed_image": 34
+    },
+    {
+      "frame": 69,
+      "date": "2026-10-27",
+      "image": "assets/img/f0069.jpg",
+      "alt": "A small figure with an egg-shaped shell form, a dot-eyed face and a single wavy line above the eyes, standing as a posed toy or prop.",
+      "from": 68,
+      "caption": "A small figure with an egg-shaped shell form, a dot-eyed face and a single wavy line above the eyes, standing as a posed toy or prop. It wears a red woolen sweater with a thick rolled collar and long sleeves, tan work overalls with flap pockets on the thighs, white gloves on the hands and tawny rubber-style boots reaching the ankles. It stands upright on its two feet, holding a glossy amber glass sphere against its chest in white-gloved hands, facing the camera. It stands on a bed of small smooth river stones in cream, rust, grey and slate tones, with a curved weathered wooden dish or bowl and more stones blurred behind it. Warm, golden sunlight comes from the upper left and behind, casting crisp highlights on the egg shell and the glass sphere, with a soft blurred background. Smooth egg shell, red yarn, tan canvas-like fabric, polished amber glass, rounded stones and weathered wood.",
+      "anomaly": "",
+      "text": 0.3775,
+      "image_distance": 28.0,
+      "seed_text": 0.058,
+      "seed_image": 36
     }
   ]
 }
