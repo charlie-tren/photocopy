@@ -905,6 +905,19 @@
       "image_distance": 28.0,
       "seed_text": 0.058,
       "seed_image": 36
+    },
+    {
+      "frame": 70,
+      "date": "2026-10-28",
+      "image": "assets/img/f0070.jpg",
+      "alt": "A small figure with an egg-shaped white shell form, painted dot eyes, curved brows, pink round cheeks and a small wavy mouth, standing in a miniature scene.",
+      "from": 69,
+      "caption": "A small figure with an egg-shaped white shell form, painted dot eyes, curved brows, pink round cheeks and a small wavy mouth, standing in a miniature scene. A red woolen sweater with long sleeves ending in white gloves, brown corduroy-style trousers reaching down to the tops of tan rubber boots. Standing upright on both boots, facing the viewer, with both gloved hands clasped around a glossy amber glass ball held against its chest. Warm, fairly hard, low sunlight coming from the upper left, golden in colour, casting a bright sheen on the egg shell and the glass ball. Glossy ceramic-like egg shell, red wool, brown woven cloth, tan rubber, amber glass, and stones in grey, pink, and brown.",
+      "anomaly": "The figure holds a translucent reddish-amber glass sphere, nearly as wide as its own form, clasped to its chest in white gloves.",
+      "text": 0.3897,
+      "image_distance": 27.2,
+      "seed_text": 0.0629,
+      "seed_image": 41
     }
   ]
 }
