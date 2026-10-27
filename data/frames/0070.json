@@ -1,0 +1,24 @@
+{
+  "n": 70,
+  "date": "2026-10-28",
+  "withheld": "setting",
+  "description": {
+    "subject": "A small figure with an egg-shaped white shell form, painted dot eyes, curved brows, pink round cheeks and a small wavy mouth, standing in a miniature scene.",
+    "covering": "A red woolen sweater with long sleeves ending in white gloves, brown corduroy-style trousers reaching down to the tops of tan rubber boots.",
+    "posture": "Standing upright on both boots, facing the viewer, with both gloved hands clasped around a glossy amber glass ball held against its chest.",
+    "setting": "",
+    "light": "Warm, fairly hard, low sunlight coming from the upper left, golden in colour, casting a bright sheen on the egg shell and the glass ball.",
+    "materials": "Glossy ceramic-like egg shell, red wool, brown woven cloth, tan rubber, amber glass, and stones in grey, pink, and brown.",
+    "anomaly": "The figure holds a translucent reddish-amber glass sphere, nearly as wide as its own form, clasped to its chest in white gloves."
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. A small figure with an egg-shaped white shell form, painted dot eyes, curved brows, pink round cheeks and a small wavy mouth, standing in a miniature scene., wearing A red woolen sweater with long sleeves ending in white gloves, brown corduroy-style trousers reaching down to the tops of tan rubber boots., Standing upright on both boots, facing the viewer, with both gloved hands clasped around a glossy amber glass ball held against its chest.. Light: Warm, fairly hard, low sunlight coming from the upper left, golden in colour, casting a bright sheen on the egg shell and the glass ball. Materials: Glossy ceramic-like egg shell, red wool, brown woven cloth, tan rubber, amber glass, and stones in grey, pink, and brown. The figure holds a translucent reddish-amber glass sphere, nearly as wide as its own form, clasped to its chest in white gloves. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0070.jpg",
+  "dhash": "12839817004261460170",
+  "reading": {
+    "text": 0.3897,
+    "image": 27.2,
+    "subject": 1.0,
+    "subject_word": "figure",
+    "n": 5
+  }
+}
