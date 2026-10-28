@@ -1,0 +1,24 @@
+{
+  "n": 71,
+  "date": "2026-10-29",
+  "withheld": "light",
+  "description": {
+    "subject": "A smooth glossy egg-shaped figure made of ceramic or glazed plastic, with a painted face, set upright as a small character toy.",
+    "covering": "It wears a chunky red knitted jumper with ribbed cuffs, striped pinstripe trousers that reach the ankle, and tan rubber boots, with glossy cream mitten-style gloves at the wrists.",
+    "posture": "It is upright on both feet with its arms bent forward, holding a round object against its chest, and it looks straight toward the camera.",
+    "setting": "An outdoor shoreline of loose pebbles and rough rocks, with a blurred rock face and a pale bright glow in the background.",
+    "light": "",
+    "materials": "Glazed ceramic-like shell, knitted yarn, translucent red glass, rubber, and weathered pebbles.",
+    "anomaly": "The figure cradles a clear deep-red glass ball whose curved surface reflects tiny silhouettes of people standing in the scene."
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. A smooth glossy egg-shaped figure made of ceramic or glazed plastic, with a painted face, set upright as a small character toy., wearing It wears a chunky red knitted jumper with ribbed cuffs, striped pinstripe trousers that reach the ankle, and tan rubber boots, with glossy cream mitten-style gloves at the wrists., It is upright on both feet with its arms bent forward, holding a round object against its chest, and it looks straight toward the camera.. An outdoor shoreline of loose pebbles and rough rocks, with a blurred rock face and a pale bright glow in the background. Materials: Glazed ceramic-like shell, knitted yarn, translucent red glass, rubber, and weathered pebbles. The figure cradles a clear deep-red glass ball whose curved surface reflects tiny silhouettes of people standing in the scene. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0071.jpg",
+  "dhash": "6691487890511816928",
+  "reading": {
+    "text": 0.3495,
+    "image": 26.8,
+    "subject": 1.0,
+    "subject_word": "figure",
+    "n": 5
+  }
+}
