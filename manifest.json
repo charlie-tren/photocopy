@@ -918,6 +918,19 @@
       "image_distance": 27.2,
       "seed_text": 0.0629,
       "seed_image": 41
+    },
+    {
+      "frame": 71,
+      "date": "2026-10-29",
+      "image": "assets/img/f0071.jpg",
+      "alt": "A smooth glossy egg-shaped figure made of ceramic or glazed plastic, with a painted face, set upright as a small character toy.",
+      "from": 70,
+      "caption": "A smooth glossy egg-shaped figure made of ceramic or glazed plastic, with a painted face, set upright as a small character toy. It wears a chunky red knitted jumper with ribbed cuffs, striped pinstripe trousers that reach the ankle, and tan rubber boots, with glossy cream mitten-style gloves at the wrists. It is upright on both feet with its arms bent forward, holding a round object against its chest, and it looks straight toward the camera. An outdoor shoreline of loose pebbles and rough rocks, with a blurred rock face and a pale bright glow in the background. Glazed ceramic-like shell, knitted yarn, translucent red glass, rubber, and weathered pebbles.",
+      "anomaly": "The figure cradles a clear deep-red glass ball whose curved surface reflects tiny silhouettes of people standing in the scene.",
+      "text": 0.3495,
+      "image_distance": 26.8,
+      "seed_text": 0.1019,
+      "seed_image": 29
     }
   ]
 }
