@@ -1,0 +1,24 @@
+{
+  "n": 72,
+  "date": "2026-10-30",
+  "withheld": "materials",
+  "description": {
+    "subject": "A painted ceramic or plastic egg-shaped toy figure with a drawn-on face of dot eyes, raised brows and a curved smile.",
+    "covering": "A red knitted jumper with a ribbed funnel neck and sleeves reaching the wrists, black-and-ivory pinstriped trousers that reach the ankles, and mustard-yellow rubber boots.",
+    "posture": "It stands on its two boots with its form facing the camera, both mitten-shaped hands clasped around a round red object held in front of its middle.",
+    "setting": "A beach of rounded pebbles in slate blue, rust and tan, with a layered sandstone cliff face behind and two blurred figures walking in the distance.",
+    "light": "Soft, diffuse daylight from the front and slightly above, with a warm golden cast on the cliff and cool tones on the pebbles.",
+    "materials": "",
+    "anomaly": "The figure clutches a translucent ruby-red glass sphere, like a lensball, that holds a tiny inverted reflection of the beach and the two distant walkers."
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. A painted ceramic or plastic egg-shaped toy figure with a drawn-on face of dot eyes, raised brows and a curved smile., wearing A red knitted jumper with a ribbed funnel neck and sleeves reaching the wrists, black-and-ivory pinstriped trousers that reach the ankles, and mustard-yellow rubber boots., It stands on its two boots with its form facing the camera, both mitten-shaped hands clasped around a round red object held in front of its middle.. A beach of rounded pebbles in slate blue, rust and tan, with a layered sandstone cliff face behind and two blurred figures walking in the distance. Light: Soft, diffuse daylight from the front and slightly above, with a warm golden cast on the cliff and cool tones on the pebbles. The figure clutches a translucent ruby-red glass sphere, like a lensball, that holds a tiny inverted reflection of the beach and the two distant walkers. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0072.jpg",
+  "dhash": "14767567940547829869",
+  "reading": {
+    "text": 0.332,
+    "image": 26.0,
+    "subject": 1.0,
+    "subject_word": "figure",
+    "n": 5
+  }
+}
