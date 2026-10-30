@@ -1,0 +1,24 @@
+{
+  "n": 73,
+  "date": "2026-10-31",
+  "withheld": "posture",
+  "description": {
+    "subject": "A small painted egg-shaped toy figure with a smiling drawn expression, red cheek circles and dark striped hair, held upright on short legs",
+    "covering": "A chunky red knitted sweater with a high rolled collar, black-and-cream vertically striped trousers reaching the ankles, yellow gloves, and yellow rubber boots",
+    "posture": "",
+    "setting": "A shingle beach of dark grey and rust-brown stones in front of layered sandstone cliffs, with two out-of-focus walkers in the distance",
+    "light": "Soft, diffuse daylight from the front and slightly above, with a slightly orange cast on the cliffs and cool tones on the stones",
+    "materials": "Knitted wool, painted ceramic or plastic, rubber, red-tinted transparent sphere, and smooth stone",
+    "anomaly": "The red transparent sphere held at the chest contains a tiny upside-down-free reflection of two figures walking on a sandy shore, matching the two blurred walkers behind"
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. A small painted egg-shaped toy figure with a smiling drawn expression, red cheek circles and dark striped hair, held upright on short legs, wearing A chunky red knitted sweater with a high rolled collar, black-and-cream vertically striped trousers reaching the ankles, yellow gloves, and yellow rubber boots. A shingle beach of dark grey and rust-brown stones in front of layered sandstone cliffs, with two out-of-focus walkers in the distance. Light: Soft, diffuse daylight from the front and slightly above, with a slightly orange cast on the cliffs and cool tones on the stones. Materials: Knitted wool, painted ceramic or plastic, rubber, red-tinted transparent sphere, and smooth stone. The red transparent sphere held at the chest contains a tiny upside-down-free reflection of two figures walking on a sandy shore, matching the two blurred walkers behind. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0073.jpg",
+  "dhash": "17072216624614634067",
+  "reading": {
+    "text": 0.3508,
+    "image": 26.0,
+    "subject": 1.0,
+    "subject_word": "figure",
+    "n": 5
+  }
+}
