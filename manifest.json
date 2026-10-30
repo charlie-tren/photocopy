@@ -944,6 +944,19 @@
       "image_distance": 26.0,
       "seed_text": 0.0392,
       "seed_image": 24
+    },
+    {
+      "frame": 73,
+      "date": "2026-10-31",
+      "image": "assets/img/f0073.jpg",
+      "alt": "A small painted egg-shaped toy figure with a smiling drawn expression, red cheek circles and dark striped hair, held upright on short legs",
+      "from": 72,
+      "caption": "A small painted egg-shaped toy figure with a smiling drawn expression, red cheek circles and dark striped hair, held upright on short legs. A chunky red knitted sweater with a high rolled collar, black-and-cream vertically striped trousers reaching the ankles, yellow gloves, and yellow rubber boots. A shingle beach of dark grey and rust-brown stones in front of layered sandstone cliffs, with two out-of-focus walkers in the distance. Soft, diffuse daylight from the front and slightly above, with a slightly orange cast on the cliffs and cool tones on the stones. Knitted wool, painted ceramic or plastic, rubber, red-tinted transparent sphere, and smooth stone.",
+      "anomaly": "The red transparent sphere held at the chest contains a tiny upside-down-free reflection of two figures walking on a sandy shore, matching the two blurred walkers behind.",
+      "text": 0.3508,
+      "image_distance": 26.0,
+      "seed_text": 0.0809,
+      "seed_image": 27
     }
   ]
 }
