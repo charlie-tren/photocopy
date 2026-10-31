@@ -1,0 +1,24 @@
+{
+  "n": 74,
+  "date": "2026-11-01",
+  "withheld": "anomaly",
+  "description": {
+    "subject": "A small toy figure with a smooth white head, drawn-on dot eyes, red round cheeks and a smile, topped with a cap of black and grey striped hair.",
+    "covering": "It wears a red knitted turtleneck sweater with long sleeves, black-and-white vertically striped trousers reaching the ankles, yellow mitten-style hands, and yellow wellington boots.",
+    "posture": "It stands upright and square on, facing the camera, with both arms hanging at its sides and its feet planted on the stones.",
+    "setting": "A beach of dark grey, flat pebbles in front of a layered tan and brown sandstone cliff, with three small out-of-focus walkers in the distance.",
+    "light": "Soft, diffuse daylight from an overcast sky, with no hard shadows and a muted, slightly warm cast on the cliff.",
+    "materials": "Red wool knit, yellow molded plastic, a translucent red dome held against the sweater front, and wet-looking grey pebbles with banded sandstone behind.",
+    "anomaly": ""
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. A small toy figure with a smooth white head, drawn-on dot eyes, red round cheeks and a smile, topped with a cap of black and grey striped hair., wearing It wears a red knitted turtleneck sweater with long sleeves, black-and-white vertically striped trousers reaching the ankles, yellow mitten-style hands, and yellow wellington boots., It stands upright and square on, facing the camera, with both arms hanging at its sides and its feet planted on the stones.. A beach of dark grey, flat pebbles in front of a layered tan and brown sandstone cliff, with three small out-of-focus walkers in the distance. Light: Soft, diffuse daylight from an overcast sky, with no hard shadows and a muted, slightly warm cast on the cliff. Materials: Red wool knit, yellow molded plastic, a translucent red dome held against the sweater front, and wet-looking grey pebbles with banded sandstone behind. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0074.jpg",
+  "dhash": "14839978272760993354",
+  "reading": {
+    "text": 0.358,
+    "image": 25.6,
+    "subject": 1.0,
+    "subject_word": "figure",
+    "n": 5
+  }
+}

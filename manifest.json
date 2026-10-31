@@ -957,6 +957,19 @@
       "image_distance": 26.0,
       "seed_text": 0.0809,
       "seed_image": 27
+    },
+    {
+      "frame": 74,
+      "date": "2026-11-01",
+      "image": "assets/img/f0074.jpg",
+      "alt": "A small toy figure with a smooth white head, drawn-on dot eyes, red round cheeks and a smile, topped with a cap of black and grey striped hair.",
+      "from": 73,
+      "caption": "A small toy figure with a smooth white head, drawn-on dot eyes, red round cheeks and a smile, topped with a cap of black and grey striped hair. It wears a red knitted turtleneck sweater with long sleeves, black-and-white vertically striped trousers reaching the ankles, yellow mitten-style hands, and yellow wellington boots. It stands upright and square on, facing the camera, with both arms hanging at its sides and its feet planted on the stones. A beach of dark grey, flat pebbles in front of a layered tan and brown sandstone cliff, with three small out-of-focus walkers in the distance. Soft, diffuse daylight from an overcast sky, with no hard shadows and a muted, slightly warm cast on the cliff. Red wool knit, yellow molded plastic, a translucent red dome held against the sweater front, and wet-looking grey pebbles with banded sandstone behind.",
+      "anomaly": "",
+      "text": 0.358,
+      "image_distance": 25.6,
+      "seed_text": 0.2024,
+      "seed_image": 35
     }
   ]
 }
