@@ -1,0 +1,24 @@
+{
+  "n": 75,
+  "date": "2026-11-02",
+  "withheld": "setting",
+  "description": {
+    "subject": "A toy-like figure with a smooth pale painted head, made of vinyl or plastic with a knitted sweater, standing as a doll on a pebble beach.",
+    "covering": "A red knitted wool sweater with long sleeves to the wrist, striped black-and-white trousers that run to the boots, and orange boots.",
+    "posture": "It stands straight on the stones with its arms hanging slightly bent at its sides, facing the viewer head-on.",
+    "setting": "",
+    "light": "Soft, diffuse daylight from an overcast sky, with no hard shadows and a neutral, slightly warm tone.",
+    "materials": "Glossy painted plastic for the head and yellow hands, red knitted wool, striped fabric, and dark rounded beach pebbles.",
+    "anomaly": "A glossy translucent orange-red dome, like a glass bead or blob of resin, sits on the front of the red sweater at the middle of the form."
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. A toy-like figure with a smooth pale painted head, made of vinyl or plastic with a knitted sweater, standing as a doll on a pebble beach., wearing A red knitted wool sweater with long sleeves to the wrist, striped black-and-white trousers that run to the boots, and orange boots., It stands straight on the stones with its arms hanging slightly bent at its sides, facing the viewer head-on.. Light: Soft, diffuse daylight from an overcast sky, with no hard shadows and a neutral, slightly warm tone. Materials: Glossy painted plastic for the head and yellow hands, red knitted wool, striped fabric, and dark rounded beach pebbles. A glossy translucent orange-red dome, like a glass bead or blob of resin, sits on the front of the red sweater at the middle of the form. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0075.jpg",
+  "dhash": "8192905990036532106",
+  "reading": {
+    "text": 0.375,
+    "image": 26.6,
+    "subject": 1.0,
+    "subject_word": "figure",
+    "n": 5
+  }
+}

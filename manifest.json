@@ -970,6 +970,19 @@
       "image_distance": 25.6,
       "seed_text": 0.2024,
       "seed_image": 35
+    },
+    {
+      "frame": 75,
+      "date": "2026-11-02",
+      "image": "assets/img/f0075.jpg",
+      "alt": "A toy-like figure with a smooth pale painted head, made of vinyl or plastic with a knitted sweater, standing as a doll on a pebble beach.",
+      "from": 74,
+      "caption": "A toy-like figure with a smooth pale painted head, made of vinyl or plastic with a knitted sweater, standing as a doll on a pebble beach. A red knitted wool sweater with long sleeves to the wrist, striped black-and-white trousers that run to the boots, and orange boots. It stands straight on the stones with its arms hanging slightly bent at its sides, facing the viewer head-on. Soft, diffuse daylight from an overcast sky, with no hard shadows and a neutral, slightly warm tone. Glossy painted plastic for the head and yellow hands, red knitted wool, striped fabric, and dark rounded beach pebbles.",
+      "anomaly": "A glossy translucent orange-red dome, like a glass bead or blob of resin, sits on the front of the red sweater at the middle of the form.",
+      "text": 0.375,
+      "image_distance": 26.6,
+      "seed_text": 0.2023,
+      "seed_image": 35
     }
   ]
 }
