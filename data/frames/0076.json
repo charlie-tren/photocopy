@@ -1,0 +1,24 @@
+{
+  "n": 76,
+  "date": "2026-11-03",
+  "withheld": "light",
+  "description": {
+    "subject": "A small toy figure with a smooth white egg-shaped head and a stiff molded form, standing upright on its own",
+    "covering": "A crimson ribbed roll-neck sweater with long sleeves ending at the wrists, white trousers with vertical dark stripes reaching the ankles, and orange rubber boots.",
+    "posture": "It stands upright with its arms hanging at its sides and its feet apart, turned toward the camera.",
+    "setting": "Outdoors on a bed of wet, dark, smooth pebbles, with a blurred structure and a metal pole in the background.",
+    "light": "",
+    "materials": "Wool yarn for the sweater, striped fabric for the trousers, glossy orange rubber for the boots, and polished river stones underneath.",
+    "anomaly": "A round dome of clear red liquid-filled material sits on the front of the sweater at chest height, like a lens or droplet set into the wool."
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. A small toy figure with a smooth white egg-shaped head and a stiff molded form, standing upright on its own, wearing A crimson ribbed roll-neck sweater with long sleeves ending at the wrists, white trousers with vertical dark stripes reaching the ankles, and orange rubber boots., It stands upright with its arms hanging at its sides and its feet apart, turned toward the camera.. Outdoors on a bed of wet, dark, smooth pebbles, with a blurred structure and a metal pole in the background. Materials: Wool yarn for the sweater, striped fabric for the trousers, glossy orange rubber for the boots, and polished river stones underneath. A round dome of clear red liquid-filled material sits on the front of the sweater at chest height, like a lens or droplet set into the wool. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0076.jpg",
+  "dhash": "10211028244580471733",
+  "reading": {
+    "text": 0.392,
+    "image": 29.0,
+    "subject": 1.0,
+    "subject_word": "figure",
+    "n": 5
+  }
+}

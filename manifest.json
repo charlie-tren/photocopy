@@ -983,6 +983,19 @@
       "image_distance": 26.6,
       "seed_text": 0.2023,
       "seed_image": 35
+    },
+    {
+      "frame": 76,
+      "date": "2026-11-03",
+      "image": "assets/img/f0076.jpg",
+      "alt": "A small toy figure with a smooth white egg-shaped head and a stiff molded form, standing upright on its own",
+      "from": 75,
+      "caption": "A small toy figure with a smooth white egg-shaped head and a stiff molded form, standing upright on its own. A crimson ribbed roll-neck sweater with long sleeves ending at the wrists, white trousers with vertical dark stripes reaching the ankles, and orange rubber boots. It stands upright with its arms hanging at its sides and its feet apart, turned toward the camera. Outdoors on a bed of wet, dark, smooth pebbles, with a blurred structure and a metal pole in the background. Wool yarn for the sweater, striped fabric for the trousers, glossy orange rubber for the boots, and polished river stones underneath.",
+      "anomaly": "A round dome of clear red liquid-filled material sits on the front of the sweater at chest height, like a lens or droplet set into the wool.",
+      "text": 0.392,
+      "image_distance": 29.0,
+      "seed_text": 0.108,
+      "seed_image": 23
     }
   ]
 }
