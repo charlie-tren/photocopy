@@ -996,6 +996,19 @@
       "image_distance": 29.0,
       "seed_text": 0.108,
       "seed_image": 23
+    },
+    {
+      "frame": 77,
+      "date": "2026-11-04",
+      "image": "assets/img/f0077.jpg",
+      "alt": "A small toy figure with a white, featureless rounded head and white hands, made of molded resin or vinyl and dressed in wool clothing.",
+      "from": 76,
+      "caption": "A small toy figure with a white, featureless rounded head and white hands, made of molded resin or vinyl and dressed in wool clothing. It wears a crimson wool beanie, a crimson rib-weave sweater with a rolled turtleneck collar and cuffed sleeves that reach the wrists, white trousers with two navy vertical bands down each leg that reach the boot tops, and glossy orange boots. It stands upright with its feet together and its arms hanging at its sides, facing the viewer. It stands on a bed of wet, shiny river stones in charcoal and brown tones, with an out-of-focus wall, a gray post and a few small colored objects in the distance. Soft, even, low-contrast light from the front and above in a neutral-to-warm tone, giving wet highlights on the stones and no hard shadows.",
+      "anomaly": "A glossy, translucent orange-red glass bead sits on the front of the sweater at stomach height, as though embedded in the wool.",
+      "text": 0.3788,
+      "image_distance": 28.8,
+      "seed_text": 0.0986,
+      "seed_image": 36
     }
   ]
 }

@@ -1,0 +1,24 @@
+{
+  "n": 77,
+  "date": "2026-11-04",
+  "withheld": "materials",
+  "description": {
+    "subject": "A small toy figure with a white, featureless rounded head and white hands, made of molded resin or vinyl and dressed in wool clothing.",
+    "covering": "It wears a crimson wool beanie, a crimson rib-weave sweater with a rolled turtleneck collar and cuffed sleeves that reach the wrists, white trousers with two navy vertical bands down each leg that reach the boot tops, and glossy orange boots.",
+    "posture": "It stands upright with its feet together and its arms hanging at its sides, facing the viewer.",
+    "setting": "It stands on a bed of wet, shiny river stones in charcoal and brown tones, with an out-of-focus wall, a gray post and a few small colored objects in the distance.",
+    "light": "Soft, even, low-contrast light from the front and above in a neutral-to-warm tone, giving wet highlights on the stones and no hard shadows.",
+    "materials": "",
+    "anomaly": "A glossy, translucent orange-red glass bead sits on the front of the sweater at stomach height, as though embedded in the wool."
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. A small toy figure with a white, featureless rounded head and white hands, made of molded resin or vinyl and dressed in wool clothing., wearing It wears a crimson wool beanie, a crimson rib-weave sweater with a rolled turtleneck collar and cuffed sleeves that reach the wrists, white trousers with two navy vertical bands down each leg that reach the boot tops, and glossy orange boots., It stands upright with its feet together and its arms hanging at its sides, facing the viewer.. It stands on a bed of wet, shiny river stones in charcoal and brown tones, with an out-of-focus wall, a gray post and a few small colored objects in the distance. Light: Soft, even, low-contrast light from the front and above in a neutral-to-warm tone, giving wet highlights on the stones and no hard shadows. A glossy, translucent orange-red glass bead sits on the front of the sweater at stomach height, as though embedded in the wool. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0077.jpg",
+  "dhash": "9657745776094364250",
+  "reading": {
+    "text": 0.3788,
+    "image": 28.8,
+    "subject": 1.0,
+    "subject_word": "figure",
+    "n": 5
+  }
+}
