@@ -1,0 +1,24 @@
+{
+  "n": 78,
+  "date": "2026-11-05",
+  "withheld": "posture",
+  "description": {
+    "subject": "A small handmade doll with a smooth white blank oval head and white hands, standing upright and facing the camera.",
+    "covering": "A red knitted hooded jacket with a ribbed cowl collar and long sleeves to the wrists, a matching red knitted cap, cream knitted leggings with navy bands at the shins, and orange rubber boots.",
+    "posture": "",
+    "setting": "An outdoor spot paved with a deep bed of glossy, rounded river pebbles in charcoal and brown, with a pale mottled wall and a grey post behind.",
+    "light": "Even, overcast light from above and in front, low in contrast and neutral to slightly warm in colour, leaving small bright reflections on the wet-looking pebbles.",
+    "materials": "Red knitted yarn, smooth white painted or molded plastic, glossy polished pebbles, and orange rubber or vinyl.",
+    "anomaly": "A round, translucent amber-orange bead sits on the front of the red knitted jacket at midriff height, like a glass button or a lens."
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. A small handmade doll with a smooth white blank oval head and white hands, standing upright and facing the camera., wearing A red knitted hooded jacket with a ribbed cowl collar and long sleeves to the wrists, a matching red knitted cap, cream knitted leggings with navy bands at the shins, and orange rubber boots.. An outdoor spot paved with a deep bed of glossy, rounded river pebbles in charcoal and brown, with a pale mottled wall and a grey post behind. Light: Even, overcast light from above and in front, low in contrast and neutral to slightly warm in colour, leaving small bright reflections on the wet-looking pebbles. Materials: Red knitted yarn, smooth white painted or molded plastic, glossy polished pebbles, and orange rubber or vinyl. A round, translucent amber-orange bead sits on the front of the red knitted jacket at midriff height, like a glass button or a lens. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0078.jpg",
+  "dhash": "7092697514535187238",
+  "reading": {
+    "text": 0.4041,
+    "image": 29.8,
+    "subject": 1.0,
+    "subject_word": "head",
+    "n": 5
+  }
+}

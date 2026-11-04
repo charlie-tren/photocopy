@@ -1009,6 +1009,19 @@
       "image_distance": 28.8,
       "seed_text": 0.0986,
       "seed_image": 36
+    },
+    {
+      "frame": 78,
+      "date": "2026-11-05",
+      "image": "assets/img/f0078.jpg",
+      "alt": "A small handmade doll with a smooth white blank oval head and white hands, standing upright and facing the camera.",
+      "from": 77,
+      "caption": "A small handmade doll with a smooth white blank oval head and white hands, standing upright and facing the camera. A red knitted hooded jacket with a ribbed cowl collar and long sleeves to the wrists, a matching red knitted cap, cream knitted leggings with navy bands at the shins, and orange rubber boots. An outdoor spot paved with a deep bed of glossy, rounded river pebbles in charcoal and brown, with a pale mottled wall and a grey post behind. Even, overcast light from above and in front, low in contrast and neutral to slightly warm in colour, leaving small bright reflections on the wet-looking pebbles. Red knitted yarn, smooth white painted or molded plastic, glossy polished pebbles, and orange rubber or vinyl.",
+      "anomaly": "A round, translucent amber-orange bead sits on the front of the red knitted jacket at midriff height, like a glass button or a lens.",
+      "text": 0.4041,
+      "image_distance": 29.8,
+      "seed_text": 0.0794,
+      "seed_image": 34
     }
   ]
 }
