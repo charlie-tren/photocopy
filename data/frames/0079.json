@@ -1,0 +1,24 @@
+{
+  "n": 79,
+  "date": "2026-11-06",
+  "withheld": "anomaly",
+  "description": {
+    "subject": "A toy figure with an egg-shaped plain-faced ball for a head, a knitted hooded coat, and rigid doll limbs, standing as a miniature doll",
+    "covering": "A crimson knitted hooded coat with long sleeves to the wrists, two round gold buttons and a round amber bead at the hem, over striped navy-and-cream knee socks that reach down into rubber-style boots.",
+    "posture": "Standing straight on both feet with the hands held slightly out from the sides, the blank round front of the hood pointed toward the camera.",
+    "setting": "An outdoor gravel bed of rounded river pebbles in front of a square concrete post, a pale green tray and a weathered timber fence.",
+    "light": "Soft, diffuse daylight from an overcast sky, coming from above and slightly in front, with low contrast and a neutral to slightly cool colour.",
+    "materials": "Knitted red yarn, hard ivory-coloured plastic or ceramic, tangerine-coloured rubber or vinyl, glassy amber bead, polished river pebbles and concrete.",
+    "anomaly": ""
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. A toy figure with an egg-shaped plain-faced ball for a head, a knitted hooded coat, and rigid doll limbs, standing as a miniature doll, wearing A crimson knitted hooded coat with long sleeves to the wrists, two round gold buttons and a round amber bead at the hem, over striped navy-and-cream knee socks that reach down into rubber-style boots., Standing straight on both feet with the hands held slightly out from the sides, the blank round front of the hood pointed toward the camera.. An outdoor gravel bed of rounded river pebbles in front of a square concrete post, a pale green tray and a weathered timber fence. Light: Soft, diffuse daylight from an overcast sky, coming from above and slightly in front, with low contrast and a neutral to slightly cool colour. Materials: Knitted red yarn, hard ivory-coloured plastic or ceramic, tangerine-coloured rubber or vinyl, glassy amber bead, polished river pebbles and concrete. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0079.jpg",
+  "dhash": "679588672557682509",
+  "reading": {
+    "text": 0.3775,
+    "image": 30.4,
+    "subject": 1.0,
+    "subject_word": "head",
+    "n": 5
+  }
+}

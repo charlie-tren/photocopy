@@ -1022,6 +1022,19 @@
       "image_distance": 29.8,
       "seed_text": 0.0794,
       "seed_image": 34
+    },
+    {
+      "frame": 79,
+      "date": "2026-11-06",
+      "image": "assets/img/f0079.jpg",
+      "alt": "A toy figure with an egg-shaped plain-faced ball for a head, a knitted hooded coat, and rigid doll limbs, standing as a miniature doll",
+      "from": 78,
+      "caption": "A toy figure with an egg-shaped plain-faced ball for a head, a knitted hooded coat, and rigid doll limbs, standing as a miniature doll. A crimson knitted hooded coat with long sleeves to the wrists, two round gold buttons and a round amber bead at the hem, over striped navy-and-cream knee socks that reach down into rubber-style boots. Standing straight on both feet with the hands held slightly out from the sides, the blank round front of the hood pointed toward the camera. An outdoor gravel bed of rounded river pebbles in front of a square concrete post, a pale green tray and a weathered timber fence. Soft, diffuse daylight from an overcast sky, coming from above and slightly in front, with low contrast and a neutral to slightly cool colour. Knitted red yarn, hard ivory-coloured plastic or ceramic, tangerine-coloured rubber or vinyl, glassy amber bead, polished river pebbles and concrete.",
+      "anomaly": "",
+      "text": 0.3775,
+      "image_distance": 30.4,
+      "seed_text": 0.119,
+      "seed_image": 30
     }
   ]
 }
