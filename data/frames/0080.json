@@ -1,0 +1,24 @@
+{
+  "n": 80,
+  "date": "2026-11-07",
+  "withheld": "setting",
+  "description": {
+    "subject": "A small doll with a smooth, featureless cloth-colored face, made of fabric and knitted yarn, standing upright.",
+    "covering": "A red crocheted hooded coat with a ruffled hem and cuffs, four gold-colored buttons, striped knee socks and black rubber rain boots.",
+    "posture": "It stands upright and square to the viewer on a bed of stones, with its arms held slightly away from the coat and its blank face looking straight out of the frame.",
+    "setting": "",
+    "light": "Soft, diffuse, even daylight from an overcast sky, neutral to slightly cool in colour, with almost no cast shadows.",
+    "materials": "Red knitted yarn, smooth pale fabric, black rubber, and rounded river stones in tan, grey and brown, with a pale green plastic trough and weathered wooden fence boards behind.",
+    "anomaly": "A small amber-orange round bead dangles from a cord attached to one of the coat's gold buttons, resting against the front of the red coat."
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. A small doll with a smooth, featureless cloth-colored face, made of fabric and knitted yarn, standing upright., wearing A red crocheted hooded coat with a ruffled hem and cuffs, four gold-colored buttons, striped knee socks and black rubber rain boots., It stands upright and square to the viewer on a bed of stones, with its arms held slightly away from the coat and its blank face looking straight out of the frame.. Light: Soft, diffuse, even daylight from an overcast sky, neutral to slightly cool in colour, with almost no cast shadows. Materials: Red knitted yarn, smooth pale fabric, black rubber, and rounded river stones in tan, grey and brown, with a pale green plastic trough and weathered wooden fence boards behind. A small amber-orange round bead dangles from a cord attached to one of the coat's gold buttons, resting against the front of the red coat. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0080.jpg",
+  "dhash": "3912535214442548389",
+  "reading": {
+    "text": 0.344,
+    "image": 28.8,
+    "subject": 0.8,
+    "subject_word": "head",
+    "n": 5
+  }
+}

@@ -1035,6 +1035,19 @@
       "image_distance": 30.4,
       "seed_text": 0.119,
       "seed_image": 30
+    },
+    {
+      "frame": 80,
+      "date": "2026-11-07",
+      "image": "assets/img/f0080.jpg",
+      "alt": "A small doll with a smooth, featureless cloth-colored face, made of fabric and knitted yarn, standing upright.",
+      "from": 79,
+      "caption": "A small doll with a smooth, featureless cloth-colored face, made of fabric and knitted yarn, standing upright. A red crocheted hooded coat with a ruffled hem and cuffs, four gold-colored buttons, striped knee socks and black rubber rain boots. It stands upright and square to the viewer on a bed of stones, with its arms held slightly away from the coat and its blank face looking straight out of the frame. Soft, diffuse, even daylight from an overcast sky, neutral to slightly cool in colour, with almost no cast shadows. Red knitted yarn, smooth pale fabric, black rubber, and rounded river stones in tan, grey and brown, with a pale green plastic trough and weathered wooden fence boards behind.",
+      "anomaly": "A small amber-orange round bead dangles from a cord attached to one of the coat's gold buttons, resting against the front of the red coat.",
+      "text": 0.344,
+      "image_distance": 28.8,
+      "seed_text": 0.1653,
+      "seed_image": 25
     }
   ]
 }
