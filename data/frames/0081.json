@@ -1,0 +1,24 @@
+{
+  "n": 81,
+  "date": "2026-11-08",
+  "withheld": "light",
+  "description": {
+    "subject": "A small crocheted figure with a cream fabric face, two black dot eyes and a curved stitched smile.",
+    "covering": "It wears a red crocheted hooded coat with sleeves to the wrist, ruffled cuffs, a flared skirt hem and three gold buttons, over black-and-white striped stockings and black rubber rain boots.",
+    "posture": "It is upright on both feet with its form turned toward the camera and its face looking straight ahead.",
+    "setting": "Outdoors on a bed of smooth tan, grey and brown pebbles in front of a pale green metal garden trough, with a wooden fence behind.",
+    "light": "",
+    "materials": "Red yarn, cream cotton fabric, black rubber, and stone pebbles, with painted metal behind.",
+    "anomaly": "A thin cream cord hangs from the coat's front tie down to a round amber-yellow ball resting on the pebbles by the boots, like a balloon or toy on a string."
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. A small crocheted figure with a cream fabric face, two black dot eyes and a curved stitched smile., wearing It wears a red crocheted hooded coat with sleeves to the wrist, ruffled cuffs, a flared skirt hem and three gold buttons, over black-and-white striped stockings and black rubber rain boots., It is upright on both feet with its form turned toward the camera and its face looking straight ahead.. Outdoors on a bed of smooth tan, grey and brown pebbles in front of a pale green metal garden trough, with a wooden fence behind. Materials: Red yarn, cream cotton fabric, black rubber, and stone pebbles, with painted metal behind. A thin cream cord hangs from the coat's front tie down to a round amber-yellow ball resting on the pebbles by the boots, like a balloon or toy on a string. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0081.jpg",
+  "dhash": "10130509589663094677",
+  "reading": {
+    "text": 0.3451,
+    "image": 27.2,
+    "subject": 0.8,
+    "subject_word": "small",
+    "n": 5
+  }
+}

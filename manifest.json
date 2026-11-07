@@ -1048,6 +1048,19 @@
       "image_distance": 28.8,
       "seed_text": 0.1653,
       "seed_image": 25
+    },
+    {
+      "frame": 81,
+      "date": "2026-11-08",
+      "image": "assets/img/f0081.jpg",
+      "alt": "A small crocheted figure with a cream fabric face, two black dot eyes and a curved stitched smile.",
+      "from": 80,
+      "caption": "A small crocheted figure with a cream fabric face, two black dot eyes and a curved stitched smile. It wears a red crocheted hooded coat with sleeves to the wrist, ruffled cuffs, a flared skirt hem and three gold buttons, over black-and-white striped stockings and black rubber rain boots. It is upright on both feet with its form turned toward the camera and its face looking straight ahead. Outdoors on a bed of smooth tan, grey and brown pebbles in front of a pale green metal garden trough, with a wooden fence behind. Red yarn, cream cotton fabric, black rubber, and stone pebbles, with painted metal behind.",
+      "anomaly": "A thin cream cord hangs from the coat's front tie down to a round amber-yellow ball resting on the pebbles by the boots, like a balloon or toy on a string.",
+      "text": 0.3451,
+      "image_distance": 27.2,
+      "seed_text": 0.0216,
+      "seed_image": 18
     }
   ]
 }
