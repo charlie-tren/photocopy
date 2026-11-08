@@ -1061,6 +1061,19 @@
       "image_distance": 27.2,
       "seed_text": 0.0216,
       "seed_image": 18
+    },
+    {
+      "frame": 82,
+      "date": "2026-11-09",
+      "image": "assets/img/f0082.jpg",
+      "alt": "A crocheted amigurumi doll made of cream and red cotton thread with a stuffed, stitched form and embroidered features.",
+      "from": 81,
+      "caption": "A crocheted amigurumi doll made of cream and red cotton thread with a stuffed, stitched form and embroidered features. A red knitted coat with two gold-coloured buttons, ruffled cuffs and hem and an attached cowl-style hood, black-and-white striped leggings that reach the ankles, cream mitten-like hands, and glossy black wellington-style boots. Standing straight on both boots with arms angled slightly out from its sides, facing directly toward the viewer. Outdoors on a bed of smooth pebbles in pink, grey, tan and white, in front of a pale sage-green metal bucket and a weathered wooden fence. Soft, diffuse daylight from the front with no hard shadows, and a warm, slightly muted colour.",
+      "anomaly": "A white cord is looped from the doll's hood down its front to a glossy orange ball resting on the pebbles between the tips of its black boots.",
+      "text": 0.3905,
+      "image_distance": 24.4,
+      "seed_text": 0.1426,
+      "seed_image": 29
     }
   ]
 }
