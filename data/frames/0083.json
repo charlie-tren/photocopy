@@ -1,0 +1,24 @@
+{
+  "n": 83,
+  "date": "2026-11-10",
+  "withheld": "posture",
+  "description": {
+    "subject": "A crocheted yarn figure with a stitched smiling face, standing upright on a pair of miniature boots.",
+    "covering": "A red crocheted hooded jacket with ruffled collar and cuffs, white knitted mittens, striped black-and-white leg warmers, and glossy black rubber rain boots.",
+    "posture": "",
+    "setting": "Outdoors on a bed of smooth multicoloured pebbles, in front of a pastel mint metal pail and a vertical plank wooden enclosure.",
+    "light": "Soft, diffuse daylight from the front, with no hard shadows and a neutral white tone.",
+    "materials": "Crocheted wool yarn, glossy black rubber, painted enamel metal, rounded river stones, and weathered timber boards.",
+    "anomaly": "A white cord runs from the front of the red jacket down to a glossy orange ball, with a second orange ball resting on the stones between the boots."
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. A crocheted yarn figure with a stitched smiling face, standing upright on a pair of miniature boots., wearing A red crocheted hooded jacket with ruffled collar and cuffs, white knitted mittens, striped black-and-white leg warmers, and glossy black rubber rain boots.. Outdoors on a bed of smooth multicoloured pebbles, in front of a pastel mint metal pail and a vertical plank wooden enclosure. Light: Soft, diffuse daylight from the front, with no hard shadows and a neutral white tone. Materials: Crocheted wool yarn, glossy black rubber, painted enamel metal, rounded river stones, and weathered timber boards. A white cord runs from the front of the red jacket down to a glossy orange ball, with a second orange ball resting on the stones between the boots. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0083.jpg",
+  "dhash": "6517495203724371346",
+  "reading": {
+    "text": 0.4052,
+    "image": 26.0,
+    "subject": 0.6,
+    "subject_word": "crocheted",
+    "n": 5
+  }
+}

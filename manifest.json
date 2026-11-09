@@ -1074,6 +1074,19 @@
       "image_distance": 24.4,
       "seed_text": 0.1426,
       "seed_image": 29
+    },
+    {
+      "frame": 83,
+      "date": "2026-11-10",
+      "image": "assets/img/f0083.jpg",
+      "alt": "A crocheted yarn figure with a stitched smiling face, standing upright on a pair of miniature boots.",
+      "from": 82,
+      "caption": "A crocheted yarn figure with a stitched smiling face, standing upright on a pair of miniature boots. A red crocheted hooded jacket with ruffled collar and cuffs, white knitted mittens, striped black-and-white leg warmers, and glossy black rubber rain boots. Outdoors on a bed of smooth multicoloured pebbles, in front of a pastel mint metal pail and a vertical plank wooden enclosure. Soft, diffuse daylight from the front, with no hard shadows and a neutral white tone. Crocheted wool yarn, glossy black rubber, painted enamel metal, rounded river stones, and weathered timber boards.",
+      "anomaly": "A white cord runs from the front of the red jacket down to a glossy orange ball, with a second orange ball resting on the stones between the boots.",
+      "text": 0.4052,
+      "image_distance": 26.0,
+      "seed_text": 0.0899,
+      "seed_image": 37
     }
   ]
 }
