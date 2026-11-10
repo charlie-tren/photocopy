@@ -1087,6 +1087,19 @@
       "image_distance": 26.0,
       "seed_text": 0.0899,
       "seed_image": 37
+    },
+    {
+      "frame": 84,
+      "date": "2026-11-11",
+      "image": "assets/img/f0084.jpg",
+      "alt": "A small crocheted doll with a round cream-colored head, embroidered eyelashes, pink cheek patches and a stitched smile.",
+      "from": 83,
+      "caption": "A small crocheted doll with a round cream-colored head, embroidered eyelashes, pink cheek patches and a stitched smile. A red crocheted sweater with a ruffled cowl collar and attached head covering, a white drawstring cord, ruffled cuffs of dark thread, white mittens, and glossy dark wellington-style boots reaching the ankle. It is upright on both feet with arms hanging at its sides, facing the camera directly. An outdoor corner with weathered wooden planks behind it, a mint-green metal pail with a handle at the left, and a bed of small stones on the ground. Soft, diffuse daylight from the front and above, with no hard shadows and a neutral to slightly cool color. Crocheted cotton thread, glossy plastic or vinyl boots, painted metal pail, weathered wood, and rounded river stones in brown, grey and rust tones, plus two glossy orange spheres, one hanging from the drawstring and one on the ground.",
+      "anomaly": "",
+      "text": 0.4162,
+      "image_distance": 27.4,
+      "seed_text": 0.1175,
+      "seed_image": 31
     }
   ]
 }

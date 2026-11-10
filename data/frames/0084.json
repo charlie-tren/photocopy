@@ -1,0 +1,24 @@
+{
+  "n": 84,
+  "date": "2026-11-11",
+  "withheld": "anomaly",
+  "description": {
+    "subject": "A small crocheted doll with a round cream-colored head, embroidered eyelashes, pink cheek patches and a stitched smile.",
+    "covering": "A red crocheted sweater with a ruffled cowl collar and attached head covering, a white drawstring cord, ruffled cuffs of dark thread, white mittens, and glossy dark wellington-style boots reaching the ankle.",
+    "posture": "It is upright on both feet with arms hanging at its sides, facing the camera directly.",
+    "setting": "An outdoor corner with weathered wooden planks behind it, a mint-green metal pail with a handle at the left, and a bed of small stones on the ground.",
+    "light": "Soft, diffuse daylight from the front and above, with no hard shadows and a neutral to slightly cool color.",
+    "materials": "Crocheted cotton thread, glossy plastic or vinyl boots, painted metal pail, weathered wood, and rounded river stones in brown, grey and rust tones, plus two glossy orange spheres, one hanging from the drawstring and one on the ground.",
+    "anomaly": ""
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. A small crocheted doll with a round cream-colored head, embroidered eyelashes, pink cheek patches and a stitched smile., wearing A red crocheted sweater with a ruffled cowl collar and attached head covering, a white drawstring cord, ruffled cuffs of dark thread, white mittens, and glossy dark wellington-style boots reaching the ankle., It is upright on both feet with arms hanging at its sides, facing the camera directly.. An outdoor corner with weathered wooden planks behind it, a mint-green metal pail with a handle at the left, and a bed of small stones on the ground. Light: Soft, diffuse daylight from the front and above, with no hard shadows and a neutral to slightly cool color. Materials: Crocheted cotton thread, glossy plastic or vinyl boots, painted metal pail, weathered wood, and rounded river stones in brown, grey and rust tones, plus two glossy orange spheres, one hanging from the drawstring and one on the ground. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0084.jpg",
+  "dhash": "12002871219713593238",
+  "reading": {
+    "text": 0.4162,
+    "image": 27.4,
+    "subject": 0.8,
+    "subject_word": "crocheted",
+    "n": 5
+  }
+}
