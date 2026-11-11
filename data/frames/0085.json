@@ -1,0 +1,24 @@
+{
+  "n": 85,
+  "date": "2026-11-12",
+  "withheld": "setting",
+  "description": {
+    "subject": "A hand-worked yarn doll with a cream-colored round head, painted-on eyelashes and pink circular cheeks, standing as a small toy figure.",
+    "covering": "A deep red hooded dress with long sleeves flaring at the wrists, a wide scalloped collar, white mittens, white knitted leggings that reach the ankles, and tall rubber rain boots.",
+    "posture": "It stands upright with arms hanging slightly out from its sides, feet apart on the pebbles, facing the camera directly.",
+    "setting": "",
+    "light": "Even, low-contrast light from the front and slightly above, neutral to cool white, with no hard shadows.",
+    "materials": "Red and cream yarn, glossy rubber, smooth river pebbles in brown, grey and tan, painted metal, and grey plank fencing.",
+    "anomaly": "Two orange beads hang from the ends of the white drawstring at the doll's chest, matching the loose orange beads lying among the pebbles around its boots."
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. A hand-worked yarn doll with a cream-colored round head, painted-on eyelashes and pink circular cheeks, standing as a small toy figure., wearing A deep red hooded dress with long sleeves flaring at the wrists, a wide scalloped collar, white mittens, white knitted leggings that reach the ankles, and tall rubber rain boots., It stands upright with arms hanging slightly out from its sides, feet apart on the pebbles, facing the camera directly.. Light: Even, low-contrast light from the front and slightly above, neutral to cool white, with no hard shadows. Materials: Red and cream yarn, glossy rubber, smooth river pebbles in brown, grey and tan, painted metal, and grey plank fencing. Two orange beads hang from the ends of the white drawstring at the doll's chest, matching the loose orange beads lying among the pebbles around its boots. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0085.jpg",
+  "dhash": "10274484359315541094",
+  "reading": {
+    "text": 0.3778,
+    "image": 26.8,
+    "subject": 0.8,
+    "subject_word": "cream",
+    "n": 5
+  }
+}

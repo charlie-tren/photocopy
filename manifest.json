@@ -1100,6 +1100,19 @@
       "image_distance": 27.4,
       "seed_text": 0.1175,
       "seed_image": 31
+    },
+    {
+      "frame": 85,
+      "date": "2026-11-12",
+      "image": "assets/img/f0085.jpg",
+      "alt": "A hand-worked yarn doll with a cream-colored round head, painted-on eyelashes and pink circular cheeks, standing as a small toy figure.",
+      "from": 84,
+      "caption": "A hand-worked yarn doll with a cream-colored round head, painted-on eyelashes and pink circular cheeks, standing as a small toy figure. A deep red hooded dress with long sleeves flaring at the wrists, a wide scalloped collar, white mittens, white knitted leggings that reach the ankles, and tall rubber rain boots. It stands upright with arms hanging slightly out from its sides, feet apart on the pebbles, facing the camera directly. Even, low-contrast light from the front and slightly above, neutral to cool white, with no hard shadows. Red and cream yarn, glossy rubber, smooth river pebbles in brown, grey and tan, painted metal, and grey plank fencing.",
+      "anomaly": "Two orange beads hang from the ends of the white drawstring at the doll's chest, matching the loose orange beads lying among the pebbles around its boots.",
+      "text": 0.3778,
+      "image_distance": 26.8,
+      "seed_text": 0.1214,
+      "seed_image": 30
     }
   ]
 }
