@@ -1,0 +1,24 @@
+{
+  "n": 86,
+  "date": "2026-11-13",
+  "withheld": "light",
+  "description": {
+    "subject": "A handmade yarn doll with a cream-colored round head, glossy dark bead eyes with stitched lashes, and pink cheek patches.",
+    "covering": "A scarlet knitted hooded dress with long flared sleeves reaching the wrists, a frilled hem, and a collar, worn over cream knit stockings that reach the ankles and a pair of glossy chocolate rain boots.",
+    "posture": "It stands on its feet facing the camera directly, with its sleeves hanging at its sides.",
+    "setting": "Outdoors on a bed of rounded pebbles in front of a pale slatted garden bench or fence.",
+    "light": "",
+    "materials": "Red and cream yarn, glossy plastic or rubber boots, small beads, and polished river pebbles in tan, slate and rust tones.",
+    "anomaly": "Two pairs of amber-yellow beads hang from a looped ivory drawstring at the dress collar, and the doll wears tiny glossy rain boots."
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. A handmade yarn doll with a cream-colored round head, glossy dark bead eyes with stitched lashes, and pink cheek patches., wearing A scarlet knitted hooded dress with long flared sleeves reaching the wrists, a frilled hem, and a collar, worn over cream knit stockings that reach the ankles and a pair of glossy chocolate rain boots., It stands on its feet facing the camera directly, with its sleeves hanging at its sides.. Outdoors on a bed of rounded pebbles in front of a pale slatted garden bench or fence. Materials: Red and cream yarn, glossy plastic or rubber boots, small beads, and polished river pebbles in tan, slate and rust tones. Two pairs of amber-yellow beads hang from a looped ivory drawstring at the dress collar, and the doll wears tiny glossy rain boots. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0086.jpg",
+  "dhash": "11931535487533849924",
+  "reading": {
+    "text": 0.3648,
+    "image": 28.0,
+    "subject": 0.8,
+    "subject_word": "cream",
+    "n": 5
+  }
+}

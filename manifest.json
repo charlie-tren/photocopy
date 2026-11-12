@@ -1113,6 +1113,19 @@
       "image_distance": 26.8,
       "seed_text": 0.1214,
       "seed_image": 30
+    },
+    {
+      "frame": 86,
+      "date": "2026-11-13",
+      "image": "assets/img/f0086.jpg",
+      "alt": "A handmade yarn doll with a cream-colored round head, glossy dark bead eyes with stitched lashes, and pink cheek patches.",
+      "from": 85,
+      "caption": "A handmade yarn doll with a cream-colored round head, glossy dark bead eyes with stitched lashes, and pink cheek patches. A scarlet knitted hooded dress with long flared sleeves reaching the wrists, a frilled hem, and a collar, worn over cream knit stockings that reach the ankles and a pair of glossy chocolate rain boots. It stands on its feet facing the camera directly, with its sleeves hanging at its sides. Outdoors on a bed of rounded pebbles in front of a pale slatted garden bench or fence. Red and cream yarn, glossy plastic or rubber boots, small beads, and polished river pebbles in tan, slate and rust tones.",
+      "anomaly": "Two pairs of amber-yellow beads hang from a looped ivory drawstring at the dress collar, and the doll wears tiny glossy rain boots.",
+      "text": 0.3648,
+      "image_distance": 28.0,
+      "seed_text": 0.0629,
+      "seed_image": 31
     }
   ]
 }
