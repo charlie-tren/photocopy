@@ -1,0 +1,24 @@
+{
+  "n": 87,
+  "date": "2026-11-14",
+  "withheld": "materials",
+  "description": {
+    "subject": "A hand-worked yarn figure of a small girl with a round ivory-coloured head, black bead eyes with painted lashes, and a small embroidered pink mouth.",
+    "covering": "It wears a knitted crimson hooded dress with flared ruffled cuffs and a ruffled hem, tied at the throat with a looped drawstring, over pale leggings that reach the ankles, with brown rubber-style boots.",
+    "posture": "It stands upright with arms hanging at its sides, its head and form turned toward the viewer.",
+    "setting": "It stands outdoors on a bed of smooth rounded river stones in brown, tan and slate tones, in front of a slatted painted bench with green foliage behind.",
+    "light": "Soft, diffuse daylight with no hard shadows, neutral to slightly warm in colour, falling from the front and above.",
+    "materials": "",
+    "anomaly": "Two round amber-coloured translucent beads hang from the ends of the drawstring at the hood's throat."
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. A hand-worked yarn figure of a small girl with a round ivory-coloured head, black bead eyes with painted lashes, and a small embroidered pink mouth., wearing It wears a knitted crimson hooded dress with flared ruffled cuffs and a ruffled hem, tied at the throat with a looped drawstring, over pale leggings that reach the ankles, with brown rubber-style boots., It stands upright with arms hanging at its sides, its head and form turned toward the viewer.. It stands outdoors on a bed of smooth rounded river stones in brown, tan and slate tones, in front of a slatted painted bench with green foliage behind. Light: Soft, diffuse daylight with no hard shadows, neutral to slightly warm in colour, falling from the front and above. Two round amber-coloured translucent beads hang from the ends of the drawstring at the hood's throat. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0087.jpg",
+  "dhash": "10346090721643990539",
+  "reading": {
+    "text": 0.3874,
+    "image": 28.6,
+    "subject": 0.8,
+    "subject_word": "head",
+    "n": 5
+  }
+}

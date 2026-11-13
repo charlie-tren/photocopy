@@ -1126,6 +1126,19 @@
       "image_distance": 28.0,
       "seed_text": 0.0629,
       "seed_image": 31
+    },
+    {
+      "frame": 87,
+      "date": "2026-11-14",
+      "image": "assets/img/f0087.jpg",
+      "alt": "A hand-worked yarn figure of a small girl with a round ivory-coloured head, black bead eyes with painted lashes, and a small embroidered pink mouth.",
+      "from": 86,
+      "caption": "A hand-worked yarn figure of a small girl with a round ivory-coloured head, black bead eyes with painted lashes, and a small embroidered pink mouth. It wears a knitted crimson hooded dress with flared ruffled cuffs and a ruffled hem, tied at the throat with a looped drawstring, over pale leggings that reach the ankles, with brown rubber-style boots. It stands upright with arms hanging at its sides, its head and form turned toward the viewer. It stands outdoors on a bed of smooth rounded river stones in brown, tan and slate tones, in front of a slatted painted bench with green foliage behind. Soft, diffuse daylight with no hard shadows, neutral to slightly warm in colour, falling from the front and above.",
+      "anomaly": "Two round amber-coloured translucent beads hang from the ends of the drawstring at the hood's throat.",
+      "text": 0.3874,
+      "image_distance": 28.6,
+      "seed_text": 0.1206,
+      "seed_image": 32
     }
   ]
 }
