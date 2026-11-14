@@ -1,0 +1,24 @@
+{
+  "n": 88,
+  "date": "2026-11-15",
+  "withheld": "posture",
+  "description": {
+    "subject": "A crocheted amigurumi figure made of yarn, standing upright with a round off-white head and a small stitched smile.",
+    "covering": "A crimson crocheted hooded dress with long sleeves, a ruffled flared skirt and a drawstring at the neck, worn over short off-white legs and brown crocheted boots.",
+    "posture": "",
+    "setting": "Outdoors on a bed of smooth, rounded beach pebbles in tan, brown, grey and white, in front of a dark metal slatted park bench.",
+    "light": "Soft, even, slightly warm light from the front and above, with gentle contrast and no hard edges.",
+    "materials": "Crocheted wool or cotton yarn, polished stone pebbles, painted metal bench slats, and amber-coloured glass or resin beads.",
+    "anomaly": "Two round, amber-brown translucent beads, like faceted glass buttons, are fastened to the front of the red dress and hang at the ends of the hood's twisted drawstring cords."
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. A crocheted amigurumi figure made of yarn, standing upright with a round off-white head and a small stitched smile., wearing A crimson crocheted hooded dress with long sleeves, a ruffled flared skirt and a drawstring at the neck, worn over short off-white legs and brown crocheted boots.. Outdoors on a bed of smooth, rounded beach pebbles in tan, brown, grey and white, in front of a dark metal slatted park bench. Light: Soft, even, slightly warm light from the front and above, with gentle contrast and no hard edges. Materials: Crocheted wool or cotton yarn, polished stone pebbles, painted metal bench slats, and amber-coloured glass or resin beads. Two round, amber-brown translucent beads, like faceted glass buttons, are fastened to the front of the red dress and hang at the ends of the hood's twisted drawstring cords. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0088.jpg",
+  "dhash": "1095240082233707852",
+  "reading": {
+    "text": 0.4062,
+    "image": 26.0,
+    "subject": 1.0,
+    "subject_word": "head",
+    "n": 5
+  }
+}

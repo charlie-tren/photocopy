@@ -1139,6 +1139,19 @@
       "image_distance": 28.6,
       "seed_text": 0.1206,
       "seed_image": 32
+    },
+    {
+      "frame": 88,
+      "date": "2026-11-15",
+      "image": "assets/img/f0088.jpg",
+      "alt": "A crocheted amigurumi figure made of yarn, standing upright with a round off-white head and a small stitched smile.",
+      "from": 87,
+      "caption": "A crocheted amigurumi figure made of yarn, standing upright with a round off-white head and a small stitched smile. A crimson crocheted hooded dress with long sleeves, a ruffled flared skirt and a drawstring at the neck, worn over short off-white legs and brown crocheted boots. Outdoors on a bed of smooth, rounded beach pebbles in tan, brown, grey and white, in front of a dark metal slatted park bench. Soft, even, slightly warm light from the front and above, with gentle contrast and no hard edges. Crocheted wool or cotton yarn, polished stone pebbles, painted metal bench slats, and amber-coloured glass or resin beads.",
+      "anomaly": "Two round, amber-brown translucent beads, like faceted glass buttons, are fastened to the front of the red dress and hang at the ends of the hood's twisted drawstring cords.",
+      "text": 0.4062,
+      "image_distance": 26.0,
+      "seed_text": 0.0624,
+      "seed_image": 40
     }
   ]
 }
