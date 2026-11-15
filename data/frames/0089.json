@@ -1,0 +1,24 @@
+{
+  "n": 89,
+  "date": "2026-11-16",
+  "withheld": "anomaly",
+  "description": {
+    "subject": "A crocheted toy doll made of cream and red cotton thread stitched over stuffing, with black glass eyes and a smile embroidered in dark thread.",
+    "covering": "It wears a red crocheted dress with long sleeves, a ruffled skirt hem and an attached cowl that sits over the back and sides of the skull, two orange faceted gem buttons at the chest, cream crocheted mitten-like cuffs, cream legs, and dark tan knitted boots that reach the ankle.",
+    "posture": "It stands on its two feet with its arms hanging slightly out from the sides, facing the camera directly.",
+    "setting": "It stands on a bed of polished pebbles outdoors, in front of a dark metal slatted bench with green showing between the slats.",
+    "light": "Soft, even daylight from the front and slightly overhead, neutral to slightly warm in colour, with no sharp shadows.",
+    "materials": "Crocheted cotton thread, orange faceted acrylic gems, glossy black eye fittings, tumbled stone pebbles in tan, grey and white, and painted slatted metal.",
+    "anomaly": ""
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. A crocheted toy doll made of cream and red cotton thread stitched over stuffing, with black glass eyes and a smile embroidered in dark thread., wearing It wears a red crocheted dress with long sleeves, a ruffled skirt hem and an attached cowl that sits over the back and sides of the skull, two orange faceted gem buttons at the chest, cream crocheted mitten-like cuffs, cream legs, and dark tan knitted boots that reach the ankle., It stands on its two feet with its arms hanging slightly out from the sides, facing the camera directly.. It stands on a bed of polished pebbles outdoors, in front of a dark metal slatted bench with green showing between the slats. Light: Soft, even daylight from the front and slightly overhead, neutral to slightly warm in colour, with no sharp shadows. Materials: Crocheted cotton thread, orange faceted acrylic gems, glossy black eye fittings, tumbled stone pebbles in tan, grey and white, and painted slatted metal. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0089.jpg",
+  "dhash": "2248338333802040717",
+  "reading": {
+    "text": 0.4099,
+    "image": 26.6,
+    "subject": 0.8,
+    "subject_word": "head",
+    "n": 5
+  }
+}

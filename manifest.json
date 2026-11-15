@@ -1152,6 +1152,19 @@
       "image_distance": 26.0,
       "seed_text": 0.0624,
       "seed_image": 40
+    },
+    {
+      "frame": 89,
+      "date": "2026-11-16",
+      "image": "assets/img/f0089.jpg",
+      "alt": "A crocheted toy doll made of cream and red cotton thread stitched over stuffing, with black glass eyes and a smile embroidered in dark thread.",
+      "from": 88,
+      "caption": "A crocheted toy doll made of cream and red cotton thread stitched over stuffing, with black glass eyes and a smile embroidered in dark thread. It wears a red crocheted dress with long sleeves, a ruffled skirt hem and an attached cowl that sits over the back and sides of the skull, two orange faceted gem buttons at the chest, cream crocheted mitten-like cuffs, cream legs, and dark tan knitted boots that reach the ankle. It stands on its two feet with its arms hanging slightly out from the sides, facing the camera directly. It stands on a bed of polished pebbles outdoors, in front of a dark metal slatted bench with green showing between the slats. Soft, even daylight from the front and slightly overhead, neutral to slightly warm in colour, with no sharp shadows. Crocheted cotton thread, orange faceted acrylic gems, glossy black eye fittings, tumbled stone pebbles in tan, grey and white, and painted slatted metal.",
+      "anomaly": "",
+      "text": 0.4099,
+      "image_distance": 26.6,
+      "seed_text": 0.1222,
+      "seed_image": 39
     }
   ]
 }
