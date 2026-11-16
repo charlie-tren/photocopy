@@ -1165,6 +1165,19 @@
       "image_distance": 26.6,
       "seed_text": 0.1222,
       "seed_image": 39
+    },
+    {
+      "frame": 90,
+      "date": "2026-11-17",
+      "image": "assets/img/f0090.jpg",
+      "alt": "A crocheted yarn doll with a cream-colored face, black glossy eyes with stitched lashes and a stitched smile, standing as a stuffed amateur-craft figure.",
+      "from": 89,
+      "caption": "A crocheted yarn doll with a cream-colored face, black glossy eyes with stitched lashes and a stitched smile, standing as a stuffed amateur-craft figure. A red crocheted hooded tunic with long sleeves to the wrist, cream ruffled trim at the cuffs and hem, a cream underskirt, pale green-cream stockinette legs to the ankle, and knitted tan-chocolate boots. Standing upright on both boots with legs together, facing the camera directly. Soft, diffuse daylight from the front and slightly above, neutral to warm in colour, with no hard shadows. Crocheted cotton or acrylic yarn in red, cream and tan, glossy black plastic eyes, sequins, and river pebbles.",
+      "anomaly": "Two pairs of gold-orange sequins sewn on as buttons down the front of the red tunic, each with a pale center.",
+      "text": 0.3867,
+      "image_distance": 26.6,
+      "seed_text": 0.0877,
+      "seed_image": 26
     }
   ]
 }

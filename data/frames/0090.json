@@ -1,0 +1,24 @@
+{
+  "n": 90,
+  "date": "2026-11-17",
+  "withheld": "setting",
+  "description": {
+    "subject": "A crocheted yarn doll with a cream-colored face, black glossy eyes with stitched lashes and a stitched smile, standing as a stuffed amateur-craft figure.",
+    "covering": "A red crocheted hooded tunic with long sleeves to the wrist, cream ruffled trim at the cuffs and hem, a cream underskirt, pale green-cream stockinette legs to the ankle, and knitted tan-chocolate boots.",
+    "posture": "Standing upright on both boots with legs together, facing the camera directly.",
+    "setting": "",
+    "light": "Soft, diffuse daylight from the front and slightly above, neutral to warm in colour, with no hard shadows.",
+    "materials": "Crocheted cotton or acrylic yarn in red, cream and tan, glossy black plastic eyes, sequins, and river pebbles.",
+    "anomaly": "Two pairs of gold-orange sequins sewn on as buttons down the front of the red tunic, each with a pale center."
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. A crocheted yarn doll with a cream-colored face, black glossy eyes with stitched lashes and a stitched smile, standing as a stuffed amateur-craft figure., wearing A red crocheted hooded tunic with long sleeves to the wrist, cream ruffled trim at the cuffs and hem, a cream underskirt, pale green-cream stockinette legs to the ankle, and knitted tan-chocolate boots., Standing upright on both boots with legs together, facing the camera directly.. Light: Soft, diffuse daylight from the front and slightly above, neutral to warm in colour, with no hard shadows. Materials: Crocheted cotton or acrylic yarn in red, cream and tan, glossy black plastic eyes, sequins, and river pebbles. Two pairs of gold-orange sequins sewn on as buttons down the front of the red tunic, each with a pale center. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0090.jpg",
+  "dhash": "5518763932678755862",
+  "reading": {
+    "text": 0.3867,
+    "image": 26.6,
+    "subject": 0.8,
+    "subject_word": "eyes",
+    "n": 5
+  }
+}
