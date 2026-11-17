@@ -1,0 +1,24 @@
+{
+  "n": 91,
+  "date": "2026-11-18",
+  "withheld": "light",
+  "description": {
+    "subject": "A crocheted amigurumi figure with a round off-white head, black glossy eyes and a stitched smile, standing as a small handmade toy.",
+    "covering": "A red crocheted coat with a attached cap-style hood, two yellow buttons, wavy ivory trim along the front and sleeve edges, mint-green leg coverings and brown crocheted boots.",
+    "posture": "Standing upright on both feet with arms hanging at its sides, facing the viewer straight on.",
+    "setting": "A plain pale grey studio backdrop with a scatter of smooth stones across the floor surface in front and around the boots.",
+    "light": "",
+    "materials": "Red, ivory, mint and brown crocheted thread, two glossy black eyes, two yellow plastic buttons, and polished river stones.",
+    "anomaly": "Pink round cheek patches and eyelashes stitched in black on the white face, paired with wavy ivory braided trim that zigzags down both sides of the red coat front."
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. A crocheted amigurumi figure with a round off-white head, black glossy eyes and a stitched smile, standing as a small handmade toy., wearing A red crocheted coat with a attached cap-style hood, two yellow buttons, wavy ivory trim along the front and sleeve edges, mint-green leg coverings and brown crocheted boots., Standing upright on both feet with arms hanging at its sides, facing the viewer straight on.. A plain pale grey studio backdrop with a scatter of smooth stones across the floor surface in front and around the boots. Materials: Red, ivory, mint and brown crocheted thread, two glossy black eyes, two yellow plastic buttons, and polished river stones. Pink round cheek patches and eyelashes stitched in black on the white face, paired with wavy ivory braided trim that zigzags down both sides of the red coat front. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0091.jpg",
+  "dhash": "5518763658736048017",
+  "reading": {
+    "text": 0.3575,
+    "image": 25.6,
+    "subject": 0.8,
+    "subject_word": "black",
+    "n": 5
+  }
+}
