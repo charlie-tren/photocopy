@@ -1191,6 +1191,19 @@
       "image_distance": 25.6,
       "seed_text": 0.1105,
       "seed_image": 28
+    },
+    {
+      "frame": 92,
+      "date": "2026-11-19",
+      "image": "assets/img/f0092.jpg",
+      "alt": "A small amigurumi doll made of cream and red yarn, with a round white face, standing among pebbles.",
+      "from": 91,
+      "caption": "A small amigurumi doll made of cream and red yarn, with a round white face, standing among pebbles. A red hooded coat with white scalloped trim at the hem, cuffs, hood edge and front opening, fastened with two yellow discs, over turquoise leggings and brown boot-shaped foot covers, with sleeves reaching the wrists. It stands upright on both feet with its arms held slightly out from its sides, turned toward the camera. A plain pale grey studio surface and backdrop, with smooth river pebbles in tan, cream, brown and olive scattered across the foreground. Soft, diffuse, even light from the front and slightly above, neutral white in colour, casting faint gentle shadows beneath the feet.",
+      "anomaly": "Round pink felt patches on the cheeks and curled embroidered lashes above each glossy round bead pupil, set in an otherwise plain white yarn face.",
+      "text": 0.3432,
+      "image_distance": 27.2,
+      "seed_text": 0.0788,
+      "seed_image": 18
     }
   ]
 }

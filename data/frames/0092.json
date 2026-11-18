@@ -1,0 +1,24 @@
+{
+  "n": 92,
+  "date": "2026-11-19",
+  "withheld": "materials",
+  "description": {
+    "subject": "A small amigurumi doll made of cream and red yarn, with a round white face, standing among pebbles.",
+    "covering": "A red hooded coat with white scalloped trim at the hem, cuffs, hood edge and front opening, fastened with two yellow discs, over turquoise leggings and brown boot-shaped foot covers, with sleeves reaching the wrists.",
+    "posture": "It stands upright on both feet with its arms held slightly out from its sides, turned toward the camera.",
+    "setting": "A plain pale grey studio surface and backdrop, with smooth river pebbles in tan, cream, brown and olive scattered across the foreground.",
+    "light": "Soft, diffuse, even light from the front and slightly above, neutral white in colour, casting faint gentle shadows beneath the feet.",
+    "materials": "",
+    "anomaly": "Round pink felt patches on the cheeks and curled embroidered lashes above each glossy round bead pupil, set in an otherwise plain white yarn face."
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. A small amigurumi doll made of cream and red yarn, with a round white face, standing among pebbles., wearing A red hooded coat with white scalloped trim at the hem, cuffs, hood edge and front opening, fastened with two yellow discs, over turquoise leggings and brown boot-shaped foot covers, with sleeves reaching the wrists., It stands upright on both feet with its arms held slightly out from its sides, turned toward the camera.. A plain pale grey studio surface and backdrop, with smooth river pebbles in tan, cream, brown and olive scattered across the foreground. Light: Soft, diffuse, even light from the front and slightly above, neutral white in colour, casting faint gentle shadows beneath the feet. Round pink felt patches on the cheeks and curled embroidered lashes above each glossy round bead pupil, set in an otherwise plain white yarn face. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0092.jpg",
+  "dhash": "11873824310287086871",
+  "reading": {
+    "text": 0.3432,
+    "image": 27.2,
+    "subject": 0.8,
+    "subject_word": "crocheted",
+    "n": 5
+  }
+}
