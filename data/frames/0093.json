@@ -1,0 +1,24 @@
+{
+  "n": 93,
+  "date": "2026-11-20",
+  "withheld": "posture",
+  "description": {
+    "subject": "A small amigurumi doll worked in yarn, with a white round head and a stitched smile, standing on two feet.",
+    "covering": "A red yarn hooded jacket with cream ruffled edging at the hood, cuffs and hem, fastened with two yellow discs, worn over teal leggings and tan-toned yarn boots with folded cuffs.",
+    "posture": "",
+    "setting": "A plain pale backdrop with the doll standing on a heap of smooth, rounded pebbles and dried beans in cream, tan, chestnut and speckled finishes.",
+    "light": "Even, diffused white light from the front with no hard shadows, neutral to cool in tone.",
+    "materials": "Knitted yarn, plastic bead pupils, flat yellow discs, and polished stone pebbles.",
+    "anomaly": "The doll's face has pink yarn cheek patches and tiny lashes stitched above round bead pupils, set inside a white face framed by a ruffled red hood."
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. A small amigurumi doll worked in yarn, with a white round head and a stitched smile, standing on two feet., wearing A red yarn hooded jacket with cream ruffled edging at the hood, cuffs and hem, fastened with two yellow discs, worn over teal leggings and tan-toned yarn boots with folded cuffs.. A plain pale backdrop with the doll standing on a heap of smooth, rounded pebbles and dried beans in cream, tan, chestnut and speckled finishes. Light: Even, diffused white light from the front with no hard shadows, neutral to cool in tone. Materials: Knitted yarn, plastic bead pupils, flat yellow discs, and polished stone pebbles. The doll's face has pink yarn cheek patches and tiny lashes stitched above round bead pupils, set inside a white face framed by a ruffled red hood. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0093.jpg",
+  "dhash": "1049925947078062410",
+  "reading": {
+    "text": 0.3419,
+    "image": 27.0,
+    "subject": 0.8,
+    "subject_word": "doll",
+    "n": 5
+  }
+}
