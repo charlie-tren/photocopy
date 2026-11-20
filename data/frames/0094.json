@@ -1,0 +1,24 @@
+{
+  "n": 94,
+  "date": "2026-11-21",
+  "withheld": "anomaly",
+  "description": {
+    "subject": "A small toy figure made of knitted yarn with a round head, black bead eyes and pink cheek patches.",
+    "covering": "A red hooded coat with a ruffled cream edge, closed with two yellow toggle fasteners, over teal trousers and mustard-yellow braided yarn boots.",
+    "posture": "It is upright on both legs with its arms down at its sides, facing the camera directly.",
+    "setting": "A plain pale backdrop with the figure on a heap of oval brown, tan and ivory beans or eggs, with several speckled grey-and-black yarn strands lying among them.",
+    "light": "Soft, even, diffuse light from the front, neutral to slightly warm in colour, with almost no hard shadows.",
+    "materials": "Knitted wool yarn in red, cream, teal and mustard, glossy black beads, yellow plastic discs, and smooth oval beans or eggs.",
+    "anomaly": ""
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. A small toy figure made of knitted yarn with a round head, black bead eyes and pink cheek patches., wearing A red hooded coat with a ruffled cream edge, closed with two yellow toggle fasteners, over teal trousers and mustard-yellow braided yarn boots., It is upright on both legs with its arms down at its sides, facing the camera directly.. A plain pale backdrop with the figure on a heap of oval brown, tan and ivory beans or eggs, with several speckled grey-and-black yarn strands lying among them. Light: Soft, even, diffuse light from the front, neutral to slightly warm in colour, with almost no hard shadows. Materials: Knitted wool yarn in red, cream, teal and mustard, glossy black beads, yellow plastic discs, and smooth oval beans or eggs. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0094.jpg",
+  "dhash": "16775007342271867848",
+  "reading": {
+    "text": 0.3871,
+    "image": 24.2,
+    "subject": 0.8,
+    "subject_word": "round",
+    "n": 5
+  }
+}

@@ -1217,6 +1217,19 @@
       "image_distance": 27.0,
       "seed_text": 0.087,
       "seed_image": 34
+    },
+    {
+      "frame": 94,
+      "date": "2026-11-21",
+      "image": "assets/img/f0094.jpg",
+      "alt": "A small toy figure made of knitted yarn with a round head, black bead eyes and pink cheek patches.",
+      "from": 93,
+      "caption": "A small toy figure made of knitted yarn with a round head, black bead eyes and pink cheek patches. A red hooded coat with a ruffled cream edge, closed with two yellow toggle fasteners, over teal trousers and mustard-yellow braided yarn boots. It is upright on both legs with its arms down at its sides, facing the camera directly. A plain pale backdrop with the figure on a heap of oval brown, tan and ivory beans or eggs, with several speckled grey-and-black yarn strands lying among them. Soft, even, diffuse light from the front, neutral to slightly warm in colour, with almost no hard shadows. Knitted wool yarn in red, cream, teal and mustard, glossy black beads, yellow plastic discs, and smooth oval beans or eggs.",
+      "anomaly": "",
+      "text": 0.3871,
+      "image_distance": 24.2,
+      "seed_text": 0.0844,
+      "seed_image": 20
     }
   ]
 }
