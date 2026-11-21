@@ -1230,6 +1230,19 @@
       "image_distance": 24.2,
       "seed_text": 0.0844,
       "seed_image": 20
+    },
+    {
+      "frame": 95,
+      "date": "2026-11-22",
+      "image": "assets/img/f0095.jpg",
+      "alt": "A crocheted yarn figure with a round white-stitched head and two small bead features, standing upright on a surface.",
+      "from": 94,
+      "caption": "A crocheted yarn figure with a round white-stitched head and two small bead features, standing upright on a surface. A red knitted hooded jacket with white fur-like trim at the hood, collar, cuffs and hem, fastened with two yellow toggle loops, teal crocheted trousers to the ankle, small white mittens, and mustard-yellow cable-knit boots. It stands upright with its legs side by side and its front turned toward the viewer. Soft diffused light from the front and slightly above, with low contrast and a warm white tone. Crocheted wool yarn, glass or plastic beads, brown and tan eggs, and loose twisted grey twine.",
+      "anomaly": "The figure stands on a field of brown and tan eggs mixed with flat yellow disc-shaped tokens and tangled grey twine.",
+      "text": 0.3885,
+      "image_distance": 25.4,
+      "seed_text": 0.1105,
+      "seed_image": 25
     }
   ]
 }

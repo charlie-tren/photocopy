@@ -1,0 +1,24 @@
+{
+  "n": 95,
+  "date": "2026-11-22",
+  "withheld": "setting",
+  "description": {
+    "subject": "A crocheted yarn figure with a round white-stitched head and two small bead features, standing upright on a surface.",
+    "covering": "A red knitted hooded jacket with white fur-like trim at the hood, collar, cuffs and hem, fastened with two yellow toggle loops, teal crocheted trousers to the ankle, small white mittens, and mustard-yellow cable-knit boots.",
+    "posture": "It stands upright with its legs side by side and its front turned toward the viewer.",
+    "setting": "",
+    "light": "Soft diffused light from the front and slightly above, with low contrast and a warm white tone.",
+    "materials": "Crocheted wool yarn, glass or plastic beads, brown and tan eggs, and loose twisted grey twine.",
+    "anomaly": "The figure stands on a field of brown and tan eggs mixed with flat yellow disc-shaped tokens and tangled grey twine."
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. A crocheted yarn figure with a round white-stitched head and two small bead features, standing upright on a surface., wearing A red knitted hooded jacket with white fur-like trim at the hood, collar, cuffs and hem, fastened with two yellow toggle loops, teal crocheted trousers to the ankle, small white mittens, and mustard-yellow cable-knit boots., It stands upright with its legs side by side and its front turned toward the viewer.. Light: Soft diffused light from the front and slightly above, with low contrast and a warm white tone. Materials: Crocheted wool yarn, glass or plastic beads, brown and tan eggs, and loose twisted grey twine. The figure stands on a field of brown and tan eggs mixed with flat yellow disc-shaped tokens and tangled grey twine. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0095.jpg",
+  "dhash": "597937060028557799",
+  "reading": {
+    "text": 0.3885,
+    "image": 25.4,
+    "subject": 1.0,
+    "subject_word": "round",
+    "n": 5
+  }
+}
