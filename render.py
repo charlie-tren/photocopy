@@ -60,6 +60,7 @@ h1{font-family:'Silkscreen',monospace;font-size:2.3rem;margin:0;
 .back{flex:0 0 auto;font-family:'Silkscreen',monospace;font-size:0.78rem;
   color:var(--muted);text-decoration:none;white-space:nowrap;}
 .back:hover{color:var(--accent);}
+.back .arr{font-size:calc(1em + 1.5px);position:relative;top:-1.5px;}
 .tag{color:var(--muted);font-size:0.85rem;margin-top:0.25rem;}
 .frame{position:relative;aspect-ratio:1/1;overflow:hidden;border-radius:3px;
   background:var(--card);box-shadow:0 1px 2px rgba(0,0,0,0.06),
@@ -286,7 +287,7 @@ def render_page(frames_raw: list[dict], meta: dict) -> str:
     <header>
       <div class="titlerow">
         <h1>{html.escape(meta['site_name'])}</h1>
-        <a class="back" href="https://charlietrenorden.com/">&larr;&nbsp;Other projects</a>
+        <a class="back" href="https://charlietrenorden.com/"><span class="arr">&larr;</span>&nbsp;Other projects</a>
       </div>
       <div class="tag">{html.escape(meta['tagline'])}</div>
     </header>
