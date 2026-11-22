@@ -1243,6 +1243,19 @@
       "image_distance": 25.4,
       "seed_text": 0.1105,
       "seed_image": 25
+    },
+    {
+      "frame": 96,
+      "date": "2026-11-23",
+      "image": "assets/img/f0096.jpg",
+      "alt": "A crocheted doll with a cream-colored knit face, two black glossy eyes, pink cheek patches and a stitched smile",
+      "from": 95,
+      "caption": "A crocheted doll with a cream-colored knit face, two black glossy eyes, pink cheek patches and a stitched smile. A red crocheted duffle coat with a white fleece-trimmed cowl, white cuffs and two toggle fastenings, worn over teal knit trousers with a teal and red striped hem and mustard-colored knit boots. It stays on its feet with legs together and arms hanging at its sides, facing the camera directly. A plain light grey tabletop surface, strewn with loose grey cord and scattered eggs. Knitted and crocheted wool-like thread, white fur-like trim, glossy black eye beads, shell-covered eggs and grey twisted cord.",
+      "anomaly": "Flat mustard-colored discs and brown eggs are scattered among tangled grey cord around the doll's boots, and its coat closes with two chain-loop fasteners held by spherical toggles.",
+      "text": 0.3851,
+      "image_distance": 25.4,
+      "seed_text": 0.0832,
+      "seed_image": 37
     }
   ]
 }
