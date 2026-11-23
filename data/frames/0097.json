@@ -1,0 +1,24 @@
+{
+  "n": 97,
+  "date": "2026-11-24",
+  "withheld": "materials",
+  "description": {
+    "subject": "A crocheted yarn doll with a cream-coloured head, black bead eyes and a stitched smile, standing upright.",
+    "covering": "A red crocheted hooded duffle jacket with cream fur-like trim at the hood, cuffs and hem, closed with two brass toggle fasteners, over teal knitted leggings with red and cream stripes at the shins and mustard-coloured knitted boots.",
+    "posture": "It stands straight on both feet with its sleeves hanging at its sides, facing the camera directly.",
+    "setting": "A plain seamless studio surface in pale silver tone, with a loose coil of thick silvery rope-like yarn, five peach-coloured wooden beads, two speckled wooden beads and two flat lemon-coloured buttons scattered around its feet.",
+    "light": "Soft, diffuse, even illumination from the front and above in a neutral cool tone, casting only faint shadows beneath the figure.",
+    "materials": "",
+    "anomaly": "Two brass toggle fasteners on the front of the jacket, each held by a flat disc button with a tiny smiley face stamped on it, plus a tuft of fluffy cream fibre stuck to the red jacket front."
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. A crocheted yarn doll with a cream-coloured head, black bead eyes and a stitched smile, standing upright., wearing A red crocheted hooded duffle jacket with cream fur-like trim at the hood, cuffs and hem, closed with two brass toggle fasteners, over teal knitted leggings with red and cream stripes at the shins and mustard-coloured knitted boots., It stands straight on both feet with its sleeves hanging at its sides, facing the camera directly.. A plain seamless studio surface in pale silver tone, with a loose coil of thick silvery rope-like yarn, five peach-coloured wooden beads, two speckled wooden beads and two flat lemon-coloured buttons scattered around its feet. Light: Soft, diffuse, even illumination from the front and above in a neutral cool tone, casting only faint shadows beneath the figure. Two brass toggle fasteners on the front of the jacket, each held by a flat disc button with a tiny smiley face stamped on it, plus a tuft of fluffy cream fibre stuck to the red jacket front. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0097.jpg",
+  "dhash": "5714449785999334714",
+  "reading": {
+    "text": 0.3852,
+    "image": 27.4,
+    "subject": 0.8,
+    "subject_word": "head",
+    "n": 5
+  }
+}

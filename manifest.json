@@ -1256,6 +1256,19 @@
       "image_distance": 25.4,
       "seed_text": 0.0832,
       "seed_image": 37
+    },
+    {
+      "frame": 97,
+      "date": "2026-11-24",
+      "image": "assets/img/f0097.jpg",
+      "alt": "A crocheted yarn doll with a cream-coloured head, black bead eyes and a stitched smile, standing upright.",
+      "from": 96,
+      "caption": "A crocheted yarn doll with a cream-coloured head, black bead eyes and a stitched smile, standing upright. A red crocheted hooded duffle jacket with cream fur-like trim at the hood, cuffs and hem, closed with two brass toggle fasteners, over teal knitted leggings with red and cream stripes at the shins and mustard-coloured knitted boots. It stands straight on both feet with its sleeves hanging at its sides, facing the camera directly. A plain seamless studio surface in pale silver tone, with a loose coil of thick silvery rope-like yarn, five peach-coloured wooden beads, two speckled wooden beads and two flat lemon-coloured buttons scattered around its feet. Soft, diffuse, even illumination from the front and above in a neutral cool tone, casting only faint shadows beneath the figure.",
+      "anomaly": "Two brass toggle fasteners on the front of the jacket, each held by a flat disc button with a tiny smiley face stamped on it, plus a tuft of fluffy cream fibre stuck to the red jacket front.",
+      "text": 0.3852,
+      "image_distance": 27.4,
+      "seed_text": 0.1113,
+      "seed_image": 21
     }
   ]
 }
