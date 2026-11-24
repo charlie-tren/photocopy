@@ -1,0 +1,24 @@
+{
+  "n": 98,
+  "date": "2026-11-25",
+  "withheld": "posture",
+  "description": {
+    "subject": "A small crocheted stuffed figure with a round off-white face, embroidered smile, black eyes with lashes and pink cheek patches, standing upright on its own legs.",
+    "covering": "A red crocheted duffle-style coat with white trim at the cuffs, hem and front edge and a pointed red-and-white-edged cowl over the head, fastened with two gold toggle clasps, worn over blue-green trousers with red-and-white striped cuffs and mustard-orange crocheted boots.",
+    "posture": "",
+    "setting": "A plain pale grey seamless studio surface with no walls or furnishings visible.",
+    "light": "Soft, diffuse, neutral white light from the front, leaving only faint shadows on the surface.",
+    "materials": "Crocheted wool-type thread in red, white, blue-green and mustard, metal-look gold toggle fasteners, white twisted rope, and small round wooden pellets and plastic sewing buttons.",
+    "anomaly": "Two gold toggle clasps, each with a four-hole button as the pivot, fasten the front of the tiny crocheted coat, while loose orange and yellow four-hole buttons lie next to a coil of white twisted rope on the floor."
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. A small crocheted stuffed figure with a round off-white face, embroidered smile, black eyes with lashes and pink cheek patches, standing upright on its own legs., wearing A red crocheted duffle-style coat with white trim at the cuffs, hem and front edge and a pointed red-and-white-edged cowl over the head, fastened with two gold toggle clasps, worn over blue-green trousers with red-and-white striped cuffs and mustard-orange crocheted boots.. A plain pale grey seamless studio surface with no walls or furnishings visible. Light: Soft, diffuse, neutral white light from the front, leaving only faint shadows on the surface. Materials: Crocheted wool-type thread in red, white, blue-green and mustard, metal-look gold toggle fasteners, white twisted rope, and small round wooden pellets and plastic sewing buttons. Two gold toggle clasps, each with a four-hole button as the pivot, fasten the front of the tiny crocheted coat, while loose orange and yellow four-hole buttons lie next to a coil of white twisted rope on the floor. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0098.jpg",
+  "dhash": "5229970597845159758",
+  "reading": {
+    "text": 0.3924,
+    "image": 27.4,
+    "subject": 0.8,
+    "subject_word": "black",
+    "n": 5
+  }
+}

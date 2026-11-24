@@ -1269,6 +1269,19 @@
       "image_distance": 27.4,
       "seed_text": 0.1113,
       "seed_image": 21
+    },
+    {
+      "frame": 98,
+      "date": "2026-11-25",
+      "image": "assets/img/f0098.jpg",
+      "alt": "A small crocheted stuffed figure with a round off-white face, embroidered smile, black eyes with lashes and pink cheek patches, standing upright on its own legs.",
+      "from": 97,
+      "caption": "A small crocheted stuffed figure with a round off-white face, embroidered smile, black eyes with lashes and pink cheek patches, standing upright on its own legs. A red crocheted duffle-style coat with white trim at the cuffs, hem and front edge and a pointed red-and-white-edged cowl over the head, fastened with two gold toggle clasps, worn over blue-green trousers with red-and-white striped cuffs and mustard-orange crocheted boots. A plain pale grey seamless studio surface with no walls or furnishings visible. Soft, diffuse, neutral white light from the front, leaving only faint shadows on the surface. Crocheted wool-type thread in red, white, blue-green and mustard, metal-look gold toggle fasteners, white twisted rope, and small round wooden pellets and plastic sewing buttons.",
+      "anomaly": "Two gold toggle clasps, each with a four-hole button as the pivot, fasten the front of the tiny crocheted coat, while loose orange and yellow four-hole buttons lie next to a coil of white twisted rope on the floor.",
+      "text": 0.3924,
+      "image_distance": 27.4,
+      "seed_text": 0.0577,
+      "seed_image": 30
     }
   ]
 }
