@@ -1282,6 +1282,19 @@
       "image_distance": 27.4,
       "seed_text": 0.0577,
       "seed_image": 30
+    },
+    {
+      "frame": 99,
+      "date": "2026-11-26",
+      "image": "assets/img/f0099.jpg",
+      "alt": "A small stuffed doll made of yarn stitches, shaped like a little child with a round white top section, a stitched smile and pink circles on either side of its nose.",
+      "from": 98,
+      "caption": "A small stuffed doll made of yarn stitches, shaped like a little child with a round white top section, a stitched smile and pink circles on either side of its nose. It wears a red hooded jacket with white trim and white mitten-like hands, blue trousers with red-and-white zigzag cuffs, and yellow-orange booties with red soles, and a gold metal clasp with two gold buttons fastens the jacket at the chest. It stands upright on both feet, facing the camera directly with its hood up and its arms hanging at its sides. It stands on a plain, smooth, off-white surface in front of a blank pale backdrop with no other objects. Soft, even, diffuse illumination in a neutral white tone from the front, producing only a faint shadow under the feet. Thick wool-like yarn in red, white, blue and orange-yellow, glossy round plastic pieces for the pupils, thin dark embroidery thread for the smile and lashes, and gold-coloured metal and buttons on the chest.",
+      "anomaly": "",
+      "text": 0.363,
+      "image_distance": 26.4,
+      "seed_text": 0.0584,
+      "seed_image": 30
     }
   ]
 }

@@ -1,0 +1,24 @@
+{
+  "n": 99,
+  "date": "2026-11-26",
+  "withheld": "anomaly",
+  "description": {
+    "subject": "A small stuffed doll made of yarn stitches, shaped like a little child with a round white top section, a stitched smile and pink circles on either side of its nose.",
+    "covering": "It wears a red hooded jacket with white trim and white mitten-like hands, blue trousers with red-and-white zigzag cuffs, and yellow-orange booties with red soles, and a gold metal clasp with two gold buttons fastens the jacket at the chest.",
+    "posture": "It stands upright on both feet, facing the camera directly with its hood up and its arms hanging at its sides.",
+    "setting": "It stands on a plain, smooth, off-white surface in front of a blank pale backdrop with no other objects.",
+    "light": "Soft, even, diffuse illumination in a neutral white tone from the front, producing only a faint shadow under the feet.",
+    "materials": "Thick wool-like yarn in red, white, blue and orange-yellow, glossy round plastic pieces for the pupils, thin dark embroidery thread for the smile and lashes, and gold-coloured metal and buttons on the chest.",
+    "anomaly": ""
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. A small stuffed doll made of yarn stitches, shaped like a little child with a round white top section, a stitched smile and pink circles on either side of its nose., wearing It wears a red hooded jacket with white trim and white mitten-like hands, blue trousers with red-and-white zigzag cuffs, and yellow-orange booties with red soles, and a gold metal clasp with two gold buttons fastens the jacket at the chest., It stands upright on both feet, facing the camera directly with its hood up and its arms hanging at its sides.. It stands on a plain, smooth, off-white surface in front of a blank pale backdrop with no other objects. Light: Soft, even, diffuse illumination in a neutral white tone from the front, producing only a faint shadow under the feet. Materials: Thick wool-like yarn in red, white, blue and orange-yellow, glossy round plastic pieces for the pupils, thin dark embroidery thread for the smile and lashes, and gold-coloured metal and buttons on the chest. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0099.jpg",
+  "dhash": "2327327803681031766",
+  "reading": {
+    "text": 0.363,
+    "image": 26.4,
+    "subject": 0.8,
+    "subject_word": "crocheted",
+    "n": 5
+  }
+}
