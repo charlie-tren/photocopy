@@ -1295,6 +1295,19 @@
       "image_distance": 26.4,
       "seed_text": 0.0584,
       "seed_image": 30
+    },
+    {
+      "frame": 100,
+      "date": "2026-11-27",
+      "image": "assets/img/f0100.jpg",
+      "alt": "A hand-stitched yarn doll with a round white head, standing as a small toy figure.",
+      "from": 99,
+      "caption": "A hand-stitched yarn doll with a round white head, standing as a small toy figure. A red hooded jacket with long sleeves, patch pockets and a single round yellow button, worn over blue trousers that reach the ankles, with yellow boots and white mitten-like hands. It stands on both feet with its arms hanging slightly out from its sides, turned toward the viewer with its head level. Even, gentle, pale white light with no hard shadows, coming from the front and slightly above, with a faint shadow pooled to the right of the feet. Knotted yarn in red, white, blue and yellow, a plastic or glass button, stitched thread for the mouth and lashes, and a smooth pale tabletop and backdrop.",
+      "anomaly": "Wavy white zigzag stitching outlines the hood edge, pockets, cuffs and hem of the jacket, and a matching white and yellow zigzag band wraps around the top of each boot.",
+      "text": 0.3473,
+      "image_distance": 24.6,
+      "seed_text": 0.1248,
+      "seed_image": 23
     }
   ]
 }

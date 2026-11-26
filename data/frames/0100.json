@@ -1,0 +1,24 @@
+{
+  "n": 100,
+  "date": "2026-11-27",
+  "withheld": "setting",
+  "description": {
+    "subject": "A hand-stitched yarn doll with a round white head, standing as a small toy figure.",
+    "covering": "A red hooded jacket with long sleeves, patch pockets and a single round yellow button, worn over blue trousers that reach the ankles, with yellow boots and white mitten-like hands.",
+    "posture": "It stands on both feet with its arms hanging slightly out from its sides, turned toward the viewer with its head level.",
+    "setting": "",
+    "light": "Even, gentle, pale white light with no hard shadows, coming from the front and slightly above, with a faint shadow pooled to the right of the feet.",
+    "materials": "Knotted yarn in red, white, blue and yellow, a plastic or glass button, stitched thread for the mouth and lashes, and a smooth pale tabletop and backdrop.",
+    "anomaly": "Wavy white zigzag stitching outlines the hood edge, pockets, cuffs and hem of the jacket, and a matching white and yellow zigzag band wraps around the top of each boot."
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. A hand-stitched yarn doll with a round white head, standing as a small toy figure., wearing A red hooded jacket with long sleeves, patch pockets and a single round yellow button, worn over blue trousers that reach the ankles, with yellow boots and white mitten-like hands., It stands on both feet with its arms hanging slightly out from its sides, turned toward the viewer with its head level.. Light: Even, gentle, pale white light with no hard shadows, coming from the front and slightly above, with a faint shadow pooled to the right of the feet. Materials: Knotted yarn in red, white, blue and yellow, a plastic or glass button, stitched thread for the mouth and lashes, and a smooth pale tabletop and backdrop. Wavy white zigzag stitching outlines the hood edge, pockets, cuffs and hem of the jacket, and a matching white and yellow zigzag band wraps around the top of each boot. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0100.jpg",
+  "dhash": "5214126638350765192",
+  "reading": {
+    "text": 0.3473,
+    "image": 24.6,
+    "subject": 0.8,
+    "subject_word": "doll",
+    "n": 5
+  }
+}
