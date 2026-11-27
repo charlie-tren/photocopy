@@ -1308,6 +1308,19 @@
       "image_distance": 24.6,
       "seed_text": 0.1248,
       "seed_image": 23
+    },
+    {
+      "frame": 101,
+      "date": "2026-11-28",
+      "image": "assets/img/f0101.jpg",
+      "alt": "A small amigurumi figure made of yarn, a toy person with a round smooth face and a closed-eyed smile sewn in dark thread.",
+      "from": 100,
+      "caption": "A small amigurumi figure made of yarn, a toy person with a round smooth face and a closed-eyed smile sewn in dark thread. It wears a red yarn jacket with a pointed cap-style cowl pulled up over the crown, two flap pockets, a yellow round button at the chest, blue yarn trousers, and mustard-yellow yarn boots, with sleeves reaching the wrists and trousers reaching the boots. It stands upright on a flat surface with its arms angled slightly out from its sides, turned a little to its left while the face points toward the camera. A plain, empty room corner or studio backdrop with a pale cream wall and a glossy pale tabletop beneath it. Red, blue, yellow and ivory cotton or acrylic yarn, a flat yellow button, dark embroidery thread, and polyester stuffing showing as firm filled shape.",
+      "anomaly": "Zigzag edging in ivory yarn runs around the face opening of the cowl, along the pocket flaps and around the boot cuffs, and the yellow cuffs at the wrists have the same wavy edging.",
+      "text": 0.3419,
+      "image_distance": 22.6,
+      "seed_text": 0.0973,
+      "seed_image": 24
     }
   ]
 }
