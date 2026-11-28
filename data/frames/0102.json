@@ -1,0 +1,24 @@
+{
+  "n": 102,
+  "date": "2026-11-29",
+  "withheld": "materials",
+  "description": {
+    "subject": "A crocheted yarn toy figure with a cream-coloured round head, stitched black oval eyes and a curved black mouth, stuffed and standing upright.",
+    "covering": "A crimson hooded jacket with cream scalloped edging, two patch pockets and cream cuffs, worn over cobalt trousers that reach the ankles, with cream trim above mustard-yellow crocheted boots.",
+    "posture": "Standing upright on both boots with the arms held slightly out from the form, the head and form turned toward the viewer.",
+    "setting": "A corner where two plain off-white walls meet a glossy cream tabletop that reflects the toy's lower half.",
+    "light": "Soft, diffuse, even light from the front and left, with gentle shadows and a neutral warm-white colour.",
+    "materials": "",
+    "anomaly": "A single large round yellow plastic fastener with two holes sits at the neck of the jacket, fixed over the cream scalloped front edging."
+  },
+  "prompt": "A photograph. Sharp focus, natural depth of field, no visible camera effects, no border, no frame. A crocheted yarn toy figure with a cream-coloured round head, stitched black oval eyes and a curved black mouth, stuffed and standing upright., wearing A crimson hooded jacket with cream scalloped edging, two patch pockets and cream cuffs, worn over cobalt trousers that reach the ankles, with cream trim above mustard-yellow crocheted boots., Standing upright on both boots with the arms held slightly out from the form, the head and form turned toward the viewer.. A corner where two plain off-white walls meet a glossy cream tabletop that reflects the toy's lower half. Light: Soft, diffuse, even light from the front and left, with gentle shadows and a neutral warm-white colour. A single large round yellow plastic fastener with two holes sits at the neck of the jacket, fixed over the cream scalloped front edging. The figure has no anatomical detail of any kind: no rendered muscles, no buttocks, no chest or groin detail, blank and unmodelled wherever it is not covered. Whatever it wears covers it from neck to wrists to ankles: shoulders, arms, chest, back and midriff are all covered. Nothing sleeveless, no bare torso. Absolutely no text, no letters, no words, no captions, no numbers, no signature and no watermark anywhere in the image. No nudity, no bare skin, no bare torso or shoulders, nothing sexual, no anatomically detailed or lifelike body.",
+  "image": "assets/img/f0102.jpg",
+  "dhash": "1016985649251421960",
+  "reading": {
+    "text": 0.3401,
+    "image": 22.6,
+    "subject": 1.0,
+    "subject_word": "round",
+    "n": 5
+  }
+}
